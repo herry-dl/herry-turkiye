@@ -43,15 +43,30 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
-.logo span {
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-herry {
+  font-size: 1.8rem;
+  font-weight: 800;
   color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+.logo-turkiye {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .game-stats {

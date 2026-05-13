@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/herry-turkiye/dev-sw.js?dev-sw', { scope: '/herry-turkiye/', type: 'classic' })

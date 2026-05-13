@@ -77,8 +77,11 @@ function App() {
     <div className="app-container">
       <header>
         <div className="logo">
-          <MapPin size={28} color="#e63946" />
-          <span>HERRY</span>-TURKIYE
+          <MapPin size={32} color="#e63946" />
+          <div className="logo-text">
+            <span className="logo-herry">HERRY</span>
+            <span className="logo-turkiye">TÜRKİYE</span>
+          </div>
         </div>
         <div className="game-stats">
           <div className="stat-item">
