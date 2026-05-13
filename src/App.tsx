@@ -13,8 +13,9 @@ function App() {
   const [lastScore, setLastScore] = useState(0);
   const [lastDistance, setLastDistance] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  const TOTAL_ROUNDS = 5;
+  const TOTAL_ROUNDS = 10;
 
   // Initialize game
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
     setCurrentRound(0);
     setTotalScore(0);
     setGameOver(false);
+    setFailed(false);
     resetRound();
   };
 
@@ -49,9 +51,16 @@ function App() {
     setLastScore(score);
     setTotalScore((prev) => prev + score);
     setRoundOver(true);
+    if (distance > 200) {
+      setFailed(true);
+    }
   };
 
   const handleNextRound = () => {
+    if (failed) {
+      startNewGame();
+      return;
+    }
     if (currentRound + 1 >= TOTAL_ROUNDS) {
       setGameOver(true);
     } else {
@@ -96,6 +105,11 @@ function App() {
                 src={`https://maps.google.com/maps?q=&layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=11,0,0,0,0&output=svembed`} 
                 allowFullScreen
               ></iframe>
+              {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
+              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '80px', background: 'linear-gradient(to bottom, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%)', zIndex: 40, pointerEvents: 'none' }}></div>
+              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', maxWidth: '400px', height: '90px', backgroundColor: 'var(--bg-dark)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: '16px', borderRight: '2px solid var(--primary-color)', borderBottom: '2px solid var(--primary-color)', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
+                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-main)', textAlign: 'center', padding: '0 15px' }}>👀 <span style={{color: 'var(--primary-color)'}}>Neresi Burası?</span><br/>Etrafına bak ve tahmin et!</span>
+              </div>
             </div>
             
             <GameMap 
@@ -117,16 +131,21 @@ function App() {
               ) : (
                 <>
                   <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
-                    <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
-                      +{lastScore} Puan
+                    <div style={{ fontSize: '2.5rem', fontWeight: '900', color: failed ? '#e63946' : '#2a9d8f', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
+                      {failed ? 'ÇUVALLADIN!' : 'SÜPERSİN!'}
                     </div>
-                    <div>Mesafe: {lastDistance.toFixed(1)} km</div>
-                    <div style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '5px' }}>
+                    {!failed && (
+                      <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
+                        +{lastScore} Puan
+                      </div>
+                    )}
+                    <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
+                    <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
                       Hedef: {currentTarget.name}
                     </div>
                   </div>
-                  <button className="btn" onClick={handleNextRound}>
-                    {currentRound + 1 === TOTAL_ROUNDS ? 'Sonuçları Gör' : 'Sonraki Tur'}
+                  <button className="btn" onClick={handleNextRound} style={{ backgroundColor: failed ? '#e63946' : 'var(--primary-color)' }}>
+                    {failed ? 'Baştan Başla' : (currentRound + 1 === TOTAL_ROUNDS ? 'Sonuçları Gör' : 'Sonraki Tur')}
                   </button>
                 </>
               )}
