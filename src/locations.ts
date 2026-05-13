@@ -6,30 +6,31 @@ export interface Location {
 }
 
 export const locations: Location[] = [
-  // Kastamonu
-  { id: 'kastamonu-saat', name: 'Saat Kulesi - Kastamonu', lat: 41.3745, lng: 33.7788 },
-  { id: 'kastamonu-kale', name: 'Kastamonu Kalesi Önü - Kastamonu', lat: 41.3735, lng: 33.7725 },
+  // Kastamonu (Ana Caddeler)
+  { id: 'kastamonu-meydan', name: 'Cumhuriyet Meydanı (Ana Yol) - Kastamonu', lat: 41.3769, lng: 33.7744 },
+  { id: 'kastamonu-ataturk', name: 'Atatürk Caddesi - Kastamonu', lat: 41.3735, lng: 33.7770 },
 
-  // Aksaray
-  { id: 'ihlara', name: 'Ihlara Vadisi - Aksaray', lat: 38.2415, lng: 34.3005 },
-  { id: 'egri-minare', name: 'Eğri Minare - Aksaray', lat: 38.3705, lng: 34.0322 },
+  // Aksaray (Ana Yollar)
+  { id: 'aksaray-e90', name: 'Ankara Yolu (E90) - Aksaray', lat: 38.3840, lng: 34.0150 },
+  { id: 'aksaray-bulvar', name: 'Atatürk Bulvarı - Aksaray', lat: 38.3700, lng: 34.0280 },
 
-  // Konya
-  { id: 'mevlana', name: 'Mevlana Meydanı - Konya', lat: 37.8711, lng: 32.5052 },
-  { id: 'alaaddin', name: 'Alaaddin Tepesi - Konya', lat: 37.8732, lng: 32.4930 },
+  // Konya (Ana Caddeler)
+  { id: 'konya-mevlana-yol', name: 'Mevlana Caddesi (Müze Önü Ana Yol) - Konya', lat: 37.8722, lng: 32.5038 },
+  { id: 'konya-nalcaci', name: 'Nalçacı Caddesi - Konya', lat: 37.8780, lng: 32.4820 },
+  { id: 'konya-alaaddin-yol', name: 'Alaaddin Bulvarı (Tepe Etrafı Ana Yol) - Konya', lat: 37.8725, lng: 32.4950 },
 
-  // İstanbul
-  { id: 'sultanahmet', name: 'Sultanahmet Meydanı - İstanbul', lat: 41.0054, lng: 28.9768 },
-  { id: 'taksim', name: 'Taksim Meydanı - İstanbul', lat: 41.0369, lng: 28.9850 },
-  { id: 'ortakoy', name: 'Ortaköy Meydanı - İstanbul', lat: 41.0475, lng: 29.0270 },
+  // İstanbul (Köprüler ve Ana Arterler)
+  { id: 'ist-bogazici', name: '15 Temmuz Şehitler Köprüsü Üzeri - İstanbul', lat: 41.0436, lng: 29.0350 },
+  { id: 'ist-galata', name: 'Galata Köprüsü Üzeri - İstanbul', lat: 41.0210, lng: 28.9733 },
+  { id: 'ist-vatan', name: 'Vatan Caddesi - İstanbul', lat: 41.0163, lng: 28.9405 },
 
-  // Ankara
-  { id: 'anitkabir', name: 'Anıtkabir Aslanlı Yol - Ankara', lat: 39.9255, lng: 32.8365 },
-  { id: 'kizilay', name: 'Kızılay Meydanı - Ankara', lat: 39.9208, lng: 32.8541 },
-  { id: 'ankara-kale', name: 'Ankara Kalesi Sokakları - Ankara', lat: 39.9392, lng: 32.8655 },
+  // Ankara (Büyük Bulvarlar)
+  { id: 'ank-tbmm', name: 'İnönü Bulvarı (TBMM Önü) - Ankara', lat: 39.9145, lng: 32.8510 },
+  { id: 'ank-eskisehir-yol', name: 'Eskişehir Yolu (Söğütözü) - Ankara', lat: 39.9100, lng: 32.8125 },
+  { id: 'ank-kizilay', name: 'Kızılay Meydanı (Atatürk Blv) - Ankara', lat: 39.9212, lng: 32.8540 },
 
-  // Eskişehir
-  { id: 'odunpazari', name: 'Odunpazarı Evleri - Eskişehir', lat: 39.7615, lng: 30.5235 },
-  { id: 'porsuk', name: 'Porsuk Çayı (Adalar) - Eskişehir', lat: 39.7711, lng: 30.5210 },
-  { id: 'sazova', name: 'Sazova Parkı Şatosu - Eskişehir', lat: 39.7665, lng: 30.4815 }
+  // Eskişehir (Ana Caddeler)
+  { id: 'esk-ataturk', name: 'Atatürk Bulvarı - Eskişehir', lat: 39.7715, lng: 30.5190 },
+  { id: 'esk-yunus', name: 'Yunus Emre Caddesi - Eskişehir', lat: 39.7680, lng: 30.5255 },
+  { id: 'esk-universite', name: 'Üniversite Bulvarı - Eskişehir', lat: 39.7820, lng: 30.5080 }
 ];
