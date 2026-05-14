@@ -196,7 +196,7 @@ function App() {
                         <>
                           <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
                             <div style={{ fontSize: '2.5rem', fontWeight: '900', color: failed ? '#e63946' : '#2a9d8f', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-                              {failed ? 'ÇUVALLADIN!' : 'SÜPERSİN!'}
+                              {failed ? 'ÇUVALLADIN!' : 'MANIAAAAC'}
                             </div>
                             {!failed && (
                               <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
@@ -209,7 +209,7 @@ function App() {
                             </div>
                           </div>
                           <button className="btn" onClick={handleNextRound} style={{ backgroundColor: failed ? '#e63946' : 'var(--primary-color)' }}>
-                            {failed ? 'Baştan Başla' : (currentRound + 1 === TOTAL_ROUNDS ? 'Sonuçları Gör' : 'Sonraki Tur')}
+                            {failed ? 'BAŞTAN BAŞLA' : (currentRound + 1 === TOTAL_ROUNDS ? 'BİTİR HACI' : 'GEÇ HACI')}
                           </button>
                         </>
                       )}
