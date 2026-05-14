@@ -1,7002 +1,7436 @@
 export const generatedLocations = [
   {
-    "id": "gen-lvl1-184",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.27788522043283,
-    "lng": 28.988992521265544,
-    "difficulty": 1
-  },
-  {
-    "id": "gen-lvl3-790",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.57522279557949,
-    "lng": 42.03430502149118,
+    "id": "gen-v2-611",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34999792109918,
+    "lng": 38.31021741487862,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-504",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.82181867969806,
-    "lng": 32.4542557008014,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-678",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.48504571173591,
-    "lng": 28.61265505673611,
+    "id": "gen-v2-284",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.034076572437556,
+    "lng": 27.42960607953229,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-937",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.8562576919293,
-    "lng": 40.1838570641915,
+    "id": "gen-v2-464",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.750148395403095,
+    "lng": 30.529649801141662,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-664",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.132713822985345,
-    "lng": 30.217109226749784,
+    "id": "gen-v2-555",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73000287870132,
+    "lng": 27.22008821535665,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-379",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.0548581981847,
-    "lng": 29.045774459079997,
+    "id": "gen-v2-260",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76998834034709,
+    "lng": 29.07989031020744,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-457",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.73958307688039,
-    "lng": 32.463738572167145,
-    "difficulty": 2
+    "id": "gen-v2-76",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.887053134070555,
+    "lng": 30.707154882645874,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-256",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.2266437104698,
-    "lng": 28.96766552335053,
-    "difficulty": 2
+    "id": "gen-v2-238",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72030993748846,
+    "lng": 35.48022634115491,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-929",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.488281121621924,
-    "lng": 38.89838696927774,
+    "id": "gen-v2-1007",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.370183626662985,
+    "lng": 33.769632948730646,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-490",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.168197418502395,
-    "lng": 28.957213726017727,
+    "id": "gen-v2-241",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.720092878187344,
+    "lng": 35.47956252560515,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-232",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.82145338807404,
-    "lng": 30.833432973968193,
-    "difficulty": 2
+    "id": "gen-v2-934",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.020108361896625,
+    "lng": 40.519779528417295,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-391",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.79114856272637,
-    "lng": 32.52859513452255,
-    "difficulty": 2
+    "id": "gen-v2-968",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.9798384060101,
+    "lng": 37.88015620076895,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-989",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.832861217057975,
-    "lng": 40.53228749657663,
-    "difficulty": 3
+    "id": "gen-v2-415",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.84,
+    "lng": 31.15,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-988",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.435443423037555,
-    "lng": 37.89879378347611,
-    "difficulty": 3
+    "id": "gen-v2-757",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.31,
+    "lng": 36.55,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-600",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.95303382796859,
-    "lng": 35.26856508030606,
+    "id": "gen-v2-369",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.780130828374524,
+    "lng": 30.400408883100113,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-691",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.55957647520678,
-    "lng": 36.77861755867908,
-    "difficulty": 3
+    "id": "gen-v2-965",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97970055686808,
+    "lng": 37.8797701711866,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-608",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.926799098326484,
-    "lng": 28.723543969840293,
-    "difficulty": 3
+    "id": "gen-v2-959",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98005561348334,
+    "lng": 37.88020195751784,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-889",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.304252226580594,
-    "lng": 39.30511556447753,
+    "id": "gen-v2-662",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14995188968545,
+    "lng": 38.790320079916775,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-426",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.798889265927954,
-    "lng": 32.39287008174107,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-174",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.07280054209594,
-    "lng": 32.822525285806286,
+    "id": "gen-v2-380",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.759656436793264,
+    "lng": 29.93020500600153,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-447",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.93108358832578,
-    "lng": 35.45155861222466,
+    "id": "gen-v2-425",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.839771871794355,
+    "lng": 31.149615559086858,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-424",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.628098995679814,
-    "lng": 35.57676286650407,
+    "id": "gen-v2-870",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96028896816333,
+    "lng": 34.669982969287155,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-46",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.25386866284803,
-    "lng": 29.042453768646105,
-    "difficulty": 1
+    "id": "gen-v2-690",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.880339295519164,
+    "lng": 41.13014556385868,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-56",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.7431528806891,
-    "lng": 28.865887302084634,
+    "id": "gen-v2-39",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.909786106774185,
+    "lng": 32.86036788938744,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-766",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.7138600805374,
-    "lng": 36.23663238573836,
-    "difficulty": 3
+    "id": "gen-v2-275",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03415424906313,
+    "lng": 27.429946632076962,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-355",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.75595584430792,
-    "lng": 35.4793895072086,
+    "id": "gen-v2-154",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.780379527573224,
+    "lng": 30.510065317463106,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-188",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.00000420104422,
-    "lng": 32.891596264154046,
-    "difficulty": 1
+    "id": "gen-v2-1016",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45008465804684,
+    "lng": 31.790339192171427,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-932",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.630688835799404,
-    "lng": 31.176645331927574,
+    "id": "gen-v2-824",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.840120208233614,
+    "lng": 33.50989498787112,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-67",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.851964163905556,
-    "lng": 32.953593872987994,
+    "id": "gen-v2-955",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98,
+    "lng": 37.88,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-686",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.49981159870194,
-    "lng": 38.02173357489621,
-    "difficulty": 3
+    "id": "gen-v2-330",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15016452588688,
+    "lng": 26.409729779060743,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-866",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.54510933446584,
-    "lng": 28.93470793915777,
-    "difficulty": 3
+    "id": "gen-v2-171",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32959929313513,
+    "lng": 36.270148760455335,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-189",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.28729378349367,
-    "lng": 29.031246996610513,
+    "id": "gen-v2-398",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65000846689063,
+    "lng": 29.269722906932248,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-598",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.19031797871977,
-    "lng": 29.205339681263375,
+    "id": "gen-v2-623",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67004128566864,
+    "lng": 39.219632291564736,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-353",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.0486088850468,
-    "lng": 35.28192111246678,
+    "id": "gen-v2-264",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77018770659132,
+    "lng": 29.079775875947423,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-772",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.31021153131842,
+    "lng": 36.550307435786706,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-433",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.08188208402205,
-    "lng": 29.118116005597898,
+    "id": "gen-v2-240",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.71999970790128,
+    "lng": 35.48015566255755,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-874",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.186048480436924,
-    "lng": 41.72711396257708,
-    "difficulty": 3
+    "id": "gen-v2-132",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.03984934236519,
+    "lng": 35.29988107486233,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-745",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.699388551772365,
-    "lng": 32.17459674088479,
-    "difficulty": 3
+    "id": "gen-v2-654",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15037699818226,
+    "lng": 38.79019601671151,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-640",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.93563785132937,
-    "lng": 29.959090251027032,
+    "id": "gen-v2-971",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97971629314675,
+    "lng": 37.879902357291904,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-948",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.17990274831812,
-    "lng": 42.946149128805544,
-    "difficulty": 3
+    "id": "gen-v2-263",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76967845308587,
+    "lng": 29.08011060799287,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-733",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.73682120445481,
-    "lng": 29.463353030769813,
+    "id": "gen-v2-989",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01974140678477,
+    "lng": 35.15021247337595,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-653",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.529440637554664,
-    "lng": 37.43031223787985,
+    "id": "gen-v2-356",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67003120437495,
+    "lng": 26.550208239177625,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-112",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.23488025719409,
-    "lng": 29.023500228999357,
-    "difficulty": 1
+    "id": "gen-v2-916",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17994392594355,
+    "lng": 33.21961671532565,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-23",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.53098990207052,
-    "lng": 27.2084374351922,
+    "id": "gen-v2-490",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.67006936020325,
+    "lng": 29.399942086696143,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-616",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.8083967017483,
-    "lng": 37.02700376451361,
-    "difficulty": 3
+    "id": "gen-v2-804",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54028544335417,
+    "lng": 34.94973979232588,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-763",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.23143132578237,
-    "lng": 33.8302722034982,
-    "difficulty": 3
+    "id": "gen-v2-541",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73,
+    "lng": 27.22,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-81",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.91336330486036,
-    "lng": 32.929214434288745,
+    "id": "gen-v2-703",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.5,
+    "lng": 43.38,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-644",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.02702642934212,
-    "lng": 40.95534700344871,
+    "id": "gen-v2-626",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.66990383680964,
+    "lng": 39.22005526133345,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-313",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.9682721618814,
-    "lng": 30.829621261278405,
+    "id": "gen-v2-282",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.034205148645796,
+    "lng": 27.429959222198896,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-585",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.80437712957634,
-    "lng": 30.597826690805835,
-    "difficulty": 2
+    "id": "gen-v2-921",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.01968649832208,
+    "lng": 40.520153170409344,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-467",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.9356229975798,
-    "lng": 35.335662505501666,
-    "difficulty": 2
+    "id": "gen-v2-233",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.79997570240521,
+    "lng": 34.58042412634941,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-648",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.8763145436633,
-    "lng": 34.10487119639896,
+    "id": "gen-v2-917",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.179622542877624,
+    "lng": 33.21991974439945,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-102",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.190106467625256,
+    "lng": 29.06035524309085,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-794",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.633620427417156,
-    "lng": 29.602449755085527,
+    "id": "gen-v2-270",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76995247702911,
+    "lng": 29.079784733701068,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-529",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.942065729634585,
-    "lng": 32.52442026758483,
+    "id": "gen-v2-602",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35000911626685,
+    "lng": 38.31023466958402,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-380",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.802730872344604,
-    "lng": 32.616162686123175,
+    "id": "gen-v2-745",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.75027273530138,
+    "lng": 37.01033188628069,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-492",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.1187820061052,
-    "lng": 28.999945479489956,
+    "id": "gen-v2-457",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74978996811315,
+    "lng": 30.53018184215069,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-527",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.056367909710694,
-    "lng": 35.27210535289856,
+    "id": "gen-v2-712",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.49974824196262,
+    "lng": 43.37997327528432,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-657",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.03723919902658,
-    "lng": 29.291181834754788,
-    "difficulty": 3
+    "id": "gen-v2-957",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97999180655396,
+    "lng": 37.880274011497825,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-747",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.62089238155386,
-    "lng": 27.43934023371472,
+    "id": "gen-v2-539",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.1500107848201,
+    "lng": 27.799596582447432,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-567",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57998381129721,
+    "lng": 36.17031352480009,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-242",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72005819951729,
+    "lng": 35.479731699895396,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-122",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.82978299462193,
-    "lng": 29.069052320703694,
+    "id": "gen-v2-687",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.880193870344826,
+    "lng": 41.12962631502652,
     "difficulty": 1
+  },
+  {
+    "id": "gen-v2-420",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.84032762739785,
+    "lng": 31.14978437305199,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-452",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.97993026892471,
-    "lng": 30.644947107092694,
+    "id": "gen-v2-800",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.53988151780023,
+    "lng": 34.94961006252487,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-898",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.05084610910441,
-    "lng": 35.75317619469921,
+    "id": "gen-v2-682",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.30984886966409,
+    "lng": 40.73978287866758,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-401",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.16626894401249,
-    "lng": 29.167674502787428,
+    "id": "gen-v2-984",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01996293623478,
+    "lng": 35.14970028046296,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-658",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.424124058783235,
-    "lng": 31.755745841207627,
-    "difficulty": 3
+    "id": "gen-v2-297",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86004131569582,
+    "lng": 27.259887987107913,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-31",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.89374745283062,
-    "lng": 29.239274643267507,
-    "difficulty": 1
+    "id": "gen-v2-763",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.3102333511996,
+    "lng": 36.55004380162134,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-25",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.85253793351654,
-    "lng": 32.93094674470896,
-    "difficulty": 1
+    "id": "gen-v2-711",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.5000553968193,
+    "lng": 43.379575696436916,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-947",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.93095740202132,
-    "lng": 41.342903789252674,
-    "difficulty": 3
+    "id": "gen-v2-907",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17968098008263,
+    "lng": 33.22014663075038,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-676",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.00162668001542,
-    "lng": 30.621661304066006,
+    "id": "gen-v2-609",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35020291909236,
+    "lng": 38.309879918013415,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-91",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.00162688999389,
-    "lng": 29.187889368520516,
-    "difficulty": 1
+    "id": "gen-v2-537",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.15026694072559,
+    "lng": 27.800221531491797,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-324",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.852954649315585,
-    "lng": 30.586332348564717,
+    "id": "gen-v2-370",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.779748579351455,
+    "lng": 30.399983033285714,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-575",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.06363733487432,
-    "lng": 28.99683230966796,
+    "id": "gen-v2-710",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.50017591063831,
+    "lng": 43.37959009217927,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-940",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.56954759641524,
-    "lng": 31.28060969244458,
+    "id": "gen-v2-899",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.37002954162101,
+    "lng": 34.01970872670152,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-503",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.72224203968839,
-    "lng": 35.599872475407025,
+    "id": "gen-v2-494",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66993623736731,
+    "lng": 29.39974598307484,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-223",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.71201438945971,
-    "lng": 30.510095690500542,
+    "id": "gen-v2-606",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34971625183974,
+    "lng": 38.30973030510733,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-373",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.70875888738585,
-    "lng": 35.513778213158616,
-    "difficulty": 2
+    "id": "gen-v2-311",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31004935257915,
+    "lng": 26.689998734612672,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-516",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.789755693841585,
-    "lng": 30.45706253402593,
+    "id": "gen-v2-873",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.959882160329265,
+    "lng": 34.669596951544435,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-242",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.81897120676889,
-    "lng": 30.51600693889054,
-    "difficulty": 2
+    "id": "gen-v2-16",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.0420052264144,
+    "lng": 29.007381045486078,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-471",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.06615987169053,
-    "lng": 35.45434299102071,
-    "difficulty": 2
+    "id": "gen-v2-526",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.1501232841761,
+    "lng": 27.80037550515968,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-69",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.006412588961936,
-    "lng": 32.78852112877825,
+    "id": "gen-v2-597",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35006044018142,
+    "lng": 38.31003263135668,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-486",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.81766890637611,
-    "lng": 32.514509556611465,
-    "difficulty": 2
+    "id": "gen-v2-94",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.18973706664274,
+    "lng": 29.05975025130901,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-438",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.68915172691901,
-    "lng": 30.509173701658014,
-    "difficulty": 2
+    "id": "gen-v2-684",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31010884007496,
+    "lng": 40.7396502026847,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-560",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.14959070259111,
-    "lng": 28.952760998806774,
-    "difficulty": 2
+    "id": "gen-v2-576",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.58017695276784,
+    "lng": 36.17006241185215,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-650",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.50605112444169,
-    "lng": 29.95443141263056,
+    "id": "gen-v2-645",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.9101881449195,
+    "lng": 40.23012604012944,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-1035",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.630380965961244,
+    "lng": 32.330074305555684,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-725",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.51532397705908,
-    "lng": 28.45869405003739,
+    "id": "gen-v2-485",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.760084895394975,
+    "lng": 30.550216666278445,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-418",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.84040463410112,
+    "lng": 31.149909671395296,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-868",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.731754222500214,
-    "lng": 26.909026807579675,
+    "id": "gen-v2-428",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.8401550284244,
+    "lng": 31.14996745803598,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-702",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.06112007727254,
-    "lng": 40.816195379007624,
+    "id": "gen-v2-554",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73010747312383,
+    "lng": 27.21970012818225,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-141",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.82109396966837,
-    "lng": 32.85613490637329,
-    "difficulty": 1
+    "id": "gen-v2-540",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.149987726578836,
+    "lng": 27.800208860359415,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-350",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.95338525013578,
-    "lng": 30.612374615318593,
-    "difficulty": 2
+    "id": "gen-v2-610",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35026204042234,
+    "lng": 38.30975689688945,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-918",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.62072023682286,
-    "lng": 43.080793789074534,
+    "id": "gen-v2-52",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.91013470663056,
+    "lng": 32.86013687604972,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-576",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.26376658516928,
-    "lng": 29.13270355754849,
+    "id": "gen-v2-581",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57959673905452,
+    "lng": 36.9301849484851,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-672",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.3099655546664,
+    "lng": 40.73961135491166,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-675",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.7446224224519,
-    "lng": 43.42269004101446,
+    "id": "gen-v2-230",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.79999764102402,
+    "lng": 34.58042845760874,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-542",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.63522903050854,
-    "lng": 35.50911882706223,
+    "id": "gen-v2-385",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76011493230421,
+    "lng": 29.93031253855186,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-107",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.5251932603118,
-    "lng": 27.088864124375867,
-    "difficulty": 1
+    "id": "gen-v2-768",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.309711769873395,
+    "lng": 36.54982931735184,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-11",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.21751297660972,
-    "lng": 29.189800607322162,
+    "id": "gen-v2-974",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01967222383501,
+    "lng": 35.15004099558069,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-37",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.35211263360437,
-    "lng": 27.18686974054037,
+    "id": "gen-v2-847",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63,
+    "lng": 34.91,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-416",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.823149580120386,
-    "lng": 35.46066679731572,
+    "id": "gen-v2-891",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.370151757698565,
+    "lng": 34.01986727897422,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-876",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.288959432865994,
-    "lng": 39.40566329697552,
-    "difficulty": 3
+    "id": "gen-v2-31",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99117489714719,
+    "lng": 29.027118940889874,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-193",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.06217701486632,
-    "lng": 28.69076775718812,
+    "id": "gen-v2-811",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84,
+    "lng": 33.51,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-565",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.722567783671074,
-    "lng": 35.489181866627305,
-    "difficulty": 2
+    "id": "gen-v2-266",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76993763421009,
+    "lng": 29.079996414745146,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-645",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.86454528723513,
-    "lng": 36.6853662195144,
-    "difficulty": 3
+    "id": "gen-v2-307",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31,
+    "lng": 26.69,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-901",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.07735183779994,
-    "lng": 35.36087569912584,
-    "difficulty": 3
+    "id": "gen-v2-274",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03424124048902,
+    "lng": 27.429842089221584,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-253",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.92709305679068,
-    "lng": 35.215516939975664,
+    "id": "gen-v2-659",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.150126072408675,
+    "lng": 38.78961561625336,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-356",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.773814717647994,
-    "lng": 30.54936182838398,
+    "id": "gen-v2-1015",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.450117505900415,
+    "lng": 31.78976627951382,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-752",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.531519587062,
-    "lng": 34.39816010702502,
-    "difficulty": 3
+    "id": "gen-v2-451",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.75,
+    "lng": 30.53,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-442",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.14142364662749,
-    "lng": 35.298942356308274,
+    "id": "gen-v2-193",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00008550601017,
+    "lng": 39.71962342995132,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-814",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.48721053257877,
-    "lng": 26.35059297459333,
+    "id": "gen-v2-158",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.779970054992305,
+    "lng": 30.510155205536027,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-659",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.10774334611708,
-    "lng": 42.75524989046178,
-    "difficulty": 3
+    "id": "gen-v2-534",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.14987614646027,
+    "lng": 27.800052942342383,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-149",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.88520778679671,
-    "lng": 32.68647606171997,
+    "id": "gen-v2-201",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.049954910530744,
+    "lng": 37.369952375101995,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-265",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.95558741374758,
-    "lng": 35.28768962404084,
-    "difficulty": 2
+    "id": "gen-v2-468",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.749902092824854,
+    "lng": 30.53023216063286,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-152",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.35981804980883,
-    "lng": 26.969893404442963,
+    "id": "gen-v2-813",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83972632802643,
+    "lng": 33.51019936206928,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-400",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.06438138109796,
-    "lng": 29.143375619276316,
-    "difficulty": 2
+    "id": "gen-v2-486",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75984347729617,
+    "lng": 30.550394353883974,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-464",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.81654579500017,
-    "lng": 30.59799502438788,
-    "difficulty": 2
+    "id": "gen-v2-905",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17965116225345,
+    "lng": 33.219745567563415,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-385",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.724042062052064,
-    "lng": 35.61436377441539,
+    "id": "gen-v2-389",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76039794347422,
+    "lng": 29.930029526583894,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-341",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.906452305404365,
-    "lng": 32.4883387953192,
+    "id": "gen-v2-696",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.8801340142067,
+    "lng": 41.13009435630821,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-774",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.850663641445976,
-    "lng": 35.84185435676561,
+    "id": "gen-v2-500",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66995519936179,
+    "lng": 29.400150585400613,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-54",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.56539324206525,
-    "lng": 27.095474688782687,
-    "difficulty": 1
+    "id": "gen-v2-222",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.7999378799504,
+    "lng": 34.579720854708405,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-459",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.68587649207806,
-    "lng": 35.61289942391187,
+    "id": "gen-v2-247",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.719852440157105,
+    "lng": 35.48008587104353,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-696",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.916254155591396,
-    "lng": 36.16310435208836,
-    "difficulty": 3
+    "id": "gen-v2-515",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60989841764291,
+    "lng": 27.419610067059306,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-607",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.37637467984991,
-    "lng": 27.384784943839385,
-    "difficulty": 3
+    "id": "gen-v2-704",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.50002577094332,
+    "lng": 43.37963718013986,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-539",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.005046255470965,
-    "lng": 35.208145098031835,
-    "difficulty": 2
+    "id": "gen-v2-1025",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44966312601064,
+    "lng": 31.7901095606982,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-244",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.81663274324587,
-    "lng": 30.83701474339928,
-    "difficulty": 2
+    "id": "gen-v2-845",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.140299592085015,
+    "lng": 34.1601396514136,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-703",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.858560753192506,
-    "lng": 26.69189184140117,
-    "difficulty": 3
+    "id": "gen-v2-26",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991047068015554,
+    "lng": 29.02677501309122,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-541",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.77927105736708,
-    "lng": 30.73054678428237,
+    "id": "gen-v2-205",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.050356348485984,
+    "lng": 37.36975857865259,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-917",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.15119357515629,
-    "lng": 33.012216549510036,
+    "id": "gen-v2-320",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31010541865182,
+    "lng": 26.68976297211926,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-406",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.111244974595955,
-    "lng": 35.381502732727874,
-    "difficulty": 2
+    "id": "gen-v2-1046",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19970634361534,
+    "lng": 32.619692229075106,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-309",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.19376847252387,
-    "lng": 28.943194560933904,
+    "id": "gen-v2-784",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65000227980023,
+    "lng": 35.82980358556373,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-498",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.27139611265382,
-    "lng": 28.950035799090475,
+    "id": "gen-v2-983",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.02010068669029,
+    "lng": 35.15010989302782,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-480",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.940438264249664,
-    "lng": 30.797999822647476,
+    "id": "gen-v2-607",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34993582404614,
+    "lng": 38.30981823682335,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-978",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.19783316446698,
-    "lng": 40.36979003852416,
-    "difficulty": 3
+    "id": "gen-v2-386",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76021656878865,
+    "lng": 29.929835609554647,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-625",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.40199631820418,
-    "lng": 40.13366547504143,
-    "difficulty": 3
+    "id": "gen-v2-148",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77990478343544,
+    "lng": 30.509816122828745,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-965",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.64725567302386,
-    "lng": 35.239671129842186,
-    "difficulty": 3
+    "id": "gen-v2-579",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.58034041456981,
+    "lng": 36.930285479430616,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-972",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.73087758125703,
-    "lng": 26.326599437597366,
-    "difficulty": 3
+    "id": "gen-v2-615",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.66986529142169,
+    "lng": 39.22013437811249,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-414",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.30928510870248,
-    "lng": 29.10702886671499,
+    "id": "gen-v2-138",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.039571667511595,
+    "lng": 35.299971071063005,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-36",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.07756392342489,
-    "lng": 29.25115627803276,
+    "id": "gen-v2-21",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.990854199572,
+    "lng": 29.026737132464795,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-497",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.807289978343114,
-    "lng": 35.53627588860199,
+    "id": "gen-v2-511",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.61000644431973,
+    "lng": 27.42001944058262,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-57",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.430251865907884,
-    "lng": 27.212825148767298,
-    "difficulty": 1
+    "id": "gen-v2-906",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.179991073636664,
+    "lng": 33.22018057991939,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-685",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.070287965268164,
-    "lng": 42.12317339143568,
+    "id": "gen-v2-196",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 40.999946661917306,
+    "lng": 39.72042942863233,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-557",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.89422428976803,
-    "lng": 32.499255819141204,
-    "difficulty": 2
+    "id": "gen-v2-882",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.95972483525581,
+    "lng": 34.670064031639406,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-536",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.97039631301853,
-    "lng": 35.4625365882371,
-    "difficulty": 2
+    "id": "gen-v2-487",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.67,
+    "lng": 29.4,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-386",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.96828317559387,
-    "lng": 30.634750460622207,
+    "id": "gen-v2-924",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.019909093993796,
+    "lng": 40.519662864857494,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-448",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.59284019337813,
-    "lng": 35.43212948138818,
-    "difficulty": 2
+    "id": "gen-v2-599",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34985309731219,
+    "lng": 38.309932226344344,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-534",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.84975274323697,
-    "lng": 30.718468323626627,
-    "difficulty": 2
+    "id": "gen-v2-806",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.5396494481958,
+    "lng": 34.949988936043404,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-613",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67,
+    "lng": 39.22,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-423",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.74870995518838,
-    "lng": 32.528816028937364,
+    "id": "gen-v2-243",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.720004951680885,
+    "lng": 35.48025057818604,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-710",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.140024695207934,
-    "lng": 44.202853671114454,
-    "difficulty": 3
+    "id": "gen-v2-379",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76,
+    "lng": 29.93,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-860",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.74793050435922,
-    "lng": 35.08443895521846,
-    "difficulty": 3
+    "id": "gen-v2-958",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97984947904751,
+    "lng": 37.880037680392796,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-875",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.600741682783166,
-    "lng": 43.57059403625151,
+    "id": "gen-v2-522",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.610060706318556,
+    "lng": 27.420357612456968,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-883",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.72420922973339,
-    "lng": 26.638873854593218,
+    "id": "gen-v2-664",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15014135764013,
+    "lng": 38.789801836855354,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-533",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.150091105028814,
+    "lng": 27.799921673982272,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-563",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.11026696589235,
-    "lng": 35.37524701820116,
+    "id": "gen-v2-458",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74980887743057,
+    "lng": 30.530008868818694,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-454",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74996335222303,
+    "lng": 30.530442448036816,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-147",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.15472212240173,
-    "lng": 28.825551083770364,
+    "id": "gen-v2-271",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.034,
+    "lng": 27.43,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-370",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.80329180796191,
-    "lng": 30.6050936844763,
+    "id": "gen-v2-313",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31012738851816,
+    "lng": 26.690189473822354,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-855",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.005361358835884,
-    "lng": 34.63572528598479,
-    "difficulty": 3
+    "id": "gen-v2-614",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.670090485390425,
+    "lng": 39.21981360713711,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-869",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.960133868815156,
+    "lng": 34.67024581168535,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-212",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.99184028249997,
-    "lng": 35.25716391400905,
+    "id": "gen-v2-80",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.887377010128894,
+    "lng": 30.70685102809442,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-642",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.05468331589384,
-    "lng": 35.082032128274065,
+    "id": "gen-v2-1023",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44998083992823,
+    "lng": 31.7901322228849,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-909",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.78369395384397,
-    "lng": 26.828541169095793,
+    "id": "gen-v2-810",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.5396160220518,
+    "lng": 34.9498992359347,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-348",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.98094581851103,
-    "lng": 30.791703903030335,
+    "id": "gen-v2-459",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.749853813608844,
+    "lng": 30.5297584173614,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-911",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.80615470656243,
-    "lng": 42.46398306408583,
+    "id": "gen-v2-180",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32961555854368,
+    "lng": 36.27002932192218,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-458",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.750984263972356,
-    "lng": 30.519493300231566,
+    "id": "gen-v2-660",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14992454615151,
+    "lng": 38.78996579509337,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-17",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.27787187304187,
-    "lng": 27.054683412937422,
+    "id": "gen-v2-109",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89,
+    "lng": 32.48,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-967",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.95603597190012,
-    "lng": 26.871932346964385,
+    "id": "gen-v2-792",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.649950036714365,
+    "lng": 35.83039266828951,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-376",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.688930871721716,
-    "lng": 35.55087011287196,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-333",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.95576554392507,
-    "lng": 35.42861768740049,
+    "id": "gen-v2-568",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.58017792249386,
+    "lng": 36.169786856495364,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-838",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.211482127662826,
-    "lng": 41.575271919043715,
+    "id": "gen-v2-414",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.6499359620291,
+    "lng": 29.27038716330591,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-968",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.69619930486465,
-    "lng": 27.56829267243735,
-    "difficulty": 3
-  },
-  {
-    "id": "gen-lvl1-64",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.05985806445746,
-    "lng": 32.92734209739758,
+    "id": "gen-v2-470",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75976011223842,
+    "lng": 30.550144804799864,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-307",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.776794634033344,
-    "lng": 35.38801442655792,
+    "id": "gen-v2-586",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57998007083291,
+    "lng": 36.930087783585876,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-849",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.30597478295743,
-    "lng": 34.28902881456095,
-    "difficulty": 3
+    "id": "gen-v2-694",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.8800119761777,
+    "lng": 41.1302201250483,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-272",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.1124828343095,
-    "lng": 29.076083480526762,
+    "id": "gen-v2-715",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.49997082883347,
+    "lng": 43.38031889503229,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-68",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.94976579917634,
-    "lng": 29.144449413308383,
-    "difficulty": 1
+    "id": "gen-v2-474",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75997125267737,
+    "lng": 30.550028625033086,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-681",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.43269331114911,
-    "lng": 36.939687381384616,
+    "id": "gen-v2-341",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15006697767542,
+    "lng": 26.410162918640843,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl1-39",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.51922772366803,
-    "lng": 27.318391680980376,
-    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-407",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.08015232313894,
-    "lng": 29.17590573485233,
+    "id": "gen-v2-152",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.78039899658457,
+    "lng": 30.509991962319646,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-117",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.83653024523256,
-    "lng": 29.18229013550098,
+    "id": "gen-v2-705",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.500031211040074,
+    "lng": 43.38043110207207,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-662",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.59944255066397,
-    "lng": 33.61244903224788,
-    "difficulty": 3
+    "id": "gen-v2-529",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.14979309418198,
+    "lng": 27.79997177748715,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-597",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.8095729412623,
-    "lng": 30.56559657209706,
+    "id": "gen-v2-890",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.370071252598,
+    "lng": 34.01966374379947,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-466",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.846452216109896,
-    "lng": 32.62956464236397,
-    "difficulty": 2
+    "id": "gen-v2-631",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.91,
+    "lng": 40.23,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-397",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.856855886040776,
-    "lng": 30.479331349757913,
+    "id": "gen-v2-262",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76999337611601,
+    "lng": 29.079667484204027,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-772",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.39411508192568,
-    "lng": 28.307449489627345,
+    "id": "gen-v2-1005",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37029713899746,
+    "lng": 33.770181372608874,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-450",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.667252967326846,
-    "lng": 35.58535598391503,
-    "difficulty": 2
+    "id": "gen-v2-973",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.02,
+    "lng": 35.15,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-488",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.93008689424116,
-    "lng": 35.21003949181925,
-    "difficulty": 2
+    "id": "gen-v2-683",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31006619380847,
+    "lng": 40.73983989129449,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-101",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.30867295257337,
-    "lng": 27.042578578910998,
+    "id": "gen-v2-59",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41891701979515,
+    "lng": 27.12787970384104,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-943",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.21591805805833,
-    "lng": 31.424940775851454,
+    "id": "gen-v2-360",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.66969621170578,
+    "lng": 26.55006654148839,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-368",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74023557426985,
-    "lng": 30.58857375885811,
+    "id": "gen-v2-931",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.02010180551994,
+    "lng": 40.52027290158848,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-327",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.149913141884326,
+    "lng": 26.41009814148803,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-213",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.83031299757801,
-    "lng": 32.38172691072568,
+    "id": "gen-v2-604",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34977219026622,
+    "lng": 38.309939734322334,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-906",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.96371485418922,
-    "lng": 29.568378473167392,
-    "difficulty": 3
+    "id": "gen-v2-85",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88678059317911,
+    "lng": 30.706949469979893,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-808",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.07650534396942,
-    "lng": 31.216144686496186,
+    "id": "gen-v2-503",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66982279836011,
+    "lng": 29.399999726125095,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-793",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.72816984995919,
-    "lng": 32.09992050378629,
+    "id": "gen-v2-738",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.900332579379906,
+    "lng": 41.27025255421049,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-334",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.82972226681165,
-    "lng": 30.577150366144657,
+    "id": "gen-v2-895",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36972197586033,
+    "lng": 34.020068612840674,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-854",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.10243930139321,
-    "lng": 36.08423218690776,
-    "difficulty": 3
+    "id": "gen-v2-498",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.6701276150875,
+    "lng": 29.400355330543732,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-1",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.93650632713632,
-    "lng": 32.94942628219583,
-    "difficulty": 1
+    "id": "gen-v2-65",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41914049343283,
+    "lng": 27.12832288097915,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-561",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.87201270266984,
-    "lng": 30.493588088177546,
+    "id": "gen-v2-1018",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45000664438553,
+    "lng": 31.79013988625952,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-137",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.136208591004866,
-    "lng": 28.905434733546418,
+    "id": "gen-v2-653",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.149827514582064,
+    "lng": 38.78973260481644,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-546",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.94752761514531,
-    "lng": 32.50353836401964,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-775",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.92516773816636,
-    "lng": 33.95357150027855,
-    "difficulty": 3
+    "id": "gen-v2-706",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.4999947886397,
+    "lng": 43.37983157748213,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-28",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.16644027672884,
-    "lng": 29.051992529194084,
+    "id": "gen-v2-649",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15,
+    "lng": 38.79,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-277",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.84270399621955,
-    "lng": 30.480620636488048,
+    "id": "gen-v2-317",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.30986903908693,
+    "lng": 26.689820733455914,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-684",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.08190219616766,
-    "lng": 32.78362777478983,
+    "id": "gen-v2-122",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89034045344487,
+    "lng": 32.4802202786585,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-544",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.773036011207445,
-    "lng": 35.54096025841865,
+    "id": "gen-v2-876",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.960016503699286,
+    "lng": 34.669869753352216,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-643",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.78370096875688,
-    "lng": 42.396801533878076,
-    "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-456",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74470940642559,
-    "lng": 30.493474320855388,
-    "difficulty": 2
+    "id": "gen-v2-416",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.839585595834656,
+    "lng": 31.15010785437679,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-320",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.13521343350848,
-    "lng": 29.191798192040576,
-    "difficulty": 2
+    "id": "gen-v2-40",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.91002748547417,
+    "lng": 32.859563877988826,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-695",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.11581028109404,
-    "lng": 38.16741691782982,
-    "difficulty": 3
+    "id": "gen-v2-796",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.5399726309656,
+    "lng": 34.950233134839436,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-279",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 38.00857087971191,
-    "lng": 32.440323033863976,
+    "id": "gen-v2-456",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.749830283545705,
+    "lng": 30.530147526293174,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-364",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.87272424910073,
-    "lng": 32.530069183132674,
+    "id": "gen-v2-350",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.66995671045574,
+    "lng": 26.550276682434262,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-721",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.31225988669693,
-    "lng": 35.92297646794645,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-66",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.093589115696,
-    "lng": 29.10581342057471,
+    "id": "gen-v2-329",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15018492039912,
+    "lng": 26.410203521462307,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-18",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.86004871461648,
-    "lng": 29.065445253289706,
-    "difficulty": 1
+    "id": "gen-v2-173",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.33006813545807,
+    "lng": 36.270398553525155,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-902",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.565308156547374,
-    "lng": 36.7402402699063,
-    "difficulty": 3
+    "id": "gen-v2-695",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.880344360527296,
+    "lng": 41.13012971775573,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-712",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.00772399160772,
-    "lng": 36.49475008092357,
+    "id": "gen-v2-394",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.760206902454584,
+    "lng": 29.929613306318217,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-382",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.94215116703175,
-    "lng": 32.47586750287765,
+    "id": "gen-v2-372",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.77990973575764,
+    "lng": 30.400423223485284,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-387",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.14869233568481,
-    "lng": 35.31493244030105,
+    "id": "gen-v2-889",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36957118666243,
+    "lng": 34.020002098659894,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-47",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.26509738948366,
-    "lng": 27.250216010922497,
-    "difficulty": 1
+    "id": "gen-v2-945",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.909739678391475,
+    "lng": 38.38031497191487,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-245",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.96688598620005,
-    "lng": 32.55798287058685,
+    "id": "gen-v2-192",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.000107066485114,
+    "lng": 39.71983538785391,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-116",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.840478046918854,
-    "lng": 32.961187168485864,
-    "difficulty": 1
+    "id": "gen-v2-666",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15025499793376,
+    "lng": 38.78974934144773,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-227",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.746207657710244,
-    "lng": 30.560256744464052,
+    "id": "gen-v2-29",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99138342635746,
+    "lng": 29.02717772219707,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-127",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.99227948570161,
-    "lng": 33.035444398255024,
-    "difficulty": 1
-  },
-  {
-    "id": "gen-lvl3-680",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.330142712855775,
-    "lng": 42.87316682851507,
+    "id": "gen-v2-896",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36976165436026,
+    "lng": 34.019828855175945,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-295",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.086559939019594,
-    "lng": 35.441028872489696,
+    "id": "gen-v2-301",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.8600003852611,
+    "lng": 27.259618240615133,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-737",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.900237880373254,
+    "lng": 41.27017460762292,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-44",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.23961641559522,
-    "lng": 28.98391943060058,
+    "id": "gen-v2-491",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.6697385466857,
+    "lng": 29.400288325151788,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-738",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.880167177592384,
-    "lng": 32.52545197293577,
-    "difficulty": 3
+    "id": "gen-v2-764",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.31017579521275,
+    "lng": 36.5501000870888,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-59",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.89150405666794,
-    "lng": 32.94417441049227,
+    "id": "gen-v2-41",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.9103160725733,
+    "lng": 32.859708618743284,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-161",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.22146252064818,
-    "lng": 28.900556261088962,
+    "id": "gen-v2-200",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.049957152798754,
+    "lng": 37.36970526114155,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-861",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.44195881482883,
-    "lng": 35.28759883958626,
-    "difficulty": 3
+    "id": "gen-v2-276",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03423198394941,
+    "lng": 27.43032001920901,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-639",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.33950322492643,
-    "lng": 40.05976917381392,
-    "difficulty": 3
+    "id": "gen-v2-912",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17996936934606,
+    "lng": 33.22002124186832,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-60",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.44957883463309,
-    "lng": 26.971473635995977,
+    "id": "gen-v2-343",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67,
+    "lng": 26.55,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-533",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.109425305965374,
-    "lng": 28.980245020658938,
+    "id": "gen-v2-48",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.909795426966426,
+    "lng": 32.85965746402692,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-821",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.32877332512508,
-    "lng": 41.472723284592035,
-    "difficulty": 3
-  },
-  {
-    "id": "gen-lvl3-844",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.9401450204809,
-    "lng": 27.560390681652546,
-    "difficulty": 3
+    "id": "gen-v2-236",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.720230735361646,
+    "lng": 35.48035274068215,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-9",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.11134815335723,
-    "lng": 32.82508083997735,
+    "id": "gen-v2-365",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.77999504396104,
+    "lng": 30.400031094370654,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-573",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.00825937624905,
-    "lng": 30.77862791039154,
+    "id": "gen-v2-117",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.8899178540881,
+    "lng": 32.47963382636508,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-10",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.93149582625902,
-    "lng": 32.81690547610886,
+    "id": "gen-v2-453",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74990119791389,
+    "lng": 30.530155615972248,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-129",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.98539207906144,
-    "lng": 28.98965523747293,
-    "difficulty": 1
+    "id": "gen-v2-510",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.610141298596965,
+    "lng": 27.42022673414757,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-930",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.54724143174711,
-    "lng": 30.490545769052915,
-    "difficulty": 3
+    "id": "gen-v2-477",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75981974244416,
+    "lng": 30.550346929635424,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-291",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.8759004345283,
-    "lng": 32.61921006240938,
+    "id": "gen-v2-766",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.310004675864725,
+    "lng": 36.54977087539629,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-809",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0929796046068,
-    "lng": 32.19666861893404,
+    "id": "gen-v2-446",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.730059789435785,
+    "lng": 31.600324390074753,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-156",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.77450840787377,
-    "lng": 28.96973442249191,
-    "difficulty": 1
+    "id": "gen-v2-194",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.000272252367054,
+    "lng": 39.72007980392358,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-694",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.90754046199667,
-    "lng": 32.33810391932863,
-    "difficulty": 3
+    "id": "gen-v2-528",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.15001972559578,
+    "lng": 27.80000131595958,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-252",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.903040275247065,
-    "lng": 35.30386938344073,
+    "id": "gen-v2-709",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.50028507944977,
+    "lng": 43.380193187820026,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-592",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.10201981152575,
-    "lng": 35.334300605926444,
+    "id": "gen-v2-319",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.3104071009587,
+    "lng": 26.689877940599988,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-281",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.043687541057494,
-    "lng": 29.052146599909562,
+    "id": "gen-v2-318",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.30989243645078,
+    "lng": 26.689881247366596,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-927",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.8809572917244,
-    "lng": 34.35298713155032,
+    "id": "gen-v2-591",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57998362751302,
+    "lng": 36.929959928409595,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-251",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.832397850291805,
-    "lng": 30.57925837598395,
+    "id": "gen-v2-426",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.840177583231224,
+    "lng": 31.150408883383026,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-61",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.04044667528848,
-    "lng": 28.8751956068675,
+    "id": "gen-v2-239",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72014297652249,
+    "lng": 35.48011372990922,
     "difficulty": 1
+  },
+  {
+    "id": "gen-v2-807",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.540138916825974,
+    "lng": 34.95022803409875,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-175",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.9687046198601,
-    "lng": 32.690881159083375,
+    "id": "gen-v2-3",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04194435061977,
+    "lng": 29.007378284078545,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-269",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.88517366627687,
-    "lng": 35.379670692032285,
+    "id": "gen-v2-496",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.67041569630518,
+    "lng": 29.399991737762992,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-200",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.80635971783541,
-    "lng": 29.054191809523843,
-    "difficulty": 1
+    "id": "gen-v2-395",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76023237593659,
+    "lng": 29.93035018216751,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-173",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.91181399765835,
-    "lng": 32.873823678632306,
+    "id": "gen-v2-23",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99087814239707,
+    "lng": 29.026602179598893,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-429",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.70434421381266,
-    "lng": 30.56942748807595,
-    "difficulty": 2
+    "id": "gen-v2-935",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.020150683769344,
+    "lng": 40.51965944935705,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-955",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.73002868594986,
-    "lng": 28.31223551851189,
+    "id": "gen-v2-644",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.91002801351129,
+    "lng": 40.229646302401314,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-800",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.43833894348463,
-    "lng": 33.94377355920819,
+    "id": "gen-v2-429",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.840025751188186,
+    "lng": 31.150037192856654,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-495",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.153166696723595,
-    "lng": 29.122981530176226,
-    "difficulty": 2
+    "id": "gen-v2-338",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15031778163288,
+    "lng": 26.410034274791833,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-531",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.906035998024514,
-    "lng": 35.2825306656565,
+    "id": "gen-v2-463",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.75020724418431,
+    "lng": 30.53024860963251,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-131",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.08425849972357,
-    "lng": 28.875378872035036,
+    "id": "gen-v2-147",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.779890856800485,
+    "lng": 30.509900024502524,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl3-718",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0283203330447,
-    "lng": 32.02804972811844,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-93",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.077997421009876,
-    "lng": 29.174446971714026,
+    "id": "gen-v2-635",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90988498825941,
+    "lng": 40.230029067718604,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-867",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.24261711067911,
-    "lng": 37.03807300034627,
-    "difficulty": 3
+    "id": "gen-v2-228",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80017922693004,
+    "lng": 34.580157795815765,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-501",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.827790203234535,
-    "lng": 30.846295932572154,
-    "difficulty": 2
+    "id": "gen-v2-740",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.7500377927347,
+    "lng": 37.00983321034056,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-197",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.90139480198362,
-    "lng": 29.163035059079096,
+    "id": "gen-v2-505",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.61,
+    "lng": 27.42,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-891",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.82042184751915,
-    "lng": 34.30758816555343,
-    "difficulty": 3
+    "id": "gen-v2-857",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62993900909511,
+    "lng": 34.9096566638582,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-915",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.54664979324117,
-    "lng": 39.20597302951407,
+    "id": "gen-v2-215",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.0500750492855,
+    "lng": 37.369651436407814,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-273",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.84890079955115,
-    "lng": 32.34258555338393,
+    "id": "gen-v2-499",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.670047196334316,
+    "lng": 29.400284820190535,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-679",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.24838919790042,
-    "lng": 28.222004542613313,
+    "id": "gen-v2-251",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72032572267728,
+    "lng": 35.480105760754476,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-357",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.80414092958883,
-    "lng": 32.489200421004924,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-130",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.072067205992504,
-    "lng": 32.78907845585713,
+    "id": "gen-v2-1012",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45010654494139,
+    "lng": 31.78963313782435,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-415",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.72964962224566,
-    "lng": 30.437707314871542,
+    "id": "gen-v2-749",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.74958224100962,
+    "lng": 37.00998437788321,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-203",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.762683256075285,
-    "lng": 35.53952318370489,
+    "id": "gen-v2-479",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.759892346737544,
+    "lng": 30.549866064092416,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-863",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.93776044632867,
-    "lng": 43.33215467642986,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-231",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.894329835702514,
-    "lng": 35.41430141377014,
+    "id": "gen-v2-79",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88728791273365,
+    "lng": 30.706709277808795,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-325",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.86655625635375,
-    "lng": 32.54711633466903,
+    "id": "gen-v2-962",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98012756390461,
+    "lng": 37.87972925617146,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-26",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.90538765482284,
-    "lng": 29.22364548786598,
-    "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-445",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.81805956762244,
-    "lng": 30.608918471335674,
-    "difficulty": 2
+    "id": "gen-v2-773",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30970286422888,
+    "lng": 36.55014901234706,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-316",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.82714815417397,
-    "lng": 35.52956564223662,
+    "id": "gen-v2-816",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.840037094781245,
+    "lng": 33.510212265572235,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-803",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.39662638888817,
-    "lng": 34.74705803525802,
+    "id": "gen-v2-482",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.76022955192298,
+    "lng": 30.549706094490364,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-931",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.80311335842645,
-    "lng": 38.53487794609568,
+    "id": "gen-v2-378",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78018626254868,
+    "lng": 30.39970926537417,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-877",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.03154400960938,
-    "lng": 36.96233334734741,
-    "difficulty": 3
+    "id": "gen-v2-985",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01972893227749,
+    "lng": 35.14996840979292,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-820",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.34202561083422,
-    "lng": 40.9080343492073,
-    "difficulty": 3
+    "id": "gen-v2-748",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.7500989355251,
+    "lng": 37.01020284392217,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-455",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.99297054337902,
-    "lng": 35.20371851200491,
+    "id": "gen-v2-402",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65011531432826,
+    "lng": 29.269609697843357,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-84",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.732924205518195,
-    "lng": 32.816619151347346,
+    "id": "gen-v2-253",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77,
+    "lng": 29.08,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-165",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.06221952491934,
-    "lng": 32.99495828034172,
+    "id": "gen-v2-866",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96012454403317,
+    "lng": 34.6702048433871,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-473",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.772534184201746,
-    "lng": 35.450701778797786,
+    "id": "gen-v2-67",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.418736958349704,
+    "lng": 27.12781697597603,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-831",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.111244552341326,
-    "lng": 34.0992268743418,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-787",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.53252041562358,
-    "lng": 27.709982353990537,
-    "difficulty": 3
+    "id": "gen-v2-546",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.72983771738406,
+    "lng": 27.22021443135529,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-724",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.7494451615233,
-    "lng": 35.05879572526482,
-    "difficulty": 3
+    "id": "gen-v2-956",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97981535548869,
+    "lng": 37.8796288772148,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-113",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.942926850105216,
-    "lng": 32.81252197004785,
+    "id": "gen-v2-310",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.310063010677766,
+    "lng": 26.689855302911813,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-797",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.24215689022786,
-    "lng": 42.403534277161086,
+    "id": "gen-v2-756",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.75021331343883,
+    "lng": 37.010320484874576,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-440",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74558845808446,
-    "lng": 30.572572233087083,
+    "id": "gen-v2-99",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19006379581079,
+    "lng": 29.060396904981886,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-218",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.91509041541942,
-    "lng": 32.52082351333564,
-    "difficulty": 2
-  },
-  {
-    "id": "gen-lvl2-338",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.84507527429147,
-    "lng": 30.72148135877384,
-    "difficulty": 2
+    "id": "gen-v2-74",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.887281142426374,
+    "lng": 30.707170982908547,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-505",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.82192645907908,
-    "lng": 30.805898236394405,
+    "id": "gen-v2-82",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88719993518812,
+    "lng": 30.70685508114793,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-813",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.70039082458855,
-    "lng": 38.38243382626956,
+    "id": "gen-v2-736",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.900264065122784,
+    "lng": 41.27029846212853,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-6",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.720131449590994,
-    "lng": 29.00441213002773,
-    "difficulty": 1
+    "id": "gen-v2-300",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86010050599403,
+    "lng": 27.26020882561302,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-443",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.73655069952517,
-    "lng": 30.495723789313924,
-    "difficulty": 2
+    "id": "gen-v2-176",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32980776608245,
+    "lng": 36.27028617963032,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-441",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.810275569454994,
-    "lng": 30.835555902287137,
+    "id": "gen-v2-961",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.980181128122844,
+    "lng": 37.88031349446256,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-837",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.951759192327955,
-    "lng": 26.370870015958303,
+    "id": "gen-v2-878",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.960352289304815,
+    "lng": 34.669870455331136,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-705",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.544706633684875,
-    "lng": 41.265845390285804,
+    "id": "gen-v2-702",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.88031439413497,
+    "lng": 41.12983551006028,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-21",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.02778799744526,
-    "lng": 32.74491361066209,
+    "id": "gen-v2-992",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.369939146010516,
+    "lng": 33.769675649634756,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-869",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.66204075397177,
-    "lng": 34.657252070012156,
-    "difficulty": 3
+    "id": "gen-v2-722",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.899709162025175,
+    "lng": 41.27000455470149,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-671",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.80224630208819,
-    "lng": 42.97180184866018,
-    "difficulty": 3
+    "id": "gen-v2-747",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.749723856381145,
+    "lng": 37.00967039488409,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-810",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.40419846625407,
-    "lng": 38.76575850176648,
-    "difficulty": 3
+    "id": "gen-v2-821",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84016458961087,
+    "lng": 33.510070425091854,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-319",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.04489890346102,
-    "lng": 35.370778053260366,
+    "id": "gen-v2-1001",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37018315904992,
+    "lng": 33.770238743560554,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-960",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.339180398639705,
-    "lng": 40.30825645081743,
-    "difficulty": 3
+    "id": "gen-v2-887",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.37042932171747,
+    "lng": 34.02006956208391,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-432",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.944498442734,
-    "lng": 32.56840920141989,
+    "id": "gen-v2-566",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.5799750818892,
+    "lng": 36.17040377834851,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-162",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.274604509099746,
-    "lng": 29.022632546109715,
-    "difficulty": 1
+    "id": "gen-v2-969",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.97966465099278,
+    "lng": 37.87972410028496,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-361",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.80387304612467,
-    "lng": 30.538915408199916,
+    "id": "gen-v2-584",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57977320964413,
+    "lng": 36.93024691824726,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-284",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.118922425556896,
-    "lng": 29.129994977200948,
+    "id": "gen-v2-998",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.369922174939525,
+    "lng": 33.77020673126982,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-984",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.184594567335026,
-    "lng": 26.183474732197823,
-    "difficulty": 3
+    "id": "gen-v2-1033",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.629574971538005,
+    "lng": 32.329871983045756,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-646",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.18445421861487,
-    "lng": 32.83887135953681,
+    "id": "gen-v2-826",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84005923035287,
+    "lng": 33.509647525807885,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-969",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.66244334485782,
-    "lng": 33.687525037892,
-    "difficulty": 3
+    "id": "gen-v2-1003",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36974342602853,
+    "lng": 33.76989339724894,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-42",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.54670878974567,
-    "lng": 27.28889936230534,
-    "difficulty": 1
+    "id": "gen-v2-953",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91036053061792,
+    "lng": 38.380015638956664,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-29",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.327685628145126,
-    "lng": 27.235772562162698,
+    "id": "gen-v2-166",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.330354675214075,
+    "lng": 36.27011976302767,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-958",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.51659346345321,
-    "lng": 28.770582286834422,
-    "difficulty": 3
+    "id": "gen-v2-433",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73,
+    "lng": 31.6,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-465",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.01011926679534,
-    "lng": 30.77531892903945,
+    "id": "gen-v2-295",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.85985387723802,
+    "lng": 27.259916803353104,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-336",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.75437118614691,
-    "lng": 35.4356492363525,
-    "difficulty": 2
+    "id": "gen-v2-778",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64997828386972,
+    "lng": 35.82985305867901,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-103",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.80293040338432,
-    "lng": 32.91135793722253,
+    "id": "gen-v2-868",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96008333607229,
+    "lng": 34.6697894751342,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-345",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.12459006687582,
-    "lng": 28.98295802881844,
+    "id": "gen-v2-315",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.309573423837534,
+    "lng": 26.69013126938187,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-634",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.270838282622314,
-    "lng": 44.235980854259,
-    "difficulty": 3
+    "id": "gen-v2-452",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.749689781158445,
+    "lng": 30.53009445384369,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-383",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.89396602048017,
-    "lng": 32.462231052117964,
+    "id": "gen-v2-841",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13987480477464,
+    "lng": 34.16034925262391,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-62",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.389571986051685,
-    "lng": 27.261791035112648,
+    "id": "gen-v2-4",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04226708449587,
+    "lng": 29.00738604654273,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-595",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.7943775412175,
-    "lng": 30.59343676297547,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-535",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.798871235657316,
-    "lng": 30.6098639015195,
+    "id": "gen-v2-908",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17994478135324,
+    "lng": 33.220296967741575,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-405",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.76937940357924,
-    "lng": 30.58969535606139,
+    "id": "gen-v2-261",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77014064513436,
+    "lng": 29.07974872083086,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-796",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.33997460627637,
-    "lng": 42.439475386806805,
-    "difficulty": 3
+    "id": "gen-v2-55",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.419,
+    "lng": 27.128,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-829",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.276788759043086,
-    "lng": 26.05898272793546,
+    "id": "gen-v2-755",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.750040622499625,
+    "lng": 37.01037443768519,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-344",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.80215169838693,
-    "lng": 30.614945256037217,
+    "id": "gen-v2-139",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.040382034578585,
+    "lng": 35.29983563206337,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-124",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.958476262160936,
-    "lng": 32.87110491812543,
-    "difficulty": 1
+    "id": "gen-v2-450",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73016723924385,
+    "lng": 31.599961681744947,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-24",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.86785674122328,
-    "lng": 29.14825253783471,
-    "difficulty": 1
+    "id": "gen-v2-423",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.83959526958464,
+    "lng": 31.149825999804744,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-27",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.117645826999286,
-    "lng": 32.828409908847604,
-    "difficulty": 1
+    "id": "gen-v2-530",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.1496833572001,
+    "lng": 27.799922198352846,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-559",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.993263860579674,
-    "lng": 35.28725836867446,
+    "id": "gen-v2-926",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.020074251421974,
+    "lng": 40.52010997427927,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-323",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.824256619584936,
-    "lng": 30.462316433086862,
+    "id": "gen-v2-893",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36994124168141,
+    "lng": 34.01982159417964,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-779",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.25123566238189,
-    "lng": 44.166853792876424,
-    "difficulty": 3
+    "id": "gen-v2-858",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.630428446461224,
+    "lng": 34.90999694090982,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-871",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.855746812148794,
-    "lng": 43.34099490429772,
-    "difficulty": 3
+    "id": "gen-v2-488",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.670191571073765,
+    "lng": 29.400195171717687,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-764",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.030700545256515,
-    "lng": 32.01355853528975,
-    "difficulty": 3
+    "id": "gen-v2-729",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.90018555918745,
+    "lng": 41.269756807139935,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-786",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.157214269344934,
-    "lng": 38.00450534071258,
+    "id": "gen-v2-324",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.30993582352187,
+    "lng": 26.6902194551444,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-959",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.63008457539878,
-    "lng": 38.14463324985751,
-    "difficulty": 3
+    "id": "gen-v2-506",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60965980290964,
+    "lng": 27.419920771257946,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-404",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.655381008363406,
-    "lng": 35.423368218900414,
-    "difficulty": 2
+    "id": "gen-v2-72",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.418588134705935,
+    "lng": 27.128071692734157,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-402",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.217367950103615,
-    "lng": 29.090077935685443,
+    "id": "gen-v2-1000",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.3699227588738,
+    "lng": 33.77014523527565,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-689",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.96846839042487,
-    "lng": 26.649244462085452,
-    "difficulty": 3
+    "id": "gen-v2-779",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64990117004578,
+    "lng": 35.829789577378904,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-150",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.51184411832594,
-    "lng": 27.04917259742077,
+    "id": "gen-v2-829",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.14,
+    "lng": 34.16,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-933",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.85988126166834,
-    "lng": 44.33933525952173,
+    "id": "gen-v2-285",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.034352061344116,
+    "lng": 27.429904563715098,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-72",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.938729957823256,
-    "lng": 32.98856942036695,
+    "id": "gen-v2-563",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.579749353262905,
+    "lng": 36.169790129653286,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-198",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.15264110563385,
-    "lng": 29.237468570957567,
+    "id": "gen-v2-128",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.0397326086686,
+    "lng": 35.30012418611461,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-1000",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.415903056231244,
-    "lng": 32.91291262589656,
+    "id": "gen-v2-646",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.91003288297831,
+    "lng": 40.22976827896613,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-303",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.98359317845077,
-    "lng": 30.614561433239906,
+    "id": "gen-v2-624",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.66986654589747,
+    "lng": 39.22004734311877,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-179",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.92656279798375,
-    "lng": 29.140546829394335,
-    "difficulty": 1
+    "id": "gen-v2-302",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.85986766162304,
+    "lng": 27.26025620412247,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-329",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.8356380449303,
-    "lng": 30.749975643493407,
+    "id": "gen-v2-449",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.7296825084131,
+    "lng": 31.600155060390257,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-11",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04222348603125,
+    "lng": 29.007120134260617,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-288",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.88100438469503,
-    "lng": 35.26797776918592,
+    "id": "gen-v2-409",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.64974521327029,
+    "lng": 29.270206239113307,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-45",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.591474601410034,
-    "lng": 27.145580659083947,
+    "id": "gen-v2-741",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.75017805788756,
+    "lng": 37.010411511994256,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-549",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.701825284055914,
-    "lng": 35.336304225251205,
-    "difficulty": 2
+    "id": "gen-v2-472",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75974172648862,
+    "lng": 30.549975993859988,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-20",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.26855879246661,
-    "lng": 27.168919635125512,
+    "id": "gen-v2-562",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.5799867162474,
+    "lng": 36.17009837745975,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-798",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.01241064403091,
-    "lng": 32.11523639765089,
-    "difficulty": 3
+    "id": "gen-v2-565",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57969364529578,
+    "lng": 36.169764063163065,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-96",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.877849468680814,
-    "lng": 32.98343054379675,
-    "difficulty": 1
+    "id": "gen-v2-570",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.58043267105928,
+    "lng": 36.17005913158974,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-287",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.92587638945106,
-    "lng": 30.736817938950303,
+    "id": "gen-v2-875",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96022001559303,
+    "lng": 34.670174789851714,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-71",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.794697278101104,
-    "lng": 32.936382289884925,
-    "difficulty": 1
+    "id": "gen-v2-532",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.1501247621753,
+    "lng": 27.799865995056447,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-601",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.80613077406053,
-    "lng": 41.86977694228586,
+    "id": "gen-v2-123",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89033437220965,
+    "lng": 32.47991248365177,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-260",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.26576951434579,
-    "lng": 28.999676913210585,
+    "id": "gen-v2-280",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03372706901398,
+    "lng": 27.430078659054356,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-649",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.96850314405548,
-    "lng": 44.273310151295505,
+    "id": "gen-v2-681",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31018842248185,
+    "lng": 40.73966722708837,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-224",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.81470087735252,
-    "lng": 32.42902299049118,
+    "id": "gen-v2-81",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88708338854204,
+    "lng": 30.707313767348516,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-159",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.017318869688125,
-    "lng": 32.945126885832806,
-    "difficulty": 1
+    "id": "gen-v2-357",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67022198024338,
+    "lng": 26.550077423275074,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-593",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.94119887699713,
-    "lng": 30.762158491239248,
-    "difficulty": 2
+    "id": "gen-v2-915",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.180089693391686,
+    "lng": 33.220203363394695,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-599",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.922454529756514,
-    "lng": 35.4409257937561,
+    "id": "gen-v2-186",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00017740185074,
+    "lng": 39.72024049653514,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-934",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.721036154364604,
-    "lng": 28.355135707094508,
-    "difficulty": 3
+    "id": "gen-v2-714",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.49967405336363,
+    "lng": 43.37991152538539,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-732",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.5311414578634,
-    "lng": 29.128160735693847,
-    "difficulty": 3
+    "id": "gen-v2-331",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14969919239667,
+    "lng": 26.409748257498322,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-736",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.62408851072625,
-    "lng": 33.04290281874439,
-    "difficulty": 3
+    "id": "gen-v2-44",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.909684458373604,
+    "lng": 32.859962982120294,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-870",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.58530794917044,
-    "lng": 37.21280451613457,
+    "id": "gen-v2-1026",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44980077942149,
+    "lng": 31.78993189508557,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-158",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.95379826443762,
-    "lng": 32.9790953323496,
+    "id": "gen-v2-776",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64983670309367,
+    "lng": 35.82971311225444,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-756",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.186728411979885,
-    "lng": 29.736094965237424,
-    "difficulty": 3
+    "id": "gen-v2-1031",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.62999778294124,
+    "lng": 32.330193183061766,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-574",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.280485783474134,
-    "lng": 29.166989984880534,
+    "id": "gen-v2-225",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.799937387823455,
+    "lng": 34.58011937345749,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-210",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.05094114051278,
-    "lng": 35.32669113986899,
+    "id": "gen-v2-679",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.30958853787965,
+    "lng": 40.740147287374654,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-157",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.53630936356624,
-    "lng": 27.11143420502559,
+    "id": "gen-v2-761",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30995271105785,
+    "lng": 36.5502156713469,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-872",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.58677737179142,
-    "lng": 28.076353005096923,
-    "difficulty": 3
+    "id": "gen-v2-157",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.780211904353365,
+    "lng": 30.510164035434343,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-513",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.6095508936704,
+    "lng": 27.41998186075629,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-32",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.817497101259306,
-    "lng": 28.905560834971034,
+    "id": "gen-v2-220",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.800004199326516,
+    "lng": 34.58014194188828,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-833",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.09560725271153,
-    "lng": 30.669044285224068,
+    "id": "gen-v2-1061",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20030317736304,
+    "lng": 32.6201643314128,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-136",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.89036238640564,
-    "lng": 32.82992253489812,
+    "id": "gen-v2-207",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.049792519269275,
+    "lng": 37.36965254131673,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-361",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78,
+    "lng": 30.4,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-248",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.94873765095346,
-    "lng": 32.561358150652794,
+    "id": "gen-v2-550",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.730052584923534,
+    "lng": 27.220218278566588,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-543",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.854350186038616,
-    "lng": 30.487174325203902,
-    "difficulty": 2
+    "id": "gen-v2-165",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32993380896448,
+    "lng": 36.27037625794286,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-711",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.99398827656816,
-    "lng": 27.610196512820806,
-    "difficulty": 3
+    "id": "gen-v2-312",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31000316915989,
+    "lng": 26.689714999251503,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-431",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.658842612464525,
-    "lng": 35.41449540853598,
+    "id": "gen-v2-460",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.75021101653572,
+    "lng": 30.530326525979046,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-758",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.21956720659101,
-    "lng": 32.829379769403516,
-    "difficulty": 3
+    "id": "gen-v2-867",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96009995763603,
+    "lng": 34.669787651538485,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-363",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.16512974095022,
-    "lng": 29.17443498682973,
+    "id": "gen-v2-391",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.7603300124049,
+    "lng": 29.92983934073769,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-294",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.66681965663732,
-    "lng": 35.52088181083208,
+    "id": "gen-v2-601",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.350354272603866,
+    "lng": 38.30990059485516,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-166",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.530737950099756,
-    "lng": 27.055341319235882,
-    "difficulty": 1
+    "id": "gen-v2-823",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84004943475752,
+    "lng": 33.5104396550788,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-106",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.76058789607137,
-    "lng": 32.95904750434563,
+    "id": "gen-v2-525",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.15037080267421,
+    "lng": 27.80019101576437,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-789",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.48409909709426,
-    "lng": 31.61982042022486,
-    "difficulty": 3
+    "id": "gen-v2-294",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86013949660613,
+    "lng": 27.260417211462638,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-87",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.04404249261099,
-    "lng": 32.997742653826954,
+    "id": "gen-v2-919",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.02,
+    "lng": 40.52,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-221",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.9379186927617,
-    "lng": 32.479134790394575,
+    "id": "gen-v2-963",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98032890139177,
+    "lng": 37.88003486765646,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-987",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.02009244487073,
+    "lng": 35.15037859056796,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-604",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.253467816708735,
-    "lng": 34.39402769862408,
+    "id": "gen-v2-250",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.7195868001243,
+    "lng": 35.48003388721542,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-976",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.17411654108788,
-    "lng": 29.784917291560774,
+    "id": "gen-v2-232",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.79985210130658,
+    "lng": 34.58009744143471,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-155",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.78010721124622,
+    "lng": 30.510420929212348,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-95",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.18986292863344,
+    "lng": 29.05993809346114,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-116",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.889899072334195,
+    "lng": 32.479904682758495,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-398",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.98686040884301,
-    "lng": 35.25034380759566,
+    "id": "gen-v2-296",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86042215007184,
+    "lng": 27.260094291726507,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-619",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.699345266434435,
-    "lng": 26.74092381045169,
+    "id": "gen-v2-161",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77970803177569,
+    "lng": 30.510147570423324,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-728",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.0993925044205,
-    "lng": 32.371480204382735,
+    "id": "gen-v2-1041",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.630025219668156,
+    "lng": 32.330096977604775,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-962",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.5457100864978,
-    "lng": 42.14463138259019,
+    "id": "gen-v2-125",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89038057357328,
+    "lng": 32.48016565540275,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-771",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.11340841958217,
-    "lng": 37.42104802751234,
+    "id": "gen-v2-538",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.14989420619298,
+    "lng": 27.80040486807642,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-139",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.842420445433696,
-    "lng": 33.026975605539334,
+    "id": "gen-v2-759",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30997969537911,
+    "lng": 36.549559711973735,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-371",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.671227578090345,
-    "lng": 35.38898524545221,
+    "id": "gen-v2-279",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03392665084996,
+    "lng": 27.429802813879604,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-847",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.76790729428575,
-    "lng": 26.325067862267197,
-    "difficulty": 3
+    "id": "gen-v2-1048",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20010440095587,
+    "lng": 32.62037696865102,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-494",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.76652993122499,
-    "lng": 30.56401014176275,
-    "difficulty": 2
+    "id": "gen-v2-938",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.90989845294038,
+    "lng": 38.38041092380989,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-479",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.72043415746376,
-    "lng": 35.49903709867538,
-    "difficulty": 2
+    "id": "gen-v2-177",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.3297670054699,
+    "lng": 36.269957853976436,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-435",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.13245522408604,
-    "lng": 29.15108167448651,
+    "id": "gen-v2-12",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04231568156518,
+    "lng": 29.00743088757247,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-862",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.672244292765015,
-    "lng": 44.164059097961044,
+    "id": "gen-v2-828",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84022847306247,
+    "lng": 33.50985987049094,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-920",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.019897388694886,
+    "lng": 40.519742961697204,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-475",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.79608324926737,
-    "lng": 32.52804592034389,
+    "id": "gen-v2-84",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88688328864592,
+    "lng": 30.706987010743788,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-635",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.83014315314653,
-    "lng": 28.95888559871967,
+    "id": "gen-v2-754",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.75020412639976,
+    "lng": 37.00980740073281,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-950",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.22085022339431,
-    "lng": 36.62894350264435,
-    "difficulty": 3
+    "id": "gen-v2-495",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66993911991417,
+    "lng": 29.399944121133945,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-971",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.45191754507362,
-    "lng": 32.87387347298361,
-    "difficulty": 3
+    "id": "gen-v2-620",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67010561912978,
+    "lng": 39.21990369465655,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-938",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.93315018263594,
-    "lng": 30.251937478319253,
-    "difficulty": 3
+    "id": "gen-v2-439",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.729951525876665,
+    "lng": 31.600240299878998,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-178",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.979666423148906,
-    "lng": 28.7252821174759,
-    "difficulty": 1
+    "id": "gen-v2-1034",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.629652656617495,
+    "lng": 32.330052338112125,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-190",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 40.99976971187664,
+    "lng": 39.719813235075044,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-258",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.8440981400252,
-    "lng": 30.555972297000483,
+    "id": "gen-v2-208",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.04997310699854,
+    "lng": 37.36971241058263,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-233",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.99706214736793,
-    "lng": 32.44409661241441,
+    "id": "gen-v2-929",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.01996730266846,
+    "lng": 40.520378037146024,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-191",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.111322200738186,
-    "lng": 32.887574683178705,
+    "id": "gen-v2-308",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.309703608463074,
+    "lng": 26.690042319753694,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-941",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.39804214698877,
-    "lng": 30.634835078008194,
+    "id": "gen-v2-216",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05036759845306,
+    "lng": 37.36985012956067,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-603",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.82250217854957,
-    "lng": 37.02078248202428,
-    "difficulty": 3
+    "id": "gen-v2-273",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03384120812705,
+    "lng": 27.42967822153591,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-801",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.554862431352944,
-    "lng": 31.55447778179875,
+    "id": "gen-v2-753",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.74982655557232,
+    "lng": 37.010005286055225,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-507",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.67907781387966,
-    "lng": 35.604132860646374,
+    "id": "gen-v2-245",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.7197998223335,
+    "lng": 35.48008877830931,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-769",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.14494511650246,
-    "lng": 31.769430780857377,
-    "difficulty": 3
+    "id": "gen-v2-481",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.76020410647926,
+    "lng": 30.5501869581666,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-618",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.19677857454295,
-    "lng": 43.68849261675514,
-    "difficulty": 3
+    "id": "gen-v2-507",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.609887764756266,
+    "lng": 27.420222066776624,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-346",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.66996072949418,
+    "lng": 26.54958842301685,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-818",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83963120883458,
+    "lng": 33.50999328763953,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-616",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.670156881221075,
+    "lng": 39.2200241001038,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-974",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.44557610896547,
-    "lng": 42.90920378291734,
+    "id": "gen-v2-483",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75981876053628,
+    "lng": 30.549858232933666,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-226",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.804917841711564,
-    "lng": 32.366491459457116,
+    "id": "gen-v2-1032",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.630097207457204,
+    "lng": 32.33039386483688,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-701",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.964219320878804,
-    "lng": 33.04148163962692,
+    "id": "gen-v2-277",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03395755840476,
+    "lng": 27.43017339607166,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-234",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80038487547792,
+    "lng": 34.57978889092575,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-446",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.0537490752089,
-    "lng": 35.45313965265454,
+    "id": "gen-v2-676",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.309801426223196,
+    "lng": 40.73998033559006,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-797",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.53960422145678,
+    "lng": 34.949993453330535,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-388",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.92636117110804,
-    "lng": 35.41348721041012,
+    "id": "gen-v2-678",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.310022479797574,
+    "lng": 40.739858112088925,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-587",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.199694865397554,
-    "lng": 28.961406177079258,
+    "id": "gen-v2-462",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74967809694078,
+    "lng": 30.53024267618807,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-945",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.08285808746196,
-    "lng": 40.494172395983455,
-    "difficulty": 3
+    "id": "gen-v2-765",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30972045835171,
+    "lng": 36.54990676977399,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-360",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.77187914522139,
-    "lng": 30.618233370181866,
+    "id": "gen-v2-910",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17971084457096,
+    "lng": 33.219776996353346,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-58",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.933633733542045,
-    "lng": 32.84131679505235,
+    "id": "gen-v2-994",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36965000416969,
+    "lng": 33.77027837283858,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-936",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.04781848022291,
-    "lng": 36.95709800358557,
+    "id": "gen-v2-448",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73034912503577,
+    "lng": 31.60001529119155,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-43",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.35268062325592,
-    "lng": 27.196168829677553,
+    "id": "gen-v2-146",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.780252561203,
+    "lng": 30.510138598500934,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-389",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.99299802760596,
-    "lng": 30.681321393322047,
+    "id": "gen-v2-15",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04184997652781,
+    "lng": 29.007605516988654,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-121",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.8900780389547,
+    "lng": 32.48008055744781,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-88",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.40344665141698,
-    "lng": 27.02537485148686,
+    "id": "gen-v2-113",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.890159220820635,
+    "lng": 32.479639612374385,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-641",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.17723101961798,
-    "lng": 36.38307792967677,
+    "id": "gen-v2-936",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.01993475527674,
+    "lng": 40.52041185491088,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-267",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.19077593556337,
-    "lng": 29.1574168264361,
-    "difficulty": 2
+    "id": "gen-v2-1059",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.200000614234774,
+    "lng": 32.61998699855403,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-595",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35,
+    "lng": 38.31,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-613",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.2170372566813,
-    "lng": 35.96159917918743,
+    "id": "gen-v2-322",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.309919407470844,
+    "lng": 26.690223912003088,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-241",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.78297304296075,
-    "lng": 30.648098392135072,
+    "id": "gen-v2-837",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.1398429674132,
+    "lng": 34.15962979278848,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-208",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.010448242829355,
-    "lng": 30.801164450963583,
-    "difficulty": 2
+    "id": "gen-v2-87",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88705105120992,
+    "lng": 30.70678454942821,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-527",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.14990187395476,
+    "lng": 27.80011591882985,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-142",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.39047251480269,
-    "lng": 26.983582306199395,
+    "id": "gen-v2-219",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80019020180934,
+    "lng": 34.580000650371446,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-359",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.63479995944674,
-    "lng": 35.53848465683674,
+    "id": "gen-v2-337",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.150253961468245,
+    "lng": 26.409732711436078,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-40",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.23568636896467,
-    "lng": 29.151251306430268,
+    "id": "gen-v2-832",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.140187032033076,
+    "lng": 34.16036814343471,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-596",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.98331981515147,
-    "lng": 30.72668257409096,
-    "difficulty": 2
+    "id": "gen-v2-901",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.18,
+    "lng": 33.22,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-342",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.5977782713091,
-    "lng": 35.486967876803526,
-    "difficulty": 2
+    "id": "gen-v2-214",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05002590748474,
+    "lng": 37.36983543664907,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-878",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.4575279926211,
-    "lng": 27.638380484860615,
+    "id": "gen-v2-951",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.90959092605252,
+    "lng": 38.379908777280676,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-660",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.005965436393396,
-    "lng": 38.77810943812659,
+    "id": "gen-v2-447",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.730094096996716,
+    "lng": 31.600230836475603,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-333",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14958969548438,
+    "lng": 26.409919847040673,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-399",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.937956609491735,
-    "lng": 30.63253487454288,
+    "id": "gen-v2-435",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73002178446199,
+    "lng": 31.599627680947343,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-693",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.8799497874576,
+    "lng": 41.13003938300474,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-487",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.26520273276124,
-    "lng": 28.953582382311357,
+    "id": "gen-v2-589",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.5797532102703,
+    "lng": 36.93028645931265,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-826",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.19701098445556,
-    "lng": 43.966817966984024,
-    "difficulty": 3
+    "id": "gen-v2-871",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96019200526292,
+    "lng": 34.67022269863089,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-261",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.99036097745559,
-    "lng": 32.4322983268355,
+    "id": "gen-v2-603",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35028244668382,
+    "lng": 38.310299797976896,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-805",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.943120147900295,
-    "lng": 42.93849943618057,
-    "difficulty": 3
+    "id": "gen-v2-978",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.02026313487484,
+    "lng": 35.149944346463826,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-434",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.7405814500028,
-    "lng": 30.501019582351837,
+    "id": "gen-v2-733",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.899775468190214,
+    "lng": 41.269804065977524,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-5",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.800145095056614,
-    "lng": 32.72116482874224,
+    "id": "gen-v2-1011",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45018492987525,
+    "lng": 31.78981661955298,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-195",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.23976438165911,
-    "lng": 29.161782962541164,
+    "id": "gen-v2-544",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.730308729892,
+    "lng": 27.220168765288133,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-125",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.93385383064453,
-    "lng": 32.759093273441636,
+    "id": "gen-v2-289",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86,
+    "lng": 27.26,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-375",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.91239611870666,
-    "lng": 30.627175686180166,
+    "id": "gen-v2-855",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62988141947972,
+    "lng": 34.91039467190705,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-963",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.19386464467271,
-    "lng": 43.81389107292108,
+    "id": "gen-v2-340",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15013115158143,
+    "lng": 26.410203145423143,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-118",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.50398911071867,
-    "lng": 27.164405316965368,
-    "difficulty": 1
+    "id": "gen-v2-493",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.67022294910664,
+    "lng": 29.400010050480702,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-346",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.76704343917159,
-    "lng": 30.56098397897377,
+    "id": "gen-v2-547",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73009755633421,
+    "lng": 27.219974530517444,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-828",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.530265894920994,
-    "lng": 38.725950884178545,
-    "difficulty": 3
+    "id": "gen-v2-531",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.150254789327725,
+    "lng": 27.80020581174404,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-735",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.1285449676455,
-    "lng": 27.139760762569455,
+    "id": "gen-v2-342",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.1503308958879,
+    "lng": 26.41014564957042,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-290",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.86088318370299,
-    "lng": 32.44859036653503,
+    "id": "gen-v2-805",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.539781894680516,
+    "lng": 34.95019100041322,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-80",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.980222272127875,
-    "lng": 32.900813255849364,
-    "difficulty": 1
+    "id": "gen-v2-103",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19033174338989,
+    "lng": 29.059837505713265,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-243",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.895197635731456,
-    "lng": 30.741562385558602,
+    "id": "gen-v2-744",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.749663232220264,
+    "lng": 37.009900786358266,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-700",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.6536893591709,
-    "lng": 35.93001633085528,
-    "difficulty": 3
+    "id": "gen-v2-673",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31008674701474,
+    "lng": 40.739924408583164,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-99",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.92765510941957,
-    "lng": 32.99869461431044,
+    "id": "gen-v2-164",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.33035858521719,
+    "lng": 36.270048170322596,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-851",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.42957659156933,
-    "lng": 33.43705758261226,
+    "id": "gen-v2-536",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.150434374885684,
+    "lng": 27.800004054478713,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-275",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.832152018903784,
-    "lng": 32.51851563411185,
+    "id": "gen-v2-258",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.76971832471715,
+    "lng": 29.079775262908313,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-132",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.281571131449724,
-    "lng": 27.05672977905056,
+    "id": "gen-v2-363",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.77966262391997,
+    "lng": 30.399807949846405,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-995",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.02336842506974,
-    "lng": 36.98219410014187,
-    "difficulty": 3
+    "id": "gen-v2-478",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.759829147572596,
+    "lng": 30.549655315270243,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-580",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.847227564637855,
-    "lng": 30.6828258428559,
+    "id": "gen-v2-227",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80018097943251,
+    "lng": 34.57964983246882,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-332",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.67761177900519,
-    "lng": 35.55676397426651,
+    "id": "gen-v2-46",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90980602743713,
+    "lng": 32.86036838307752,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-903",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.68204098432695,
-    "lng": 35.90195832022245,
-    "difficulty": 3
+    "id": "gen-v2-351",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.670040931207005,
+    "lng": 26.55013331871144,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-994",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.304224371177305,
-    "lng": 36.38419124131154,
-    "difficulty": 3
+    "id": "gen-v2-913",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.18028810829044,
+    "lng": 33.22017489431618,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-169",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.09279875636608,
-    "lng": 29.08764422398465,
+    "id": "gen-v2-93",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19012816991035,
+    "lng": 29.060375454147504,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-437",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.83884653431322,
-    "lng": 32.5385010047457,
+    "id": "gen-v2-637",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.910102388287505,
+    "lng": 40.23035458086912,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-956",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.465941725084775,
-    "lng": 34.33527796339563,
-    "difficulty": 3
+    "id": "gen-v2-960",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98008347103397,
+    "lng": 37.87998377041991,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-502",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.741466947046746,
-    "lng": 30.543395219602154,
+    "id": "gen-v2-967",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98038677374707,
+    "lng": 37.880200826772146,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-518",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.0420613895307,
-    "lng": 30.70750817077238,
+    "id": "gen-v2-8",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04209374726926,
+    "lng": 29.007474159248986,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-114",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.23976972324186,
-    "lng": 28.816106087006418,
-    "difficulty": 1
+    "id": "gen-v2-798",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54011456739559,
+    "lng": 34.95035474958412,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-848",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.097332091835405,
-    "lng": 38.015891701554054,
-    "difficulty": 3
+    "id": "gen-v2-814",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84012449868182,
+    "lng": 33.509773723355494,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-308",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.83170628669537,
-    "lng": 30.560058295023406,
+    "id": "gen-v2-1057",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20015807973988,
+    "lng": 32.62037087096162,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-575",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57998698613799,
+    "lng": 36.170124463918604,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-13",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.81331915679296,
-    "lng": 28.76734815253589,
+    "id": "gen-v2-524",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.1498132965448,
+    "lng": 27.7996763496357,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-411",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.69597799644624,
-    "lng": 35.36952753573282,
+    "id": "gen-v2-928",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.02029688110464,
+    "lng": 40.520169980148964,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-926",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.49924836628997,
-    "lng": 42.14046655498994,
+    "id": "gen-v2-323",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.31033438497123,
+    "lng": 26.690030758218434,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-799",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54006698909672,
+    "lng": 34.94980216350867,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-407",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.649765487296136,
+    "lng": 29.270078499781157,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-285",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.07896011268612,
-    "lng": 29.083109522785353,
+    "id": "gen-v2-170",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32971358701422,
+    "lng": 36.270041351182606,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-729",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.79875139843078,
-    "lng": 42.10271070807602,
+    "id": "gen-v2-1022",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44965493957795,
+    "lng": 31.789900399579782,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-104",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.78034069745025,
-    "lng": 28.807943110456506,
-    "difficulty": 1
+    "id": "gen-v2-790",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64965589498631,
+    "lng": 35.82999258687378,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-196",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.94843600426901,
-    "lng": 28.783593831970574,
+    "id": "gen-v2-758",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.310270618215604,
+    "lng": 36.5499213685338,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-182",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.15864185547997,
-    "lng": 28.73107401482514,
+    "id": "gen-v2-542",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73031640108592,
+    "lng": 27.22006785879213,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-517",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.23827906268416,
-    "lng": 29.1165405367188,
+    "id": "gen-v2-1014",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44985189333144,
+    "lng": 31.790212392428113,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-163",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.027322273820594,
-    "lng": 32.97151075435919,
+    "id": "gen-v2-689",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.87968242301342,
+    "lng": 41.13030082968963,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl3-633",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.39116933369375,
-    "lng": 35.338974164519016,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-760",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.96237958154883,
-    "lng": 26.578701907463348,
+    "id": "gen-v2-647",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90995126889656,
+    "lng": 40.230443114397225,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-693",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.495345498060956,
-    "lng": 42.627149148214514,
+    "id": "gen-v2-720",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.49997542226011,
+    "lng": 43.37983014141593,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-50",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.474419793034656,
-    "lng": 27.267752156278103,
+    "id": "gen-v2-202",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.050237598239946,
+    "lng": 37.369998611701476,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-857",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.93750194060838,
-    "lng": 31.930646280297495,
+    "id": "gen-v2-108",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19008931164301,
+    "lng": 29.059952238782987,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-292",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.013013744018565,
-    "lng": 30.728470858191052,
+    "id": "gen-v2-640",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.910127682075604,
+    "lng": 40.22981733134641,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-229",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.93143716783672,
-    "lng": 30.785717672424433,
-    "difficulty": 2
+    "id": "gen-v2-57",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41880111030328,
+    "lng": 27.128333433974323,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-884",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.14306054274708,
-    "lng": 30.187179467801023,
-    "difficulty": 3
+    "id": "gen-v2-182",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 40.999893430174545,
+    "lng": 39.72024242032751,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-708",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.33305813776053,
-    "lng": 34.29327971181324,
+    "id": "gen-v2-1040",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.62961815900588,
+    "lng": 32.33017298680207,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-632",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.57421774487653,
-    "lng": 38.55198992713424,
-    "difficulty": 3
+    "id": "gen-v2-939",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91041282927357,
+    "lng": 38.38011608683648,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-656",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.28892150512404,
-    "lng": 39.241458511887274,
-    "difficulty": 3
+    "id": "gen-v2-145",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.78,
+    "lng": 30.51,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-204",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.943034426209294,
-    "lng": 30.64544006021537,
-    "difficulty": 2
-  },
-  {
-    "id": "gen-lvl1-133",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.774531470933546,
-    "lng": 28.939684210250707,
+    "id": "gen-v2-293",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.85956492885939,
+    "lng": 27.260110661609982,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-276",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.95345845361377,
-    "lng": 35.25298975385282,
+    "id": "gen-v2-856",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63041917713295,
+    "lng": 34.909866098680794,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-832",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.43985763774556,
-    "lng": 37.11764193971421,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-773",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.118968132310066,
-    "lng": 38.48111702066485,
-    "difficulty": 3
+    "id": "gen-v2-316",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.3098261680813,
+    "lng": 26.68986686596512,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-180",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.07390722153124,
-    "lng": 28.927964592119746,
+    "id": "gen-v2-598",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34980147757265,
+    "lng": 38.310213162601265,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-264",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.8367782445667,
-    "lng": 32.4788123285102,
+    "id": "gen-v2-571",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.58035884127619,
+    "lng": 36.16989139062321,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-581",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.16339193719006,
-    "lng": 29.044182775566455,
+    "id": "gen-v2-966",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.979854805328586,
+    "lng": 37.87974328800692,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-767",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.234007689834684,
-    "lng": 31.596377256912998,
-    "difficulty": 3
+    "id": "gen-v2-292",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.85996831087165,
+    "lng": 27.260323752275124,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-980",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.70674517645013,
-    "lng": 35.81747640276271,
+    "id": "gen-v2-33",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99116898233605,
+    "lng": 29.026896031172626,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-661",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.41781976564072,
-    "lng": 31.20442735069234,
-    "difficulty": 3
+    "id": "gen-v2-728",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.89977702701608,
+    "lng": 41.269820179272315,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-714",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.09601189252737,
-    "lng": 36.113826519610086,
-    "difficulty": 3
+    "id": "gen-v2-669",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.309726159015455,
+    "lng": 40.73971543490573,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-617",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.18624424087797,
-    "lng": 32.32814756298585,
+    "id": "gen-v2-69",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41906138270943,
+    "lng": 27.128032589495493,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-973",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.52097217988815,
-    "lng": 40.543379528836994,
-    "difficulty": 3
+    "id": "gen-v2-290",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.859774667429356,
+    "lng": 27.2596840083284,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-985",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.48832693768136,
-    "lng": 30.5301278494017,
+    "id": "gen-v2-405",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.64957199900656,
+    "lng": 29.27005261927543,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-107",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19035105025872,
+    "lng": 29.060063929446702,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-128",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.29823380463013,
-    "lng": 27.079152359529953,
-    "difficulty": 1
+    "id": "gen-v2-98",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19028080408911,
+    "lng": 29.06031559318768,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-667",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.18010271845441,
-    "lng": 41.54997001587969,
-    "difficulty": 3
+    "id": "gen-v2-61",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41917348146261,
+    "lng": 27.1281485500072,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-970",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.69044816078014,
-    "lng": 29.387117166741845,
-    "difficulty": 3
+    "id": "gen-v2-476",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.759847553490005,
+    "lng": 30.550346223818813,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-783",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.551274684031235,
-    "lng": 35.24355562814885,
+    "id": "gen-v2-306",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86011329788991,
+    "lng": 27.260022109449313,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-168",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.320424610104716,
-    "lng": 27.155202171832375,
-    "difficulty": 1
+    "id": "gen-v2-1036",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.629945490378894,
+    "lng": 32.33026515239136,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-8",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.54801653574359,
-    "lng": 27.045517490216763,
-    "difficulty": 1
+    "id": "gen-v2-1039",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.6303076868851,
+    "lng": 32.32980764197003,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-514",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.61016510173614,
+    "lng": 27.420005974024043,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-75",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.985365201941335,
-    "lng": 33.028515768398464,
+    "id": "gen-v2-902",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17996602742649,
+    "lng": 33.21995659557281,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-582",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.66153012882511,
-    "lng": 35.590308488737385,
-    "difficulty": 2
+    "id": "gen-v2-519",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60973566112912,
+    "lng": 27.4201018063527,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-548",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.239401989981374,
-    "lng": 28.963616431798656,
+    "id": "gen-v2-783",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65003243579456,
+    "lng": 35.83040154166582,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-715",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.903238919133635,
-    "lng": 37.30510504344976,
+    "id": "gen-v2-410",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.64978314943885,
+    "lng": 29.269765474251045,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-602",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.7959310166657,
-    "lng": 38.72956539312591,
-    "difficulty": 3
+    "id": "gen-v2-168",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.330395096150525,
+    "lng": 36.26984631339092,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-427",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.80879951848263,
-    "lng": 32.602914391239864,
+    "id": "gen-v2-655",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15005197319585,
+    "lng": 38.79024797280579,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-207",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74539515182592,
-    "lng": 30.59995521164335,
+    "id": "gen-v2-677",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31005784412842,
+    "lng": 40.73978738073743,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-337",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.97426896155195,
-    "lng": 32.48237667663619,
-    "difficulty": 2
+    "id": "gen-v2-880",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.95971986795034,
+    "lng": 34.670030874614895,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-383",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.7600206828645,
+    "lng": 29.930205342816702,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-699",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.62181987210581,
-    "lng": 36.81015136640795,
+    "id": "gen-v2-809",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.540400501603784,
+    "lng": 34.95015489668802,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-514",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.91143887254379,
-    "lng": 35.40929859841809,
+    "id": "gen-v2-24",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99073924676089,
+    "lng": 29.027132012214913,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-254",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.10942335467816,
-    "lng": 29.09432401055799,
-    "difficulty": 2
+    "id": "gen-v2-900",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.369944141174436,
+    "lng": 34.01978967569352,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-76",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.07888562482286,
-    "lng": 32.975695295117255,
+    "id": "gen-v2-686",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.880086848722705,
+    "lng": 41.130000874723116,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-511",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74559457406558,
-    "lng": 30.56992731993524,
+    "id": "gen-v2-66",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.419039108011646,
+    "lng": 27.12819062506789,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-392",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.624348068618524,
-    "lng": 35.40644234130955,
+    "id": "gen-v2-996",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36965390490594,
+    "lng": 33.7697580536576,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-806",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.04765158980483,
-    "lng": 37.597964102992506,
+    "id": "gen-v2-933",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.0201016097472,
+    "lng": 40.52025899242597,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl1-51",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.0549203477252,
-    "lng": 32.76404111209329,
-    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-176",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.55658885650293,
-    "lng": 27.188341362143383,
+    "id": "gen-v2-561",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57990985019064,
+    "lng": 36.17011694574155,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-250",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.82220663734927,
-    "lng": 35.563939971172,
+    "id": "gen-v2-949",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.90963459895603,
+    "lng": 38.38000625936323,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-463",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.900986666355344,
-    "lng": 35.380759305732866,
+    "id": "gen-v2-119",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.889702019345144,
+    "lng": 32.479718430593664,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-628",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.418697188582215,
-    "lng": 35.24148696500207,
+    "id": "gen-v2-879",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.959558523130205,
+    "lng": 34.67004856175056,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-759",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.186270877526,
-    "lng": 39.19009608588531,
-    "difficulty": 3
+    "id": "gen-v2-708",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.4997929491334,
+    "lng": 43.380345295606254,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-49",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.45157438587972,
-    "lng": 27.328779947015754,
+    "id": "gen-v2-721",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.9,
+    "lng": 41.27,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-430",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.155029283438544,
-    "lng": 29.15751459924268,
+    "id": "gen-v2-947",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.90993902621695,
+    "lng": 38.380280220851645,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-614",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.48065840793672,
-    "lng": 39.47250166910526,
-    "difficulty": 3
+    "id": "gen-v2-922",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.01982578333675,
+    "lng": 40.5198304628172,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-570",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.92034875560028,
-    "lng": 35.20935111193877,
-    "difficulty": 2
+    "id": "gen-v2-181",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41,
+    "lng": 39.72,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-38",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90999545647408,
+    "lng": 32.86007742340862,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-20",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99141695155384,
+    "lng": 29.026873532637968,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-910",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.63461615447497,
-    "lng": 30.710639700281945,
+    "id": "gen-v2-1043",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.62989316740331,
+    "lng": 32.329841103654246,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-310",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.07660896459598,
-    "lng": 28.961229128939546,
+    "id": "gen-v2-732",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.90012115510231,
+    "lng": 41.26984308107648,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-654",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.10064365117751,
-    "lng": 37.87796097784663,
+    "id": "gen-v2-339",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14955580162364,
+    "lng": 26.409965678534903,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-110",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.88991708443507,
+    "lng": 32.479756288911595,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-834",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.25261257378563,
-    "lng": 37.593579210917106,
+    "id": "gen-v2-126",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.889798284034725,
+    "lng": 32.479717393129064,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-215",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.93588631634982,
-    "lng": 30.605958212083706,
+    "id": "gen-v2-819",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.840331091449784,
+    "lng": 33.510123380177575,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-240",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.97333170684156,
-    "lng": 35.450141851012695,
-    "difficulty": 2
+    "id": "gen-v2-520",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.610102778203256,
+    "lng": 27.420347732442615,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-89",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.39025881650219,
-    "lng": 27.1099931797811,
-    "difficulty": 1
+    "id": "gen-v2-881",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.95958843166502,
+    "lng": 34.670054445727104,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-394",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.58803221750396,
-    "lng": 35.44633608134549,
+    "id": "gen-v2-30",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991332222889255,
+    "lng": 29.027101717085646,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-34",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.37370861549784,
-    "lng": 27.28788489632089,
-    "difficulty": 1
+    "id": "gen-v2-431",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.83978375193781,
+    "lng": 31.15038644568997,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-365",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.07243196505181,
-    "lng": 28.997452996834177,
+    "id": "gen-v2-639",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.909974296524254,
+    "lng": 40.22998594714213,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-841",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.75297795290818,
-    "lng": 38.84559505278182,
-    "difficulty": 3
+    "id": "gen-v2-187",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00013189674559,
+    "lng": 39.71984828679928,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-620",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.17793329061041,
-    "lng": 26.76330793213344,
+    "id": "gen-v2-17",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.041911569605176,
+    "lng": 29.007546149013752,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-524",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.12306362393706,
-    "lng": 35.25779711746345,
+    "id": "gen-v2-445",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73040961132934,
+    "lng": 31.599822120229064,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-515",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.808183743671854,
-    "lng": 32.582363899462045,
+    "id": "gen-v2-1037",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.63015231327038,
+    "lng": 32.32989221615124,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-697",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.56858381503764,
-    "lng": 31.643182697922665,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-305",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.87850173193675,
-    "lng": 35.32166633536885,
+    "id": "gen-v2-13",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.042078287466246,
+    "lng": 29.007631349076675,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-564",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.96500043233138,
-    "lng": 30.83936294871256,
+    "id": "gen-v2-384",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.760146605559555,
+    "lng": 29.930372670194433,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-740",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.20594296168473,
-    "lng": 40.1229345349657,
+    "id": "gen-v2-771",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.310061260537566,
+    "lng": 36.54987372287046,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-94",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.86404914511867,
-    "lng": 32.782620223938025,
+    "id": "gen-v2-641",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.910358373257964,
+    "lng": 40.23016689880316,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-419",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.8398886541989,
+    "lng": 31.150080748682587,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-683",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.38960471556641,
-    "lng": 34.44050687421908,
-    "difficulty": 3
+    "id": "gen-v2-349",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.6701394621815,
+    "lng": 26.550003579231042,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-53",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.885857353232396,
-    "lng": 32.8211060422271,
+    "id": "gen-v2-345",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67043527470487,
+    "lng": 26.550054264071473,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-164",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.872730908019925,
-    "lng": 29.149894514164327,
+    "id": "gen-v2-685",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.88,
+    "lng": 41.13,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-97",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.003276956780795,
-    "lng": 32.84292776413031,
-    "difficulty": 1
+    "id": "gen-v2-36",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99111582127701,
+    "lng": 29.026993594357258,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-111",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.56729334268543,
-    "lng": 27.22125897743721,
+    "id": "gen-v2-401",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65015287537342,
+    "lng": 29.270375964675765,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-205",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.82553063149043,
-    "lng": 30.73797712923167,
+    "id": "gen-v2-334",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15017063607726,
+    "lng": 26.409919167374408,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-739",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.33793133228402,
-    "lng": 40.60278253021761,
+    "id": "gen-v2-627",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.66975244867241,
+    "lng": 39.220331393449385,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-38",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.82961721745195,
-    "lng": 32.761898109783566,
+    "id": "gen-v2-975",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01976489527279,
+    "lng": 35.15032474384361,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-748",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.281847208370685,
-    "lng": 40.243307853519575,
-    "difficulty": 3
+    "id": "gen-v2-588",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57971383706285,
+    "lng": 36.92998406933222,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-946",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.4079141364018,
-    "lng": 42.77083910423961,
+    "id": "gen-v2-374",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78026156787883,
+    "lng": 30.399823571928902,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-298",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.658079154460424,
-    "lng": 35.401173191792935,
+    "id": "gen-v2-9",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.042370995115036,
+    "lng": 29.007523326149514,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-1006",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36964910587991,
+    "lng": 33.76993702128119,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-300",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.22469052093744,
-    "lng": 29.191756586976094,
+    "id": "gen-v2-97",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.18980606317663,
+    "lng": 29.059843658325764,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-422",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.99443441816543,
-    "lng": 32.488370773899774,
+    "id": "gen-v2-348",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.670069561055804,
+    "lng": 26.549995678618345,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-460",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.746924041079836,
-    "lng": 32.4283657706457,
+    "id": "gen-v2-564",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.580199363654884,
+    "lng": 36.17010428319372,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-737",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.53346280751957,
-    "lng": 38.551646886716156,
+    "id": "gen-v2-392",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.760144843976335,
+    "lng": 29.92962561551431,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-623",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.568168932988954,
-    "lng": 36.57486610299746,
-    "difficulty": 3
+    "id": "gen-v2-545",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73014312782963,
+    "lng": 27.220068294903733,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-954",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.59386123320402,
-    "lng": 27.31574971999768,
-    "difficulty": 3
+    "id": "gen-v2-1010",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45006997257998,
+    "lng": 31.789649907836953,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-262",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.59318735708153,
-    "lng": 35.484334596869445,
+    "id": "gen-v2-137",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.0398874051459,
+    "lng": 35.30034970643989,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-673",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.81701976537982,
-    "lng": 34.1645153994018,
-    "difficulty": 3
+    "id": "gen-v2-206",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05016779393365,
+    "lng": 37.37010335374946,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-462",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.04700167808669,
-    "lng": 35.30540819646704,
+    "id": "gen-v2-354",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67041841614203,
+    "lng": 26.54996687165944,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-381",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.172224237115984,
-    "lng": 28.962977235400317,
+    "id": "gen-v2-582",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.579979620951335,
+    "lng": 36.92998581915779,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-624",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.150463018607745,
-    "lng": 35.38882724380004,
-    "difficulty": 3
+    "id": "gen-v2-136",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.040038806540615,
+    "lng": 35.30013926129938,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-237",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.9739940657001,
-    "lng": 35.37298263765665,
-    "difficulty": 2
+    "id": "gen-v2-577",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.58,
+    "lng": 36.93,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-123",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.51535333892423,
-    "lng": 27.164684604729338,
+    "id": "gen-v2-471",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.76012132853714,
+    "lng": 30.550123166729016,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-850",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.37575697809117,
-    "lng": 41.94514891376011,
+    "id": "gen-v2-898",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.37016067306255,
+    "lng": 34.01994607192367,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-631",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.109319359757805,
-    "lng": 43.86774537150045,
+    "id": "gen-v2-411",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.64975232847681,
+    "lng": 29.270012977936187,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-12",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.9852755018087,
-    "lng": 28.924792292299145,
-    "difficulty": 1
+    "id": "gen-v2-83",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88699656224667,
+    "lng": 30.706921196682664,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-328",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.8334598602032,
-    "lng": 32.46873828380784,
+    "id": "gen-v2-408",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65021842498948,
+    "lng": 29.26967069126188,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-761",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.990939350793525,
-    "lng": 34.51885673021406,
-    "difficulty": 3
+    "id": "gen-v2-130",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.040239759818405,
+    "lng": 35.300262579857076,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-716",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.21694619587209,
-    "lng": 35.64644219615036,
+    "id": "gen-v2-861",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.630074747096856,
+    "lng": 34.91019413785472,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-928",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.90542216775571,
-    "lng": 40.729534445112044,
-    "difficulty": 3
+    "id": "gen-v2-64",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41880846119846,
+    "lng": 27.127594344435344,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-892",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.81976433929521,
-    "lng": 38.914682702365994,
-    "difficulty": 3
+    "id": "gen-v2-617",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.6700829942534,
+    "lng": 39.21973786757304,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-999",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.18843007860053,
-    "lng": 40.38246627653564,
+    "id": "gen-v2-142",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.039791766567845,
+    "lng": 35.29961604994586,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-886",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.02738715403666,
-    "lng": 31.391530313560303,
-    "difficulty": 3
+    "id": "gen-v2-794",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.53983555855067,
+    "lng": 34.95035250758629,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-201",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.911315258253545,
-    "lng": 35.23204877641284,
+    "id": "gen-v2-1017",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45018083972745,
+    "lng": 31.78967164397076,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-904",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.90463250227593,
-    "lng": 27.100441141091355,
+    "id": "gen-v2-630",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67015395592869,
+    "lng": 39.220283736788126,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-912",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.78558293572815,
-    "lng": 30.501368329014184,
-    "difficulty": 3
+    "id": "gen-v2-204",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.04967960187465,
+    "lng": 37.36973542408374,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-825",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.085271620004555,
-    "lng": 36.98152749853633,
-    "difficulty": 3
+    "id": "gen-v2-1029",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.6298523526241,
+    "lng": 32.32967846860014,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-723",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.877697071150564,
-    "lng": 37.70712037557955,
+    "id": "gen-v2-1044",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.6299217670773,
+    "lng": 32.33020433082786,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-880",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.95074713956002,
-    "lng": 40.1538214774769,
-    "difficulty": 3
+    "id": "gen-v2-625",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67024233069907,
+    "lng": 39.22032217881825,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-521",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.171392292254176,
-    "lng": 29.1909328826368,
+    "id": "gen-v2-1053",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20038002992736,
+    "lng": 32.6200068198074,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-148",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.44987756738223,
-    "lng": 27.214756082583836,
-    "difficulty": 1
+    "id": "gen-v2-952",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91012036034408,
+    "lng": 38.38003866222525,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-590",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.91945544921682,
-    "lng": 35.24236967918784,
+    "id": "gen-v2-1056",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20001395981844,
+    "lng": 32.62019845156161,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-216",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.17668663141903,
-    "lng": 29.0725217165885,
+    "id": "gen-v2-930",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.01978181108959,
+    "lng": 40.52003768228561,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-65",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.50086705702627,
-    "lng": 26.999922636802264,
+    "id": "gen-v2-183",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00005548456356,
+    "lng": 39.72034017665683,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-418",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.9928244254272,
-    "lng": 35.36911348287591,
-    "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-983",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.39808455362477,
-    "lng": 28.939154198086452,
-    "difficulty": 3
-  },
-  {
-    "id": "gen-lvl1-55",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.06003231482238,
-    "lng": 29.037269811963885,
+    "id": "gen-v2-111",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.890038102920236,
+    "lng": 32.479687071144156,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-554",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.73152743814317,
-    "lng": 30.470580385988498,
-    "difficulty": 2
+    "id": "gen-v2-382",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76028579564923,
+    "lng": 29.930122567950175,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-444",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.842067853340964,
-    "lng": 35.398101103974035,
+    "id": "gen-v2-769",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.3099180290222,
+    "lng": 36.5500218348234,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-469",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.200108646696044,
-    "lng": 29.21543077390554,
+    "id": "gen-v2-211",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.04990730996537,
+    "lng": 37.36957447259377,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-840",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.06941484386811,
-    "lng": 34.62585975468342,
+    "id": "gen-v2-1004",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36963707076932,
+    "lng": 33.76980378707834,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-102",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.8358453304982,
-    "lng": 32.75830867898288,
-    "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-453",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.68791693059054,
-    "lng": 35.6070106428761,
+    "id": "gen-v2-817",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84024761850727,
+    "lng": 33.51015894364678,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-896",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.8466976178648,
-    "lng": 34.494683534057046,
-    "difficulty": 3
+    "id": "gen-v2-634",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90971077234871,
+    "lng": 40.22999151266252,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-610",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.717089843324715,
-    "lng": 32.780436765772365,
-    "difficulty": 3
+    "id": "gen-v2-785",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.650102227302696,
+    "lng": 35.83009952471595,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-626",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.970884208895214,
-    "lng": 43.5304927543786,
+    "id": "gen-v2-286",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.034012165498716,
+    "lng": 27.430259556047723,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-92",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.90443492909303,
-    "lng": 32.82139755667931,
+    "id": "gen-v2-830",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.14030278067169,
+    "lng": 34.160255911359,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-942",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.760122971749304,
-    "lng": 39.58161906951183,
-    "difficulty": 3
+    "id": "gen-v2-489",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.670087848093814,
+    "lng": 29.400127909926905,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-249",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.66684723536788,
-    "lng": 35.56361711822214,
+    "id": "gen-v2-404",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.6499927962876,
+    "lng": 29.269872857528235,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-35",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.825763844025644,
-    "lng": 28.79925203331411,
-    "difficulty": 1
+    "id": "gen-v2-51",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90972249581648,
+    "lng": 32.85997006178632,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-206",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.71641926048205,
-    "lng": 35.44406174667633,
-    "difficulty": 2
+    "id": "gen-v2-707",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.499980660160304,
+    "lng": 43.37980666356988,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-975",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.26099279370089,
-    "lng": 42.18435676936204,
+    "id": "gen-v2-897",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36983169905097,
+    "lng": 34.02024289250728,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-663",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.96173344029758,
-    "lng": 35.93168088493667,
+    "id": "gen-v2-144",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.040297215732075,
+    "lng": 35.300157514976505,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-425",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.92981231265022,
-    "lng": 32.41951267517775,
+    "id": "gen-v2-980",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.0196930471157,
+    "lng": 35.15018813244052,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-925",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.611096272042104,
-    "lng": 26.692915794294713,
-    "difficulty": 3
+    "id": "gen-v2-1020",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.450312865966,
+    "lng": 31.78989491441005,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-547",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.01620975955403,
-    "lng": 30.6966323047215,
-    "difficulty": 2
+    "id": "gen-v2-883",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.37,
+    "lng": 34.02,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-282",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.87279886445081,
-    "lng": 30.515736882712194,
-    "difficulty": 2
+    "id": "gen-v2-287",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03423167509096,
+    "lng": 27.430080753123267,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-286",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.238338940863066,
-    "lng": 29.09674286669691,
+    "id": "gen-v2-353",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.669777282075735,
+    "lng": 26.54996929722615,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-190",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.43509580398412,
-    "lng": 27.102896076625935,
-    "difficulty": 1
+    "id": "gen-v2-305",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.85972413027142,
+    "lng": 27.260044976069338,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-622",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.92328846677728,
-    "lng": 43.638665506206635,
+    "id": "gen-v2-501",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.669869356633434,
+    "lng": 29.399586688002834,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-977",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.228191744761375,
-    "lng": 40.52490905760052,
+    "id": "gen-v2-612",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.34986775925577,
+    "lng": 38.31033416052504,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-882",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.12662674580495,
-    "lng": 31.57919608242404,
-    "difficulty": 3
+    "id": "gen-v2-443",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73027247400925,
+    "lng": 31.599755938759817,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-160",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.58335681205035,
-    "lng": 27.09482025036399,
+    "id": "gen-v2-5",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04257634641871,
+    "lng": 29.007714982263675,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-317",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.73685887659374,
-    "lng": 35.45619606049401,
-    "difficulty": 2
+    "id": "gen-v2-688",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.87998296110882,
+    "lng": 41.12955808462219,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-378",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.76846962666229,
-    "lng": 35.403614580255535,
-    "difficulty": 2
+    "id": "gen-v2-1045",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.2,
+    "lng": 32.62,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-652",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.86024150902757,
-    "lng": 34.61939790929809,
+    "id": "gen-v2-231",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.800180090071876,
+    "lng": 34.57999410895256,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-812",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.46619390168252,
-    "lng": 41.50284135469217,
-    "difficulty": 3
+    "id": "gen-v2-874",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.960011846652236,
+    "lng": 34.66981991236426,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-885",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36985898990806,
+    "lng": 34.020240652185215,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-907",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.066835344729185,
-    "lng": 36.0454056983209,
+    "id": "gen-v2-593",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57987891484375,
+    "lng": 36.929899963497135,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-496",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.012710269448654,
-    "lng": 30.67463454850751,
+    "id": "gen-v2-189",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.0001604531925,
+    "lng": 39.719684196384264,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-144",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.3076295682684,
-    "lng": 28.965820128583164,
+    "id": "gen-v2-596",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.35018151332249,
+    "lng": 38.310383043180956,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-7",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.036079130117976,
-    "lng": 28.86833715797587,
+    "id": "gen-v2-760",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.310012310059314,
+    "lng": 36.550197208476476,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-493",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.110528783473825,
-    "lng": 35.35100303449245,
-    "difficulty": 2
-  },
-  {
-    "id": "gen-lvl1-146",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.56425062848084,
-    "lng": 27.10962682604668,
+    "id": "gen-v2-937",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91,
+    "lng": 38.38,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-913",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.70610416032542,
-    "lng": 31.739898674008487,
+    "id": "gen-v2-197",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00004297417594,
+    "lng": 39.72003182790517,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-895",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.923042514737375,
-    "lng": 27.682666108062893,
+    "id": "gen-v2-195",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00021348331354,
+    "lng": 39.71964922806788,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-890",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.049973674586056,
-    "lng": 32.30146362255974,
-    "difficulty": 3
+    "id": "gen-v2-185",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 40.99982369250106,
+    "lng": 39.71994701435518,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-266",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.785903755560454,
-    "lng": 30.568986209691438,
+    "id": "gen-v2-801",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54004504348229,
+    "lng": 34.94996073763907,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-957",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.09971299546625,
-    "lng": 30.223870218030495,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-16",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.86378090923886,
-    "lng": 32.94584789945256,
+    "id": "gen-v2-723",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.8997461129455,
+    "lng": 41.27009205858456,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-330",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.14265634988835,
-    "lng": 29.137364246742184,
-    "difficulty": 2
+    "id": "gen-v2-699",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.879738951283095,
+    "lng": 41.13035459368356,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-802",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.653977325092775,
-    "lng": 39.03743007672695,
-    "difficulty": 3
+    "id": "gen-v2-942",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91003059990406,
+    "lng": 38.380120184079246,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-413",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.76566985944837,
-    "lng": 35.47297891029781,
+    "id": "gen-v2-480",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75961665544837,
+    "lng": 30.549834027999164,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-90",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.20080413693381,
-    "lng": 28.94047267766335,
-    "difficulty": 1
+    "id": "gen-v2-42",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.909809405050545,
+    "lng": 32.86016523127948,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-299",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.98560297846063,
-    "lng": 35.17883072127873,
+    "id": "gen-v2-692",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.879776778709285,
+    "lng": 41.129935539127494,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-921",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.78129973160689,
-    "lng": 29.632117461907985,
+    "id": "gen-v2-34",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991222027101784,
+    "lng": 29.027242560014518,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-82",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.4186770083064,
-    "lng": 27.01285944430943,
+    "id": "gen-v2-131",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.03988566331841,
+    "lng": 35.299668256100624,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl3-894",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.604991549771405,
-    "lng": 34.158296474712884,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-362",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.0536397340143,
-    "lng": 35.43083383418035,
-    "difficulty": 2
+    "id": "gen-v2-473",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.76019582297438,
+    "lng": 30.549770217193768,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-520",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.61183109681789,
-    "lng": 35.39941493585412,
+    "id": "gen-v2-782",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.649750205677705,
+    "lng": 35.83029602580474,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-478",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.11066902330428,
-    "lng": 29.0490731150989,
-    "difficulty": 2
+    "id": "gen-v2-129",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.03991238041127,
+    "lng": 35.299792565891515,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-621",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.87876903397796,
-    "lng": 41.9003031404082,
+    "id": "gen-v2-1008",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37004035044983,
+    "lng": 33.7699682199968,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-343",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.084007454657694,
-    "lng": 28.958018772073665,
-    "difficulty": 2
+    "id": "gen-v2-574",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.580167378917466,
+    "lng": 36.169640551907676,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-992",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.832541596293865,
-    "lng": 33.78475847961589,
+    "id": "gen-v2-698",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.880303164400026,
+    "lng": 41.12989482495129,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-239",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.119440377997755,
-    "lng": 35.285203135671225,
+    "id": "gen-v2-172",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.33026267093999,
+    "lng": 36.27027995425193,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-939",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.33839779029626,
-    "lng": 32.30465947952892,
-    "difficulty": 3
+    "id": "gen-v2-793",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54,
+    "lng": 34.95,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-823",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.75379130896106,
-    "lng": 43.9800340966799,
-    "difficulty": 3
+    "id": "gen-v2-118",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.88987120137135,
+    "lng": 32.48029074573089,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-48",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.42933166589039,
-    "lng": 27.112353513145884,
+    "id": "gen-v2-815",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84009297903527,
+    "lng": 33.51039563627261,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-297",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.860908836046676,
-    "lng": 30.552209867796144,
+    "id": "gen-v2-979",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01974558965294,
+    "lng": 35.14999515886002,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-257",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.72452499444665,
-    "lng": 30.55763147942838,
-    "difficulty": 2
+    "id": "gen-v2-257",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.770226093768,
+    "lng": 29.07979687678219,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-706",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.49232469782561,
-    "lng": 42.517452598377965,
-    "difficulty": 3
+    "id": "gen-v2-244",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.720108085253024,
+    "lng": 35.479849338909794,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-720",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.27868130804933,
-    "lng": 31.571386068563804,
-    "difficulty": 3
+    "id": "gen-v2-633",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90992586171608,
+    "lng": 40.230083452199416,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-859",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.571601786707,
-    "lng": 44.38481535175625,
+    "id": "gen-v2-735",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.8997521086399,
+    "lng": 41.26986072044249,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-476",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.82572524978443,
-    "lng": 30.497486089502853,
+    "id": "gen-v2-1021",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45004919773809,
+    "lng": 31.789670046759223,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-584",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.70184100366841,
-    "lng": 35.36376724286467,
-    "difficulty": 2
+    "id": "gen-v2-849",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63026383125961,
+    "lng": 34.90995256722077,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-746",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.59043625227747,
-    "lng": 36.27057573623906,
-    "difficulty": 3
+    "id": "gen-v2-237",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.719911435440885,
+    "lng": 35.480407750366524,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-579",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.723696623770685,
-    "lng": 30.500410422215598,
-    "difficulty": 2
+    "id": "gen-v2-248",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.71979729577584,
+    "lng": 35.48030033103816,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-717",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.87115406549291,
-    "lng": 35.941437365865724,
+    "id": "gen-v2-842",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.139643759041064,
+    "lng": 34.159921639122345,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-449",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.94516398460026,
-    "lng": 35.40808635084796,
-    "difficulty": 2
+    "id": "gen-v2-543",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.72980654651262,
+    "lng": 27.219709918782847,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-403",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.13081196020686,
-    "lng": 35.371978533684945,
+    "id": "gen-v2-549",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.72979360976414,
+    "lng": 27.22031516030343,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-508",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.74014480762846,
-    "lng": 30.49156314776961,
+    "id": "gen-v2-909",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.1800719059546,
+    "lng": 33.220311949120614,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-419",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.818930466042254,
-    "lng": 30.806951727037884,
+    "id": "gen-v2-151",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77964058339678,
+    "lng": 30.509796774428214,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-506",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.15740268091407,
-    "lng": 29.085471162247707,
+    "id": "gen-v2-367",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.779784388746094,
+    "lng": 30.400360059543953,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl1-154",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.837456867789776,
-    "lng": 32.926098003286036,
-    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-555",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.0595698136662,
-    "lng": 35.18487712924029,
+    "id": "gen-v2-948",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.9101608414047,
+    "lng": 38.37971456771646,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-420",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.8059240761922,
-    "lng": 32.5053081538568,
-    "difficulty": 2
+    "id": "gen-v2-716",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.50020581744589,
+    "lng": 43.38007299544336,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-873",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.776421170140885,
-    "lng": 41.97804710300949,
+    "id": "gen-v2-572",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57999715953589,
+    "lng": 36.1699461822305,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-428",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.93362706657847,
-    "lng": 30.60788676048607,
+    "id": "gen-v2-78",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88708275129003,
+    "lng": 30.706650655043607,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-900",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.56924270889458,
-    "lng": 33.33374376066621,
-    "difficulty": 3
+    "id": "gen-v2-580",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.5802763445815,
+    "lng": 36.930047225173624,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-845",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.658581273500516,
-    "lng": 29.106789238666067,
-    "difficulty": 3
+    "id": "gen-v2-940",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.909895466444,
+    "lng": 38.38012739796249,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-682",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.949202874937626,
-    "lng": 38.86488973014885,
+    "id": "gen-v2-573",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.57998060304896,
+    "lng": 36.169758898123476,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-499",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.0835489741333,
-    "lng": 29.014346729934598,
-    "difficulty": 2
+    "id": "gen-v2-163",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.33,
+    "lng": 36.27,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-588",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.00723372406393,
-    "lng": 30.739798841293943,
+    "id": "gen-v2-911",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.18016545928291,
+    "lng": 33.22019451084356,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-707",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0307231091562,
-    "lng": 43.995048604280115,
-    "difficulty": 3
-  },
-  {
-    "id": "gen-lvl1-63",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.834341527329144,
-    "lng": 28.939077450883172,
+    "id": "gen-v2-254",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77023550078052,
+    "lng": 29.079944244109125,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-512",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.866870287758104,
-    "lng": 32.46758832969296,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-998",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.46325188339527,
-    "lng": 43.23474791739174,
+    "id": "gen-v2-846",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13994619275854,
+    "lng": 34.159629101300276,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-919",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.633868838389844,
-    "lng": 28.38642634699302,
+    "id": "gen-v2-465",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.750203490808396,
+    "lng": 30.529665172878644,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-140",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.08397035907036,
-    "lng": 32.94585762206652,
+    "id": "gen-v2-667",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31,
+    "lng": 40.74,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-70",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.199119996977714,
-    "lng": 28.810737046951356,
-    "difficulty": 1
+    "id": "gen-v2-421",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.8399120058828,
+    "lng": 31.149982656853897,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-807",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.22359377403122,
-    "lng": 27.115619566116667,
-    "difficulty": 3
+    "id": "gen-v2-22",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991303633315816,
+    "lng": 29.02733156758382,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-312",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.7041585991314,
-    "lng": 30.491401298514422,
-    "difficulty": 2
+    "id": "gen-v2-218",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80036746717771,
+    "lng": 34.580103363629945,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-268",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.630493354088465,
-    "lng": 35.49308544718567,
+    "id": "gen-v2-552",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.729864022366954,
+    "lng": 27.2197362512082,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-396",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.08286748166768,
-    "lng": 29.074524596485315,
+    "id": "gen-v2-10",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04208174464861,
+    "lng": 29.007336936601007,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-923",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.59931754213896,
-    "lng": 43.36178884945607,
-    "difficulty": 3
+    "id": "gen-v2-56",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41918291871366,
+    "lng": 27.128192975702177,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-981",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.88479679300882,
-    "lng": 41.36430736044635,
+    "id": "gen-v2-268",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.769968977765714,
+    "lng": 29.080252434653218,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-235",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.8646911996607,
-    "lng": 32.61394912270936,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-836",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.151926203606486,
-    "lng": 31.80074518195651,
+    "id": "gen-v2-986",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.020207316856606,
+    "lng": 35.15021235432646,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-647",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.50894190879936,
-    "lng": 42.65796938664893,
+    "id": "gen-v2-104",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.18995438500044,
+    "lng": 29.06032800087538,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-666",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.94368861632725,
-    "lng": 26.83659423358699,
+    "id": "gen-v2-1042",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.629851254416494,
+    "lng": 32.329920286074156,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-627",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.283858008164984,
-    "lng": 31.052694018970488,
+    "id": "gen-v2-700",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.87975152943466,
+    "lng": 41.12977479049473,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-289",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.95291948283183,
-    "lng": 30.68260456130641,
+    "id": "gen-v2-786",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65027043387333,
+    "lng": 35.83025359917135,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-881",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.452925809002785,
-    "lng": 34.69063314173238,
+    "id": "gen-v2-375",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78003500448834,
+    "lng": 30.40023619388788,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-792",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.33909421818322,
-    "lng": 38.543607296255516,
-    "difficulty": 3
+    "id": "gen-v2-73",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.887,
+    "lng": 30.707,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-853",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63026938403491,
+    "lng": 34.909980450194986,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-222",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.7866626083566,
-    "lng": 30.421294186573316,
+    "id": "gen-v2-944",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.90988437359156,
+    "lng": 38.37997792593354,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-167",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.075376504735175,
-    "lng": 29.225257571552927,
+    "id": "gen-v2-865",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.96,
+    "lng": 34.67,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-220",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.13389413539912,
-    "lng": 29.003117096978524,
+    "id": "gen-v2-787",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65038147223638,
+    "lng": 35.829982189172775,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-953",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.86698457101318,
-    "lng": 31.605471671279243,
-    "difficulty": 3
+    "id": "gen-v2-724",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.89988778247956,
+    "lng": 41.27017984472685,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-532",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.59806385541593,
-    "lng": 35.43846844083564,
+    "id": "gen-v2-713",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.499690941564765,
+    "lng": 43.37990971920725,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-322",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.78824129520199,
-    "lng": 30.619209751211102,
-    "difficulty": 2
+    "id": "gen-v2-770",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30968222700726,
+    "lng": 36.55018336402909,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-688",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.20639804182963,
-    "lng": 33.553806477464036,
+    "id": "gen-v2-377",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.7799379342822,
+    "lng": 30.400419532611615,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-785",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.994906788988686,
-    "lng": 29.783112426855745,
+    "id": "gen-v2-430",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.83984083349298,
+    "lng": 31.149964074764323,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-651",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.263012715897126,
-    "lng": 32.426629707505825,
+    "id": "gen-v2-844",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.14023336310347,
+    "lng": 34.160335997698716,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-85",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.84972288498083,
-    "lng": 28.777753621239,
+    "id": "gen-v2-991",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37,
+    "lng": 33.77,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-571",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.86289954475247,
-    "lng": 32.367117486889036,
+    "id": "gen-v2-516",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.61042066315475,
+    "lng": 27.420110213606115,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-359",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67004707454745,
+    "lng": 26.55042098739539,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-390",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.91243012006179,
-    "lng": 32.49527579395841,
+    "id": "gen-v2-442",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73000197493317,
+    "lng": 31.59996968710562,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-817",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.659359475450174,
-    "lng": 29.688378373362397,
+    "id": "gen-v2-1058",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19998047223852,
+    "lng": 32.619625831969536,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-339",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.754824798128496,
-    "lng": 30.574898724036824,
-    "difficulty": 2
+    "id": "gen-v2-670",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.310446923525234,
+    "lng": 40.7400229021136,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-510",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.08132811066719,
-    "lng": 29.07710383406196,
+    "id": "gen-v2-517",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60999189707925,
+    "lng": 27.420191610061853,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-472",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.986766415168574,
-    "lng": 32.54213796114259,
+    "id": "gen-v2-101",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.1902452906315,
+    "lng": 29.060197656156184,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-202",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.72212745687567,
-    "lng": 32.489851609812455,
+    "id": "gen-v2-100",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19010063345214,
+    "lng": 29.06033352799959,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-105",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.078286471776515,
-    "lng": 29.05135110624349,
+    "id": "gen-v2-850",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63032915244008,
+    "lng": 34.90991063646113,
     "difficulty": 1
-  },
-  {
-    "id": "gen-lvl2-485",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.966093830763114,
-    "lng": 35.26110427273943,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-885",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.32821266584087,
-    "lng": 42.64012706895559,
+    "id": "gen-v2-269",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.769641403630025,
+    "lng": 29.080155863822814,
     "difficulty": 3
-  },
-  {
-    "id": "gen-lvl2-366",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.75378201565607,
-    "lng": 30.494945636765355,
-    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-311",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.65543245860091,
-    "lng": 35.46498811178213,
-    "difficulty": 2
+    "id": "gen-v2-347",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.670325793070035,
+    "lng": 26.550001345121053,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-842",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.98252335946815,
-    "lng": 36.53704848470512,
+    "id": "gen-v2-89",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88661574355618,
+    "lng": 30.706815224640817,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-335",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.18649353690339,
-    "lng": 29.04349049128983,
-    "difficulty": 2
+    "id": "gen-v2-249",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72038385391757,
+    "lng": 35.48003271344403,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-765",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.231664854593866,
-    "lng": 37.5303981020465,
+    "id": "gen-v2-629",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.670045678559944,
+    "lng": 39.21962430952785,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-306",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.32425472464609,
-    "lng": 29.022026408253762,
+    "id": "gen-v2-548",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.7303396967786,
+    "lng": 27.2198553589056,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-964",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.09664262967252,
-    "lng": 43.46100446853813,
-    "difficulty": 3
+    "id": "gen-v2-831",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13995212553952,
+    "lng": 34.160001551559084,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-751",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.88910688890131,
-    "lng": 41.2943655038402,
+    "id": "gen-v2-1060",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19977801017626,
+    "lng": 32.62015512220735,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-753",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.55726000675466,
-    "lng": 33.345101291786996,
+    "id": "gen-v2-162",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77976015843312,
+    "lng": 30.50971618873345,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-33",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.88827973836781,
-    "lng": 32.999627038072326,
-    "difficulty": 1
+    "id": "gen-v2-734",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.90004860851381,
+    "lng": 41.269943683967995,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-819",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.785325241283665,
-    "lng": 27.023463875429957,
-    "difficulty": 3
+    "id": "gen-v2-652",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15024682683098,
+    "lng": 38.78991183225545,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-853",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.66140887521798,
-    "lng": 33.53395725101092,
+    "id": "gen-v2-432",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.84003032003403,
+    "lng": 31.150118570050054,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-674",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.66698858713755,
-    "lng": 32.142270112155074,
-    "difficulty": 3
+    "id": "gen-v2-326",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14978672524502,
+    "lng": 26.40973379729466,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-519",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.749073468162244,
-    "lng": 30.477449879797494,
+    "id": "gen-v2-838",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13968260363786,
+    "lng": 34.15977620398948,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-134",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.92121541263074,
-    "lng": 29.262520245391446,
-    "difficulty": 1
+    "id": "gen-v2-665",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14995763123935,
+    "lng": 38.790327044930315,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-893",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.37061664352962,
-    "lng": 40.471956576755005,
-    "difficulty": 3
+    "id": "gen-v2-373",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.780226873963684,
+    "lng": 30.40015514199184,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-568",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.86752157417914,
-    "lng": 35.47717986125643,
+    "id": "gen-v2-981",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01994158928503,
+    "lng": 35.149867445523256,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-236",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.99734828314861,
-    "lng": 32.44541244774684,
+    "id": "gen-v2-156",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.78022356218039,
+    "lng": 30.510077082677086,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-3",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.55356339697135,
-    "lng": 27.170417371429494,
+    "id": "gen-v2-127",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.04,
+    "lng": 35.3,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-86",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.38313200637294,
-    "lng": 26.974122341501474,
-    "difficulty": 1
+    "id": "gen-v2-825",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83987436224427,
+    "lng": 33.50960001673583,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-879",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.4999536885329,
-    "lng": 33.672575610635086,
+    "id": "gen-v2-862",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.630323939232724,
+    "lng": 34.90983420627651,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-986",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.461085372198454,
-    "lng": 37.517641158291134,
+    "id": "gen-v2-914",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.18005563863658,
+    "lng": 33.21963273177021,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-731",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.89986661947726,
+    "lng": 41.26984745941421,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-83",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.84510702096621,
-    "lng": 28.784814518124897,
+    "id": "gen-v2-523",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.15,
+    "lng": 27.8,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-246",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.03209024371653,
-    "lng": 35.3483879906443,
+    "id": "gen-v2-332",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14990676582549,
+    "lng": 26.409924784333,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-578",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.90175589908106,
-    "lng": 35.425510042739226,
-    "difficulty": 2
+    "id": "gen-v2-291",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.859920501920044,
+    "lng": 27.260329105518256,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-545",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.80822852722561,
-    "lng": 32.60603016683412,
-    "difficulty": 2
+    "id": "gen-v2-434",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73002885557135,
+    "lng": 31.600170162982675,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-704",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.64567950645127,
-    "lng": 30.85407428832891,
-    "difficulty": 3
+    "id": "gen-v2-795",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.53982414877895,
+    "lng": 34.94994294349256,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-321",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.70080482379505,
-    "lng": 30.513673842143497,
-    "difficulty": 2
+    "id": "gen-v2-159",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77962657646606,
+    "lng": 30.510076612583703,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-340",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.75688457300331,
-    "lng": 30.563822200374503,
+    "id": "gen-v2-188",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.000121157656174,
+    "lng": 39.719742949722864,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-952",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.22475609117059,
-    "lng": 32.301365606814514,
+    "id": "gen-v2-988",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.02008730570232,
+    "lng": 35.15016657802113,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-73",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.38618023691914,
-    "lng": 27.12781609857472,
-    "difficulty": 1
+    "id": "gen-v2-246",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.71969124738951,
+    "lng": 35.48008189182386,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-417",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.14456551633974,
-    "lng": 29.156394003824744,
+    "id": "gen-v2-835",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13985827636403,
+    "lng": 34.15965089076457,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-74",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.42837839201015,
-    "lng": 27.219722020109195,
+    "id": "gen-v2-112",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89008318619602,
+    "lng": 32.48016866775298,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-22",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.96608056080316,
-    "lng": 29.04001460253655,
-    "difficulty": 1
+    "id": "gen-v2-999",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37031534666776,
+    "lng": 33.770265047093474,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-755",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.95597758466824,
-    "lng": 40.16770566090743,
+    "id": "gen-v2-663",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14978238236778,
+    "lng": 38.78963750468254,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-552",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.001393341175834,
-    "lng": 30.65708708772953,
+    "id": "gen-v2-583",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.58020432610863,
+    "lng": 36.92996363561803,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-230",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.8501862521869,
-    "lng": 30.855343663852423,
+    "id": "gen-v2-209",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05012263590186,
+    "lng": 37.36999943042582,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-318",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.81292001224141,
-    "lng": 32.47736809530664,
+    "id": "gen-v2-1019",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44999696728722,
+    "lng": 31.79009422211875,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-410",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.265478900431056,
-    "lng": 29.17720657729718,
+    "id": "gen-v2-925",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.02001538765638,
+    "lng": 40.52026869642493,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-95",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.56618030035446,
-    "lng": 27.17767162356149,
-    "difficulty": 1
+    "id": "gen-v2-304",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86005567932765,
+    "lng": 27.259991148520125,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-263",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.95118490042909,
-    "lng": 30.77860804277014,
+    "id": "gen-v2-762",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.31039003191551,
+    "lng": 36.54985984573564,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-566",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.814331148400285,
-    "lng": 32.34660123218117,
+    "id": "gen-v2-587",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57994715656204,
+    "lng": 36.93041776094918,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-990",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.007831633373,
-    "lng": 26.099698867298184,
-    "difficulty": 3
+    "id": "gen-v2-203",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.050157857976544,
+    "lng": 37.37020392950695,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-331",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.696336328295686,
-    "lng": 30.489813048408944,
+    "id": "gen-v2-674",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.31016732087667,
+    "lng": 40.74019519979131,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-351",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.88223783936756,
-    "lng": 35.28120275241415,
+    "id": "gen-v2-314",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.30988415354498,
+    "lng": 26.689799165894268,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-234",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.98435492210569,
-    "lng": 30.76157416215317,
+    "id": "gen-v2-834",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.139881677624516,
+    "lng": 34.160186994504315,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-121",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.0103467062962,
-    "lng": 33.0285061866434,
-    "difficulty": 1
+    "id": "gen-v2-730",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.899665108650446,
+    "lng": 41.26984283856907,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-835",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.44118761370244,
-    "lng": 32.28861922136035,
-    "difficulty": 3
+    "id": "gen-v2-325",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15,
+    "lng": 26.41,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-586",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.79953755469739,
-    "lng": 32.38232080451733,
+    "id": "gen-v2-802",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.53992590702034,
+    "lng": 34.950401177208605,
     "difficulty": 2
-  },
-  {
-    "id": "gen-lvl3-744",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.20348434832887,
-    "lng": 39.845832302023396,
-    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-762",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.20530891181338,
-    "lng": 34.15925848446287,
+    "id": "gen-v2-954",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91028840759202,
+    "lng": 38.37983201793503,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-109",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.04020424283632,
-    "lng": 32.83585720335128,
-    "difficulty": 1
+    "id": "gen-v2-427",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.83989202524319,
+    "lng": 31.150403797825277,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-270",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.05130770710731,
-    "lng": 35.45276986771028,
+    "id": "gen-v2-25",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99066582712738,
+    "lng": 29.02694346079811,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-780",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.69297801889331,
-    "lng": 42.47286258094878,
+    "id": "gen-v2-1062",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.199790924096334,
+    "lng": 32.61987489519535,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-120",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.39922216315724,
-    "lng": 27.028299584557278,
-    "difficulty": 1
+    "id": "gen-v2-62",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.4190292693447,
+    "lng": 27.128008220821446,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-979",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.21461640927736,
-    "lng": 34.10199974415786,
-    "difficulty": 3
+    "id": "gen-v2-941",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91028365444537,
+    "lng": 38.380030591347364,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-145",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.21717787220907,
-    "lng": 28.957827548936066,
+    "id": "gen-v2-1013",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45006522354107,
+    "lng": 31.789711095930315,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-899",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.80833020163019,
-    "lng": 38.885965901826395,
-    "difficulty": 3
+    "id": "gen-v2-836",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.14026579043636,
+    "lng": 34.15984662433964,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-78",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.94669130761422,
-    "lng": 32.99748345171637,
-    "difficulty": 1
+    "id": "gen-v2-982",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.01983247772635,
+    "lng": 35.14975865658751,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-606",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.94001239117302,
-    "lng": 32.12691027707191,
-    "difficulty": 3
+    "id": "gen-v2-512",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.61029349128861,
+    "lng": 27.42001650374606,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-14",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.264252360150884,
-    "lng": 28.90526309489939,
-    "difficulty": 1
+    "id": "gen-v2-888",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.369670522027256,
+    "lng": 34.020166542195504,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-924",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.02031233777255,
-    "lng": 27.846621617016282,
+    "id": "gen-v2-789",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64989387822331,
+    "lng": 35.82972233945252,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-690",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.38753862661082,
-    "lng": 38.81936790861634,
+    "id": "gen-v2-680",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.310216133618276,
+    "lng": 40.74018275813354,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-583",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.04673883430466,
-    "lng": 29.08192740874337,
-    "difficulty": 2
+    "id": "gen-v2-904",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17982185346913,
+    "lng": 33.219816770637884,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-138",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.95921914093955,
-    "lng": 29.145931391676022,
+    "id": "gen-v2-632",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.91030647282795,
+    "lng": 40.23013657018456,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-722",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.35343604648637,
-    "lng": 43.255111402874114,
+    "id": "gen-v2-691",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.87994826579436,
+    "lng": 41.129998795343546,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-918",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.17995697467798,
+    "lng": 33.220083796343886,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-409",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.052455987660174,
-    "lng": 29.052044127162954,
+    "id": "gen-v2-175",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.329632130375366,
+    "lng": 36.270190744126104,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-518",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60991420505484,
+    "lng": 27.420268346968477,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-537",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.72339107458843,
-    "lng": 35.432171427052936,
+    "id": "gen-v2-387",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.76040086517293,
+    "lng": 29.93000079993159,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-225",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.8029885435452,
-    "lng": 35.47004864389346,
+    "id": "gen-v2-877",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.95981037149931,
+    "lng": 34.67032837548706,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-795",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.267948842475015,
-    "lng": 31.220155570541397,
-    "difficulty": 3
+    "id": "gen-v2-618",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67032966753589,
+    "lng": 39.21992424430842,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-743",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.426951989153146,
-    "lng": 38.94448165078001,
+    "id": "gen-v2-413",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.649935966886844,
+    "lng": 29.269624273289438,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-757",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.79327705978893,
-    "lng": 34.207070718519375,
+    "id": "gen-v2-160",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77974851773387,
+    "lng": 30.50997909800713,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-777",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.94039509962141,
-    "lng": 42.379498165494105,
-    "difficulty": 3
+    "id": "gen-v2-509",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.609875851077796,
+    "lng": 27.420015726831604,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-935",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.4634708965774,
-    "lng": 26.394550313088594,
-    "difficulty": 3
+    "id": "gen-v2-892",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.36995358477944,
+    "lng": 34.01999694172264,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-52",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.79479693200999,
-    "lng": 32.97402636746995,
+    "id": "gen-v2-1028",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.6300537405239,
+    "lng": 32.32993475671565,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-395",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.861804694022105,
-    "lng": 30.839661185602,
+    "id": "gen-v2-441",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.72974577777338,
+    "lng": 31.599770966079788,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-199",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.37064942524663,
-    "lng": 27.139531015470432,
-    "difficulty": 1
+    "id": "gen-v2-140",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.03996643119582,
+    "lng": 35.300436826136874,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-888",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.246273730297155,
-    "lng": 28.511054144902822,
+    "id": "gen-v2-50",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90971894894112,
+    "lng": 32.86024247796503,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-60",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41855870801811,
+    "lng": 27.128018776327536,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-719",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.595708194067576,
-    "lng": 41.23981959128667,
+    "id": "gen-v2-358",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67033787252571,
+    "lng": 26.550110172498037,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-572",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.79224990079864,
-    "lng": 32.604469206107176,
+    "id": "gen-v2-229",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.80003993058182,
+    "lng": 34.58032646481233,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-522",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.987233268488175,
-    "lng": 32.469378563405414,
-    "difficulty": 2
+    "id": "gen-v2-149",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.78024782888239,
+    "lng": 30.509994175078205,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-172",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.931258385541454,
-    "lng": 32.80498367966487,
+    "id": "gen-v2-362",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78031726150557,
+    "lng": 30.399809064118106,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-412",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.78381703939611,
-    "lng": 30.706525312798004,
+    "id": "gen-v2-281",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.0339379888349,
+    "lng": 27.429999937113276,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-852",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.92073689737437,
-    "lng": 35.24544237158463,
-    "difficulty": 3
+    "id": "gen-v2-803",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.539630139718895,
+    "lng": 34.9502452490701,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-991",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.087197793676644,
-    "lng": 43.92237085559432,
-    "difficulty": 3
+    "id": "gen-v2-535",
+    "name": "Tekirdağ Çorlu Çevresi",
+    "lat": 41.149742013291956,
+    "lng": 27.799975021315,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-636",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.47049298832045,
-    "lng": 27.078202102397295,
-    "difficulty": 3
+    "id": "gen-v2-656",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15032526314555,
+    "lng": 38.789951267951864,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-687",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.03399864096908,
-    "lng": 29.076018765263473,
+    "id": "gen-v2-143",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.039980296960564,
+    "lng": 35.30001576350533,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-830",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.278525001239736,
-    "lng": 29.748206608574808,
+    "id": "gen-v2-167",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32975353809732,
+    "lng": 36.27010209213816,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-35",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99061341984957,
+    "lng": 29.026844841432823,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-589",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.2302617093111,
-    "lng": 29.071543047678343,
+    "id": "gen-v2-424",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.84040176727849,
+    "lng": 31.14996522470588,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-609",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.308903129462664,
-    "lng": 29.10363132839245,
-    "difficulty": 3
+    "id": "gen-v2-133",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.04013107037656,
+    "lng": 35.300052713625604,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-993",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.44890272692579,
-    "lng": 41.83085087772163,
-    "difficulty": 3
+    "id": "gen-v2-872",
+    "name": "Niğde Merkez Çevresi",
+    "lat": 37.960021821603966,
+    "lng": 34.67027448562426,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-605",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.20354244379002,
-    "lng": 42.60643643456786,
-    "difficulty": 3
+    "id": "gen-v2-417",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.840163439555894,
+    "lng": 31.15026644069526,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-153",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.97829857408198,
-    "lng": 28.8849824568771,
-    "difficulty": 1
+    "id": "gen-v2-1052",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19970758824846,
+    "lng": 32.61995457642015,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-347",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.85665506993385,
-    "lng": 32.56796386701347,
+    "id": "gen-v2-265",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77030665219958,
+    "lng": 29.080104553546533,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-209",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.78504406613323,
-    "lng": 30.72239741984506,
+    "id": "gen-v2-223",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.799905044035825,
+    "lng": 34.579989630019966,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-374",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.84916152922732,
-    "lng": 30.561818418622856,
+    "id": "gen-v2-619",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.669589830848594,
+    "lng": 39.219995112893855,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-372",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.20146209087524,
-    "lng": 29.106540279457757,
+    "id": "gen-v2-368",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.779743025911024,
+    "lng": 30.39988866204146,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-143",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.808030574765084,
-    "lng": 32.90130283968879,
-    "difficulty": 1
+    "id": "gen-v2-49",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90997696718933,
+    "lng": 32.86033120036434,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-987",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.58939177573078,
-    "lng": 30.335297484765363,
-    "difficulty": 3
+    "id": "gen-v2-822",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83959494425355,
+    "lng": 33.510057678488444,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-278",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.775866416275555,
-    "lng": 30.551728872230004,
+    "id": "gen-v2-43",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90991034779848,
+    "lng": 32.86027123628303,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-905",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.447009151160046,
-    "lng": 40.21405307604272,
+    "id": "gen-v2-750",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.74992672822369,
+    "lng": 37.01030641506559,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-718",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.499878152962914,
+    "lng": 43.379588592292556,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-436",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 38.01492266772865,
-    "lng": 32.47363417061891,
+    "id": "gen-v2-751",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.7498070140594,
+    "lng": 37.009770096396444,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-509",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.77990067582889,
-    "lng": 30.487401132193224,
+    "id": "gen-v2-621",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.669947639561165,
+    "lng": 39.21985706328106,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-412",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.650005795608905,
+    "lng": 29.27006650037657,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-177",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.14177314334903,
-    "lng": 29.122717125656752,
+    "id": "gen-v2-344",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.6702370318332,
+    "lng": 26.549671744544238,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-170",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.93550182597285,
-    "lng": 32.83102231515823,
+    "id": "gen-v2-725",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.900059284330574,
+    "lng": 41.27030870396027,
     "difficulty": 1
+  },
+  {
+    "id": "gen-v2-88",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88705075686475,
+    "lng": 30.706629277035418,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-327",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.03258677067818,
-    "lng": 35.194588610678785,
+    "id": "gen-v2-259",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77003605725155,
+    "lng": 29.08044044017633,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-731",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.226660813490696,
-    "lng": 26.84860047573184,
-    "difficulty": 3
+    "id": "gen-v2-661",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14962592339446,
+    "lng": 38.78979495591968,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-827",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.54152154174888,
-    "lng": 36.30012001490476,
-    "difficulty": 3
+    "id": "gen-v2-884",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.369848799141046,
+    "lng": 34.02018314286087,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-75",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88697298006866,
+    "lng": 30.707063930991627,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-638",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.54650683956495,
-    "lng": 38.05590908228261,
+    "id": "gen-v2-504",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66967851356922,
+    "lng": 29.40023769826296,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-922",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.32806822352211,
-    "lng": 29.843805553019102,
+    "id": "gen-v2-648",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90999907798921,
+    "lng": 40.22964865716053,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-643",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.9098552231779,
+    "lng": 40.23010819785791,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-155",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.23572648542465,
-    "lng": 27.13128100702247,
+    "id": "gen-v2-364",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.77972299227949,
+    "lng": 30.399973223074642,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-611",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.122430889000064,
-    "lng": 37.221633557013774,
-    "difficulty": 3
+    "id": "gen-v2-903",
+    "name": "Karaman Merkez Çevresi",
+    "lat": 37.18003116304704,
+    "lng": 33.2199700836253,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-553",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.754146624051025,
-    "lng": 35.572948026943024,
-    "difficulty": 2
+    "id": "gen-v2-2",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.042231050190075,
+    "lng": 29.00774945116211,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-185",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.333732104874336,
-    "lng": 27.079800154670618,
+    "id": "gen-v2-221",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.79997908644003,
+    "lng": 34.58000489036685,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-944",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.51735408292042,
-    "lng": 42.5935811211274,
-    "difficulty": 3
+    "id": "gen-v2-210",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05043097193589,
+    "lng": 37.36992554542725,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-749",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0523288528762,
-    "lng": 30.02806399013322,
-    "difficulty": 3
+    "id": "gen-v2-642",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.90974539799788,
+    "lng": 40.22977411676958,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-591",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.87678464630805,
-    "lng": 32.364312268721754,
+    "id": "gen-v2-45",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90970590064713,
+    "lng": 32.85994017878851,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-908",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.5687872667503,
-    "lng": 43.07685070861241,
-    "difficulty": 3
+    "id": "gen-v2-235",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72,
+    "lng": 35.48,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-328",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15007621035129,
+    "lng": 26.409631730757905,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-671",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.310232930441856,
+    "lng": 40.74009428948235,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-818",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.905837995706335,
-    "lng": 31.24130035612449,
+    "id": "gen-v2-932",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.020446453769566,
+    "lng": 40.51994375005413,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-530",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.20362644624172,
-    "lng": 29.029259673020437,
+    "id": "gen-v2-406",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65016776859308,
+    "lng": 29.270082045865866,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-734",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.82435142284762,
-    "lng": 38.477328619731104,
+    "id": "gen-v2-299",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86026702548214,
+    "lng": 27.259975422959016,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-843",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13998708227994,
+    "lng": 34.160293181390855,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-314",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.81393098162675,
-    "lng": 35.60350147984027,
-    "difficulty": 2
+    "id": "gen-v2-288",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03390447291205,
+    "lng": 27.43022296445232,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-562",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.93089653368863,
-    "lng": 30.844928552236038,
+    "id": "gen-v2-650",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.150390451039,
+    "lng": 38.78995101298839,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-355",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.66994781149169,
+    "lng": 26.550209269317723,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-151",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.9490153853017,
-    "lng": 32.687410391554934,
+    "id": "gen-v2-977",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.019586001418745,
+    "lng": 35.14999095586246,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-949",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.03776056488867,
-    "lng": 33.42110003880684,
+    "id": "gen-v2-808",
+    "name": "Çorum Merkez Çevresi",
+    "lat": 40.54011158992107,
+    "lng": 34.94974060623981,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-15",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.04155207385504,
-    "lng": 28.7171315216377,
+    "id": "gen-v2-851",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63010483007781,
+    "lng": 34.91031569709785,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-811",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.54364171996525,
-    "lng": 41.32501534795082,
+    "id": "gen-v2-14",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04185463260963,
+    "lng": 29.00756753182277,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-1002",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36989571878903,
+    "lng": 33.770271603749244,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-815",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.38912880471118,
-    "lng": 41.15342524196613,
+    "id": "gen-v2-179",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32984632862499,
+    "lng": 36.27037070177197,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-468",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.823274837149704,
-    "lng": 35.37447090862684,
+    "id": "gen-v2-1054",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.20021621888487,
+    "lng": 32.61967744864066,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-354",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.88145275074993,
-    "lng": 30.739524273811178,
-    "difficulty": 2
+    "id": "gen-v2-309",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.309910059700414,
+    "lng": 26.690432244027367,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-727",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.351369699786105,
-    "lng": 35.26862216860152,
-    "difficulty": 3
+    "id": "gen-v2-135",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.04006155627415,
+    "lng": 35.29982761787497,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-788",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.776780225143284,
-    "lng": 27.771938392708417,
-    "difficulty": 3
+    "id": "gen-v2-777",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.6497528423288,
+    "lng": 35.829847170727305,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-816",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.48687517903861,
-    "lng": 28.10634106830388,
+    "id": "gen-v2-1024",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.44989186161745,
+    "lng": 31.790350059210656,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-474",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.72868356217571,
-    "lng": 30.512868874857837,
+    "id": "gen-v2-440",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.72979685375808,
+    "lng": 31.6003906706584,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-484",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.96127957652885,
-    "lng": 35.23524566698322,
+    "id": "gen-v2-1055",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19992835766623,
+    "lng": 32.62003060881594,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-477",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.156055059935845,
-    "lng": 29.069769904086247,
-    "difficulty": 2
+    "id": "gen-v2-521",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60992978009027,
+    "lng": 27.420291945289645,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-211",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.70971465529796,
-    "lng": 35.468837249354884,
+    "id": "gen-v2-657",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.149828732805716,
+    "lng": 38.78999657155674,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-367",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.81390653677917,
-    "lng": 30.734064574297104,
-    "difficulty": 2
+    "id": "gen-v2-608",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.3501673238468,
+    "lng": 38.30990269294219,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-774",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.30993938472774,
+    "lng": 36.55042693184985,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-976",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.020118714326756,
+    "lng": 35.15024909770935,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-556",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.723878753194576,
-    "lng": 30.470669385999997,
+    "id": "gen-v2-298",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.86006340383529,
+    "lng": 27.260399198259424,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-739",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.75,
+    "lng": 37.01,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-489",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.27110240200627,
-    "lng": 28.988380148384564,
+    "id": "gen-v2-475",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.75977587297942,
+    "lng": 30.549643476997034,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-540",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.9726728287418,
-    "lng": 30.665321244892827,
+    "id": "gen-v2-854",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62966442418485,
+    "lng": 34.91000620881461,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-259",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.0740553165627,
-    "lng": 29.054794508892986,
+    "id": "gen-v2-150",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.77980942343367,
+    "lng": 30.509659001647897,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-843",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.57665857880491,
-    "lng": 37.36968561358573,
+    "id": "gen-v2-106",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.1902909848537,
+    "lng": 29.05970971315356,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-115",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.55384294029976,
-    "lng": 27.0749619164731,
+    "id": "gen-v2-697",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.87997854939738,
+    "lng": 41.13006488844176,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-1009",
+    "name": "Zonguldak Merkez Çevresi",
+    "lat": 41.45,
+    "lng": 31.79,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-538",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.836048219233994,
-    "lng": 30.546836368930382,
+    "id": "gen-v2-726",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.90015785505759,
+    "lng": 41.270034188691376,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-782",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.526569784778296,
-    "lng": 43.57654076308126,
+    "id": "gen-v2-717",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.50032058181826,
+    "lng": 43.38023835940587,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-293",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.140323863117665,
-    "lng": 28.9601697003699,
-    "difficulty": 2
+    "id": "gen-v2-54",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.91038810420148,
+    "lng": 32.860210083363874,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-19",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.537325317457494,
-    "lng": 27.153829991990545,
+    "id": "gen-v2-833",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13988889434779,
+    "lng": 34.16018824562791,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-301",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.196959497756865,
-    "lng": 29.069357300944894,
+    "id": "gen-v2-403",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65004062537098,
+    "lng": 29.270220934872512,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-481",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.76068702499265,
-    "lng": 30.506490902507068,
-    "difficulty": 2
+    "id": "gen-v2-399",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.649619777829535,
+    "lng": 29.270210572528974,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-914",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.11041654013019,
-    "lng": 33.377639688219276,
+    "id": "gen-v2-303",
+    "name": "Aydın Kuşadası Çevresi",
+    "lat": 37.860291855121694,
+    "lng": 27.259951990362516,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-692",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.91540419676641,
-    "lng": 29.64806846906446,
-    "difficulty": 3
+    "id": "gen-v2-578",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.58040617373861,
+    "lng": 36.93012426480433,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-358",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.18619711163384,
-    "lng": 29.06400900934341,
-    "difficulty": 2
+    "id": "gen-v2-217",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.8,
+    "lng": 34.58,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-271",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.97777852803018,
-    "lng": 32.46092816383935,
+    "id": "gen-v2-28",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.99090805362723,
+    "lng": 29.027187210539815,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-470",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.80970240370743,
-    "lng": 30.61384262817921,
+    "id": "gen-v2-839",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.140326918959346,
+    "lng": 34.1601226154132,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-754",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.11798033703682,
-    "lng": 31.25900285504167,
-    "difficulty": 3
+    "id": "gen-v2-553",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.730038641994966,
+    "lng": 27.219656317310665,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-776",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.93991548175702,
-    "lng": 40.97411843209777,
-    "difficulty": 3
+    "id": "gen-v2-605",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.349603360070724,
+    "lng": 38.31002112448323,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-247",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.829260366194454,
-    "lng": 30.70209394435629,
+    "id": "gen-v2-927",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.019870365084934,
+    "lng": 40.51995410383356,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-612",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.068898861391055,
-    "lng": 34.617623420243525,
+    "id": "gen-v2-18",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04198288485077,
+    "lng": 29.00748145423843,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-677",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.25891497809201,
-    "lng": 44.11907967177659,
+    "id": "gen-v2-701",
+    "name": "Batman Merkez Çevresi",
+    "lat": 37.88032531482368,
+    "lng": 41.130171839672485,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-30",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.98977633930789,
-    "lng": 29.063293976873407,
+    "id": "gen-v2-995",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.369916403770674,
+    "lng": 33.769573549817544,
     "difficulty": 1
+  },
+  {
+    "id": "gen-v2-484",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.759912051358235,
+    "lng": 30.550022702242504,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-791",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65000573787513,
+    "lng": 35.82966606142584,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-523",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.68777191434145,
-    "lng": 35.38049281738794,
+    "id": "gen-v2-283",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03393556454754,
+    "lng": 27.43040090698251,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-304",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.21284441232034,
-    "lng": 29.137295666535117,
+    "id": "gen-v2-997",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.36961419937279,
+    "lng": 33.77007405360547,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-397",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.65,
+    "lng": 29.27,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-408",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.83411204125373,
-    "lng": 30.53192976638899,
+    "id": "gen-v2-7",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.041840522255825,
+    "lng": 29.007261328622246,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-698",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.62540563652682,
-    "lng": 35.748479215826876,
+    "id": "gen-v2-970",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.98027229050458,
+    "lng": 37.87978339067353,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-629",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.395442989040035,
-    "lng": 29.090303851040257,
-    "difficulty": 3
+    "id": "gen-v2-169",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.33033112437961,
+    "lng": 36.2697624798468,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-982",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.26069007808073,
-    "lng": 29.475763125303498,
-    "difficulty": 3
+    "id": "gen-v2-668",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.309757378486175,
+    "lng": 40.74011840453226,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-668",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.4019045279977,
-    "lng": 37.20098920528152,
+    "id": "gen-v2-396",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.75981188517588,
+    "lng": 29.930090536353276,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-296",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.15843970750167,
-    "lng": 29.087486830514656,
-    "difficulty": 2
+    "id": "gen-v2-436",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.73012393206861,
+    "lng": 31.600135818187315,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-41",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.29181501532654,
-    "lng": 27.043781092020392,
+    "id": "gen-v2-199",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05,
+    "lng": 37.37,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-846",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.180575746995,
-    "lng": 36.492428734305875,
+    "id": "gen-v2-32",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.990928868741626,
+    "lng": 29.027109567992127,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-274",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.84281407408215,
-    "lng": 32.444295771751705,
-    "difficulty": 2
+    "id": "gen-v2-70",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.419131245009275,
+    "lng": 27.128018338983146,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-302",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.93968049363936,
-    "lng": 32.53362485565621,
+    "id": "gen-v2-461",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.74983840975911,
+    "lng": 30.52991550679642,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-252",
+    "name": "Kayseri Melikgazi Çevresi",
+    "lat": 38.72013584294904,
+    "lng": 35.48032887990582,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-577",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.20047540264367,
-    "lng": 28.993071734292144,
+    "id": "gen-v2-497",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.669705603000025,
+    "lng": 29.4002111341959,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-186",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.217715363524206,
-    "lng": 28.994576085875533,
+    "id": "gen-v2-742",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.749843112837866,
+    "lng": 37.01007968062164,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-98",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.041464497156305,
-    "lng": 28.70154153559651,
+    "id": "gen-v2-469",
+    "name": "Isparta Merkez Çevresi",
+    "lat": 37.76,
+    "lng": 30.55,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-369",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.78155780435064,
-    "lng": 32.53813183672598,
+    "id": "gen-v2-780",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64988386587141,
+    "lng": 35.829952118172905,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-119",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.010990372967115,
-    "lng": 29.13326244545081,
+    "id": "gen-v2-559",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.58,
+    "lng": 36.17,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-784",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.547001135708456,
-    "lng": 36.78444919831543,
-    "difficulty": 3
+    "id": "gen-v2-256",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77003719730407,
+    "lng": 29.079867771512127,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-110",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.86426638842907,
-    "lng": 28.940697235674104,
+    "id": "gen-v2-184",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.000174737214905,
+    "lng": 39.71996369812729,
     "difficulty": 1
+  },
+  {
+    "id": "gen-v2-746",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.74970476262691,
+    "lng": 37.01011526439376,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-824",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.72911143956594,
-    "lng": 39.95668069305986,
+    "id": "gen-v2-859",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62970819685908,
+    "lng": 34.910236884350724,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-53",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90970120552222,
+    "lng": 32.86019329517394,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-743",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.74990651204037,
+    "lng": 37.01026580352237,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-730",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.53796995970236,
-    "lng": 30.205393701138696,
+    "id": "gen-v2-990",
+    "name": "Sinop Merkez Çevresi",
+    "lat": 42.020439684157154,
+    "lng": 35.149908536033244,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-1030",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.63024846238545,
+    "lng": 32.33001924271974,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-174",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32997575258146,
+    "lng": 36.2695540921141,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-997",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.8284695348673,
-    "lng": 37.04384800042843,
+    "id": "gen-v2-213",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.05005236518637,
+    "lng": 37.36958210231685,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-996",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.92035836246032,
-    "lng": 26.238521787983988,
+    "id": "gen-v2-71",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41931235134042,
+    "lng": 27.128148537465144,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-886",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.370110027477445,
+    "lng": 34.020263453323516,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-238",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.83650329843236,
-    "lng": 30.639550239198933,
+    "id": "gen-v2-781",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65031482225256,
+    "lng": 35.82972731956243,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-525",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.81139849160717,
-    "lng": 35.58648095981516,
+    "id": "gen-v2-153",
+    "name": "Eskişehir Tepebaşı Çevresi",
+    "lat": 39.780292744082004,
+    "lng": 30.509728080738434,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-183",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.81214094394406,
-    "lng": 28.908431287400035,
+    "id": "gen-v2-993",
+    "name": "Kastamonu Merkez Çevresi",
+    "lat": 41.37016548145683,
+    "lng": 33.77028163320997,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-864",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.93040984925864,
-    "lng": 37.7500980193172,
-    "difficulty": 3
+    "id": "gen-v2-636",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.91000497463528,
+    "lng": 40.23043749468982,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-637",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.61295464401639,
-    "lng": 33.567832847082926,
+    "id": "gen-v2-68",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.418721874281026,
+    "lng": 27.127761166052245,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-778",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.06029024035181,
-    "lng": 32.50253470193395,
-    "difficulty": 3
+    "id": "gen-v2-569",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.579975679267775,
+    "lng": 36.169733390677244,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-349",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.80333340061333,
-    "lng": 30.609000311847833,
+    "id": "gen-v2-1051",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.19988054267197,
+    "lng": 32.62026105584747,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-280",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.89932721112705,
-    "lng": 32.53120953650467,
+    "id": "gen-v2-422",
+    "name": "Düzce Merkez Çevresi",
+    "lat": 40.840196582076565,
+    "lng": 31.150143758036826,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-781",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.88114968962943,
-    "lng": 41.673152411873744,
-    "difficulty": 3
+    "id": "gen-v2-848",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62998731451721,
+    "lng": 34.91000285612878,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-594",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.855550620746484,
-    "lng": 35.466931190978514,
-    "difficulty": 2
+    "id": "gen-v2-455",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.750193401437016,
+    "lng": 30.529765466986685,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-171",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.74316183467962,
-    "lng": 29.097459591263338,
-    "difficulty": 1
+    "id": "gen-v2-178",
+    "name": "Samsun Atakum Çevresi",
+    "lat": 41.32968261369363,
+    "lng": 36.27023156222527,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl1-194",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.82346209314375,
-    "lng": 32.810450491667474,
+    "id": "gen-v2-1047",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.200275459927205,
+    "lng": 32.620165260631346,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-2",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.95455767311692,
-    "lng": 28.692931859792896,
+    "id": "gen-v2-267",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.7697382571784,
+    "lng": 29.080339590657854,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-437",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.72990720170549,
+    "lng": 31.60036749346245,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-352",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.80983443185128,
-    "lng": 30.73139497968247,
-    "difficulty": 2
+    "id": "gen-v2-827",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.84040662922298,
+    "lng": 33.5100901759591,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-219",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.12627311913688,
-    "lng": 35.35100537198098,
+    "id": "gen-v2-638",
+    "name": "Diyarbakır Sur Çevresi",
+    "lat": 37.910137458574916,
+    "lng": 40.23002710694217,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-567",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.803412315877715,
-    "lng": 30.582470763733337,
-    "difficulty": 2
+    "id": "gen-v2-400",
+    "name": "Yalova Merkez Çevresi",
+    "lat": 40.64986480070171,
+    "lng": 29.270356782617423,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-558",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73036433738018,
+    "lng": 27.219804627440293,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-961",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.63229053316294,
-    "lng": 34.261036667313576,
+    "id": "gen-v2-124",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.88962329459871,
+    "lng": 32.48005166592298,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-228",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.742249569562624,
-    "lng": 30.514966562199128,
+    "id": "gen-v2-335",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.14987170132268,
+    "lng": 26.40958384765959,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-217",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.76626075420597,
-    "lng": 30.481558006549548,
+    "id": "gen-v2-585",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.57992487229013,
+    "lng": 36.92976296766051,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-615",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.803871123045475,
-    "lng": 32.27682159319885,
+    "id": "gen-v2-212",
+    "name": "Gaziantep Şahinbey Çevresi",
+    "lat": 37.04993667302264,
+    "lng": 37.37012068134977,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-709",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.28654383778307,
-    "lng": 35.653930961734545,
+    "id": "gen-v2-592",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.579886158009955,
+    "lng": 36.92962026696166,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-181",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.24273003891742,
-    "lng": 29.128504756498934,
-    "difficulty": 1
+    "id": "gen-v2-864",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63012921188281,
+    "lng": 34.909788706513716,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl3-768",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.10858771532913,
-    "lng": 37.77162154676998,
-    "difficulty": 3
+    "id": "gen-v2-278",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.03413810256166,
+    "lng": 27.43032234755207,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-326",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.88997065358394,
-    "lng": 32.374854008220446,
+    "id": "gen-v2-943",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91025870931123,
+    "lng": 38.3796630957459,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-670",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.41099511314518,
-    "lng": 32.86549576591717,
-    "difficulty": 3
+    "id": "gen-v2-27",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991062309013216,
+    "lng": 29.02690961360356,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-887",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.31845330826341,
-    "lng": 34.17596482698244,
-    "difficulty": 3
+    "id": "gen-v2-551",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.72971800380682,
+    "lng": 27.22012806654953,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-192",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.32325156073799,
-    "lng": 27.12743758542135,
-    "difficulty": 1
+    "id": "gen-v2-840",
+    "name": "Kırşehir Merkez Çevresi",
+    "lat": 39.13965967246162,
+    "lng": 34.159868530752256,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-804",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.03600948425114,
-    "lng": 37.63393275679015,
-    "difficulty": 3
+    "id": "gen-v2-675",
+    "name": "Mardin Artuklu Çevresi",
+    "lat": 37.309926051254976,
+    "lng": 40.74000715725981,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-742",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.702690790277344,
-    "lng": 35.223016601490286,
-    "difficulty": 3
+    "id": "gen-v2-255",
+    "name": "Denizli Pamukkale Çevresi",
+    "lat": 37.77014530455801,
+    "lng": 29.079756515310873,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-920",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.35730451592548,
-    "lng": 28.034173681920766,
+    "id": "gen-v2-590",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.580000041842396,
+    "lng": 36.93010856291532,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-799",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.20660617829828,
-    "lng": 36.29416642743722,
+    "id": "gen-v2-321",
+    "name": "Balıkesir Ayvalık Çevresi",
+    "lat": 39.3101943688818,
+    "lng": 26.689898494728652,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-187",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.895349457353596,
-    "lng": 28.780727310023902,
+    "id": "gen-v2-1",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.0422,
+    "lng": 29.0075,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl1-126",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.15809565010056,
-    "lng": 28.94504649195034,
-    "difficulty": 1
+    "id": "gen-v2-600",
+    "name": "Malatya Battalgazi Çevresi",
+    "lat": 38.350125751153215,
+    "lng": 38.30999449813959,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl1-100",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 41.130402246707156,
-    "lng": 28.859389779671833,
+    "id": "gen-v2-91",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19,
+    "lng": 29.06,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-451",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.838777516179675,
-    "lng": 32.515425803475416,
+    "id": "gen-v2-47",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.90985315431705,
+    "lng": 32.859889261147984,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-923",
+    "name": "Rize Merkez Çevresi",
+    "lat": 41.02016062533573,
+    "lng": 40.52040549614976,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-594",
+    "name": "Kahramanmaraş Dulkadiroğlu Çevresi",
+    "lat": 37.58001889685968,
+    "lng": 36.92971676396716,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-90",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88710707455441,
+    "lng": 30.706830308366662,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-454",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.13735216648562,
-    "lng": 29.20760065904464,
+    "id": "gen-v2-557",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.73013024710181,
+    "lng": 27.220018313794437,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-466",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.75003292404477,
+    "lng": 30.53017784259922,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-658",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.14982661115853,
+    "lng": 38.78961987903712,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-283",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.93315196201615,
-    "lng": 32.59647988983205,
+    "id": "gen-v2-767",
+    "name": "Tokat Merkez Çevresi",
+    "lat": 40.309821139313385,
+    "lng": 36.54991860705302,
     "difficulty": 2
+  },
+  {
+    "id": "gen-v2-502",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.67014541692563,
+    "lng": 29.399741399338875,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-651",
+    "name": "Şanlıurfa Eyyübiye Çevresi",
+    "lat": 37.15031081613318,
+    "lng": 38.78984460331682,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-863",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62995480702923,
+    "lng": 34.90959070580777,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-551",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.71136641224263,
-    "lng": 30.500698033204944,
+    "id": "gen-v2-788",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.64970605574764,
+    "lng": 35.82979115970208,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-96",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.190413044019934,
+    "lng": 29.059859830208687,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-550",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.28428456218046,
-    "lng": 29.144778356111743,
+    "id": "gen-v2-1038",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.62984707715321,
+    "lng": 32.32969753215908,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-951",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.6273087312671,
-    "lng": 41.89322228552662,
+    "id": "gen-v2-860",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.63023902458878,
+    "lng": 34.91020802330082,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-421",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.66804582265412,
-    "lng": 35.532121753985564,
+    "id": "gen-v2-63",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41930955011937,
+    "lng": 27.128200308314646,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-135",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 39.97804490154776,
-    "lng": 32.77149509983184,
+    "id": "gen-v2-775",
+    "name": "Amasya Merkez Çevresi",
+    "lat": 40.65,
+    "lng": 35.83,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl3-916",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.55455306100894,
-    "lng": 35.193305505073965,
+    "id": "gen-v2-198",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00018845246476,
+    "lng": 39.72009823435936,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-672",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.29992044052905,
-    "lng": 35.32006334508603,
-    "difficulty": 3
+    "id": "gen-v2-58",
+    "name": "İzmir Konak Çevresi",
+    "lat": 38.41867358645094,
+    "lng": 27.1282800318319,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-839",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.777163445909764,
-    "lng": 30.0298146188636,
+    "id": "gen-v2-376",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.779638055882664,
+    "lng": 30.40005720040153,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl2-483",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 36.85742956429582,
-    "lng": 35.31832553914428,
-    "difficulty": 2
+    "id": "gen-v2-467",
+    "name": "Afyonkarahisar Merkez Çevresi",
+    "lat": 38.749969487453185,
+    "lng": 30.530292346458165,
+    "difficulty": 3
   },
   {
-    "id": "gen-lvl2-393",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.97064508245679,
-    "lng": 32.573963556473295,
+    "id": "gen-v2-134",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.04026646042237,
+    "lng": 35.29985237698077,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-822",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.00126195717912,
-    "lng": 30.440697999114725,
+    "id": "gen-v2-393",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.760346606559054,
+    "lng": 29.929784161253263,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-865",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.324909917353835,
-    "lng": 37.584527383668245,
+    "id": "gen-v2-628",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.67017290913647,
+    "lng": 39.219790765483886,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl1-4",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.90361530474528,
-    "lng": 29.141680307813658,
-    "difficulty": 1
+    "id": "gen-v2-444",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.729744744089174,
+    "lng": 31.60034227259984,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-713",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.91173094419131,
-    "lng": 36.358584884544214,
-    "difficulty": 3
+    "id": "gen-v2-812",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83980471453751,
+    "lng": 33.51028429755706,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl1-79",
-    "name": "Rastgele Sokak - İstanbul Merkezi Çevresi",
-    "lat": 40.75010902607353,
-    "lng": 28.961366202522395,
+    "id": "gen-v2-19",
+    "name": "İstanbul Kadıköy Çevresi",
+    "lat": 40.991,
+    "lng": 29.027,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-255",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.22083742305086,
-    "lng": 29.181814732910226,
+    "id": "gen-v2-964",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.980167977158025,
+    "lng": 37.88006718173788,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-569",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.75077836031285,
-    "lng": 32.55958776803193,
+    "id": "gen-v2-191",
+    "name": "Trabzon Ortahisar Çevresi",
+    "lat": 41.00043097786149,
+    "lng": 39.72005401240323,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-513",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.92900817165364,
-    "lng": 30.6829079615529,
+    "id": "gen-v2-622",
+    "name": "Elazığ Merkez Çevresi",
+    "lat": 38.66980786422715,
+    "lng": 39.220354262914555,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-770",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0136867139648,
-    "lng": 32.5017047154111,
-    "difficulty": 3
+    "id": "gen-v2-226",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.800337082703656,
+    "lng": 34.57980936538066,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-77",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88712269004014,
+    "lng": 30.707039164527476,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-384",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.146709173742146,
-    "lng": 29.14477972294851,
+    "id": "gen-v2-438",
+    "name": "Bolu Merkez Çevresi",
+    "lat": 40.729982209422445,
+    "lng": 31.60009276543204,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-214",
-    "name": "Rastgele Sokak - Kayseri Merkezi Çevresi",
-    "lat": 38.69614878135736,
-    "lng": 35.49695755181571,
+    "id": "gen-v2-946",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.909817130348614,
+    "lng": 38.379943973200646,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-630",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.80105862421996,
-    "lng": 37.61321864797904,
+    "id": "gen-v2-752",
+    "name": "Sivas Merkez Çevresi",
+    "lat": 39.749859922044045,
+    "lng": 37.010033572863684,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-820",
+    "name": "Kırıkkale Merkez Çevresi",
+    "lat": 39.83983077875732,
+    "lng": 33.509748771369274,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-726",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 41.70378403922745,
-    "lng": 27.137204123468308,
+    "id": "gen-v2-556",
+    "name": "Kırklareli Merkez Çevresi",
+    "lat": 41.72972535700941,
+    "lng": 27.219775621692747,
     "difficulty": 3
   },
   {
-    "id": "gen-lvl3-750",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 37.54097546700322,
-    "lng": 26.82690966914535,
+    "id": "gen-v2-950",
+    "name": "Giresun Merkez Çevresi",
+    "lat": 40.91025039804335,
+    "lng": 38.38007674481098,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-92",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.189924686614034,
+    "lng": 29.060081437911478,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-558",
-    "name": "Rastgele Sokak - Bursa Merkezi Çevresi",
-    "lat": 40.2374752599879,
-    "lng": 29.15538180667138,
+    "id": "gen-v2-1050",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.199808531165345,
+    "lng": 32.61979544023851,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-665",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.845924813179295,
-    "lng": 27.07709325833821,
-    "difficulty": 3
+    "id": "gen-v2-894",
+    "name": "Aksaray Merkez Çevresi",
+    "lat": 38.369879478590576,
+    "lng": 34.019792960469815,
+    "difficulty": 2
+  },
+  {
+    "id": "gen-v2-1027",
+    "name": "Bartın Merkez Çevresi",
+    "lat": 41.63,
+    "lng": 32.33,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-224",
+    "name": "Mersin Yenişehir Çevresi",
+    "lat": 36.800221436337075,
+    "lng": 34.57982335246206,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-491",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 37.005036550001996,
-    "lng": 30.7186575179481,
+    "id": "gen-v2-6",
+    "name": "İstanbul Beşiktaş Çevresi",
+    "lat": 41.04245068810911,
+    "lng": 29.007852038654057,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-108",
-    "name": "Rastgele Sokak - Ankara Merkezi Çevresi",
-    "lat": 40.05428220112245,
-    "lng": 32.83906385197348,
+    "id": "gen-v2-972",
+    "name": "Ordu Altınordu Çevresi",
+    "lat": 40.980144620338024,
+    "lng": 37.879891736047846,
+    "difficulty": 3
+  },
+  {
+    "id": "gen-v2-381",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.759849841286155,
+    "lng": 29.930182556867752,
     "difficulty": 1
   },
   {
-    "id": "gen-lvl2-482",
-    "name": "Rastgele Sokak - Adana Merkezi Çevresi",
-    "lat": 37.07965548187366,
-    "lng": 35.20801818622404,
+    "id": "gen-v2-115",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89006431696155,
+    "lng": 32.48022508846644,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-966",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.06468427716633,
-    "lng": 32.51292289410286,
+    "id": "gen-v2-719",
+    "name": "Van İpekyolu Çevresi",
+    "lat": 38.500204058013615,
+    "lng": 43.37984149296564,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-37",
+    "name": "Ankara Çankaya Çevresi",
+    "lat": 39.91,
+    "lng": 32.86,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-439",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.923576637602785,
-    "lng": 30.828702711341627,
+    "id": "gen-v2-336",
+    "name": "Çanakkale Merkez Çevresi",
+    "lat": 40.15007139784651,
+    "lng": 26.410024872793155,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-461",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.71516231839036,
-    "lng": 30.489971983478632,
+    "id": "gen-v2-114",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.89032785526991,
+    "lng": 32.47982403547512,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-856",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.59018452290308,
-    "lng": 26.559060472849044,
-    "difficulty": 3
+    "id": "gen-v2-492",
+    "name": "Uşak Merkez Çevresi",
+    "lat": 38.66961392768481,
+    "lng": 29.399813820509884,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-858",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 40.0453057322677,
-    "lng": 42.347952076590175,
+    "id": "gen-v2-141",
+    "name": "Adana Çukurova Çevresi",
+    "lat": 37.040059333824864,
+    "lng": 35.299583402296264,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-560",
+    "name": "Hatay İskenderun Çevresi",
+    "lat": 36.5801653681107,
+    "lng": 36.17021732303007,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-526",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.8483512040813,
-    "lng": 30.5434134520238,
+    "id": "gen-v2-366",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.77980742801475,
+    "lng": 30.400188111241754,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-669",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.80168464413825,
-    "lng": 39.84390321746988,
-    "difficulty": 3
+    "id": "gen-v2-371",
+    "name": "Sakarya Adapazarı Çevresi",
+    "lat": 40.78019326128597,
+    "lng": 30.400025322886073,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-897",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.227424874817395,
-    "lng": 44.33932765057553,
-    "difficulty": 3
+    "id": "gen-v2-1049",
+    "name": "Karabük Merkez Çevresi",
+    "lat": 41.2001156596821,
+    "lng": 32.62040791918676,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl2-500",
-    "name": "Rastgele Sokak - Konya Merkezi Çevresi",
-    "lat": 37.89917680229327,
-    "lng": 32.507221705955935,
+    "id": "gen-v2-352",
+    "name": "Edirne Merkez Çevresi",
+    "lat": 41.67002773680632,
+    "lng": 26.549584664012002,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-315",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.88405408282477,
-    "lng": 30.59433962840547,
+    "id": "gen-v2-508",
+    "name": "Manisa Merkez Çevresi",
+    "lat": 38.60989980010571,
+    "lng": 27.419756106719678,
+    "difficulty": 1
+  },
+  {
+    "id": "gen-v2-120",
+    "name": "Konya Selçuklu Çevresi",
+    "lat": 37.88970399168963,
+    "lng": 32.480171401898794,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl3-741",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 39.32750220886103,
-    "lng": 26.48845740880025,
-    "difficulty": 3
+    "id": "gen-v2-388",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.75986798850409,
+    "lng": 29.93020728087191,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl2-528",
-    "name": "Rastgele Sokak - Eskişehir Merkezi Çevresi",
-    "lat": 39.75911304263606,
-    "lng": 30.453775237296387,
+    "id": "gen-v2-852",
+    "name": "Nevşehir Ürgüp Çevresi",
+    "lat": 38.62958842413686,
+    "lng": 34.90981806334549,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl2-377",
-    "name": "Rastgele Sokak - Antalya Merkezi Çevresi",
-    "lat": 36.8207362411129,
-    "lng": 30.805423353586594,
+    "id": "gen-v2-390",
+    "name": "Kocaeli İzmit Çevresi",
+    "lat": 40.759730692318904,
+    "lng": 29.930341569846966,
     "difficulty": 2
   },
   {
-    "id": "gen-lvl1-77",
-    "name": "Rastgele Sokak - İzmir Merkezi Çevresi",
-    "lat": 38.31667245778761,
-    "lng": 27.296738196765066,
-    "difficulty": 1
+    "id": "gen-v2-727",
+    "name": "Erzurum Palandöken Çevresi",
+    "lat": 39.90001606579454,
+    "lng": 41.26973322334899,
+    "difficulty": 2
   },
   {
-    "id": "gen-lvl3-655",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 38.34206980077111,
-    "lng": 36.03715301611754,
+    "id": "gen-v2-105",
+    "name": "Bursa Osmangazi Çevresi",
+    "lat": 40.19041438368826,
+    "lng": 29.060004547428004,
     "difficulty": 3
+  },
+  {
+    "id": "gen-v2-272",
+    "name": "Muğla Bodrum Çevresi",
+    "lat": 37.033936640246615,
+    "lng": 27.430388925656306,
+    "difficulty": 1
   },
   {
-    "id": "gen-lvl3-791",
-    "name": "Kırsal / Şehir Dışı Yollar - Türkiye Geneli",
-    "lat": 36.79461829145128,
-    "lng": 30.303621699852833,
+    "id": "gen-v2-86",
+    "name": "Antalya Muratpaşa Çevresi",
+    "lat": 36.88683463693858,
+    "lng": 30.70728654525319,
     "difficulty": 3
   }
 ];
