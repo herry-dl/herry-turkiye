@@ -306,7 +306,7 @@ header {
   }
 /* Landing Page */
 .landing-page {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
   display: flex;
@@ -314,7 +314,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  padding: 2rem 0;
 }
 
 .landing-page::before {
@@ -357,7 +357,7 @@ header {
 .landing-banner {
   width: 100%;
   max-width: 850px;
-  max-height: 70vh;
+  max-height: 45vh;
   height: auto;
   object-fit: contain;
   border-radius: 20px;
@@ -370,7 +370,7 @@ header {
     max-width: 320px;
   }
   .landing-banner {
-    max-height: 55vh;
+    max-height: 50vh;
   }
 }
 
