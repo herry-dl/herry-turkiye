@@ -15,6 +15,7 @@ function App() {
   const [lastDistance, setLastDistance] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
 
   const TOTAL_ROUNDS = 10;
 
@@ -22,6 +23,24 @@ function App() {
   useEffect(() => {
     startNewGame();
   }, []);
+
+  useEffect(() => {
+    let timer: any;
+    if (!roundOver && !gameOver && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft((prev) => prev - 1);
+      }, 1000);
+    } else if (timeLeft === 0 && !roundOver) {
+      handleGuess();
+    }
+    return () => clearInterval(timer);
+  }, [timeLeft, roundOver, gameOver]);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
 
   const startNewGame = () => {
     // 3 kolay, 4 orta, 3 zor lokasyon seç
@@ -42,19 +61,26 @@ function App() {
     setRoundOver(false);
     setLastScore(0);
     setLastDistance(0);
+    setTimeLeft(120);
   };
 
   const handleGuess = () => {
-    if (!guess) return;
+    if (roundOver) return;
 
     const target = gameLocations[currentRound];
-    const distance = calculateDistance(guess.lat, guess.lng, target.lat, target.lng);
-    const score = calculateScore(distance);
+    let distance = 9999;
+    let score = 0;
+
+    if (guess) {
+      distance = calculateDistance(guess.lat, guess.lng, target.lat, target.lng);
+      score = calculateScore(distance);
+    }
 
     setLastDistance(distance);
     setLastScore(score);
     setTotalScore((prev) => prev + score);
     setRoundOver(true);
+    
     if (distance > 200) {
       setFailed(true);
     }
@@ -93,6 +119,10 @@ function App() {
           <div className="stat-item">
             <span className="stat-label">TUR</span>
             <span>{currentRound + 1} / {TOTAL_ROUNDS}</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-label">SÜRE</span>
+            <span style={{ color: timeLeft < 30 ? '#e63946' : 'var(--text-main)', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
           </div>
           <div className="stat-item">
             <span className="stat-label">SKOR</span>
