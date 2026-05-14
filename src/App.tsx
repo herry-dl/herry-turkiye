@@ -23,9 +23,12 @@ function App() {
   }, []);
 
   const startNewGame = () => {
-    // Shuffle locations and pick 5
-    const shuffled = [...locations].sort(() => 0.5 - Math.random());
-    setGameLocations(shuffled.slice(0, TOTAL_ROUNDS));
+    // 3 kolay, 4 orta, 3 zor lokasyon seç
+    const level1 = locations.filter(l => l.difficulty === 1).sort(() => 0.5 - Math.random()).slice(0, 3);
+    const level2 = locations.filter(l => l.difficulty === 2).sort(() => 0.5 - Math.random()).slice(0, 4);
+    const level3 = locations.filter(l => l.difficulty === 3).sort(() => 0.5 - Math.random()).slice(0, 3);
+    
+    setGameLocations([...level1, ...level2, ...level3]);
     setCurrentRound(0);
     setTotalScore(0);
     setGameOver(false);
@@ -72,18 +75,20 @@ function App() {
   if (gameLocations.length === 0) return null;
 
   const currentTarget = gameLocations[currentRound];
+  const difficultyText = currentTarget.difficulty === 1 ? 'Kolay' : currentTarget.difficulty === 2 ? 'Orta' : 'Zor';
+  const difficultyColor = currentTarget.difficulty === 1 ? '#2a9d8f' : currentTarget.difficulty === 2 ? '#fca311' : '#e63946';
 
   return (
     <div className="app-container">
       <header>
         <div className="logo">
-          <MapPin size={32} color="#e63946" />
-          <div className="logo-text">
-            <span className="logo-herry">HERRY</span>
-            <span className="logo-turkiye">TÜRKİYE</span>
-          </div>
+          <img src="/herry_turkey_logo_2.webp" alt="HERRY TÜRKİYE" style={{ height: '40px', objectFit: 'contain' }} className="logo-img" />
         </div>
         <div className="game-stats">
+          <div className="stat-item">
+            <span className="stat-label">ZORLUK</span>
+            <span style={{ color: difficultyColor, fontWeight: 'bold' }}>{difficultyText}</span>
+          </div>
           <div className="stat-item">
             <span className="stat-label">TUR</span>
             <span>{currentRound + 1} / {TOTAL_ROUNDS}</span>
