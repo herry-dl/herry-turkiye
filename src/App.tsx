@@ -4,6 +4,7 @@ import { GameMap } from './components/GameMap';
 import { locations, Location } from './locations';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
+import landingBanner from './assets/landing.webp';
 
 function App() {
   const [gameLocations, setGameLocations] = useState<Location[]>([]);
@@ -106,8 +107,9 @@ function App() {
       {!gameStarted ? (
         <div className="landing-page">
           <div className="landing-content">
-            <img src={logo} alt="HERRY TÜRKİYE" className="logo-img-large" />
-            <h1 className="landing-title">HERRY TÜRKİYE</h1>
+            <div className="banner-container">
+              <img src={landingBanner} alt="HERRY TÜRKİYE Banner" className="landing-banner" />
+            </div>
             <p className="by-dagli">BY Dagli</p>
             <p className="landing-subtitle">Türkiye'yi ne kadar iyi tanıyorsun? Sokak sokak gez, keşfet ve tahmin et!</p>
             
