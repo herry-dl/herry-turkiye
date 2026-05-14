@@ -122,7 +122,7 @@ function App() {
             </div>
           </div>
           <div className="landing-footer">
-            © 2024 HERRY-TÜRKİYE | GeoGuessr Experience
+            © 2024 HERRY-TÜRKİYE | Türkiye Kâşifi
           </div>
         </div>
       ) : (

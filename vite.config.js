@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: 'HERRY-TURKIYE',
         short_name: 'HERRY',
-        description: 'Türkiye Kâşifi GeoGuessr Oyunu',
+        description: 'Türkiye Kâşifi Deneyimi',
         theme_color: '#121212',
         background_color: '#121212',
         display: 'standalone',
