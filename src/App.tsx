@@ -108,6 +108,7 @@ function App() {
           <div className="landing-content">
             <img src={logo} alt="HERRY TÜRKİYE" className="logo-img-large" />
             <h1 className="landing-title">HERRY TÜRKİYE</h1>
+            <p className="by-dagli">BY Dagli</p>
             <p className="landing-subtitle">Türkiye'yi ne kadar iyi tanıyorsun? Sokak sokak gez, keşfet ve tahmin et!</p>
             
             <div className="landing-buttons">
