@@ -325,31 +325,36 @@ header {
   z-index: 1;
 }
 
-.banner-container {
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 1rem;
-  animation: logo-float 4s ease-in-out infinite;
-}
-
-.landing-banner {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-  border: 2px solid rgba(252, 163, 17, 0.3);
-}
-
 .landing-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1200px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 1.5rem;
+  animation: logo-float 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-banner {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+  border: 3px solid rgba(252, 163, 17, 0.4);
 }
 
 .logo-img-large {
@@ -381,24 +386,29 @@ header {
 }
 
 .landing-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   line-height: 1.6;
+  max-width: 800px;
 }
 
 .landing-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .btn-huge {
-  padding: 1.2rem 3rem;
-  font-size: 1.3rem;
-  border-radius: 50px;
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .btn-primary {
