@@ -3,7 +3,7 @@ import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
 import { locations, Location } from './locations';
 import { calculateDistance, calculateScore } from './utils';
-import logo from './assets/logo.webp';
+import logo from './assets/logo.png';
 
 function App() {
   const [gameLocations, setGameLocations] = useState<Location[]>([]);
@@ -83,7 +83,7 @@ function App() {
     <div className="app-container">
       <header>
         <div className="logo">
-          <img src={logo} alt="HERRY TÜRKİYE" style={{ height: '40px', objectFit: 'contain' }} className="logo-img" />
+          <img src={logo} alt="HERRY TÜRKİYE" className="logo-img" />
         </div>
         <div className="game-stats">
           <div className="stat-item">

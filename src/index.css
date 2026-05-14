@@ -61,6 +61,23 @@ header {
   letter-spacing: 2px;
 }
 
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  animation: logo-float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
 .logo-turkiye {
   font-size: 0.7rem;
   font-weight: 600;
@@ -259,7 +276,7 @@ header {
   }
   
   .logo-img {
-    height: 28px !important;
+    height: 40px !important;
   }
   
   .logo {
