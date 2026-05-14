@@ -78,23 +78,21 @@ function App() {
     if (guess) {
       distance = calculateDistance(guess.lat, guess.lng, target.lat, target.lng);
       score = calculateScore(distance);
+      
+      // 1 dakikadan az sürede bulursa (timeLeft > 60) puan 2 katı
+      if (timeLeft > 60) {
+        score = score * 2;
+      }
     }
 
     setLastDistance(distance);
     setLastScore(score);
     setTotalScore((prev) => prev + score);
     setRoundOver(true);
-    
-    if (distance > 200) {
-      setFailed(true);
-    }
+    setFailed(false);
   };
 
   const handleNextRound = () => {
-    if (failed) {
-      startNewGame();
-      return;
-    }
     if (currentRound + 1 >= TOTAL_ROUNDS) {
       setGameOver(true);
     } else {
@@ -202,21 +200,21 @@ function App() {
                       ) : (
                         <>
                           <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
-                            <div style={{ fontSize: '2.5rem', fontWeight: '900', color: failed ? '#e63946' : '#2a9d8f', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-                              {failed ? 'ÇUVALLADIN!' : 'MANIAAAAC'}
-                            </div>
-                            {!failed && (
-                              <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
-                                +{lastScore} Puan
-                              </div>
-                            )}
-                            <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
-                            <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
-                              Hedef: {currentTarget.name}
-                            </div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: '900', color: lastScore > 0 ? '#2a9d8f' : '#e63946', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
+                          {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI MANIAAAAC!' : 'MANIAAAAC') : 'COK UZAKTASIN HACI!'}
+                        </div>
+                        {lastScore > 0 && (
+                          <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
+                            +{lastScore} Puan {timeLeft > 60 && <span style={{fontSize: '1rem', display: 'block'}}>(Hız Bonusu: 2x)</span>}
                           </div>
-                          <button className="btn" onClick={handleNextRound} style={{ backgroundColor: failed ? '#e63946' : 'var(--primary-color)' }}>
-                            {failed ? 'BAŞTAN BAŞLA' : (currentRound + 1 === TOTAL_ROUNDS ? 'BİTİR HACI' : 'GEÇ HACI')}
+                        )}
+                        <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
+                        <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
+                          Hedef: {currentTarget.name}
+                        </div>
+                          </div>
+                          <button className="btn" onClick={handleNextRound} style={{ backgroundColor: 'var(--primary-color)' }}>
+                            {currentRound + 1 === TOTAL_ROUNDS ? 'BİTİR HACI' : 'GEÇ HACI'}
                           </button>
                         </>
                       )}
@@ -230,7 +228,7 @@ function App() {
                     <div className="result-card">
                       <h3>Toplam Skor</h3>
                       <div className="score-display">{totalScore}</div>
-                      <p style={{ color: 'var(--text-muted)' }}>Maksimum: {TOTAL_ROUNDS * 5000}</p>
+                      <p style={{ color: 'var(--text-muted)' }}>Maksimum: {TOTAL_ROUNDS * 200}</p>
                       
                       <button className="btn" style={{ marginTop: '30px', width: '100%' }} onClick={startNewGame}>
                         Tekrar Oyna
