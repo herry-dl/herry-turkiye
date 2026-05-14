@@ -304,6 +304,113 @@ header {
     bottom: 10px;
     right: 5vw;
   }
+/* Landing Page */
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/landing.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-img-large {
+  height: 180px;
+  object-fit: contain;
+  animation: logo-float 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.landing-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  background: linear-gradient(to right, #e63946, #fca311);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.landing-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.landing-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-huge {
+  padding: 1.2rem 3rem;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.landing-footer {
+  position: absolute;
+  bottom: 2rem;
+  color: #444;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.8rem;
+  }
+  .landing-subtitle {
+    font-size: 1.1rem;
+  }
+  .logo-img-large {
+    height: 120px;
+  }
+  .landing-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-huge {
+    width: 100%;
+  }
+}
 
   .controls-overlay {
     padding: 10px 15px;

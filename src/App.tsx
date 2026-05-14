@@ -16,12 +16,13 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
   const [failed, setFailed] = useState(false);
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
+  const [gameStarted, setGameStarted] = useState(false);
 
   const TOTAL_ROUNDS = 10;
 
   // Initialize game
   useEffect(() => {
-    startNewGame();
+    // startNewGame removed from here to allow landing page
   }, []);
 
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
     setTotalScore(0);
     setGameOver(false);
     setFailed(false);
+    setGameStarted(true);
     resetRound();
   };
 
@@ -107,106 +109,131 @@ function App() {
 
   return (
     <div className="app-container">
-      <header>
-        <div className="logo">
-          <img src={logo} alt="HERRY TÜRKİYE" className="logo-img" />
-        </div>
-        <div className="game-stats">
-          <div className="stat-item">
-            <span className="stat-label">ZORLUK</span>
-            <span style={{ color: difficultyColor, fontWeight: 'bold' }}>{difficultyText}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-label">TUR</span>
-            <span>{currentRound + 1} / {TOTAL_ROUNDS}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-label">SÜRE</span>
-            <span style={{ color: timeLeft < 30 ? '#e63946' : 'var(--text-main)', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-label">SKOR</span>
-            <span>{totalScore}</span>
-          </div>
-        </div>
-      </header>
-
-      <main className="game-area">
-        {!gameOver ? (
-          <>
-            <div className="image-section">
-              <iframe 
-                title="Street View"
-                width="100%" 
-                height="100%" 
-                frameBorder="0" 
-                style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
-                src={`https://maps.google.com/maps?q=&layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=11,0,0,0,0&output=svembed`} 
-                allowFullScreen
-              ></iframe>
-              {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
-              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '80px', background: 'linear-gradient(to bottom, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%)', zIndex: 40, pointerEvents: 'none' }}></div>
-              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', maxWidth: '400px', height: '90px', backgroundColor: 'var(--bg-dark)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: '16px', borderRight: '2px solid var(--primary-color)', borderBottom: '2px solid var(--primary-color)', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
-                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-main)', textAlign: 'center', padding: '0 15px' }}>👀 <span style={{color: 'var(--primary-color)'}}>Neresi Burası?</span><br/>Etrafına bak ve tahmin et!</span>
-              </div>
-            </div>
+      {!gameStarted ? (
+        <div className="landing-page">
+          <div className="landing-content">
+            <img src={logo} alt="HERRY TÜRKİYE" className="logo-img-large" />
+            <h1 className="landing-title">HERRY TÜRKİYE</h1>
+            <p className="landing-subtitle">Türkiye'yi ne kadar iyi tanıyorsun? Sokak sokak gez, keşfet ve tahmin et!</p>
             
-            <GameMap 
-              guess={guess} 
-              setGuess={setGuess} 
-              targetLocation={currentTarget} 
-              roundOver={roundOver} 
-            />
-
-            <div className="controls-overlay">
-              {!roundOver ? (
-                <button 
-                  className="btn" 
-                  onClick={handleGuess} 
-                  disabled={!guess}
-                >
-                  Tahmin Et
-                </button>
-              ) : (
-                <>
-                  <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '900', color: failed ? '#e63946' : '#2a9d8f', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-                      {failed ? 'ÇUVALLADIN!' : 'SÜPERSİN!'}
-                    </div>
-                    {!failed && (
-                      <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
-                        +{lastScore} Puan
-                      </div>
-                    )}
-                    <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
-                    <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
-                      Hedef: {currentTarget.name}
-                    </div>
-                  </div>
-                  <button className="btn" onClick={handleNextRound} style={{ backgroundColor: failed ? '#e63946' : 'var(--primary-color)' }}>
-                    {failed ? 'Baştan Başla' : (currentRound + 1 === TOTAL_ROUNDS ? 'Sonuçları Gör' : 'Sonraki Tur')}
-                  </button>
-                </>
-              )}
-            </div>
-          </>
-        ) : (
-          <div className="overlay-screen">
-            <Trophy size={80} color="#fca311" style={{ marginBottom: '20px' }} />
-            <h1 className="title-huge">Oyun Bitti!</h1>
-            
-            <div className="result-card">
-              <h3>Toplam Skor</h3>
-              <div className="score-display">{totalScore}</div>
-              <p style={{ color: 'var(--text-muted)' }}>Maksimum: {TOTAL_ROUNDS * 5000}</p>
-              
-              <button className="btn" style={{ marginTop: '30px', width: '100%' }} onClick={startNewGame}>
-                Tekrar Oyna
+            <div className="landing-buttons">
+              <button className="btn btn-primary btn-huge" onClick={startNewGame}>
+                <Flag size={20} style={{ marginRight: '10px' }} />
+                MACERAYA BAŞLA
+              </button>
+              <button className="btn btn-secondary btn-huge" onClick={() => alert('Sokak görünümünde nerede olduğunuzu tahmin edin. Merkeze ne kadar yakınsanız o kadar çok puan kazanırsınız!')}>
+                NASIL OYNANIR?
               </button>
             </div>
           </div>
-        )}
-      </main>
+          <div className="landing-footer">
+            © 2024 HERRY-TÜRKİYE | GeoGuessr Experience
+          </div>
+        </div>
+      ) : (
+        <>
+          <header>
+            <div className="logo" onClick={() => setGameStarted(false)} style={{ cursor: 'pointer' }}>
+              <img src={logo} alt="HERRY TÜRKİYE" className="logo-img" />
+            </div>
+            <div className="game-stats">
+              <div className="stat-item">
+                <span className="stat-label">ZORLUK</span>
+                <span style={{ color: difficultyColor, fontWeight: 'bold' }}>{difficultyText}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">TUR</span>
+                <span>{currentRound + 1} / {TOTAL_ROUNDS}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">SÜRE</span>
+                <span style={{ color: timeLeft < 30 ? '#e63946' : 'var(--text-main)', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-label">SKOR</span>
+                <span>{totalScore}</span>
+              </div>
+            </div>
+          </header>
+
+          <main className="game-area">
+            {!gameOver ? (
+              <>
+                <div className="image-section">
+                  <iframe 
+                    title="Street View"
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    src={`https://maps.google.com/maps?q=&layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=11,0,0,0,0&output=svembed`} 
+                    allowFullScreen
+                  ></iframe>
+                  {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '80px', background: 'linear-gradient(to bottom, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%)', zIndex: 40, pointerEvents: 'none' }}></div>
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', maxWidth: '400px', height: '90px', backgroundColor: 'var(--bg-dark)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: '16px', borderRight: '2px solid var(--primary-color)', borderBottom: '2px solid var(--primary-color)', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-main)', textAlign: 'center', padding: '0 15px' }}>👀 <span style={{color: 'var(--primary-color)'}}>Neresi Burası?</span><br/>Etrafına bak ve tahmin et!</span>
+                  </div>
+                </div>
+                
+                <GameMap 
+                  guess={guess} 
+                  setGuess={setGuess} 
+                  targetLocation={currentTarget} 
+                  roundOver={roundOver} 
+                />
+
+                <div className="controls-overlay">
+                  {!roundOver ? (
+                    <button 
+                      className="btn" 
+                      onClick={handleGuess} 
+                      disabled={!guess}
+                    >
+                      Tahmin Et
+                    </button>
+                  ) : (
+                    <>
+                      <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
+                        <div style={{ fontSize: '2.5rem', fontWeight: '900', color: failed ? '#e63946' : '#2a9d8f', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
+                          {failed ? 'ÇUVALLADIN!' : 'SÜPERSİN!'}
+                        </div>
+                        {!failed && (
+                          <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
+                            +{lastScore} Puan
+                          </div>
+                        )}
+                        <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
+                        <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
+                          Hedef: {currentTarget.name}
+                        </div>
+                      </div>
+                      <button className="btn" onClick={handleNextRound} style={{ backgroundColor: failed ? '#e63946' : 'var(--primary-color)' }}>
+                        {failed ? 'Baştan Başla' : (currentRound + 1 === TOTAL_ROUNDS ? 'Sonuçları Gör' : 'Sonraki Tur')}
+                      </button>
+                    </>
+                  )}
+                </div>
+              </>
+            ) : (
+              <div className="overlay-screen">
+                <Trophy size={80} color="#fca311" style={{ marginBottom: '20px' }} />
+                <h1 className="title-huge">Oyun Bitti!</h1>
+                
+                <div className="result-card">
+                  <h3>Toplam Skor</h3>
+                  <div className="score-display">{totalScore}</div>
+                  <p style={{ color: 'var(--text-muted)' }}>Maksimum: {TOTAL_ROUNDS * 5000}</p>
+                  
+                  <button className="btn" style={{ marginTop: '30px', width: '100%' }} onClick={startNewGame}>
+                    Tekrar Oyna
+                  </button>
+                </div>
+              </div>
+            )}
+          </main>
+        </>
+      )}
     </div>
   );
 }
