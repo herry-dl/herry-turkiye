@@ -348,15 +348,30 @@ header {
   justify-content: center;
 }
 
+.landing-banner-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .landing-banner {
   width: 100%;
   max-width: 850px;
-  max-height: 65vh;
+  max-height: 70vh;
   height: auto;
   object-fit: contain;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.8);
   border: 2px solid rgba(252, 163, 17, 0.3);
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    max-width: 320px;
+  }
+  .landing-banner {
+    max-height: 55vh;
+  }
 }
 
 .logo-img-large {
