@@ -196,16 +196,22 @@ body {
     height: 70px;
   }
   .map-section {
-    width: 220px;
-    height: 160px;
-    bottom: 15px;
-    left: 15px;
+    width: 140px; /* Daha da küçüldü */
+    height: 100px;
+    bottom: 10px;
+    right: 10px;
+    border-width: 2px;
     border-radius: 20px;
   }
-  .map-section:hover, .map-section.expanded {
+  .map-section:hover {
+    width: 300px; /* Dokunulduğunda makul boyuta çıksın */
+    height: 220px;
+    bottom: 15px;
+    right: 15px;
+  }
+  .map-section.round-over-expanded {
     width: 90vw;
-    height: 50vh;
-    left: 5vw;
+    height: 60vh;
   }
 }
 
