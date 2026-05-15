@@ -122,8 +122,9 @@ body {
 /* --- STREET VIEW AREA --- */
 .image-section { width: 100%; height: 100%; background: #000; position: relative; }
 .image-section::after {
-  content: ''; position: absolute; top: 0; left: 0; width: 500px; height: 200px;
-  background: radial-gradient(circle at top left, #000 0%, transparent 100%); z-index: 50;
+  content: ''; position: absolute; top: 0; left: 0; width: 450px; height: 180px;
+  background: radial-gradient(circle at top left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, transparent 100%); z-index: 60;
+  pointer-events: none;
 }
 
 /* --- MAP --- */
@@ -178,8 +179,10 @@ body {
   .map-section:hover {
     width: 280px; height: 200px;
   }
-  .map-section.round-over-expanded {
-    width: 90vw; height: 50vh; bottom: 50%; right: 50%;
+  .image-section::after {
+    width: 100%; /* Mobilde tüm üst şeridi kaplayabilir */
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, transparent 100%);
   }
 
   .result-panel-glass { width: 90vw; padding: 1.2rem; }
