@@ -355,61 +355,57 @@ function App() {
                       roundOver={roundOver} 
                     />
 
-                    <div className="controls-overlay">
-                      {!roundOver ? (
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-                          {!guess && (
-                            <div className="guess-hint-bubble">
-                              Lütfen haritadan bir yer seç!
-                            </div>
-                          )}
-                          <button 
-                            className={`btn ${!guess ? 'btn-disabled-style' : ''}`} 
-                            onClick={handleGuess} 
-                            disabled={!guess}
-                          >
-                            Tahmin Et
-                          </button>
-                        </div>
-                      ) : (
-                        <div className="result-panel-glass">
-                          <div className="result-header">
-                            <div className="result-status-text" style={{ color: lastScore > 0 ? '#2a9d8f' : '#e63946' }}>
-                              {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI!' : 'HARİKA!') : 'ÇOK UZAKTASIN!'}
-                            </div>
-                            <div className="result-location-name">{currentTarget.name}</div>
+                    {(guess || roundOver) && (
+                      <div className="controls-overlay">
+                        {!roundOver ? (
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+                            <button 
+                              className="btn" 
+                              onClick={handleGuess}
+                            >
+                              Tahmin Et
+                            </button>
                           </div>
-                          
-                          <div className="score-breakdown">
-                            <div className="score-row">
-                              <span>Mesafe:</span>
-                              <span>{lastDistance.toFixed(1)} km</span>
-                            </div>
-                            <div className="score-row">
-                              <span>Mesafe Puanı:</span>
-                              <span>{Math.floor(lastScore / (timeLeft > 60 ? 2 : 1))}</span>
-                            </div>
-                            {timeLeft > 60 && (
-                              <div className="score-row bonus">
-                                <span>Hız Bonusu:</span>
-                                <span>2X</span>
+                        ) : (
+                          <div className="result-panel-glass">
+                            <div className="result-header">
+                              <div className="result-status-text" style={{ color: lastScore > 0 ? '#2a9d8f' : '#e63946' }}>
+                                {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI!' : 'HARİKA!') : 'ÇOK UZAKTASIN!'}
                               </div>
-                            )}
-                            <div className="score-total-row">
-                              <span>TOPLAM:</span>
-                              <span>{lastScore} Puan</span>
+                              <div className="result-location-name">{currentTarget.name}</div>
                             </div>
-                            {lastScore === 0 && (
-                              <div className="score-note">1000km'den uzak olduğun için puan alamadın.</div>
-                            )}
-                          </div>
+                            
+                            <div className="score-breakdown">
+                              <div className="score-row">
+                                <span>Mesafe:</span>
+                                <span>{lastDistance.toFixed(1)} km</span>
+                              </div>
+                              <div className="score-row">
+                                <span>Mesafe Puanı:</span>
+                                <span>{Math.floor(lastScore / (timeLeft > 60 ? 2 : 1))}</span>
+                              </div>
+                              {timeLeft > 60 && (
+                                <div className="score-row bonus">
+                                  <span>Hız Bonusu:</span>
+                                  <span>2X</span>
+                                </div>
+                              )}
+                              <div className="score-total-row">
+                                <span>TOPLAM:</span>
+                                <span>{lastScore} Puan</span>
+                              </div>
+                              {lastScore === 0 && (
+                                <div className="score-note">1000km'den uzak olduğun için puan alamadın.</div>
+                              )}
+                            </div>
 
-                          <button className="btn-next-round" onClick={handleNextRound}>
-                            {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR' : 'SONRAKİ TUR'}
-                          </button>
-                        </div>
-                      )}
-                    </div>
+                            <button className="btn-next-round" onClick={handleNextRound}>
+                              {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR' : 'SONRAKİ TUR'}
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </>
                 ) : (
                   <div className="overlay-screen">
