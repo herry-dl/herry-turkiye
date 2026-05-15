@@ -33,10 +33,23 @@ function App() {
 
   // Initialize game and handle intro music
   useEffect(() => {
-    if (!gameStarted && introAudioRef.current) {
-      introAudioRef.current.volume = 0.6;
-      introAudioRef.current.play().catch(e => console.log("Giriş müziği çalınamadı:", e));
-    }
+    const startIntro = () => {
+      if (!gameStarted && introAudioRef.current) {
+        introAudioRef.current.volume = 0.6;
+        introAudioRef.current.play().catch(e => console.log("Giriş müziği çalınamadı:", e));
+        // Remove listener after first interaction
+        document.removeEventListener('click', startIntro);
+        document.removeEventListener('touchstart', startIntro);
+      }
+    };
+
+    document.addEventListener('click', startIntro);
+    document.addEventListener('touchstart', startIntro);
+
+    return () => {
+      document.removeEventListener('click', startIntro);
+      document.removeEventListener('touchstart', startIntro);
+    };
   }, [gameStarted]);
 
   useEffect(() => {

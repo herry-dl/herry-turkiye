@@ -163,15 +163,21 @@ const countPerCity = Math.ceil(5000 / cities.length);
 
 cities.forEach(city => {
   for (let i = 0; i < countPerCity; i++) {
-    // Very small offset: ±0.012 deg ≈ ±1.3km — stays in urban Street View coverage
-    const latOffset = (Math.random() - 0.5) * 0.024;
-    const lngOffset = (Math.random() - 0.5) * 0.024;
+    // Increased offset: ±0.03 deg ≈ ±3.3km 
+    // Small bias to avoid exact city center/building center where indoor photos live
+    const latOffset = (Math.random() - 0.5) * 0.06;
+    const lngOffset = (Math.random() - 0.5) * 0.06;
     
+    // Add a tiny extra jitter to avoid being exactly on a building coordinate
+    const jitter = 0.0001; 
+    const finalLat = city.lat + latOffset + (Math.random() > 0.5 ? jitter : -jitter);
+    const finalLng = city.lng + lngOffset + (Math.random() > 0.5 ? jitter : -jitter);
+
     locations.push({
-      id: `gen-v6-${city.name.replace(/\s+/g,'-')}-${i}`,
-      name: `${city.name} Çevresi`,
-      lat: parseFloat((city.lat + latOffset).toFixed(6)),
-      lng: parseFloat((city.lng + lngOffset).toFixed(6)),
+      id: `gen-v7-${city.name.replace(/\s+/g,'-')}-${i}`,
+      name: `${city.name} Civarı`,
+      lat: parseFloat(finalLat.toFixed(6)),
+      lng: parseFloat(finalLng.toFixed(6)),
       difficulty: city.diff
     });
   }
