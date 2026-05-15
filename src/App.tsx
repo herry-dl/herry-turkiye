@@ -19,6 +19,7 @@ function App() {
   const [failed, setFailed] = useState(false);
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
   const [gameStarted, setGameStarted] = useState(false);
+  const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const TOTAL_ROUNDS = 10;
 
@@ -33,9 +34,21 @@ function App() {
       timer = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
+      
+      // Son 20 saniye kala müziği başlat
+      if (timeLeft === 20) {
+        audioRef.current?.play().catch(e => console.log("Müzik çalınamadı (etkileşim gerekli):", e));
+      }
     } else if (timeLeft === 0 && !roundOver) {
       handleGuess();
     }
+    
+    // Tur bittiyse müziği durdur
+    if (roundOver) {
+      audioRef.current?.pause();
+      if (audioRef.current) audioRef.current.currentTime = 0;
+    }
+    
     return () => clearInterval(timer);
   }, [timeLeft, roundOver, gameOver]);
 
@@ -171,7 +184,7 @@ function App() {
                         height="100%" 
                         frameBorder="0" 
                         style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
-                        src={`https://maps.google.com/maps?q=&layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=11,0,0,0,0&output=svembed`} 
+                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&output=svembed&hl=tr`} 
                         allowFullScreen
                       ></iframe>
                       {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
@@ -241,6 +254,9 @@ function App() {
           );
         })()
       )}
+      
+      {/* Son 20 saniye müziği - leyla-mecnun.mp3 dosyasını src/assets altına koymalısınız */}
+      <audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto" />
     </div>
   );
 }
