@@ -212,25 +212,39 @@ function App() {
                 <div className="logo" onClick={() => setGameStarted(false)} style={{ cursor: 'pointer' }}>
                   <img src={logo} alt="HERRY TÜRKİYE" className="logo-img" />
                 </div>
-                <div className="game-stats">
-                  <div className="stat-item">
-                    <span className="stat-label">ZORLUK</span>
-                    <span style={{ color: difficultyColor, fontWeight: 'bold' }}>{difficultyText}</span>
+                <div className="game-stats-new">
+                  <div className="stat-card-new">
+                    <span className="stat-label-new">ZORLUK</span>
+                    <span className="stat-value-new" style={{ color: difficultyColor }}>{difficultyText}</span>
                   </div>
-                  <div className="stat-item">
-                    <span className="stat-label">TUR</span>
-                    <span>{currentRound + 1} / {TOTAL_ROUNDS}</span>
+                  <div className="stat-card-new">
+                    <span className="stat-label-new">TUR</span>
+                    <span className="stat-value-new">{currentRound + 1} / {TOTAL_ROUNDS}</span>
                   </div>
-                  <div className="stat-item">
-                    <span className="stat-label">SÜRE</span>
-                    <span style={{ color: timeLeft < 30 ? '#e63946' : 'var(--text-main)', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
-                  </div>
-                  <div className="stat-item">
-                    <span className="stat-label">SKOR</span>
-                    <span>{totalScore}</span>
+                  <div className="stat-card-new">
+                    <span className="stat-label-new">SKOR</span>
+                    <span className="stat-value-new" style={{ color: 'var(--primary-color)' }}>{totalScore}</span>
                   </div>
                 </div>
               </header>
+
+              {/* Yüzen Dairesel Süre Paneli */}
+              {!gameOver && !roundOver && (
+                <div className={`floating-timer-circle ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
+                  <svg viewBox="0 0 100 100" className="timer-svg">
+                    <circle className="timer-bg" cx="50" cy="50" r="45" />
+                    <circle 
+                      className="timer-progress" 
+                      cx="50" cy="50" r="45" 
+                      style={{ strokeDashoffset: (1 - timeLeft / 120) * 283 }}
+                    />
+                  </svg>
+                  <div className="timer-text-container">
+                    <span className="timer-time">{formatTime(timeLeft)}</span>
+                    <span className="timer-label">KALDI</span>
+                  </div>
+                </div>
+              )}
 
               <main className="game-area">
                 {!gameOver ? (

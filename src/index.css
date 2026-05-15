@@ -35,13 +35,155 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  padding: 0.5rem 1.5rem;
-  background-color: var(--bg-dark);
-  border-bottom: 2px solid var(--primary-color);
+  padding: 1rem 2rem;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(252, 163, 17, 0.2);
   z-index: 100;
+}
+
+.game-stats-new {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-card-new {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+
+.stat-label-new {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.stat-value-new {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* Floating Timer Circle */
+.floating-timer-circle {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 50%;
+  border: 2px solid rgba(252, 163, 17, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.timer-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 6;
+}
+
+.timer-progress {
+  fill: none;
+  stroke: #fca311;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  transition: stroke-dashoffset 1s linear, stroke 0.3s;
+}
+
+.timer-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.timer-time {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.timer-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fca311;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.pulse-urgent {
+  animation: pulse-red 1s infinite alternate;
+  border-color: rgba(230, 57, 70, 0.6);
+}
+
+.pulse-urgent .timer-progress {
+  stroke: #e63946;
+}
+
+.pulse-urgent .timer-label {
+  color: #e63946;
+}
+
+@keyframes pulse-red {
+  from { box-shadow: 0 0 10px rgba(230, 57, 70, 0.2); }
+  to { box-shadow: 0 0 25px rgba(230, 57, 70, 0.5); }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.6rem 1rem;
+  }
+  .game-stats-new {
+    gap: 0.6rem;
+  }
+  .stat-card-new {
+    padding: 0.4rem 0.8rem;
+    min-width: 70px;
+  }
+  .stat-value-new {
+    font-size: 0.9rem;
+  }
+  .floating-timer-circle {
+    width: 70px;
+    height: 70px;
+    top: 80px;
+    right: 10px;
+  }
+  .timer-time {
+    font-size: 1rem;
+  }
+  .timer-label {
+    font-size: 0.5rem;
+  }
 }
 
 .logo {
