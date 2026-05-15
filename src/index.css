@@ -49,6 +49,13 @@ body {
 .diff-btn.active.easy { border-color: #2a9d8f; background: rgba(42,157,143,0.2); color: #2a9d8f; }
 .diff-btn.active.medium { border-color: var(--neon-yellow); background: rgba(252,163,17,0.2); color: var(--neon-yellow); }
 .diff-btn.active.hard { border-color: var(--primary-color); background: rgba(230,57,70,0.2); color: var(--primary-color); }
+.diff-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin: 0;
+  text-align: center;
+}
 .btn-play-new { background: linear-gradient(135deg, var(--neon-yellow), var(--primary-color)); padding: 1.2rem; border-radius: 18px; color: white; font-weight: 900; font-size: 1.3rem; border: none; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
 /* --- GAME NEW LAYOUT --- */

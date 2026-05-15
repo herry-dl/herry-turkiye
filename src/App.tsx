@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
+import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
-import bannerDesktop from './assets/banner-desktop.webp';
-import bannerMobile from './assets/banner-mobile.webp';
 import introMusic from './assets/giris-muzigi.mp3';
 import backgroundMusic from './assets/background.mp3';
 import countdownMusic from './assets/countdown.mp3';
+
+const MAPS_API_KEY =
+  typeof import.meta.env.VITE_GOOGLE_MAPS_API_KEY === 'string'
+    ? import.meta.env.VITE_GOOGLE_MAPS_API_KEY.trim() || undefined
+    : undefined;
+
+function filterLocationsByMenuDifficulty(level: 1 | 2 | 3): Location[] {
+  return locations.filter((l) => {
+    if (level === 1) return l.difficulty === 1;
+    if (level === 2) return l.difficulty <= 2;
+    return true;
+  });
+}
 
 function App() {
   const [gameLocations, setGameLocations] = useState<Location[]>([]);
@@ -19,8 +31,7 @@ function App() {
   const [lastScore, setLastScore] = useState(0);
   const [lastDistance, setLastDistance] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [failed, setFailed] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(120);
   const [gameStarted, setGameStarted] = useState(false);
   const [showSkipBtn, setShowSkipBtn] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<1 | 2 | 3>(1);
@@ -30,17 +41,55 @@ function App() {
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
-  const skipTimerRef = React.useRef<any>(null);
+  const skipTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const locationPoolRef = useRef<Location[]>(locations);
+
+  const guessRef = useRef(guess);
+  const roundOverRef = useRef(roundOver);
+  const gameLocationsRef = useRef<Location[]>(gameLocations);
+  const currentRoundRef = useRef(currentRound);
+  const timeLeftRef = useRef(timeLeft);
+
+  guessRef.current = guess;
+  roundOverRef.current = roundOver;
+  gameLocationsRef.current = gameLocations;
+  currentRoundRef.current = currentRound;
+  timeLeftRef.current = timeLeft;
 
   const TOTAL_ROUNDS = 10;
 
-  // Initialize game and handle intro music
+  const handleGuess = useCallback(() => {
+    if (roundOverRef.current) return;
+    const target = gameLocationsRef.current[currentRoundRef.current];
+    if (!target) return;
+
+    let distance = 9999;
+    let score = 0;
+    const g = guessRef.current;
+
+    if (g) {
+      distance = calculateDistance(g.lat, g.lng, target.lat, target.lng);
+      score = calculateScore(distance);
+      if (timeLeftRef.current > 60) {
+        score *= 2;
+      }
+    }
+
+    setLastDistance(distance);
+    setLastScore(score);
+    setTotalScore((prev) => prev + score);
+    setRoundOver(true);
+  }, []);
+
+  const handleGuessRef = useRef(handleGuess);
+  handleGuessRef.current = handleGuess;
+
+  // Intro music
   useEffect(() => {
     const startIntro = () => {
       if (!gameStarted && introAudioRef.current) {
         introAudioRef.current.volume = 0.6;
-        introAudioRef.current.play().catch(e => console.log("Giriş müziği çalınamadı:", e));
-        // Remove listener after first interaction
+        introAudioRef.current.play().catch((e) => console.log('Giriş müziği çalınamadı:', e));
         document.removeEventListener('click', startIntro);
         document.removeEventListener('touchstart', startIntro);
       }
@@ -55,72 +104,54 @@ function App() {
     };
   }, [gameStarted]);
 
+  // Round timer
   useEffect(() => {
-    let timer: any;
+    let timer: ReturnType<typeof setInterval> | undefined;
     if (!roundOver && !gameOver && timeLeft > 0) {
       timer = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
-      
-      // Son 20 saniye kala müziği başlat
+
       if (timeLeft === 20 && countdownAudioRef.current) {
-        countdownAudioRef.current.play().catch(e => console.log("Geri sayım müziği çalınamadı:", e));
+        countdownAudioRef.current.play().catch((e) => console.log('Geri sayım müziği çalınamadı:', e));
       }
-    } else if (timeLeft === 0 && !roundOver) {
-      handleGuess();
+    } else if (timeLeft === 0 && !roundOver && !gameOver) {
+      handleGuessRef.current();
     }
-    
-    // Tur bittiyse müziği durdur
+
     if (roundOver && countdownAudioRef.current) {
       countdownAudioRef.current.pause();
       countdownAudioRef.current.currentTime = 0;
     }
-    
-    return () => clearInterval(timer);
+
+    return () => {
+      if (timer) clearInterval(timer);
+    };
   }, [timeLeft, roundOver, gameOver]);
 
-  // Handle background music
+  // Background music
   useEffect(() => {
     if (gameStarted && !gameOver && !roundOver) {
       if (bgAudioRef.current) {
-        bgAudioRef.current.volume = 0.15; // Kısık ses
-        bgAudioRef.current.play().catch(e => console.log("Background müzik çalınamadı:", e));
+        bgAudioRef.current.volume = 0.15;
+        bgAudioRef.current.play().catch((e) => console.log('Background müzik çalınamadı:', e));
       }
     } else {
       bgAudioRef.current?.pause();
     }
   }, [gameStarted, gameOver, roundOver]);
 
+  // Sokak görünümü çok yavaşsa yükleme ekranını kaldır
+  useEffect(() => {
+    if (!gameStarted || gameOver) return;
+    const id = window.setTimeout(() => setLoadingLocation(false), 12000);
+    return () => clearTimeout(id);
+  }, [currentRound, gameStarted, gameOver]);
+
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
-
-  const startNewGame = () => {
-    // Lokasyonlari karistir ve state'e set et
-    const shuffled = [...locations].sort(() => Math.random() - 0.5);
-    setGameLocations(shuffled);
-    setTotalScore(0);
-    setCurrentRound(0);
-    setGameOver(false);
-    setGameStarted(true);
-    
-    // Stop intro music when game starts
-    if (introAudioRef.current) {
-      introAudioRef.current.pause();
-      introAudioRef.current.currentTime = 0;
-    }
-    
-    // Reset state for first round
-    setGuess(null);
-    setRoundOver(false);
-    setLastScore(0);
-    setLastDistance(0);
-    setTimeLeft(120);
-    setShowSkipBtn(false);
-    setLoadingLocation(true);
-    setTimeout(() => setLoadingLocation(false), 1500);
   };
 
   const resetRound = () => {
@@ -131,36 +162,29 @@ function App() {
     setTimeLeft(120);
     setShowSkipBtn(false);
     setLoadingLocation(true);
-    // Hide loading screen after 1.5s
-    setTimeout(() => setLoadingLocation(false), 1500);
 
-    // Show skip button after 4 seconds in case of blackout
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
     skipTimerRef.current = setTimeout(() => setShowSkipBtn(true), 4000);
   };
 
-  const handleGuess = () => {
-    if (roundOver) return;
+  const startNewGame = () => {
+    const pool = filterLocationsByMenuDifficulty(selectedDifficulty);
+    const usable = pool.length > 0 ? pool : locations;
+    locationPoolRef.current = usable;
 
-    const target = gameLocations[currentRound];
-    let distance = 9999;
-    let score = 0;
+    const shuffled = [...usable].sort(() => Math.random() - 0.5);
+    setGameLocations(shuffled);
+    setTotalScore(0);
+    setCurrentRound(0);
+    setGameOver(false);
+    setGameStarted(true);
 
-    if (guess) {
-      distance = calculateDistance(guess.lat, guess.lng, target.lat, target.lng);
-      score = calculateScore(distance);
-      
-      // 1 dakikadan az sürede bulursa (timeLeft > 60) puan 2 katı
-      if (timeLeft > 60) {
-        score = score * 2;
-      }
+    if (introAudioRef.current) {
+      introAudioRef.current.pause();
+      introAudioRef.current.currentTime = 0;
     }
 
-    setLastDistance(distance);
-    setLastScore(score);
-    setTotalScore((prev) => prev + score);
-    setRoundOver(true);
-    setFailed(false);
+    resetRound();
   };
 
   const handleNextRound = () => {
@@ -175,15 +199,24 @@ function App() {
 
   const handleSkipLocation = () => {
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
-    // Pick a new random location, replacing current blackout spot
-    const newLoc = locations[Math.floor(Math.random() * locations.length)];
-    setGameLocations(prev => {
+    const pool = locationPoolRef.current;
+    const newLoc = pool[Math.floor(Math.random() * pool.length)];
+    setGameLocations((prev) => {
       const updated = [...prev];
       updated[currentRound] = newLoc;
       return updated;
     });
     resetRound();
   };
+
+  const handlePanoramaReady = useCallback(() => {
+    setLoadingLocation(false);
+  }, []);
+
+  const handlePanoramaFailed = useCallback(() => {
+    setLoadingLocation(false);
+    setShowSkipBtn(true);
+  }, []);
 
   return (
     <div className="app-container">
@@ -198,27 +231,30 @@ function App() {
             <div className="difficulty-selector">
               <span className="diff-label">ZORLUK SEÇ:</span>
               <div className="diff-buttons">
-                <button 
+                <button
                   className={`diff-btn ${selectedDifficulty === 1 ? 'active easy' : ''}`}
                   onClick={() => setSelectedDifficulty(1)}
                 >
                   Kolay
                 </button>
-                <button 
+                <button
                   className={`diff-btn ${selectedDifficulty === 2 ? 'active medium' : ''}`}
                   onClick={() => setSelectedDifficulty(2)}
                 >
                   Orta
                 </button>
-                <button 
+                <button
                   className={`diff-btn ${selectedDifficulty === 3 ? 'active hard' : ''}`}
                   onClick={() => setSelectedDifficulty(3)}
                 >
                   Zor
                 </button>
               </div>
+              <p className="diff-hint">
+                Kolay: bilinen merkezler · Orta: + il içi yollar · Zor: tüm Türkiye havuzu
+              </p>
             </div>
-            
+
             <div className="landing-buttons-new">
               <button className="btn-play-new" onClick={startNewGame}>
                 <Flag size={24} />
@@ -230,10 +266,9 @@ function App() {
             </div>
           </div>
 
-          {/* Nasıl Oynanır Modalı */}
           {showHowToPlay && (
             <div className="modal-overlay" onClick={() => setShowHowToPlay(false)}>
-              <div className="modal-card" onClick={e => e.stopPropagation()}>
+              <div className="modal-card" onClick={(e) => e.stopPropagation()}>
                 <h2 className="modal-title">NASIL OYNANIR?</h2>
                 <div className="modal-body">
                   <div className="how-step">
@@ -246,35 +281,51 @@ function App() {
                   </div>
                   <div className="how-step">
                     <span className="step-num">3</span>
-                    <p>Hızlı ol! İlk 60 saniyede tahmin yaparsan <strong>2X puan</strong> kazanırsın.</p>
+                    <p>
+                      Hızlı ol! 200 km içinde puan alırsın; ilk 60 saniyede tahmin yaparsan{' '}
+                      <strong>2X puan</strong> kazanırsın.
+                    </p>
                   </div>
                   <div className="how-step">
                     <span className="step-num">4</span>
                     <p>10 tur sonunda en yüksek skora ulaşmaya çalış!</p>
                   </div>
                 </div>
-                <button className="btn-modal-close" onClick={() => setShowHowToPlay(false)}>ANLADIM HACI!</button>
+                <button className="btn-modal-close" onClick={() => setShowHowToPlay(false)}>
+                  ANLADIM HACI!
+                </button>
               </div>
             </div>
           )}
-          <div className="landing-footer-new">
-            © 2026
-          </div>
+          <div className="landing-footer-new">© 2026</div>
         </div>
       ) : (
-        gameLocations.length > 0 && (() => {
+        gameLocations.length > 0 &&
+        (() => {
           const currentTarget = gameLocations[currentRound];
-          const difficultyText = currentTarget.difficulty === 1 ? 'Kolay' : currentTarget.difficulty === 2 ? 'Orta' : 'Zor';
-          const difficultyColor = currentTarget.difficulty === 1 ? '#2a9d8f' : currentTarget.difficulty === 2 ? '#fca311' : '#e63946';
-          
+          const difficultyText =
+            currentTarget.difficulty === 1
+              ? 'Kolay'
+              : currentTarget.difficulty === 2
+                ? 'Orta'
+                : 'Zor';
+          const difficultyColor =
+            currentTarget.difficulty === 1 ? '#2a9d8f' : currentTarget.difficulty === 2 ? '#fca311' : '#e63946';
+
           return (
             <>
               <div className="game-top-bar animate-top">
-                <div className="back-btn-wrap" onClick={() => setGameStarted(false)}>
+                <div
+                  className="back-btn-wrap"
+                  onClick={() => {
+                    if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
+                    setGameStarted(false);
+                  }}
+                >
                   <Flag size={20} color="var(--neon-yellow)" />
                   <span>MENÜ</span>
                 </div>
-                
+
                 {showSkipBtn && !roundOver && !isMapOpen && (
                   <div className="skip-btn-wrap animate-fade" onClick={handleSkipLocation}>
                     <span>📵 ATLA</span>
@@ -300,23 +351,23 @@ function App() {
                       {(!currentTarget || loadingLocation) && (
                         <div className="location-loader">
                           <div className="loader-spinner"></div>
-                          <p>{!currentTarget ? 'VERİ YÜKLENİYOR...' : 'LOKASYON HAZIRLANIYOR...'}</p>
+                          <p>{!currentTarget ? 'VERİ YÜKLENİYOR...' : 'SOKAK GÖRÜNÜMÜ YÜKLENİYOR...'}</p>
                         </div>
                       )}
-                      <iframe 
-                        key={currentTarget?.id || 'empty'}
-                        title="Street View"
-                        width="100%" 
-                        height="100%" 
-                        frameBorder="0" 
-                        style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
-                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget?.lat},${currentTarget?.lng}&output=svembed&hl=tr`} 
-                        allowFullScreen
-                      ></iframe>
+                      {currentTarget && (
+                        <StreetViewPlayer
+                          key={currentTarget.id}
+                          lat={currentTarget.lat}
+                          lng={currentTarget.lng}
+                          locationKey={currentTarget.id}
+                          apiKey={MAPS_API_KEY}
+                          onReady={handlePanoramaReady}
+                          onLoadFailed={handlePanoramaFailed}
+                        />
+                      )}
                       <div className="blackout-mask-new"></div>
                     </div>
-                    
-                    {/* Harita Overlay - Tam Ekran */}
+
                     <div className={`map-overlay-container ${isMapOpen || roundOver ? 'open' : ''}`}>
                       <div className="map-modal-content">
                         {isMapOpen && !roundOver && (
@@ -324,21 +375,20 @@ function App() {
                             BAKMAYA DEVAM ET
                           </button>
                         )}
-                        <GameMap 
-                          guess={guess} 
+                        <GameMap
+                          guess={guess}
                           setGuess={(g) => {
                             setGuess(g);
                             if (!roundOver) {
-                              setTimeout(() => setIsMapOpen(false), 300); // Pin konunca otomatik kapansin mi? User istegi uzerine.
+                              setTimeout(() => setIsMapOpen(false), 300);
                             }
-                          }} 
-                          targetLocation={currentTarget} 
-                          roundOver={roundOver} 
+                          }}
+                          targetLocation={currentTarget}
+                          roundOver={roundOver}
                         />
                       </div>
                     </div>
 
-                    {/* Harita Tetikleyici İkon */}
                     {!roundOver && !isMapOpen && (
                       <div className={`map-trigger-icon ${guess ? 'has-pin' : ''}`} onClick={() => setIsMapOpen(true)}>
                         <MapPin size={32} color={guess ? 'var(--neon-yellow)' : '#fff'} />
@@ -355,7 +405,14 @@ function App() {
                       {guess && !roundOver && (
                         <div className="guess-confirm-wrap" onClick={handleGuess}>
                           <div className="btn-check-neon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
                               <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                           </div>
@@ -365,48 +422,56 @@ function App() {
 
                       <div className="bottom-stat-group align-right">
                         <span className="bottom-stat-lab">SKOR</span>
-                        <span className="bottom-stat-val" style={{ color: 'var(--neon-yellow)' }}>{totalScore}</span>
+                        <span className="bottom-stat-val" style={{ color: 'var(--neon-yellow)' }}>
+                          {totalScore}
+                        </span>
                       </div>
                     </div>
 
                     {roundOver && (
                       <div className="round-result-overlay">
-                          <div className="result-panel-glass">
-                            <div className="result-header">
-                              <div className="result-status-text" style={{ color: lastScore > 0 ? 'var(--neon-yellow)' : '#e63946', textShadow: lastScore > 0 ? '0 0 15px var(--neon-yellow)' : 'none' }}>
-                                {lastScore > 0 ? 'MANIAAAC!' : 'ÇOK UZAKTASIN!'}
-                              </div>
-                              <div className="result-location-name">{currentTarget.name}</div>
+                        <div className="result-panel-glass">
+                          <div className="result-header">
+                            <div
+                              className="result-status-text"
+                              style={{
+                                color: lastScore > 0 ? 'var(--neon-yellow)' : '#e63946',
+                                textShadow: lastScore > 0 ? '0 0 15px var(--neon-yellow)' : 'none',
+                              }}
+                            >
+                              {lastScore > 0 ? 'MANIAAAC!' : 'ÇOK UZAKTASIN!'}
                             </div>
-                            
-                            <div className="score-breakdown">
-                              <div className="score-row">
-                                <span>MESAFE</span>
-                                <span>{lastDistance.toFixed(1)} km</span>
-                              </div>
-                              <div className="score-row">
-                                <span>PUAN</span>
-                                <span>{Math.floor(lastScore / (timeLeft > 60 && lastScore > 0 ? 2 : 1))}</span>
-                              </div>
-                              {timeLeft > 60 && lastScore > 0 && (
-                                <div className="score-row bonus">
-                                  <span>HIZ BONUSU</span>
-                                  <span>2X 🔥</span>
-                                </div>
-                              )}
-                              <div className="score-total-row">
-                                <span>TOPLAM</span>
-                                <span>{lastScore} PUAN</span>
-                              </div>
-                              {lastScore === 0 && (
-                                <div className="score-note">1000km'den uzak olduğun için puan alamadın.</div>
-                              )}
-                            </div>
-
-                            <button className="btn-next-round" onClick={handleNextRound}>
-                              {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR HACI' : 'GEÇ HACI'}
-                            </button>
+                            <div className="result-location-name">{currentTarget.name}</div>
                           </div>
+
+                          <div className="score-breakdown">
+                            <div className="score-row">
+                              <span>MESAFE</span>
+                              <span>{lastDistance.toFixed(1)} km</span>
+                            </div>
+                            <div className="score-row">
+                              <span>PUAN</span>
+                              <span>{Math.floor(lastScore / (timeLeft > 60 && lastScore > 0 ? 2 : 1))}</span>
+                            </div>
+                            {timeLeft > 60 && lastScore > 0 && (
+                              <div className="score-row bonus">
+                                <span>HIZ BONUSU</span>
+                                <span>2X 🔥</span>
+                              </div>
+                            )}
+                            <div className="score-total-row">
+                              <span>TOPLAM</span>
+                              <span>{lastScore} PUAN</span>
+                            </div>
+                            {lastScore === 0 && (
+                              <div className="score-note">200 km'den uzaktığın veya tahmin yapmadığın için puan yok.</div>
+                            )}
+                          </div>
+
+                          <button className="btn-next-round" onClick={handleNextRound}>
+                            {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR HACI' : 'GEÇ HACI'}
+                          </button>
+                        </div>
                       </div>
                     )}
                   </>
@@ -414,12 +479,12 @@ function App() {
                   <div className="overlay-screen">
                     <Trophy size={80} color="#fca311" style={{ marginBottom: '20px' }} />
                     <h1 className="title-huge">Oyun Bitti!</h1>
-                    
+
                     <div className="result-card">
                       <h3>Toplam Skor</h3>
                       <div className="score-display">{totalScore}</div>
                       <p style={{ color: 'var(--text-muted)' }}>Maksimum: {TOTAL_ROUNDS * 200}</p>
-                      
+
                       <button className="btn" style={{ marginTop: '30px', width: '100%' }} onClick={startNewGame}>
                         Tekrar Oyna
                       </button>
@@ -431,8 +496,7 @@ function App() {
           );
         })()
       )}
-      
-      {/* Müzikler */}
+
       <audio ref={introAudioRef} src={introMusic} loop />
       <audio ref={bgAudioRef} src={backgroundMusic} loop />
       <audio ref={countdownAudioRef} src={countdownMusic} />

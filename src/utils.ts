@@ -16,8 +16,7 @@ function deg2rad(deg: number): number {
   return deg * (Math.PI / 180);
 }
 
-// Calculate score based on distance (max 5000)
-// For a Turkey-only game, 10km is perfect, 1000km is 0 points.
+// Mesafe kademeleri: tur başına taban en fazla 100 puan; ilk 60 sn içinde tahmin 2x (en fazla 200).
 export function calculateScore(distanceKm: number): number {
   if (distanceKm <= 1) return 100;
   if (distanceKm <= 10) return 80;
