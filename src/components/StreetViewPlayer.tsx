@@ -1,123 +1,119 @@
 import { useEffect, useRef, useState } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
+import { Viewer, CameraControls } from 'mapillary-js';
+import 'mapillary-js/dist/mapillary.css';
 
-const RADII_METERS = [50, 150, 400, 1000, 2500];
-
-function findNearestPanoId(
-  service: google.maps.StreetViewService,
+async function fetchNearestMapillaryImageId(
+  accessToken: string,
   lat: number,
   lng: number
 ): Promise<string | null> {
-  const tryAtIndex = (i: number): Promise<string | null> => {
-    if (i >= RADII_METERS.length) return Promise.resolve(null);
-    const radius = RADII_METERS[i];
-    return new Promise<string | null>((resolve) => {
-      service.getPanorama(
-        {
-          location: { lat, lng },
-          radius,
-          source: google.maps.StreetViewSource.DEFAULT,
-        },
-        (data, status) => {
-          if (status === google.maps.StreetViewStatus.OK && data?.location?.pano) {
-            resolve(data.location.pano);
-          } else {
-            void tryAtIndex(i + 1).then(resolve);
-          }
-        }
-      );
-    });
+  const base = 'https://graph.mapillary.com/images';
+  const run = async (search: URLSearchParams): Promise<string | null> => {
+    const url = `${base}?${search.toString()}`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const json = (await res.json()) as { data?: { id: string }[] };
+    const id = json.data?.[0]?.id;
+    return id != null ? String(id) : null;
   };
-  return tryAtIndex(0);
+
+  const point = new URLSearchParams({
+    access_token: accessToken,
+    fields: 'id',
+    lat: String(lat),
+    lng: String(lng),
+    radius: '50',
+    limit: '1',
+  });
+  const idFromPoint = await run(point);
+  if (idFromPoint) return idFromPoint;
+
+  const d = 0.0009;
+  const bbox = new URLSearchParams({
+    access_token: accessToken,
+    fields: 'id',
+    bbox: `${lng - d},${lat - d},${lng + d},${lat + d}`,
+    limit: '5',
+  });
+  return run(bbox);
 }
 
 interface StreetViewPlayerProps {
   lat: number;
   lng: number;
   locationKey: string;
-  apiKey: string | undefined;
+  /** Ücretsiz client token: mapillary.com → Developers */
+  mapillaryAccessToken: string | undefined;
   onReady: () => void;
-  /** API veya iframe yüklenemediğinde (veya anahtar yokken iframe hatası) */
   onLoadFailed?: () => void;
 }
 
 /**
- * Anahtar varsa: resmi Panorama API — yakın sokak görüntüsüne snap.
- * Anahtar yoksa: eski svembed iframe (aynı riskler korunur).
+ * Sokak görüntüsü: varsa ücretsiz Mapillary (Graph API + MapillaryJS),
+ * yoksa veya görüntü bulunamazsa Google svembed iframe (API anahtarı gerekmez).
+ * Tahmin haritası zaten OpenStreetMap (Leaflet).
  */
 export function StreetViewPlayer({
   lat,
   lng,
   locationKey,
-  apiKey,
+  mapillaryAccessToken,
   onReady,
   onLoadFailed,
 }: StreetViewPlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const panoramaRef = useRef<google.maps.StreetViewPanorama | null>(null);
+  const viewerRef = useRef<Viewer | null>(null);
   const onReadyRef = useRef(onReady);
   const onLoadFailedRef = useRef(onLoadFailed);
   onReadyRef.current = onReady;
   onLoadFailedRef.current = onLoadFailed;
-  const [iframeFallback, setIframeFallback] = useState(!apiKey);
+
+  const [iframeOnly, setIframeOnly] = useState(() => !mapillaryAccessToken);
 
   useEffect(() => {
-    if (iframeFallback) return;
+    setIframeOnly(!mapillaryAccessToken);
+  }, [locationKey, mapillaryAccessToken]);
 
-    const container = containerRef.current;
-    if (!container || !apiKey) return;
+  useEffect(() => {
+    if (iframeOnly || !mapillaryAccessToken) return;
+
+    const el = containerRef.current;
+    if (!el) return;
 
     let cancelled = false;
-    let readyNotified = false;
-    panoramaRef.current = null;
-    container.innerHTML = '';
+    let readyFired = false;
+    el.innerHTML = '';
 
-    const safeReady = (pano: google.maps.StreetViewPanorama) => {
-      if (cancelled || readyNotified) return;
-      if (pano.getStatus() === google.maps.StreetViewStatus.OK) {
-        readyNotified = true;
-        onReadyRef.current();
-      }
+    const fireReady = () => {
+      if (cancelled || readyFired) return;
+      readyFired = true;
+      onReadyRef.current();
     };
 
     const run = async () => {
       try {
-        const loader = new Loader({ apiKey, version: 'weekly' });
-        await loader.load();
-        if (cancelled || !containerRef.current) return;
-
-        const panoId = await findNearestPanoId(
-          new google.maps.StreetViewService(),
-          lat,
-          lng
-        );
-        if (cancelled || !containerRef.current) return;
-
-        if (!panoId) {
-          setIframeFallback(true);
+        const imageId = await fetchNearestMapillaryImageId(mapillaryAccessToken, lat, lng);
+        if (cancelled) return;
+        if (!imageId) {
+          setIframeOnly(true);
           onLoadFailedRef.current?.();
           return;
         }
 
-        const pano = new google.maps.StreetViewPanorama(containerRef.current, {
-          pano: panoId,
-          addressControl: false,
-          linksControl: true,
-          panControl: true,
-          enableCloseButton: false,
-          fullscreenControl: true,
-          motionTracking: false,
-          motionTrackingControl: false,
+        el.innerHTML = '';
+        const viewer = new Viewer({
+          accessToken: mapillaryAccessToken,
+          container: el,
+          imageId,
+          cameraControls: CameraControls.Street,
         });
-        panoramaRef.current = pano;
+        viewerRef.current = viewer;
 
-        pano.addListener('status_changed', () => safeReady(pano));
-        google.maps.event.addListenerOnce(pano, 'pano_changed', () => safeReady(pano));
-
-        window.setTimeout(() => safeReady(pano), 2500);
+        viewer.on('load', fireReady);
+        window.setTimeout(fireReady, 4000);
       } catch {
         if (!cancelled) {
-          setIframeFallback(true);
+          setIframeOnly(true);
           onLoadFailedRef.current?.();
         }
       }
@@ -127,15 +123,13 @@ export function StreetViewPlayer({
 
     return () => {
       cancelled = true;
-      if (panoramaRef.current) {
-        panoramaRef.current.setVisible(false);
-        panoramaRef.current = null;
-      }
-      if (containerRef.current) containerRef.current.innerHTML = '';
+      viewerRef.current?.remove();
+      viewerRef.current = null;
+      el.innerHTML = '';
     };
-  }, [lat, lng, locationKey, apiKey, iframeFallback]);
+  }, [lat, lng, locationKey, mapillaryAccessToken, iframeOnly]);
 
-  if (iframeFallback) {
+  if (iframeOnly) {
     return (
       <iframe
         key={locationKey}
@@ -155,7 +149,7 @@ export function StreetViewPlayer({
     <div
       ref={containerRef}
       className="street-view-panorama-root"
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1 }}
     />
   );
 }

@@ -9,9 +9,9 @@ import introMusic from './assets/giris-muzigi.mp3';
 import backgroundMusic from './assets/background.mp3';
 import countdownMusic from './assets/countdown.mp3';
 
-const MAPS_API_KEY =
-  typeof import.meta.env.VITE_GOOGLE_MAPS_API_KEY === 'string'
-    ? import.meta.env.VITE_GOOGLE_MAPS_API_KEY.trim() || undefined
+const MAPILLARY_TOKEN =
+  typeof import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN === 'string'
+    ? import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN.trim() || undefined
     : undefined;
 
 function filterLocationsByMenuDifficulty(level: 1 | 2 | 3): Location[] {
@@ -360,7 +360,7 @@ function App() {
                           lat={currentTarget.lat}
                           lng={currentTarget.lng}
                           locationKey={currentTarget.id}
-                          apiKey={MAPS_API_KEY}
+                          mapillaryAccessToken={MAPILLARY_TOKEN}
                           onReady={handlePanoramaReady}
                           onLoadFailed={handlePanoramaFailed}
                         />
