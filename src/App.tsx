@@ -319,7 +319,7 @@ function App() {
                         height="100%" 
                         frameBorder="0" 
                         style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: loadingLocation ? 0 : 1 }} 
-                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&output=svembed&hl=tr`} 
+                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&source=outdoor&output=svembed&hl=tr`} 
                         allowFullScreen
                       ></iframe>
                       {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
