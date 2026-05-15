@@ -147,8 +147,40 @@ body {
 
 /* --- CONTROLS --- */
 .controls-overlay {
-  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: 30px; left: 30px;
   z-index: 600; display: flex; flex-direction: column; align-items: center;
+}
+
+.btn {
+  background: transparent;
+  color: #fff;
+  border: 3px solid var(--neon-yellow);
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--neon-yellow), inset 0 0 10px var(--neon-yellow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #fff;
+}
+
+.btn:hover:not(:disabled) {
+  transform: scale(1.1) translateY(-5px);
+  border-color: #bc13fe; /* Neon Purple */
+  box-shadow: 0 0 30px #bc13fe, inset 0 0 15px #bc13fe;
+  color: #bc13fe;
+  text-shadow: 0 0 10px #bc13fe;
+}
+
+.btn:disabled {
+  background: rgba(255,255,255,0.05);
+  color: #444;
+  border-color: #333;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .result-panel-glass {
@@ -186,7 +218,12 @@ body {
   }
 
   .result-panel-glass { width: 92vw; padding: 1.2rem; }
-  .controls-overlay { z-index: 2500; bottom: 20px; }
+  .controls-overlay { 
+    z-index: 2500; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
 }
 
 /* Animations */
