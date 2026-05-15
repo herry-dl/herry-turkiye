@@ -165,23 +165,35 @@ body {
 }
 
 @media (max-width: 768px) {
-  .logo-img-floating {
-    height: 70px;
+  .floating-logo {
+    top: 10px;
+    left: 10px;
+    width: 60px;
   }
   .floating-stats-container {
     top: 10px;
     right: 10px;
-    gap: 8px;
+    gap: 6px;
   }
   .stat-circle-new {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
+    padding: 5px;
   }
-  .stat-value-mini, .timer-val {
+  .stat-label-mini {
+    font-size: 0.5rem;
+  }
+  .stat-value-mini {
     font-size: 0.8rem;
   }
-  .stat-label-mini, .timer-lab {
-    font-size: 0.45rem;
+  .timer-text-mini .timer-val {
+    font-size: 0.8rem;
+  }
+  .timer-text-mini .timer-lab {
+    font-size: 0.4rem;
+  }
+  .logo-img-floating {
+    height: 70px;
   }
   .map-section {
     width: 220px;
