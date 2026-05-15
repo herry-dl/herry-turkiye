@@ -25,6 +25,7 @@ function App() {
   const [showSkipBtn, setShowSkipBtn] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<1 | 2 | 3>(1);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [loadingLocation, setLoadingLocation] = useState(false);
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -124,6 +125,10 @@ function App() {
     setLastDistance(0);
     setTimeLeft(120);
     setShowSkipBtn(false);
+    setLoadingLocation(true);
+    // Hide loading screen after 1.5s
+    setTimeout(() => setLoadingLocation(false), 1500);
+
     // Show skip button after 4 seconds in case of blackout
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
     skipTimerRef.current = setTimeout(() => setShowSkipBtn(true), 4000);
@@ -302,12 +307,18 @@ function App() {
                 {!gameOver ? (
                   <>
                     <div className="image-section">
+                      {loadingLocation && (
+                        <div className="location-loader">
+                          <div className="loader-spinner"></div>
+                          <p>LOKASYON HAZIRLANIYOR...</p>
+                        </div>
+                      )}
                       <iframe 
                         title="Street View"
                         width="100%" 
                         height="100%" 
                         frameBorder="0" 
-                        style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                        style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: loadingLocation ? 0 : 1 }} 
                         src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&output=svembed&hl=tr`} 
                         allowFullScreen
                       ></iframe>

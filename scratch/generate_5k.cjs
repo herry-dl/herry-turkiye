@@ -163,19 +163,17 @@ const countPerCity = Math.ceil(5000 / cities.length);
 
 cities.forEach(city => {
   for (let i = 0; i < countPerCity; i++) {
-    // Increased offset: ±0.03 deg ≈ ±3.3km 
-    // Small bias to avoid exact city center/building center where indoor photos live
-    const latOffset = (Math.random() - 0.5) * 0.06;
-    const lngOffset = (Math.random() - 0.5) * 0.06;
+    // Offset reduced to ±0.005 deg ≈ ±0.5km (Total 1km range)
+    // This ensures we stay in the heart of cities where coverage is guaranteed
+    const latOffset = (Math.random() - 0.5) * 0.01;
+    const lngOffset = (Math.random() - 0.5) * 0.01;
     
-    // Add a tiny extra jitter to avoid being exactly on a building coordinate
-    const jitter = 0.0001; 
-    const finalLat = city.lat + latOffset + (Math.random() > 0.5 ? jitter : -jitter);
-    const finalLng = city.lng + lngOffset + (Math.random() > 0.5 ? jitter : -jitter);
+    const finalLat = city.lat + latOffset;
+    const finalLng = city.lng + lngOffset;
 
     locations.push({
-      id: `gen-v7-${city.name.replace(/\s+/g,'-')}-${i}`,
-      name: `${city.name} Civarı`,
+      id: `gen-v8-${city.name.replace(/\s+/g,'-')}-${i}`,
+      name: `${city.name} Merkezi`,
       lat: parseFloat(finalLat.toFixed(6)),
       lng: parseFloat(finalLng.toFixed(6)),
       difficulty: city.diff
