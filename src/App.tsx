@@ -369,30 +369,30 @@ function App() {
                         ) : (
                           <div className="result-panel-glass">
                             <div className="result-header">
-                              <div className="result-status-text" style={{ color: lastScore > 0 ? '#2a9d8f' : '#e63946' }}>
-                                {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI!' : 'HARİKA!') : 'ÇOK UZAKTASIN!'}
+                              <div className="result-status-text" style={{ color: lastScore > 0 ? 'var(--neon-yellow)' : '#e63946', textShadow: lastScore > 0 ? '0 0 15px var(--neon-yellow)' : 'none' }}>
+                                {lastScore > 0 ? 'MANIAAAC!' : 'ÇOK UZAKTASIN!'}
                               </div>
                               <div className="result-location-name">{currentTarget.name}</div>
                             </div>
                             
                             <div className="score-breakdown">
                               <div className="score-row">
-                                <span>Mesafe:</span>
+                                <span>MESAFE</span>
                                 <span>{lastDistance.toFixed(1)} km</span>
                               </div>
                               <div className="score-row">
-                                <span>Mesafe Puanı:</span>
+                                <span>PUAN</span>
                                 <span>{Math.floor(lastScore / (timeLeft > 60 && lastScore > 0 ? 2 : 1))}</span>
                               </div>
-                              {(timeLeft > 60 && lastScore > 0) && (
+                              {timeLeft > 60 && lastScore > 0 && (
                                 <div className="score-row bonus">
-                                  <span>Hız Bonusu:</span>
-                                  <span>2X</span>
+                                  <span>HIZ BONUSU</span>
+                                  <span>2X 🔥</span>
                                 </div>
                               )}
                               <div className="score-total-row">
-                                <span>TOPLAM:</span>
-                                <span>{lastScore} Puan</span>
+                                <span>TOPLAM</span>
+                                <span>{lastScore} PUAN</span>
                               </div>
                               {lastScore === 0 && (
                                 <div className="score-note">1000km'den uzak olduğun için puan alamadın.</div>
@@ -400,7 +400,7 @@ function App() {
                             </div>
 
                             <button className="btn-next-round" onClick={handleNextRound}>
-                              {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR' : 'SONRAKİ TUR'}
+                              {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR HACI' : 'GEÇ HACI'}
                             </button>
                           </div>
                         )}
