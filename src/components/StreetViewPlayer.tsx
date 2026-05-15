@@ -139,7 +139,13 @@ export function StreetViewPlayer({
   };
 
   if (layer.kind === 'loading') {
-    return null;
+    return (
+      <div
+        className="street-view-loading-shell"
+        style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#000' }}
+        aria-hidden
+      />
+    );
   }
 
   if (layer.kind === 'kartaview') {

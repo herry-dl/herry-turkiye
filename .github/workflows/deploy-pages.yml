@@ -1,10 +1,11 @@
-# Sokak görüntüsü varsayılan: KartaView (anahtar gerekmez).
-# İsteğe bağlı: VITE_MAPILLARY_ACCESS_TOKEN (Mapillary panoramik yedek)
+# Sokak: KartaView (varsayılan, anahtarsız) → isteğe bağlı Mapillary → Google iframe
+# İsteğe bağlı secret: VITE_MAPILLARY_ACCESS_TOKEN
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -26,6 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build
         env:
