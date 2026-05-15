@@ -19,7 +19,9 @@ function App() {
   const [failed, setFailed] = useState(false);
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
   const [gameStarted, setGameStarted] = useState(false);
+  const [showSkipBtn, setShowSkipBtn] = useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
+  const skipTimerRef = React.useRef<any>(null);
 
   const TOTAL_ROUNDS = 10;
 
@@ -79,6 +81,10 @@ function App() {
     setLastScore(0);
     setLastDistance(0);
     setTimeLeft(120);
+    setShowSkipBtn(false);
+    // Show skip button after 4 seconds in case of blackout
+    if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
+    skipTimerRef.current = setTimeout(() => setShowSkipBtn(true), 4000);
   };
 
   const handleGuess = () => {
@@ -106,12 +112,25 @@ function App() {
   };
 
   const handleNextRound = () => {
+    if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
     if (currentRound + 1 >= TOTAL_ROUNDS) {
       setGameOver(true);
     } else {
       setCurrentRound((prev) => prev + 1);
       resetRound();
     }
+  };
+
+  const handleSkipLocation = () => {
+    if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
+    // Pick a new random location, replacing current blackout spot
+    const newLoc = locations[Math.floor(Math.random() * locations.length)];
+    setGameLocations(prev => {
+      const updated = [...prev];
+      updated[currentRound] = newLoc;
+      return updated;
+    });
+    resetRound();
   };
 
   return (
@@ -192,6 +211,28 @@ function App() {
                       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', maxWidth: '400px', height: '90px', backgroundColor: 'var(--bg-dark)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: '16px', borderRight: '2px solid var(--primary-color)', borderBottom: '2px solid var(--primary-color)', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
                         <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-main)', textAlign: 'center', padding: '0 15px' }}>👀 <span style={{color: 'var(--primary-color)'}}>Neresi Burası?</span><br/>Etrafına bak ve tahmin et!</span>
                       </div>
+                      {/* Skip button - appears after 4s if blackout */}
+                      {showSkipBtn && !roundOver && (
+                        <div style={{ position: 'absolute', bottom: '16px', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
+                          <button
+                            onClick={handleSkipLocation}
+                            style={{
+                              background: 'rgba(230,57,70,0.9)',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '30px',
+                              padding: '10px 24px',
+                              fontSize: '0.95rem',
+                              fontWeight: 'bold',
+                              cursor: 'pointer',
+                              backdropFilter: 'blur(4px)',
+                              boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+                            }}
+                          >
+                            📵 Görüntü Yok — Atla
+                          </button>
+                        </div>
+                      )}
                     </div>
                     
                     <GameMap 

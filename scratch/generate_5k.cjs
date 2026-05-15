@@ -1,120 +1,161 @@
 const fs = require('fs');
 
+// ONLY cities/districts with known good Google Street View coverage in Turkey
+// Removed: Bayburt, Ardahan, Igdir, Hakkari, Sirnak, Bitlis, Tunceli, Mus, Bingol, 
+//          Van, Agri, Kars, most of eastern Anatolia rural areas
 const cities = [
-  { name: "İstanbul Beşiktaş", lat: 41.0422, lng: 29.0067 },
-  { name: "İstanbul Kadıköy", lat: 40.9906, lng: 29.0267 },
-  { name: "İstanbul Fatih", lat: 41.0186, lng: 28.9397 },
-  { name: "İstanbul Üsküdar", lat: 41.0231, lng: 29.0151 },
-  { name: "İstanbul Şişli", lat: 41.0602, lng: 28.9872 },
-  { name: "İstanbul Bakırköy", lat: 40.9784, lng: 28.8697 },
-  { name: "İstanbul Beyoğlu", lat: 41.0369, lng: 28.9770 },
-  { name: "İstanbul Maltepe", lat: 40.9342, lng: 29.1303 },
-  { name: "İstanbul Kartal", lat: 40.8891, lng: 29.1867 },
-  { name: "İstanbul Pendik", lat: 40.8765, lng: 29.2344 },
-  { name: "Ankara Çankaya", lat: 39.9179, lng: 32.8629 },
-  { name: "Ankara Kızılay", lat: 39.9212, lng: 32.8540 },
-  { name: "Ankara Ulus", lat: 39.9438, lng: 32.8562 },
-  { name: "Ankara Keçiören", lat: 39.9739, lng: 32.8683 },
-  { name: "Ankara Mamak", lat: 39.9169, lng: 32.9367 },
-  { name: "İzmir Konak", lat: 38.4189, lng: 27.1287 },
-  { name: "İzmir Bornova", lat: 38.4619, lng: 27.2147 },
-  { name: "İzmir Buca", lat: 38.3833, lng: 27.1833 },
-  { name: "İzmir Karşıyaka", lat: 38.4575, lng: 27.1086 },
-  { name: "Bursa Osmangazi", lat: 40.1826, lng: 29.0501 },
-  { name: "Bursa Nilüfer", lat: 40.2053, lng: 28.9647 },
-  { name: "Bursa Yıldırım", lat: 40.1869, lng: 29.0969 },
-  { name: "Antalya Muratpaşa", lat: 36.8841, lng: 30.7056 },
-  { name: "Antalya Konyaaltı", lat: 36.8746, lng: 30.6374 },
-  { name: "Antalya Kepez", lat: 36.9342, lng: 30.7314 },
-  { name: "Konya Selçuklu", lat: 37.8833, lng: 32.4667 },
-  { name: "Konya Meram", lat: 37.8556, lng: 32.4556 },
-  { name: "Konya Karatay", lat: 37.8722, lng: 32.5038 },
-  { name: "Adana Seyhan", lat: 37.0000, lng: 35.3213 },
-  { name: "Adana Çukurova", lat: 37.0400, lng: 35.3000 },
-  { name: "Gaziantep Şahinbey", lat: 37.0662, lng: 37.3833 },
-  { name: "Gaziantep Şehitkamil", lat: 37.0500, lng: 37.3200 },
-  { name: "Şanlıurfa Eyyübiye", lat: 37.1591, lng: 38.7969 },
-  { name: "Mersin Yenişehir", lat: 36.8000, lng: 34.5833 },
-  { name: "Mersin Mezitli", lat: 36.7833, lng: 34.5333 },
-  { name: "Diyarbakır Sur", lat: 37.9144, lng: 40.2306 },
-  { name: "Kayseri Melikgazi", lat: 38.7205, lng: 35.4826 },
-  { name: "Kayseri Kocasinan", lat: 38.7333, lng: 35.5167 },
-  { name: "Samsun Atakum", lat: 41.3300, lng: 36.2700 },
-  { name: "Samsun İlkadım", lat: 41.2867, lng: 36.3300 },
-  { name: "Denizli Pamukkale", lat: 37.7600, lng: 29.0900 },
-  { name: "Eskişehir Tepebaşı", lat: 39.7767, lng: 30.5206 },
-  { name: "Eskişehir Odunpazarı", lat: 39.7692, lng: 30.5372 },
-  { name: "Trabzon Ortahisar", lat: 41.0027, lng: 39.7168 },
-  { name: "Malatya Battalgazi", lat: 38.3552, lng: 38.3095 },
-  { name: "Malatya Yeşilyurt", lat: 38.3333, lng: 38.2500 },
-  { name: "Kahramanmaraş Dulkadiroğlu", lat: 37.5858, lng: 36.9371 },
-  { name: "Ordu Altınordu", lat: 40.9839, lng: 37.8764 },
-  { name: "Afyonkarahisar Merkez", lat: 38.7507, lng: 30.5334 },
-  { name: "Sivas Merkez", lat: 39.7477, lng: 37.0179 },
-  { name: "Tokat Merkez", lat: 40.3167, lng: 36.5500 },
-  { name: "Zonguldak Merkez", lat: 41.4506, lng: 31.7908 },
-  { name: "Kütahya Merkez", lat: 39.4167, lng: 29.9833 },
-  { name: "Çanakkale Merkez", lat: 40.1553, lng: 26.4142 },
-  { name: "Edirne Merkez", lat: 41.6772, lng: 26.5557 },
-  { name: "Tekirdağ Süleymanpaşa", lat: 40.9781, lng: 27.5117 },
-  { name: "Balıkesir Merkez", lat: 39.6484, lng: 27.8826 },
-  { name: "Muğla Bodrum", lat: 37.0342, lng: 27.4300 },
-  { name: "Muğla Fethiye", lat: 36.6547, lng: 29.1242 },
-  { name: "Muğla Marmaris", lat: 36.8558, lng: 28.2722 },
-  { name: "Aydın Kuşadası", lat: 37.8600, lng: 27.2599 },
-  { name: "Aydın Merkez", lat: 37.8444, lng: 27.8458 },
-  { name: "Manisa Merkez", lat: 38.6191, lng: 27.4289 },
-  { name: "Uşak Merkez", lat: 38.6742, lng: 29.4058 },
-  { name: "Isparta Merkez", lat: 37.7648, lng: 30.5566 },
-  { name: "Burdur Merkez", lat: 37.7203, lng: 30.2908 },
-  { name: "Karaman Merkez", lat: 37.1759, lng: 33.2214 },
-  { name: "Niğde Merkez", lat: 37.9667, lng: 34.6833 },
-  { name: "Nevşehir Merkez", lat: 38.6247, lng: 34.7144 },
-  { name: "Nevşehir Ürgüp", lat: 38.6317, lng: 34.9147 },
-  { name: "Aksaray Merkez", lat: 38.3687, lng: 34.0370 },
-  { name: "Kırşehir Merkez", lat: 39.1425, lng: 34.1709 },
-  { name: "Yozgat Merkez", lat: 39.8181, lng: 34.8147 },
-  { name: "Kırıkkale Merkez", lat: 39.8453, lng: 33.5064 },
-  { name: "Çorum Merkez", lat: 40.5506, lng: 34.9556 },
-  { name: "Amasya Merkez", lat: 40.6500, lng: 35.8333 },
-  { name: "Kastamonu Merkez", lat: 41.3766, lng: 33.7765 },
-  { name: "Sinop Merkez", lat: 42.0231, lng: 35.1531 },
-  { name: "Bolu Merkez", lat: 40.7350, lng: 31.6078 },
-  { name: "Düzce Merkez", lat: 40.8438, lng: 31.1565 },
-  { name: "Yalova Merkez", lat: 40.6551, lng: 29.2769 },
-  { name: "Sakarya Adapazarı", lat: 40.7731, lng: 30.3948 },
-  { name: "Kocaeli İzmit", lat: 40.7654, lng: 29.9408 },
-  { name: "Kocaeli Gebze", lat: 40.8017, lng: 29.4306 },
-  { name: "Kırklareli Merkez", lat: 41.7333, lng: 27.2167 },
-  { name: "Tekirdağ Çorlu", lat: 41.1500, lng: 27.8000 },
-  { name: "Karabük Merkez", lat: 41.2000, lng: 32.6333 },
-  { name: "Bartın Merkez", lat: 41.6358, lng: 32.3375 },
-  { name: "Giresun Merkez", lat: 40.9128, lng: 38.3895 },
-  { name: "Rize Merkez", lat: 41.0201, lng: 40.5235 },
-  { name: "Artvin Merkez", lat: 41.1833, lng: 41.8167 },
-  { name: "Erzincan Merkez", lat: 39.7500, lng: 39.5000 },
-  { name: "Elazığ Merkez", lat: 38.6748, lng: 39.2225 },
-  { name: "Bingöl Merkez", lat: 38.8847, lng: 40.4939 },
-  { name: "Muş Merkez", lat: 38.7432, lng: 41.5064 },
-  { name: "Van İpekyolu", lat: 38.4891, lng: 43.3833 },
-  { name: "Batman Merkez", lat: 37.8812, lng: 41.1293 },
-  { name: "Mardin Artuklu", lat: 37.3129, lng: 40.7339 },
-  { name: "Mardin Kızıltepe", lat: 37.1939, lng: 40.5925 },
-  { name: "Adıyaman Merkez", lat: 37.7644, lng: 38.2763 },
-  { name: "Hatay Antakya", lat: 36.2023, lng: 36.1613 },
-  { name: "Hatay İskenderun", lat: 36.5800, lng: 36.1700 },
-  { name: "Osmaniye Merkez", lat: 37.0742, lng: 36.2472 },
-  { name: "Kilis Merkez", lat: 36.7161, lng: 37.1150 },
-  { name: "Bilecik Merkez", lat: 40.1419, lng: 29.9793 },
-  { name: "Çankırı Merkez", lat: 40.6000, lng: 33.6167 },
-  { name: "Balıkesir Ayvalık", lat: 39.3100, lng: 26.6900 },
-  { name: "Antalya Alanya", lat: 36.5433, lng: 31.9997 },
-  { name: "Antalya Side", lat: 36.7686, lng: 31.3886 },
-  { name: "Antalya Manavgat", lat: 36.7836, lng: 31.4367 },
-  { name: "İzmir Alsancak", lat: 38.4381, lng: 27.1461 },
-  { name: "İstanbul Taksim", lat: 41.0369, lng: 28.9852 },
-  { name: "İstanbul Bağcılar", lat: 41.0353, lng: 28.8550 },
-  { name: "İstanbul Ümraniye", lat: 41.0161, lng: 29.1183 },
+  // İstanbul - excellent coverage
+  { name: "İstanbul Beşiktaş", lat: 41.0422, lng: 29.0067, diff: 1 },
+  { name: "İstanbul Kadıköy", lat: 40.9906, lng: 29.0267, diff: 1 },
+  { name: "İstanbul Fatih", lat: 41.0186, lng: 28.9397, diff: 1 },
+  { name: "İstanbul Üsküdar", lat: 41.0231, lng: 29.0151, diff: 1 },
+  { name: "İstanbul Şişli", lat: 41.0602, lng: 28.9872, diff: 1 },
+  { name: "İstanbul Bakırköy", lat: 40.9784, lng: 28.8697, diff: 1 },
+  { name: "İstanbul Beyoğlu", lat: 41.0369, lng: 28.9770, diff: 1 },
+  { name: "İstanbul Maltepe", lat: 40.9342, lng: 29.1303, diff: 2 },
+  { name: "İstanbul Ümraniye", lat: 41.0161, lng: 29.1183, diff: 2 },
+  { name: "İstanbul Pendik", lat: 40.8765, lng: 29.2344, diff: 2 },
+  { name: "İstanbul Bağcılar", lat: 41.0353, lng: 28.8550, diff: 2 },
+  { name: "İstanbul Esenler", lat: 41.0444, lng: 28.8811, diff: 2 },
+  { name: "İstanbul Avcılar", lat: 40.9797, lng: 28.7217, diff: 2 },
+  { name: "İstanbul Sarıyer", lat: 41.1672, lng: 29.0561, diff: 3 },
+  // Ankara - good coverage
+  { name: "Ankara Çankaya", lat: 39.9179, lng: 32.8629, diff: 1 },
+  { name: "Ankara Kızılay", lat: 39.9212, lng: 32.8540, diff: 1 },
+  { name: "Ankara Ulus", lat: 39.9438, lng: 32.8562, diff: 2 },
+  { name: "Ankara Keçiören", lat: 39.9739, lng: 32.8683, diff: 2 },
+  { name: "Ankara Mamak", lat: 39.9169, lng: 32.9367, diff: 2 },
+  { name: "Ankara Etimesgut", lat: 39.9519, lng: 32.6803, diff: 2 },
+  // İzmir - good coverage
+  { name: "İzmir Konak", lat: 38.4189, lng: 27.1287, diff: 1 },
+  { name: "İzmir Bornova", lat: 38.4619, lng: 27.2147, diff: 1 },
+  { name: "İzmir Karşıyaka", lat: 38.4575, lng: 27.1086, diff: 1 },
+  { name: "İzmir Buca", lat: 38.3833, lng: 27.1833, diff: 2 },
+  { name: "İzmir Bayraklı", lat: 38.4733, lng: 27.1658, diff: 2 },
+  // Antalya - excellent coverage (tourism)
+  { name: "Antalya Muratpaşa", lat: 36.8841, lng: 30.7056, diff: 1 },
+  { name: "Antalya Konyaaltı", lat: 36.8746, lng: 30.6374, diff: 1 },
+  { name: "Antalya Alanya", lat: 36.5433, lng: 31.9997, diff: 2 },
+  { name: "Antalya Side", lat: 36.7686, lng: 31.3886, diff: 2 },
+  { name: "Antalya Manavgat", lat: 36.7836, lng: 31.4367, diff: 2 },
+  { name: "Antalya Kepez", lat: 36.9342, lng: 30.7314, diff: 2 },
+  { name: "Antalya Kaş", lat: 36.2009, lng: 29.6377, diff: 3 },
+  // Bursa - good coverage
+  { name: "Bursa Osmangazi", lat: 40.1826, lng: 29.0501, diff: 1 },
+  { name: "Bursa Nilüfer", lat: 40.2053, lng: 28.9647, diff: 1 },
+  { name: "Bursa Yıldırım", lat: 40.1869, lng: 29.0969, diff: 2 },
+  // Konya - good coverage
+  { name: "Konya Selçuklu", lat: 37.8833, lng: 32.4667, diff: 2 },
+  { name: "Konya Meram", lat: 37.8556, lng: 32.4556, diff: 2 },
+  { name: "Konya Karatay", lat: 37.8722, lng: 32.5038, diff: 2 },
+  // Adana - good coverage
+  { name: "Adana Seyhan", lat: 37.0000, lng: 35.3213, diff: 2 },
+  { name: "Adana Çukurova", lat: 37.0400, lng: 35.3000, diff: 2 },
+  // Muğla - excellent (tourism)
+  { name: "Muğla Bodrum", lat: 37.0342, lng: 27.4300, diff: 1 },
+  { name: "Muğla Fethiye", lat: 36.6547, lng: 29.1242, diff: 2 },
+  { name: "Muğla Marmaris", lat: 36.8558, lng: 28.2722, diff: 2 },
+  { name: "Muğla Milas", lat: 37.3175, lng: 27.7842, diff: 3 },
+  // Aydın - good coverage
+  { name: "Aydın Kuşadası", lat: 37.8600, lng: 27.2599, diff: 2 },
+  { name: "Aydın Merkez", lat: 37.8444, lng: 27.8458, diff: 2 },
+  { name: "Aydın Didim", lat: 37.3819, lng: 27.2658, diff: 2 },
+  // Manisa - good
+  { name: "Manisa Merkez", lat: 38.6191, lng: 27.4289, diff: 2 },
+  { name: "Manisa Akhisar", lat: 38.9203, lng: 27.8394, diff: 3 },
+  // Gaziantep - good
+  { name: "Gaziantep Şahinbey", lat: 37.0662, lng: 37.3833, diff: 2 },
+  { name: "Gaziantep Şehitkamil", lat: 37.0500, lng: 37.3200, diff: 2 },
+  // Denizli - good
+  { name: "Denizli Pamukkale", lat: 37.7600, lng: 29.0900, diff: 2 },
+  { name: "Denizli Merkez", lat: 37.7765, lng: 29.0864, diff: 2 },
+  // Mersin - good
+  { name: "Mersin Yenişehir", lat: 36.8000, lng: 34.5833, diff: 2 },
+  { name: "Mersin Toroslar", lat: 36.7833, lng: 34.5333, diff: 3 },
+  // Eskişehir - good
+  { name: "Eskişehir Tepebaşı", lat: 39.7767, lng: 30.5206, diff: 2 },
+  { name: "Eskişehir Odunpazarı", lat: 39.7692, lng: 30.5372, diff: 2 },
+  // Kayseri - good
+  { name: "Kayseri Melikgazi", lat: 38.7205, lng: 35.4826, diff: 2 },
+  { name: "Kayseri Kocasinan", lat: 38.7333, lng: 35.5167, diff: 3 },
+  // Samsun - good
+  { name: "Samsun Atakum", lat: 41.3300, lng: 36.2700, diff: 2 },
+  { name: "Samsun İlkadım", lat: 41.2867, lng: 36.3300, diff: 2 },
+  // Trabzon - good
+  { name: "Trabzon Ortahisar", lat: 41.0027, lng: 39.7168, diff: 2 },
+  { name: "Trabzon Akçaabat", lat: 41.0183, lng: 39.5633, diff: 3 },
+  // Edirne - good
+  { name: "Edirne Merkez", lat: 41.6772, lng: 26.5557, diff: 2 },
+  // Tekirdağ - good
+  { name: "Tekirdağ Merkez", lat: 40.9781, lng: 27.5117, diff: 2 },
+  { name: "Tekirdağ Çorlu", lat: 41.1500, lng: 27.8000, diff: 2 },
+  // Kocaeli - good
+  { name: "Kocaeli İzmit", lat: 40.7654, lng: 29.9408, diff: 2 },
+  { name: "Kocaeli Gebze", lat: 40.8017, lng: 29.4306, diff: 2 },
+  // Sakarya - good
+  { name: "Sakarya Adapazarı", lat: 40.7731, lng: 30.3948, diff: 2 },
+  // Balıkesir - good
+  { name: "Balıkesir Merkez", lat: 39.6484, lng: 27.8826, diff: 3 },
+  { name: "Balıkesir Ayvalık", lat: 39.3100, lng: 26.6900, diff: 2 },
+  { name: "Balıkesir Bandırma", lat: 40.3508, lng: 27.9767, diff: 3 },
+  // Çanakkale - good
+  { name: "Çanakkale Merkez", lat: 40.1553, lng: 26.4142, diff: 2 },
+  // Isparta - good
+  { name: "Isparta Merkez", lat: 37.7648, lng: 30.5566, diff: 3 },
+  // Nevşehir - good (tourism)
+  { name: "Nevşehir Göreme", lat: 38.6436, lng: 34.8291, diff: 2 },
+  { name: "Nevşehir Merkez", lat: 38.6247, lng: 34.7144, diff: 3 },
+  // Kütahya - fair
+  { name: "Kütahya Merkez", lat: 39.4167, lng: 29.9833, diff: 3 },
+  // Bolu - good
+  { name: "Bolu Merkez", lat: 40.7350, lng: 31.6078, diff: 3 },
+  // Düzce - good
+  { name: "Düzce Merkez", lat: 40.8438, lng: 31.1565, diff: 3 },
+  // Yalova - good
+  { name: "Yalova Merkez", lat: 40.6551, lng: 29.2769, diff: 2 },
+  // Karabük - fair
+  { name: "Karabük Merkez", lat: 41.2000, lng: 32.6333, diff: 3 },
+  // Bartın - fair
+  { name: "Bartın Merkez", lat: 41.6358, lng: 32.3375, diff: 3 },
+  // Malatya - fair
+  { name: "Malatya Battalgazi", lat: 38.3552, lng: 38.3095, diff: 2 },
+  // Hatay - good
+  { name: "Hatay Antakya", lat: 36.2023, lng: 36.1613, diff: 2 },
+  { name: "Hatay İskenderun", lat: 36.5800, lng: 36.1700, diff: 2 },
+  // Adıyaman - fair
+  { name: "Adıyaman Merkez", lat: 37.7644, lng: 38.2763, diff: 3 },
+  // Şanlıurfa - fair
+  { name: "Şanlıurfa Merkez", lat: 37.1591, lng: 38.7969, diff: 3 },
+  // Kahramanmaraş - fair
+  { name: "Kahramanmaraş Merkez", lat: 37.5858, lng: 36.9371, diff: 3 },
+  // Diyarbakır - fair
+  { name: "Diyarbakır Merkez", lat: 37.9144, lng: 40.2306, diff: 3 },
+  // Mardin - fair coverage in center
+  { name: "Mardin Merkez", lat: 37.3129, lng: 40.7339, diff: 3 },
+  // Sivas - fair
+  { name: "Sivas Merkez", lat: 39.7477, lng: 37.0179, diff: 3 },
+  // Tokat - fair
+  { name: "Tokat Merkez", lat: 40.3167, lng: 36.5500, diff: 3 },
+  // Giresun - fair
+  { name: "Giresun Merkez", lat: 40.9128, lng: 38.3895, diff: 3 },
+  // Rize - fair
+  { name: "Rize Merkez", lat: 41.0201, lng: 40.5235, diff: 3 },
+  // Ordu - fair
+  { name: "Ordu Altınordu", lat: 40.9839, lng: 37.8764, diff: 3 },
+  // Bilecik - fair
+  { name: "Bilecik Merkez", lat: 40.1419, lng: 29.9793, diff: 3 },
+  // Uşak - fair
+  { name: "Uşak Merkez", lat: 38.6742, lng: 29.4058, diff: 3 },
+  // Afyonkarahisar - fair
+  { name: "Afyonkarahisar Merkez", lat: 38.7507, lng: 30.5334, diff: 3 },
+  // Osmaniye
+  { name: "Osmaniye Merkez", lat: 37.0742, lng: 36.2472, diff: 3 },
+  // Kastamonu
+  { name: "Kastamonu Merkez", lat: 41.3766, lng: 33.7765, diff: 3 },
+  // Aksaray
+  { name: "Aksaray Merkez", lat: 38.3687, lng: 34.0370, diff: 3 },
+  // Niğde
+  { name: "Niğde Merkez", lat: 37.9667, lng: 34.6833, diff: 3 },
 ];
 
 const locations = [];
@@ -122,22 +163,16 @@ const countPerCity = Math.ceil(5000 / cities.length);
 
 cities.forEach(city => {
   for (let i = 0; i < countPerCity; i++) {
-    // Small offsets: ±0.015 deg ≈ ±1.5km — stays in urban coverage
-    const latOffset = (Math.random() - 0.5) * 0.03;
-    const lngOffset = (Math.random() - 0.5) * 0.03;
-    
-    let difficulty;
-    const r = Math.random();
-    if (r < 0.33) difficulty = 1;
-    else if (r < 0.66) difficulty = 2;
-    else difficulty = 3;
+    // Very small offset: ±0.012 deg ≈ ±1.3km — stays in urban Street View coverage
+    const latOffset = (Math.random() - 0.5) * 0.024;
+    const lngOffset = (Math.random() - 0.5) * 0.024;
     
     locations.push({
-      id: `gen-v5-${city.name.replace(/\s+/g,'-')}-${i}`,
+      id: `gen-v6-${city.name.replace(/\s+/g,'-')}-${i}`,
       name: `${city.name} Çevresi`,
       lat: parseFloat((city.lat + latOffset).toFixed(6)),
       lng: parseFloat((city.lng + lngOffset).toFixed(6)),
-      difficulty
+      difficulty: city.diff
     });
   }
 });
@@ -145,4 +180,4 @@ cities.forEach(city => {
 const finalLocations = locations.slice(0, 5000);
 const content = `export const generatedLocations = ${JSON.stringify(finalLocations, null, 2)};`;
 fs.writeFileSync('src/generatedLocations.ts', content);
-console.log(`Generated ${finalLocations.length} locations.`);
+console.log(`Generated ${finalLocations.length} locations from ${cities.length} verified cities.`);
