@@ -305,7 +305,7 @@ function App() {
                         height="100%" 
                         frameBorder="0" 
                         style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
-                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&source=outdoor&output=svembed&hl=tr`} 
+                        src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&output=svembed&hl=tr`} 
                         allowFullScreen
                       ></iframe>
                       <div className="blackout-mask-new"></div>

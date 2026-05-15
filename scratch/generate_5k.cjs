@@ -163,16 +163,15 @@ const countPerCity = Math.ceil(5000 / cities.length);
 
 cities.forEach(city => {
   for (let i = 0; i < countPerCity; i++) {
-    // Offset reduced to ±0.0015 deg ≈ ±165m (Total ~330m range)
-    // This is a very tight radius around verified city center roads to avoid indoor panoramas
-    const latOffset = (Math.random() - 0.5) * 0.003;
-    const lngOffset = (Math.random() - 0.5) * 0.003;
+    // Reverted to 1km range for maximum coverage stability
+    const latOffset = (Math.random() - 0.5) * 0.01;
+    const lngOffset = (Math.random() - 0.5) * 0.01;
     
     const finalLat = city.lat + latOffset;
     const finalLng = city.lng + lngOffset;
 
     locations.push({
-      id: `gen-v9-${city.name.replace(/\s+/g,'-')}-${i}`,
+      id: `gen-v10-${city.name.replace(/\s+/g,'-')}-${i}`,
       name: `${city.name} Merkezi`,
       lat: parseFloat(finalLat.toFixed(6)),
       lng: parseFloat(finalLng.toFixed(6)),
