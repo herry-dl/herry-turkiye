@@ -65,18 +65,18 @@ body {
 }
 
 .stat-circle-new {
-  width: 85px;
-  height: 85px;
-  background: rgba(18, 18, 18, 0.7);
+  width: 80px;
+  height: 80px;
+  background: rgba(18, 18, 18, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 50%;
-  border: 2px solid rgba(252, 163, 17, 0.3);
+  border: 2px solid #fca311;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(252, 163, 17, 0.4);
   animation: fadeIn 0.5s ease-out forwards;
 }
 
@@ -132,25 +132,26 @@ body {
 /* Map Section Refinement */
 .map-section {
   position: fixed;
-  bottom: 25px;
-  left: 25px; /* Left corner as requested */
-  width: 280px;
-  height: 200px;
+  bottom: 20px;
+  left: 20px;
+  width: 200px; /* Even smaller idle map */
+  height: 140px;
   background-color: var(--bg-card);
-  border-radius: 24px; /* More rounded as requested */
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(252, 163, 17, 0.5); /* Neon glow */
   z-index: 500;
-  border: 3px solid rgba(252, 163, 17, 0.4);
+  border: 2px solid #fca311;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .map-section:hover, .map-section.expanded {
-  width: 500px;
+  width: 550px;
   height: 400px;
-  bottom: 30px;
-  left: 30px;
+  bottom: 25px;
+  left: 25px;
   border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.8);
 }
 
 @media (max-width: 768px) {
@@ -268,6 +269,18 @@ body {
   align-items: center;
 }
 
+.image-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 180px;
+  background: radial-gradient(circle at top left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, transparent 100%);
+  z-index: 60;
+  pointer-events: none;
+}
+
 .location-image {
   max-width: 100%;
   max-height: 100%;
@@ -319,29 +332,31 @@ body {
 }
 
 .btn {
-  background-color: var(--primary-color);
-  color: white;
+  background: #fca311; /* Neon Yellow-Gold */
+  color: #000;
   border: none;
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 30px;
+  padding: 14px 35px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.2s;
-  font-family: inherit;
-  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+  box-shadow: 0 0 25px rgba(252, 163, 17, 0.6);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  background-color: #fca311; /* Highlight */
-  box-shadow: 0 6px 15px rgba(252, 163, 17, 0.4);
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgba(252, 163, 17, 0.9);
+  background: #fff;
 }
 
 .btn:disabled {
-  background-color: #555;
-  cursor: not-allowed;
+  background: #444;
+  color: #777;
   box-shadow: none;
+  cursor: not-allowed;
 }
 
 .btn-secondary {
