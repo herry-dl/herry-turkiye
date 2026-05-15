@@ -165,25 +165,26 @@ function App() {
     <div className="app-container">
       {!gameStarted ? (
         <div className="landing-page">
-          <div className="landing-content">
-            <div className="banner-container">
-              <img src={bannerMobile} alt="Türkiye Kâşifi" className="landing-banner" />
+          <div className="landing-content-card">
+            <div className="landing-logo-container">
+              <img src={logo} alt="HERRY TÜRKİYE" className="landing-logo-img" />
             </div>
-            <p className="by-dagli">BY Dagli</p>
-            <p className="landing-subtitle">Türkiye'yi ne kadar iyi tanıyorsun? Sokak sokak gez, keşfet ve tahmin et!</p>
+            <h1 className="landing-title-main">TÜRKİYE KÂŞİFİ</h1>
+            <p className="by-dagli-new">BY Dagli</p>
+            <p className="landing-subtitle-new">Sokak sokak gez, keşfet ve Türkiye'yi ne kadar iyi tanıdığını kanıtla!</p>
             
-            <div className="landing-buttons">
-              <button className="btn btn-primary btn-huge" onClick={startNewGame}>
-                <Flag size={20} style={{ marginRight: '10px' }} />
+            <div className="landing-buttons-new">
+              <button className="btn-play-new" onClick={startNewGame}>
+                <Flag size={24} />
                 MACERAYA BAŞLA
               </button>
-              <button className="btn btn-secondary btn-huge" onClick={() => alert('Sokak görünümünde nerede olduğunuzu tahmin edin. Merkeze ne kadar yakınsanız o kadar çok puan kazanırsınız!')}>
+              <button className="btn-how-new" onClick={() => alert('Street View görüntüsünde nerede olduğunuzu harita üzerinde işaretleyin. Merkeze ne kadar yakınsanız o kadar çok puan ve hız bonusu kazanırsınız!')}>
                 NASIL OYNANIR?
               </button>
             </div>
           </div>
-          <div className="landing-footer">
-            © 2024 HERRY-TÜRKİYE | Türkiye Kâşifi
+          <div className="landing-footer-new">
+            © 2024 HERRY-TÜRKİYE
           </div>
         </div>
       ) : (
