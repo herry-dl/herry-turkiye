@@ -23,7 +23,8 @@ function App() {
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes in seconds
   const [gameStarted, setGameStarted] = useState(false);
   const [showSkipBtn, setShowSkipBtn] = useState(false);
-  const audioRef = React.useRef<HTMLAudioElement>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<1 | 2 | 3>(1);
+  const [showHowToPlay, setShowHowToPlay] = useState(false);
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -95,12 +96,12 @@ function App() {
   };
 
   const startNewGame = () => {
-    // 3 kolay, 4 orta, 3 zor lokasyon seç
-    const level1 = locations.filter(l => l.difficulty === 1).sort(() => 0.5 - Math.random()).slice(0, 3);
-    const level2 = locations.filter(l => l.difficulty === 2).sort(() => 0.5 - Math.random()).slice(0, 4);
-    const level3 = locations.filter(l => l.difficulty === 3).sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Seçilen zorluğa göre lokasyonları filtrele
+    const filtered = locations.filter(l => l.difficulty === selectedDifficulty);
+    const shuffled = [...filtered].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, TOTAL_ROUNDS);
     
-    setGameLocations([...level1, ...level2, ...level3]);
+    setGameLocations(selected);
     setCurrentRound(0);
     setTotalScore(0);
     setGameOver(false);
@@ -184,18 +185,68 @@ function App() {
             </div>
             <h1 className="landing-title-main">TÜRKİYE KÂŞİFİ</h1>
             <p className="by-dagli-new">BY Dagli</p>
-            <p className="landing-subtitle-new">Sokak sokak gez, keşfet ve Türkiye'yi ne kadar iyi tanıdığını kanıtla!</p>
+            <div className="difficulty-selector">
+              <span className="diff-label">ZORLUK SEÇ:</span>
+              <div className="diff-buttons">
+                <button 
+                  className={`diff-btn ${selectedDifficulty === 1 ? 'active easy' : ''}`}
+                  onClick={() => setSelectedDifficulty(1)}
+                >
+                  Kolay
+                </button>
+                <button 
+                  className={`diff-btn ${selectedDifficulty === 2 ? 'active medium' : ''}`}
+                  onClick={() => setSelectedDifficulty(2)}
+                >
+                  Orta
+                </button>
+                <button 
+                  className={`diff-btn ${selectedDifficulty === 3 ? 'active hard' : ''}`}
+                  onClick={() => setSelectedDifficulty(3)}
+                >
+                  Zor
+                </button>
+              </div>
+            </div>
             
             <div className="landing-buttons-new">
               <button className="btn-play-new" onClick={startNewGame}>
                 <Flag size={24} />
                 MACERAYA BAŞLA
               </button>
-              <button className="btn-how-new" onClick={() => alert('Street View görüntüsünde nerede olduğunuzu harita üzerinde işaretleyin. Merkeze ne kadar yakınsanız o kadar çok puan ve hız bonusu kazanırsınız!')}>
+              <button className="btn-how-new" onClick={() => setShowHowToPlay(true)}>
                 NASIL OYNANIR?
               </button>
             </div>
           </div>
+
+          {/* Nasıl Oynanır Modalı */}
+          {showHowToPlay && (
+            <div className="modal-overlay" onClick={() => setShowHowToPlay(false)}>
+              <div className="modal-card" onClick={e => e.stopPropagation()}>
+                <h2 className="modal-title">NASIL OYNANIR?</h2>
+                <div className="modal-body">
+                  <div className="how-step">
+                    <span className="step-num">1</span>
+                    <p>Etrafına bakarak Türkiye'nin neresinde olduğunu tahmin etmeye çalış.</p>
+                  </div>
+                  <div className="how-step">
+                    <span className="step-num">2</span>
+                    <p>Haritaya tıkla ve yerini işaretle. Merkeze ne kadar yakınsan o kadar çok puan!</p>
+                  </div>
+                  <div className="how-step">
+                    <span className="step-num">3</span>
+                    <p>Hızlı ol! İlk 60 saniyede tahmin yaparsan <strong>2X puan</strong> kazanırsın.</p>
+                  </div>
+                  <div className="how-step">
+                    <span className="step-num">4</span>
+                    <p>10 tur sonunda en yüksek skora ulaşmaya çalış!</p>
+                  </div>
+                </div>
+                <button className="btn-modal-close" onClick={() => setShowHowToPlay(false)}>ANLADIM HACI!</button>
+              </div>
+            </div>
+          )}
           <div className="landing-footer-new">
             © 2026
           </div>
