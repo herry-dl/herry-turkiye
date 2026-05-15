@@ -6,6 +6,9 @@ import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import bannerDesktop from './assets/banner-desktop.webp';
 import bannerMobile from './assets/banner-mobile.webp';
+import introMusic from './assets/giris-muzigi.mp3';
+import backgroundMusic from './assets/background.mp3';
+import countdownMusic from './assets/countdown.mp3';
 
 function App() {
   const [gameLocations, setGameLocations] = useState<Location[]>([]);
@@ -21,14 +24,20 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [showSkipBtn, setShowSkipBtn] = useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
+  const introAudioRef = React.useRef<HTMLAudioElement>(null);
+  const bgAudioRef = React.useRef<HTMLAudioElement>(null);
+  const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
   const skipTimerRef = React.useRef<any>(null);
 
   const TOTAL_ROUNDS = 10;
 
-  // Initialize game
+  // Initialize game and handle intro music
   useEffect(() => {
-    // startNewGame removed from here to allow landing page
-  }, []);
+    if (!gameStarted && introAudioRef.current) {
+      introAudioRef.current.volume = 0.6;
+      introAudioRef.current.play().catch(e => console.log("Giriş müziği çalınamadı:", e));
+    }
+  }, [gameStarted]);
 
   useEffect(() => {
     let timer: any;
@@ -38,21 +47,33 @@ function App() {
       }, 1000);
       
       // Son 20 saniye kala müziği başlat
-      if (timeLeft === 20) {
-        audioRef.current?.play().catch(e => console.log("Müzik çalınamadı (etkileşim gerekli):", e));
+      if (timeLeft === 20 && countdownAudioRef.current) {
+        countdownAudioRef.current.play().catch(e => console.log("Geri sayım müziği çalınamadı:", e));
       }
     } else if (timeLeft === 0 && !roundOver) {
       handleGuess();
     }
     
     // Tur bittiyse müziği durdur
-    if (roundOver) {
-      audioRef.current?.pause();
-      if (audioRef.current) audioRef.current.currentTime = 0;
+    if (roundOver && countdownAudioRef.current) {
+      countdownAudioRef.current.pause();
+      countdownAudioRef.current.currentTime = 0;
     }
     
     return () => clearInterval(timer);
   }, [timeLeft, roundOver, gameOver]);
+
+  // Handle background music
+  useEffect(() => {
+    if (gameStarted && !gameOver && !roundOver) {
+      if (bgAudioRef.current) {
+        bgAudioRef.current.volume = 0.15; // Kısık ses
+        bgAudioRef.current.play().catch(e => console.log("Background müzik çalınamadı:", e));
+      }
+    } else {
+      bgAudioRef.current?.pause();
+    }
+  }, [gameStarted, gameOver, roundOver]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -72,6 +93,13 @@ function App() {
     setGameOver(false);
     setFailed(false);
     setGameStarted(true);
+    
+    // Stop intro music when game starts
+    if (introAudioRef.current) {
+      introAudioRef.current.pause();
+      introAudioRef.current.currentTime = 0;
+    }
+    
     resetRound();
   };
 
@@ -296,8 +324,10 @@ function App() {
         })()
       )}
       
-      {/* Son 20 saniye müziği - leyla-mecnun.mp3 dosyasını src/assets altına koymalısınız */}
-      <audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto" />
+      {/* Müzikler */}
+      <audio ref={introAudioRef} src={introMusic} loop />
+      <audio ref={bgAudioRef} src={backgroundMusic} loop />
+      <audio ref={countdownAudioRef} src={countdownMusic} />
     </div>
   );
 }
