@@ -197,7 +197,7 @@ function App() {
             </div>
           </div>
           <div className="landing-footer-new">
-            © 2024 HERRY-TÜRKİYE
+            © 2026
           </div>
         </div>
       ) : (
