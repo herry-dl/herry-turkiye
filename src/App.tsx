@@ -382,9 +382,9 @@ function App() {
                               </div>
                               <div className="score-row">
                                 <span>Mesafe Puanı:</span>
-                                <span>{Math.floor(lastScore / (timeLeft > 60 ? 2 : 1))}</span>
+                                <span>{Math.floor(lastScore / (timeLeft > 60 && lastScore > 0 ? 2 : 1))}</span>
                               </div>
-                              {timeLeft > 60 && (
+                              {(timeLeft > 60 && lastScore > 0) && (
                                 <div className="score-row bonus">
                                   <span>Hız Bonusu:</span>
                                   <span>2X</span>
