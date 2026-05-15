@@ -173,11 +173,11 @@ body {
   .timer-lab { font-size: 0.35rem; }
 
   .map-section {
-    width: 110px; height: 85px; bottom: 10px; right: 10px;
+    width: 110px; height: 85px; bottom: 10px; right: 10px; left: auto !important;
     border-width: 2px; border-radius: 12px;
   }
   .map-section:hover {
-    width: 280px; height: 200px;
+    width: 280px; height: 200px; bottom: 15px; right: 15px; left: auto !important;
   }
   .image-section::after {
     width: 100%; /* Mobilde tüm üst şeridi kaplayabilir */
@@ -185,7 +185,8 @@ body {
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, transparent 100%);
   }
 
-  .result-panel-glass { width: 90vw; padding: 1.2rem; }
+  .result-panel-glass { width: 92vw; padding: 1.2rem; }
+  .controls-overlay { z-index: 2500; bottom: 20px; }
 }
 
 /* Animations */
