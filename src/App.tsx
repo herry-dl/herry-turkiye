@@ -208,43 +208,44 @@ function App() {
           
           return (
             <>
-              <header>
-                <div className="logo" onClick={() => setGameStarted(false)} style={{ cursor: 'pointer' }}>
-                  <img src={logo} alt="HERRY TÜRKİYE" className="logo-img" />
-                </div>
-                <div className="game-stats-new">
-                  <div className="stat-card-new">
-                    <span className="stat-label-new">ZORLUK</span>
-                    <span className="stat-value-new" style={{ color: difficultyColor }}>{difficultyText}</span>
-                  </div>
-                  <div className="stat-card-new">
-                    <span className="stat-label-new">TUR</span>
-                    <span className="stat-value-new">{currentRound + 1} / {TOTAL_ROUNDS}</span>
-                  </div>
-                  <div className="stat-card-new">
-                    <span className="stat-label-new">SKOR</span>
-                    <span className="stat-value-new" style={{ color: 'var(--primary-color)' }}>{totalScore}</span>
-                  </div>
-                </div>
-              </header>
+              {/* Sol Üst: Büyük Logo */}
+              <div className="floating-logo" onClick={() => setGameStarted(false)}>
+                <img src={logo} alt="HERRY TÜRKİYE" className="logo-img-floating" />
+              </div>
 
-              {/* Yüzen Dairesel Süre Paneli */}
-              {!gameOver && !roundOver && (
-                <div className={`floating-timer-circle ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
-                  <svg viewBox="0 0 100 100" className="timer-svg">
-                    <circle className="timer-bg" cx="50" cy="50" r="45" />
-                    <circle 
-                      className="timer-progress" 
-                      cx="50" cy="50" r="45" 
-                      style={{ strokeDashoffset: (1 - timeLeft / 120) * 283 }}
-                    />
-                  </svg>
-                  <div className="timer-text-container">
-                    <span className="timer-time">{formatTime(timeLeft)}</span>
-                    <span className="timer-label">KALDI</span>
-                  </div>
+              {/* Sağ Üst: Yüzen Dairesel İstatistikler */}
+              <div className="floating-stats-container">
+                <div className="stat-circle-new">
+                  <span className="stat-label-mini">ZORLUK</span>
+                  <span className="stat-value-mini" style={{ color: difficultyColor }}>{difficultyText}</span>
                 </div>
-              )}
+                <div className="stat-circle-new">
+                  <span className="stat-label-mini">TUR</span>
+                  <span className="stat-value-mini">{currentRound + 1}/10</span>
+                </div>
+                <div className="stat-circle-new">
+                  <span className="stat-label-mini">SKOR</span>
+                  <span className="stat-value-mini" style={{ color: '#fca311' }}>{totalScore}</span>
+                </div>
+                
+                {/* Dairesel Süre Paneli */}
+                {!gameOver && !roundOver && (
+                  <div className={`stat-circle-new timer-circle-wrap ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
+                    <svg viewBox="0 0 100 100" className="timer-svg-mini">
+                      <circle className="timer-bg" cx="50" cy="50" r="45" />
+                      <circle 
+                        className="timer-progress" 
+                        cx="50" cy="50" r="45" 
+                        style={{ strokeDashoffset: (1 - timeLeft / 120) * 283 }}
+                      />
+                    </svg>
+                    <div className="timer-text-mini">
+                      <span className="timer-val">{formatTime(timeLeft)}</span>
+                      <span className="timer-lab">SÜRE</span>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               <main className="game-area">
                 {!gameOver ? (
@@ -261,9 +262,6 @@ function App() {
                       ></iframe>
                       {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
                       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '80px', background: 'linear-gradient(to bottom, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%)', zIndex: 40, pointerEvents: 'none' }}></div>
-                      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', maxWidth: '400px', height: '90px', backgroundColor: 'var(--bg-dark)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: '16px', borderRight: '2px solid var(--primary-color)', borderBottom: '2px solid var(--primary-color)', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
-                        <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-main)', textAlign: 'center', padding: '0 15px' }}>👀 <span style={{color: 'var(--primary-color)'}}>Neresi Burası?</span><br/>Etrafına bak ve tahmin et!</span>
-                      </div>
                       {/* Skip button - appears after 4s if blackout */}
                       {showSkipBtn && !roundOver && (
                         <div style={{ position: 'absolute', bottom: '16px', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
