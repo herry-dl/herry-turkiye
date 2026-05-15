@@ -98,12 +98,12 @@ function App() {
   };
 
   const startNewGame = () => {
-    setTotalScore(0);
-    setCurrentRound(0);
-    setGameOver(false);
     // Lokasyonlari karistir ve state'e set et
     const shuffled = [...locations].sort(() => Math.random() - 0.5);
     setGameLocations(shuffled);
+    setTotalScore(0);
+    setCurrentRound(0);
+    setGameOver(false);
     setGameStarted(true);
     
     // Stop intro music when game starts
@@ -112,7 +112,15 @@ function App() {
       introAudioRef.current.currentTime = 0;
     }
     
-    resetRound();
+    // Reset state for first round
+    setGuess(null);
+    setRoundOver(false);
+    setLastScore(0);
+    setLastDistance(0);
+    setTimeLeft(120);
+    setShowSkipBtn(false);
+    setLoadingLocation(true);
+    setTimeout(() => setLoadingLocation(false), 1500);
   };
 
   const resetRound = () => {
@@ -296,6 +304,7 @@ function App() {
                         </div>
                       )}
                       <iframe 
+                        key={currentTarget?.id || 'empty'}
                         title="Street View"
                         width="100%" 
                         height="100%" 
