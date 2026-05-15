@@ -1,4 +1,5 @@
-# İsteğe bağlı secret: VITE_MAPILLARY_ACCESS_TOKEN (ücretsiz Mapillary token)
+# Sokak görüntüsü varsayılan: KartaView (anahtar gerekmez).
+# İsteğe bağlı: VITE_MAPILLARY_ACCESS_TOKEN (Mapillary panoramik yedek)
 name: Deploy to GitHub Pages
 
 on:
