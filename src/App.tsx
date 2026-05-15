@@ -265,13 +265,18 @@ function App() {
           
           return (
             <>
-              {/* Üst Bar: Geri Dönüş ve Süre */}
-              <div className="game-top-bar">
+              <div className="game-top-bar animate-top">
                 <div className="back-btn-wrap" onClick={() => setGameStarted(false)}>
                   <Flag size={20} color="var(--neon-yellow)" />
                   <span>MENÜ</span>
                 </div>
                 
+                {showSkipBtn && !roundOver && !isMapOpen && (
+                  <div className="skip-btn-wrap animate-fade" onClick={handleSkipLocation}>
+                    <span>📵 ATLA</span>
+                  </div>
+                )}
+
                 {!gameOver && !roundOver && (
                   <div className={`top-timer-wrap ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
                     <span className="top-timer-val">{formatTime(timeLeft)}</span>
@@ -336,8 +341,7 @@ function App() {
                       </div>
                     )}
 
-                    {/* Alt Bar: Tur ve Skor */}
-                    <div className="game-bottom-bar">
+                    <div className="game-bottom-bar animate-bottom">
                       <div className="bottom-stat-group">
                         <span className="bottom-stat-lab">TUR</span>
                         <span className="bottom-stat-val">{currentRound + 1}/10</span>
