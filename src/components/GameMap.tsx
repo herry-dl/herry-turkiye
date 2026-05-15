@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, useMapEvents, Polyline, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMapEvents, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -15,7 +15,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl,
 });
 
-// Custom Icon for Target
+// Custom Icons
 const targetIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -25,7 +25,6 @@ const targetIcon = new L.Icon({
   shadowSize: [41, 41]
 });
 
-// Custom Icon for Guess
 const guessIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -34,7 +33,6 @@ const guessIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
-
 
 interface ClickHandlerProps {
   onMapClick: (lat: number, lng: number) => void;
@@ -62,6 +60,11 @@ interface GameMapProps {
 export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocation, roundOver }) => {
   const mapRef = useRef<L.Map>(null);
 
+  const turkeyBounds: L.LatLngBoundsExpression = [
+    [35.8, 25.5],
+    [42.2, 44.8]
+  ];
+
   // Auto-fit bounds when round is over
   useEffect(() => {
     if (roundOver && guess && targetLocation && mapRef.current) {
@@ -69,21 +72,24 @@ export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocatio
         [guess.lat, guess.lng],
         [targetLocation.lat, targetLocation.lng]
       ]);
-      mapRef.current.fitBounds(bounds, { padding: [50, 50] });
+      mapRef.current.fitBounds(bounds, { padding: [100, 100] });
     }
   }, [roundOver, guess, targetLocation]);
 
   return (
-    <div className={`map-section ${guess ? 'expanded' : ''}`}>
+    <div className={`map-section ${roundOver ? 'round-over-expanded' : ''}`}>
       <MapContainer 
-        center={[39.0, 35.0]} // Center of Turkey
-        zoom={5} 
+        center={[39.0, 35.0]} 
+        zoom={5.5} 
         scrollWheelZoom={true}
         ref={mapRef}
         style={{ height: '100%', width: '100%' }}
+        maxBounds={turkeyBounds}
+        maxBoundsViscosity={1.0}
+        minZoom={5}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; OpenStreetMap'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         
@@ -101,10 +107,7 @@ export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocatio
             <Marker position={[targetLocation.lat, targetLocation.lng]} icon={targetIcon} />
             {guess && (
               <Polyline 
-                positions={[
-                  [guess.lat, guess.lng],
-                  [targetLocation.lat, targetLocation.lng]
-                ]} 
+                positions={[[guess.lat, guess.lng], [targetLocation.lat, targetLocation.lng]]} 
                 color="#e63946" 
                 dashArray="10, 10" 
                 weight={3}

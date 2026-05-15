@@ -346,33 +346,57 @@ function App() {
 
                     <div className="controls-overlay">
                       {!roundOver ? (
-                        <button 
-                          className="btn" 
-                          onClick={handleGuess} 
-                          disabled={!guess}
-                        >
-                          Tahmin Et
-                        </button>
-                      ) : (
-                        <>
-                          <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: '900', color: lastScore > 0 ? '#2a9d8f' : '#e63946', textShadow: '0 2px 4px rgba(0,0,0,0.5)', marginBottom: '10px' }}>
-                          {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI MANIAAAAC!' : 'MANIAAAAC') : 'COK UZAKTASIN HACI!'}
-                        </div>
-                        {lastScore > 0 && (
-                          <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fca311' }}>
-                            +{lastScore} Puan {timeLeft > 60 && <span style={{fontSize: '1rem', display: 'block'}}>(Hız Bonusu: 2x)</span>}
-                          </div>
-                        )}
-                        <div style={{ fontSize: '1.2rem' }}>Mesafe: {lastDistance.toFixed(1)} km</div>
-                        <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '5px' }}>
-                          Hedef: {currentTarget.name}
-                        </div>
-                          </div>
-                          <button className="btn" onClick={handleNextRound} style={{ backgroundColor: 'var(--primary-color)' }}>
-                            {currentRound + 1 === TOTAL_ROUNDS ? 'BİTİR HACI' : 'GEÇ HACI'}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+                          {!guess && (
+                            <div className="guess-hint-bubble">
+                              Lütfen haritadan bir yer seç!
+                            </div>
+                          )}
+                          <button 
+                            className={`btn ${!guess ? 'btn-disabled-style' : ''}`} 
+                            onClick={handleGuess} 
+                            disabled={!guess}
+                          >
+                            Tahmin Et
                           </button>
-                        </>
+                        </div>
+                      ) : (
+                        <div className="result-panel-glass">
+                          <div className="result-header">
+                            <div className="result-status-text" style={{ color: lastScore > 0 ? '#2a9d8f' : '#e63946' }}>
+                              {lastScore > 0 ? (timeLeft > 60 ? 'SÜPER HIZLI!' : 'HARİKA!') : 'ÇOK UZAKTASIN!'}
+                            </div>
+                            <div className="result-location-name">{currentTarget.name}</div>
+                          </div>
+                          
+                          <div className="score-breakdown">
+                            <div className="score-row">
+                              <span>Mesafe:</span>
+                              <span>{lastDistance.toFixed(1)} km</span>
+                            </div>
+                            <div className="score-row">
+                              <span>Mesafe Puanı:</span>
+                              <span>{Math.floor(lastScore / (timeLeft > 60 ? 2 : 1))}</span>
+                            </div>
+                            {timeLeft > 60 && (
+                              <div className="score-row bonus">
+                                <span>Hız Bonusu:</span>
+                                <span>2X</span>
+                              </div>
+                            )}
+                            <div className="score-total-row">
+                              <span>TOPLAM:</span>
+                              <span>{lastScore} Puan</span>
+                            </div>
+                            {lastScore === 0 && (
+                              <div className="score-note">1000km'den uzak olduğun için puan alamadın.</div>
+                            )}
+                          </div>
+
+                          <button className="btn-next-round" onClick={handleNextRound}>
+                            {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR' : 'SONRAKİ TUR'}
+                          </button>
+                        </div>
                       )}
                     </div>
                   </>
