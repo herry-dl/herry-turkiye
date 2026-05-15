@@ -26,6 +26,7 @@ function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<1 | 2 | 3>(1);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [loadingLocation, setLoadingLocation] = useState(false);
+  const [isMapOpen, setIsMapOpen] = useState(false);
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -264,43 +265,23 @@ function App() {
           
           return (
             <>
-              {/* Sol Üst: Büyük Logo */}
-              <div className="floating-logo" onClick={() => setGameStarted(false)}>
-                <img src={logo} alt="HERRY TÜRKİYE" className="logo-img-floating" />
-              </div>
-
-              {/* Sağ Üst: Yüzen Dairesel İstatistikler */}
-              <div className="floating-stats-container">
-                <div className="stat-circle-new">
-                  <span className="stat-label-mini">ZORLUK</span>
-                  <span className="stat-value-mini" style={{ color: difficultyColor }}>{difficultyText}</span>
-                </div>
-                <div className="stat-circle-new">
-                  <span className="stat-label-mini">TUR</span>
-                  <span className="stat-value-mini">{currentRound + 1}/10</span>
-                </div>
-                <div className="stat-circle-new">
-                  <span className="stat-label-mini">SKOR</span>
-                  <span className="stat-value-mini" style={{ color: '#fca311' }}>{totalScore}</span>
+              {/* Üst Bar: Geri Dönüş ve Süre */}
+              <div className="game-top-bar">
+                <div className="back-btn-wrap" onClick={() => setGameStarted(false)}>
+                  <Flag size={20} color="var(--neon-yellow)" />
+                  <span>MENÜ</span>
                 </div>
                 
-                {/* Dairesel Süre Paneli */}
                 {!gameOver && !roundOver && (
-                  <div className={`stat-circle-new timer-circle-wrap ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
-                    <svg viewBox="0 0 100 100" className="timer-svg-mini">
-                      <circle className="timer-bg" cx="50" cy="50" r="45" />
-                      <circle 
-                        className="timer-progress" 
-                        cx="50" cy="50" r="45" 
-                        style={{ strokeDashoffset: (1 - timeLeft / 120) * 283 }}
-                      />
-                    </svg>
-                    <div className="timer-text-mini">
-                      <span className="timer-val">{formatTime(timeLeft)}</span>
-                      <span className="timer-lab">SÜRE</span>
-                    </div>
+                  <div className={`top-timer-wrap ${timeLeft < 30 ? 'pulse-urgent' : ''}`}>
+                    <span className="top-timer-val">{formatTime(timeLeft)}</span>
+                    <span className="top-timer-lab">SÜRE</span>
                   </div>
                 )}
+
+                <div className="difficulty-tag" style={{ color: difficultyColor }}>
+                  {difficultyText}
+                </div>
               </div>
 
               <main className="game-area">
@@ -322,51 +303,65 @@ function App() {
                         src={`https://maps.google.com/maps?layer=c&cbll=${currentTarget.lat},${currentTarget.lng}&cbp=12,0,0,0,0&source=outdoor&output=svembed&hl=tr`} 
                         allowFullScreen
                       ></iframe>
-                      {/* Google Haritalar'in konum adini gizlemek icin sol ust koseteki ortu */}
-                      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '80px', background: 'linear-gradient(to bottom, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%)', zIndex: 40, pointerEvents: 'none' }}></div>
-                      {/* Skip button - appears after 4s if blackout */}
-                      {showSkipBtn && !roundOver && (
-                        <div style={{ position: 'absolute', bottom: '16px', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
-                          <button
-                            onClick={handleSkipLocation}
-                            style={{
-                              background: 'rgba(230,57,70,0.9)',
-                              color: 'white',
-                              border: 'none',
-                              borderRadius: '30px',
-                              padding: '10px 24px',
-                              fontSize: '0.95rem',
-                              fontWeight: 'bold',
-                              cursor: 'pointer',
-                              backdropFilter: 'blur(4px)',
-                              boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
-                            }}
-                          >
-                            📵 Görüntü Yok — Atla
-                          </button>
-                        </div>
-                      )}
+                      <div className="blackout-mask-new"></div>
                     </div>
                     
-                    <GameMap 
-                      guess={guess} 
-                      setGuess={setGuess} 
-                      targetLocation={currentTarget} 
-                      roundOver={roundOver} 
-                    />
+                    {/* Harita Overlay - Tam Ekran */}
+                    <div className={`map-overlay-container ${isMapOpen || roundOver ? 'open' : ''}`}>
+                      <div className="map-modal-content">
+                        {isMapOpen && !roundOver && (
+                          <button className="btn-close-map" onClick={() => setIsMapOpen(false)}>
+                            BAKMAYA DEVAM ET
+                          </button>
+                        )}
+                        <GameMap 
+                          guess={guess} 
+                          setGuess={(g) => {
+                            setGuess(g);
+                            if (!roundOver) {
+                              setTimeout(() => setIsMapOpen(false), 300); // Pin konunca otomatik kapansin mi? User istegi uzerine.
+                            }
+                          }} 
+                          targetLocation={currentTarget} 
+                          roundOver={roundOver} 
+                        />
+                      </div>
+                    </div>
 
-                    {(guess || roundOver) && (
-                      <div className="controls-overlay">
-                        {!roundOver ? (
-                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-                            <button 
-                              className="btn" 
-                              onClick={handleGuess}
-                            >
-                              Tahmin Et
-                            </button>
+                    {/* Harita Tetikleyici İkon */}
+                    {!roundOver && !isMapOpen && (
+                      <div className={`map-trigger-icon ${guess ? 'has-pin' : ''}`} onClick={() => setIsMapOpen(true)}>
+                        <MapPin size={32} color={guess ? 'var(--neon-yellow)' : '#fff'} />
+                        <span className="trigger-label">{guess ? 'PİN KONDU' : 'HARİTAYI AÇ'}</span>
+                      </div>
+                    )}
+
+                    {/* Alt Bar: Tur ve Skor */}
+                    <div className="game-bottom-bar">
+                      <div className="bottom-stat-group">
+                        <span className="bottom-stat-lab">TUR</span>
+                        <span className="bottom-stat-val">{currentRound + 1}/10</span>
+                      </div>
+
+                      {guess && !roundOver && (
+                        <div className="guess-confirm-wrap" onClick={handleGuess}>
+                          <div className="btn-check-neon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
                           </div>
-                        ) : (
+                          <span className="confirm-lab">TAHMİN ET</span>
+                        </div>
+                      )}
+
+                      <div className="bottom-stat-group align-right">
+                        <span className="bottom-stat-lab">SKOR</span>
+                        <span className="bottom-stat-val" style={{ color: 'var(--neon-yellow)' }}>{totalScore}</span>
+                      </div>
+                    </div>
+
+                    {roundOver && (
+                      <div className="round-result-overlay">
                           <div className="result-panel-glass">
                             <div className="result-header">
                               <div className="result-status-text" style={{ color: lastScore > 0 ? 'var(--neon-yellow)' : '#e63946', textShadow: lastScore > 0 ? '0 0 15px var(--neon-yellow)' : 'none' }}>
@@ -403,7 +398,6 @@ function App() {
                               {currentRound + 1 === TOTAL_ROUNDS ? 'SONUCU GÖR HACI' : 'GEÇ HACI'}
                             </button>
                           </div>
-                        )}
                       </div>
                     )}
                   </>

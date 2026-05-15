@@ -77,45 +77,43 @@ export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocatio
   }, [roundOver, guess, targetLocation]);
 
   return (
-    <div className={`map-section ${roundOver ? 'round-over-expanded' : ''}`}>
-      <MapContainer 
-        center={[39.0, 35.0]} 
-        zoom={5.5} 
-        scrollWheelZoom={true}
-        ref={mapRef}
-        style={{ height: '100%', width: '100%' }}
-        maxBounds={turkeyBounds}
-        maxBoundsViscosity={1.0}
-        minZoom={5}
-      >
-        <TileLayer
-          attribution='&copy; OpenStreetMap'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        
-        <ClickHandler 
-          onMapClick={(lat, lng) => setGuess({ lat, lng })} 
-          disabled={roundOver} 
-        />
+    <MapContainer 
+      center={[39.0, 35.0]} 
+      zoom={5.5} 
+      scrollWheelZoom={true}
+      ref={mapRef}
+      style={{ height: '100%', width: '100%' }}
+      maxBounds={turkeyBounds}
+      maxBoundsViscosity={1.0}
+      minZoom={5}
+    >
+      <TileLayer
+        attribution='&copy; OpenStreetMap'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      
+      <ClickHandler 
+        onMapClick={(lat, lng) => setGuess({ lat, lng })} 
+        disabled={roundOver} 
+      />
 
-        {guess && (
-          <Marker position={[guess.lat, guess.lng]} icon={guessIcon} />
-        )}
+      {guess && (
+        <Marker position={[guess.lat, guess.lng]} icon={guessIcon} />
+      )}
 
-        {roundOver && targetLocation && (
-          <>
-            <Marker position={[targetLocation.lat, targetLocation.lng]} icon={targetIcon} />
-            {guess && (
-              <Polyline 
-                positions={[[guess.lat, guess.lng], [targetLocation.lat, targetLocation.lng]]} 
-                color="#e63946" 
-                dashArray="10, 10" 
-                weight={3}
-              />
-            )}
-          </>
-        )}
-      </MapContainer>
-    </div>
+      {roundOver && targetLocation && (
+        <>
+          <Marker position={[targetLocation.lat, targetLocation.lng]} icon={targetIcon} />
+          {guess && (
+            <Polyline 
+              positions={[[guess.lat, guess.lng], [targetLocation.lat, targetLocation.lng]]} 
+              color="#e63946" 
+              dashArray="10, 10" 
+              weight={3}
+            />
+          )}
+        </>
+      )}
+    </MapContainer>
   );
 };
