@@ -167,10 +167,7 @@ function App() {
         <div className="landing-page">
           <div className="landing-content">
             <div className="banner-container">
-              <picture className="landing-banner-picture">
-                <source media="(max-width: 768px)" srcSet={bannerMobile} />
-                <img src={bannerDesktop} alt="HERRY TÜRKİYE Banner" className="landing-banner" />
-              </picture>
+              <img src={bannerMobile} alt="Türkiye Kâşifi" className="landing-banner" />
             </div>
             <p className="by-dagli">BY Dagli</p>
             <p className="landing-subtitle">Türkiye'yi ne kadar iyi tanıyorsun? Sokak sokak gez, keşfet ve tahmin et!</p>
