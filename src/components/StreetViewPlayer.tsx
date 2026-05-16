@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { LeafletScene } from './LeafletScene';
-import { fetchFreeStreetImage, type StreetImageSource } from '../streetImagery';
+import { PhotoStreetView } from './PhotoStreetView';
+import { fetchStreetScene, type StreetScene } from '../streetImagery';
 import { fetchNearestMapillaryImageId } from '../mapillary';
-
-type PhotoOverlay = { url: string; source: StreetImageSource };
 
 interface StreetViewPlayerProps {
   lat: number;
@@ -14,14 +12,9 @@ interface StreetViewPlayerProps {
   onLoadFailed?: () => void;
 }
 
-const ATTRIB: Record<StreetImageSource, { href: string; label: string }> = {
-  panoramax: { href: 'https://panoramax.fr', label: 'Panoramax' },
-  kartaview: { href: 'https://kartaview.org', label: 'KartaView' },
-};
-
 /**
- * Ana görünüm: Leaflet (https://leafletjs.com/) — anında yüklenir, siyah ekran yok.
- * Üstüne isteğe bağlı topluluk sokak fotoğrafı veya Mapillary panoraması bindirilir.
+ * Sokak görünümü: topluluk fotoğraflarında gezinme (sürükle + ileri/geri).
+ * Mapillary token varsa panoramik görüntü denenir.
  */
 export function StreetViewPlayer({
   lat,
@@ -38,26 +31,26 @@ export function StreetViewPlayer({
   onReadyRef.current = onReady;
   onLoadFailedRef.current = onLoadFailed;
 
-  const [mapReady, setMapReady] = useState(false);
-  const [photo, setPhoto] = useState<PhotoOverlay | null>(null);
-  const [photoVisible, setPhotoVisible] = useState(false);
+  const [scene, setScene] = useState<StreetScene | null>(null);
   const [mapillaryActive, setMapillaryActive] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  const handleMapReady = () => {
-    setMapReady(true);
-    onReadyRef.current();
-  };
-
-  // Ücretsiz sokak fotoğrafını arka planda dene (Leaflet’i bloklamaz)
   useEffect(() => {
     let cancelled = false;
-    setPhoto(null);
-    setPhotoVisible(false);
+    setScene(null);
+    setFailed(false);
+    setMapillaryActive(false);
 
     (async () => {
-      const free = await fetchFreeStreetImage(lat, lng);
-      if (cancelled || !free) return;
-      setPhoto(free);
+      const result = await fetchStreetScene(lat, lng);
+      if (cancelled) return;
+      if (result) {
+        setScene(result);
+        return;
+      }
+      setFailed(true);
+      onLoadFailedRef.current?.();
+      onReadyRef.current();
     })();
 
     return () => {
@@ -65,9 +58,8 @@ export function StreetViewPlayer({
     };
   }, [lat, lng, locationKey]);
 
-  // Mapillary (token varsa ve fotoğraf yoksa)
   useEffect(() => {
-    if (!mapillaryAccessToken || photo) {
+    if (!mapillaryAccessToken || scene || failed) {
       setMapillaryActive(false);
       return;
     }
@@ -75,21 +67,18 @@ export function StreetViewPlayer({
     let cancelled = false;
     let readyFired = false;
 
-    const tryMapillary = async () => {
-      await new Promise((r) => setTimeout(r, 2500));
-      if (cancelled || photo) return;
-
-      const el = containerRef.current;
-      if (!el) return;
-
+    (async () => {
       try {
         const imageId = await fetchNearestMapillaryImageId(mapillaryAccessToken, lat, lng);
-        if (cancelled || photo || !imageId) return;
+        if (cancelled || scene || !imageId) return;
+
+        const el = containerRef.current;
+        if (!el) return;
 
         const { Viewer, CameraControls } = await import('mapillary-js');
         await import('mapillary-js/dist/mapillary.css');
 
-        if (cancelled || photo) return;
+        if (cancelled) return;
 
         el.innerHTML = '';
         setMapillaryActive(true);
@@ -110,11 +99,13 @@ export function StreetViewPlayer({
         viewer.on('load', fireReady);
         window.setTimeout(fireReady, 4000);
       } catch {
-        if (!cancelled) onLoadFailedRef.current?.();
+        if (!cancelled) {
+          setFailed(true);
+          onLoadFailedRef.current?.();
+          onReadyRef.current();
+        }
       }
-    };
-
-    tryMapillary();
+    })();
 
     return () => {
       cancelled = true;
@@ -123,60 +114,33 @@ export function StreetViewPlayer({
       viewerRef.current = null;
       if (containerRef.current) containerRef.current.innerHTML = '';
     };
-  }, [lat, lng, locationKey, mapillaryAccessToken, photo]);
+  }, [lat, lng, locationKey, mapillaryAccessToken, scene, failed]);
 
-  const failPhoto = () => {
-    setPhoto(null);
-    setPhotoVisible(false);
-    onLoadFailedRef.current?.();
-  };
+  if (mapillaryActive) {
+    return (
+      <div ref={containerRef} className="street-view-panorama-root" />
+    );
+  }
 
-  return (
-    <div className="street-scene-wrap">
-      {!mapillaryActive && (
-        <LeafletScene
-          lat={lat}
-          lng={lng}
-          locationKey={locationKey}
-          onReady={handleMapReady}
-        />
-      )}
+  if (scene) {
+    return (
+      <PhotoStreetView
+        key={locationKey}
+        images={scene.images}
+        source={scene.source}
+        onReady={onReady}
+      />
+    );
+  }
 
-      {photo && !mapillaryActive && !photoVisible && (
-        <img
-          className="street-photo-preload"
-          src={photo.url}
-          alt=""
-          onLoad={() => setPhotoVisible(true)}
-          onError={failPhoto}
-        />
-      )}
+  if (failed) {
+    return (
+      <div className="street-empty">
+        <p>Bu konumda sokak fotoğrafı bulunamadı.</p>
+        <p className="street-empty-hint">ATLA ile başka bir konum dene.</p>
+      </div>
+    );
+  }
 
-      {photo && photoVisible && !mapillaryActive && (
-        <div className="street-photo-overlay">
-          <img src={photo.url} alt="" decoding="async" />
-          <a
-            className="street-photo-attrib"
-            href={ATTRIB[photo.source].href}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {ATTRIB[photo.source].label}
-          </a>
-        </div>
-      )}
-
-      {mapillaryActive && (
-        <div
-          ref={containerRef}
-          className="street-view-panorama-root"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-        />
-      )}
-
-      {mapReady && !photo && !mapillaryActive && (
-        <div className="map-hint-banner">Harita modu — etrafa kaydırarak bak</div>
-      )}
-    </div>
-  );
+  return <div className="street-loading" aria-hidden />;
 }

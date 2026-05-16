@@ -1,36 +1,32 @@
-import { fetchKartaViewImageUrl } from './kartaview';
+import { fetchKartaViewSequence } from './kartaview';
 import { fetchNearestPanoramaxImageUrl } from './panoramax';
 
 export type StreetImageSource = 'panoramax' | 'kartaview';
 
-export type StreetImageResult = {
-  url: string;
+export type StreetScene = {
+  images: string[];
   source: StreetImageSource;
 };
 
+const TOTAL_TIMEOUT_MS = 9_000;
+
 /**
- * Ücretsiz kaynaklardan ilk bulunan sokak fotoğrafı.
- * Panoramax ve KartaView paralel; biri döner dönmez kullanılır.
+ * Sokak sahnesi: KartaView dizisi (dolaşılabilir) veya tek Panoramax fotoğrafı.
  */
-const TOTAL_TIMEOUT_MS = 7_000;
-
-export async function fetchFreeStreetImage(lat: number, lng: number): Promise<StreetImageResult | null> {
-  const tasks = [
-    fetchNearestPanoramaxImageUrl(lat, lng).then((url) =>
-      url ? ({ url, source: 'panoramax' as const }) : Promise.reject()
-    ),
-    fetchKartaViewImageUrl(lat, lng).then((url) =>
-      url ? ({ url, source: 'kartaview' as const }) : Promise.reject()
-    ),
-  ];
-
-  const timeout = new Promise<never>((_, reject) => {
-    window.setTimeout(() => reject(new Error('timeout')), TOTAL_TIMEOUT_MS);
+export async function fetchStreetScene(lat: number, lng: number): Promise<StreetScene | null> {
+  const timeout = new Promise<null>((resolve) => {
+    window.setTimeout(() => resolve(null), TOTAL_TIMEOUT_MS);
   });
 
-  try {
-    return await Promise.race([Promise.any(tasks), timeout]);
-  } catch {
+  const work = async (): Promise<StreetScene | null> => {
+    const kv = await fetchKartaViewSequence(lat, lng);
+    if (kv.length) return { images: kv, source: 'kartaview' };
+
+    const px = await fetchNearestPanoramaxImageUrl(lat, lng);
+    if (px) return { images: [px], source: 'panoramax' };
+
     return null;
-  }
+  };
+
+  return Promise.race([work(), timeout]);
 }

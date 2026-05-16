@@ -157,6 +157,7 @@ function App() {
   const resetRound = () => {
     setGuess(null);
     setRoundOver(false);
+    setIsMapOpen(false);
     setLastScore(0);
     setLastDistance(0);
     setTimeLeft(120);
@@ -377,15 +378,15 @@ function App() {
                         )}
                         <GameMap
                           guess={guess}
-                          setGuess={(g) => {
-                            setGuess(g);
-                            if (!roundOver) {
-                              setTimeout(() => setIsMapOpen(false), 300);
-                            }
-                          }}
+                          setGuess={setGuess}
                           targetLocation={currentTarget}
                           roundOver={roundOver}
                         />
+                        {isMapOpen && !roundOver && guess && (
+                          <button type="button" className="btn-confirm-map" onClick={handleGuess}>
+                            TAHMİN ET
+                          </button>
+                        )}
                       </div>
                     </div>
 
@@ -402,7 +403,7 @@ function App() {
                         <span className="bottom-stat-val">{currentRound + 1}/10</span>
                       </div>
 
-                      {guess && !roundOver && (
+                      {guess && !roundOver && !isMapOpen && (
                         <div className="guess-confirm-wrap" onClick={handleGuess}>
                           <div className="btn-check-neon">
                             <svg
