@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 
 // Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
-const BUILD_VERSION = '2026-05-17-mapillary-v4'
+const BUILD_VERSION = '2026-05-17-mapillary-v5'
 console.log(`[Türkiye Kâşifi] build=${BUILD_VERSION}`)
 
 if ('serviceWorker' in navigator) {
@@ -18,7 +18,7 @@ if ('caches' in window) {
 }
 
 try {
-  ['herry-validated-v1', 'herry-validated-v2'].forEach((k) => localStorage.removeItem(k))
+  ['herry-validated-v1', 'herry-validated-v2', 'herry-validated-v3'].forEach((k) => localStorage.removeItem(k))
 } catch {
   /* ignore */
 }

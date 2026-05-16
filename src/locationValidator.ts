@@ -1,7 +1,7 @@
 import type { Location } from './locations';
 import { hasStreetCoverage } from './streetImagery';
 
-const CACHE_KEY = 'herry-validated-v3';
+const CACHE_KEY = 'herry-validated-v4';
 const CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
 type CacheEntry = { ok: boolean; ts: number };

@@ -4,8 +4,8 @@
  * @see https://www.mapillary.com/developer/api-documentation
  */
 
-/** Mapillary'nin örnek dökümanlarında kullandığı public demo token. */
-const DEFAULT_TOKEN = 'MLY|4142433049200173|72206abe5035850d6743b23a49c41333';
+/** Türkiye Kâşifi için Mapillary client token (public). */
+const DEFAULT_TOKEN = 'MLY|26987588834193708|011dc134097b4445565515726fe4c9d0';
 
 const ENV_TOKEN =
   typeof import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN === 'string'
