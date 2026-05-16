@@ -10,9 +10,27 @@ interface MapillaryViewerProps {
   onFailed?: () => void;
 }
 
+function waitForSize(el: HTMLElement, maxMs = 5000): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const start = Date.now();
+    const tick = () => {
+      if (el.offsetWidth > 0 && el.offsetHeight > 0) {
+        resolve();
+        return;
+      }
+      if (Date.now() - start > maxMs) {
+        reject(new Error('Panorama alanı boyutlanamadı'));
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    tick();
+  });
+}
+
 /**
  * Resmi Mapillary JS viewer — 360° sokak panoraması.
- * cover:false zorunlu: varsayılan true iken viewer tıklanana kadar siyah kalır.
+ * cover:false: varsayılan true iken tıklanana kadar siyah kalır.
  */
 export function MapillaryViewer({
   imageId,
@@ -39,55 +57,70 @@ export function MapillaryViewer({
     let cancelled = false;
     let viewer: Viewer | null = null;
     let readyFired = false;
+    let loadTimeout = 0;
+    let resizeObserver: ResizeObserver | null = null;
 
     const fireReady = () => {
       if (cancelled || readyFired) return;
       readyFired = true;
+      viewer?.resize();
       onReadyRef.current();
     };
 
-    const fail = () => {
+    const fail = (reason: string) => {
       if (cancelled) return;
+      console.warn('[MapillaryViewer]', reason);
       onFailedRef.current?.();
     };
 
-    try {
-      viewer = new Viewer({
-        accessToken: MAPILLARY_TOKEN,
-        container: el,
-        imageId,
-        component: {
-          cover: false,
-          attribution: true,
-          bearing: false,
-          zoom: false,
-          sequence: true,
-          direction: true,
-          keyboard: true,
-          pointer: true,
-        },
-      });
+    (async () => {
+      try {
+        await waitForSize(el);
+        if (cancelled) return;
 
-      viewer.on('load', fireReady);
-      viewer.on('image', fireReady);
+        viewer = new Viewer({
+          accessToken: MAPILLARY_TOKEN,
+          container: el,
+          imageId,
+          component: {
+            cover: false,
+            attribution: true,
+            bearing: false,
+            zoom: false,
+            sequence: true,
+            direction: true,
+            keyboard: true,
+            pointer: true,
+          },
+        });
 
-      const timeout = window.setTimeout(() => {
-        if (!readyFired) {
-          console.warn('[MapillaryViewer] load timeout for', imageId);
-          fail();
-        }
-      }, 20_000);
+        viewer.on('load', fireReady);
+        viewer.on('image', fireReady);
 
-      return () => {
-        cancelled = true;
-        clearTimeout(timeout);
+        resizeObserver = new ResizeObserver(() => {
+          if (!cancelled) viewer?.resize();
+        });
+        resizeObserver.observe(el);
+
+        loadTimeout = window.setTimeout(() => {
+          if (!readyFired) fail(`load timeout imageId=${imageId}`);
+        }, 25_000);
+      } catch (err) {
+        fail(err instanceof Error ? err.message : String(err));
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      clearTimeout(loadTimeout);
+      resizeObserver?.disconnect();
+      try {
         viewer?.remove();
-      };
-    } catch (err) {
-      console.error('[MapillaryViewer] init failed', err);
-      fail();
-      return undefined;
-    }
+      } catch {
+        /* StrictMode / hızlı tur değişiminde Mapillary iptal hatası */
+      }
+      viewer = null;
+    };
   }, [imageId, locationKey]);
 
   return (

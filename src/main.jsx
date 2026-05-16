@@ -1,10 +1,9 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
 
 // Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
-const BUILD_VERSION = '2026-05-17-mapillary-js-v7'
+const BUILD_VERSION = '2026-05-17-mapillary-js-v8-fix-height'
 console.log(`[Türkiye Kâşifi] build=${BUILD_VERSION}`)
 
 if ('serviceWorker' in navigator) {
@@ -23,8 +22,4 @@ try {
   /* ignore */
 }
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+createRoot(document.getElementById('root')).render(<App />)
