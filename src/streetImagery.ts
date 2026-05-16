@@ -12,6 +12,8 @@ export type StreetImageResult = {
  * Ücretsiz kaynaklardan ilk bulunan sokak fotoğrafı.
  * Panoramax ve KartaView paralel; biri döner dönmez kullanılır.
  */
+const TOTAL_TIMEOUT_MS = 7_000;
+
 export async function fetchFreeStreetImage(lat: number, lng: number): Promise<StreetImageResult | null> {
   const tasks = [
     fetchNearestPanoramaxImageUrl(lat, lng).then((url) =>
@@ -22,8 +24,12 @@ export async function fetchFreeStreetImage(lat: number, lng: number): Promise<St
     ),
   ];
 
+  const timeout = new Promise<never>((_, reject) => {
+    window.setTimeout(() => reject(new Error('timeout')), TOTAL_TIMEOUT_MS);
+  });
+
   try {
-    return await Promise.any(tasks);
+    return await Promise.race([Promise.any(tasks), timeout]);
   } catch {
     return null;
   }

@@ -45,6 +45,22 @@ export function StreetViewPlayer({
 
   const [layer, setLayer] = useState<Layer>({ kind: 'loading' });
 
+  // 8 sn sonra hâlâ yükleniyorsa harita ipucuna geç (siyah ekran kalmasın)
+  useEffect(() => {
+    if (layer.kind !== 'loading') return;
+    const t = window.setTimeout(() => {
+      setLayer({ kind: 'map-hint' });
+      onLoadFailedRef.current?.();
+    }, 8_000);
+    return () => clearTimeout(t);
+  }, [layer.kind, lat, lng, locationKey]);
+
+  useEffect(() => {
+    if (layer.kind === 'map-hint' || layer.kind === 'photo') {
+      onReadyRef.current();
+    }
+  }, [layer]);
+
   useEffect(() => {
     let cancelled = false;
     setLayer({ kind: 'loading' });

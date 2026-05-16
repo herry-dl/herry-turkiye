@@ -144,7 +144,7 @@ function App() {
   // Sokak görünümü çok yavaşsa yükleme ekranını kaldır
   useEffect(() => {
     if (!gameStarted || gameOver) return;
-    const id = window.setTimeout(() => setLoadingLocation(false), 12000);
+    const id = window.setTimeout(() => setLoadingLocation(false), 8000);
     return () => clearTimeout(id);
   }, [currentRound, gameStarted, gameOver]);
 

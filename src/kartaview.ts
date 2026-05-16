@@ -5,7 +5,7 @@
  */
 
 const NEARBY_URL = 'https://api.openstreetcam.org/1.0/list/nearby-photos/';
-const NEARBY_TIMEOUT_MS = 9_000;
+const NEARBY_TIMEOUT_MS = 6_000;
 
 type NearbyItem = {
   id: string;
@@ -48,16 +48,13 @@ function cdnUrlFromStorageName(name: string): string | null {
 }
 
 export async function fetchKartaViewImageUrl(lat: number, lng: number): Promise<string | null> {
-  const radii = [80, 160, 320, 500];
+  const radii = [120, 320, 500];
+  const results = await Promise.all(radii.map((r) => fetchNearby(lat, lng, r)));
 
-  for (const radius of radii) {
-    const item = await fetchNearby(lat, lng, radius);
-    if (!item) continue;
-
-    if (item.name) {
-      const cdn = cdnUrlFromStorageName(item.name);
-      if (cdn) return cdn;
-    }
+  for (const item of results) {
+    if (!item?.name) continue;
+    const cdn = cdnUrlFromStorageName(item.name);
+    if (cdn) return cdn;
   }
 
   return null;
