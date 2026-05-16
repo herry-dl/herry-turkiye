@@ -1,4 +1,4 @@
-# Sokak: KartaView (varsayılan, anahtarsız) → isteğe bağlı Mapillary → Google iframe
+# Sokak: Panoramax + KartaView (anahtarsız) → isteğe bağlı Mapillary → OSM harita ipucu
 # İsteğe bağlı secret: VITE_MAPILLARY_ACCESS_TOKEN
 name: Deploy to GitHub Pages
 

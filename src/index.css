@@ -201,7 +201,8 @@ body {
   width: 100%; background: var(--neon-yellow); color: #000; border: none; padding: 1.2rem; border-radius: 20px; font-weight: 900; font-size: 1.2rem; cursor: pointer; transition: 0.2s;
 }
 
-/* KartaView attribution (CC-BY-SA topluluk verisi) */
+/* Sokak fotoğrafı kaynağı (Panoramax / KartaView) */
+.street-photo-attrib,
 .kartaview-attrib {
   position: absolute;
   bottom: 96px;
@@ -215,6 +216,24 @@ body {
   border-radius: 6px;
   text-decoration: none;
   pointer-events: auto;
+}
+
+.map-hint-wrap .leaflet-container { background: #1a2634; }
+.map-hint-banner {
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 55;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  background: rgba(230, 57, 70, 0.85);
+  padding: 8px 14px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 /* LEAFLET OVERRIDE */

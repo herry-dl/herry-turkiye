@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-İsteğe bağlı: proje kökünde `.env` oluşturup `VITE_MAPILLARY_ACCESS_TOKEN` ekleyebilirsin ([Mapillary Developers](https://www.mapillary.com/dashboard/developers)). Yoksa sırayla KartaView ve Google iframe kullanılır.
+Sokak görüntüsü: **Panoramax** ve **KartaView** (ücretsiz, anahtarsız). İkisi de yoksa OSM harita ipucu gösterilir. İsteğe bağlı: `.env` içinde `VITE_MAPILLARY_ACCESS_TOKEN` ([Mapillary Developers](https://www.mapillary.com/dashboard/developers)).
 
 ## Yayın (GitHub Pages)
 

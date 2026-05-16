@@ -1,64 +1,62 @@
 /**
  * KartaView (eski adı OpenStreetCam) — topluluk sokak fotoğrafları.
- * POST /1.0/list/nearby-photos/ ve GET /2.0/photo/ herkese açık; API anahtarı gerekmez.
+ * POST /1.0/list/nearby-photos/ herkese açık; API anahtarı gerekmez.
  * @see https://api.openstreetcam.org/api/doc.html
  */
 
 const NEARBY_URL = 'https://api.openstreetcam.org/1.0/list/nearby-photos/';
-const PHOTO_URL = 'https://api.openstreetcam.org/2.0/photo/';
-const REQUEST_TIMEOUT_MS = 12_000;
+const NEARBY_TIMEOUT_MS = 9_000;
+
+type NearbyItem = {
+  id: string;
+  name?: string;
+};
 
 type NearbyResponse = {
-  currentPageItems?: { id: string }[];
+  currentPageItems?: NearbyItem[];
 };
 
-type PhotoResult = {
-  result?: {
-    data?: {
-      imageProcUrl?: string;
-      fileurlProc?: string;
-    }[];
-  };
-};
-
-async function fetchWithTimeout(url: string, init: RequestInit): Promise<Response> {
+async function fetchNearby(lat: number, lng: number, radius: number): Promise<NearbyItem | null> {
   const ctrl = new AbortController();
-  const t = window.setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
+  const t = window.setTimeout(() => ctrl.abort(), NEARBY_TIMEOUT_MS);
   try {
-    return await fetch(url, { ...init, signal: ctrl.signal });
+    const form = new FormData();
+    form.append('lat', String(lat));
+    form.append('lng', String(lng));
+    form.append('radius', String(radius));
+
+    const res = await fetch(NEARBY_URL, { method: 'POST', body: form, signal: ctrl.signal });
+    if (!res.ok) return null;
+
+    const nearby = (await res.json()) as NearbyResponse;
+    return nearby.currentPageItems?.[0] ?? null;
+  } catch {
+    return null;
   } finally {
     clearTimeout(t);
   }
+}
+
+/** storage11/files/photo/... → cdn.kartaview.org (CORS uyumlu) */
+function cdnUrlFromStorageName(name: string): string | null {
+  const m = name.match(/^storage(\d+)\/files\/photo\/(.+)$/);
+  if (!m) return null;
+  const origin = `https://storage${m[1]}.openstreetcam.org/files/photo/${m[2]}`;
+  if (typeof btoa !== 'function') return null;
+  const encoded = btoa(origin);
+  return `https://cdn.kartaview.org/pr:sharp/${encoded}`;
 }
 
 export async function fetchKartaViewImageUrl(lat: number, lng: number): Promise<string | null> {
   const radii = [80, 160, 320, 500];
 
   for (const radius of radii) {
-    try {
-      const form = new FormData();
-      form.append('lat', String(lat));
-      form.append('lng', String(lng));
-      form.append('radius', String(radius));
+    const item = await fetchNearby(lat, lng, radius);
+    if (!item) continue;
 
-      const nearbyRes = await fetchWithTimeout(NEARBY_URL, { method: 'POST', body: form });
-      if (!nearbyRes.ok) continue;
-
-      const nearby = (await nearbyRes.json()) as NearbyResponse;
-      const first = nearby.currentPageItems?.[0];
-      if (!first?.id) continue;
-
-      const photoRes = await fetchWithTimeout(`${PHOTO_URL}?id=${encodeURIComponent(first.id)}`, {
-        method: 'GET',
-      });
-      if (!photoRes.ok) continue;
-
-      const photoJson = (await photoRes.json()) as PhotoResult;
-      const row = photoJson.result?.data?.[0];
-      const url = row?.imageProcUrl || row?.fileurlProc;
-      if (url) return url;
-    } catch {
-      continue;
+    if (item.name) {
+      const cdn = cdnUrlFromStorageName(item.name);
+      if (cdn) return cdn;
     }
   }
 

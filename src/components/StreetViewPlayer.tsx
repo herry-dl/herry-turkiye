@@ -1,27 +1,32 @@
 import { useEffect, useRef, useState } from 'react';
-import { fetchKartaViewImageUrl } from '../kartaview';
+import { MapHintView } from './MapHintView';
+import { fetchFreeStreetImage, type StreetImageSource } from '../streetImagery';
 import { fetchNearestMapillaryImageId } from '../mapillary';
 
 type Layer =
   | { kind: 'loading' }
-  | { kind: 'kartaview'; url: string }
+  | { kind: 'photo'; url: string; source: StreetImageSource }
   | { kind: 'mapillary' }
-  | { kind: 'iframe' };
+  | { kind: 'map-hint' };
 
 interface StreetViewPlayerProps {
   lat: number;
   lng: number;
   locationKey: string;
-  /** İsteğe bağlı; yoksa KartaView → iframe */
   mapillaryAccessToken: string | undefined;
   onReady: () => void;
   onLoadFailed?: () => void;
 }
 
+const ATTRIB: Record<StreetImageSource, { href: string; label: string }> = {
+  panoramax: { href: 'https://panoramax.fr', label: 'Panoramax' },
+  kartaview: { href: 'https://kartaview.org', label: 'KartaView' },
+};
+
 /**
- * 1) KartaView (OpenStreetCam) — ücretsiz, kayıt/anahtar gerekmez
- * 2) İsteğe bağlı Mapillary (token ile panoramik)
- * 3) Google svembed iframe (anahtarsız yedek)
+ * 1) Panoramax + KartaView (paralel, ücretsiz)
+ * 2) İsteğe bağlı Mapillary (token)
+ * 3) OSM harita ipucu (siyah ekran yok)
  */
 export function StreetViewPlayer({
   lat,
@@ -40,29 +45,29 @@ export function StreetViewPlayer({
 
   const [layer, setLayer] = useState<Layer>({ kind: 'loading' });
 
-  // Tur değişince: önce KartaView dene
   useEffect(() => {
     let cancelled = false;
     setLayer({ kind: 'loading' });
 
     (async () => {
       try {
-        const kv = await fetchKartaViewImageUrl(lat, lng);
+        const free = await fetchFreeStreetImage(lat, lng);
         if (cancelled) return;
-        if (kv) {
-          setLayer({ kind: 'kartaview', url: kv });
+        if (free) {
+          setLayer({ kind: 'photo', url: free.url, source: free.source });
           return;
         }
         if (mapillaryAccessToken) {
           setLayer({ kind: 'mapillary' });
           return;
         }
-        setLayer({ kind: 'iframe' });
+        setLayer({ kind: 'map-hint' });
+        onLoadFailedRef.current?.();
       } catch {
         if (!cancelled) {
           if (mapillaryAccessToken) setLayer({ kind: 'mapillary' });
           else {
-            setLayer({ kind: 'iframe' });
+            setLayer({ kind: 'map-hint' });
             onLoadFailedRef.current?.();
           }
         }
@@ -74,7 +79,6 @@ export function StreetViewPlayer({
     };
   }, [lat, lng, locationKey, mapillaryAccessToken]);
 
-  // Mapillary katmanı
   useEffect(() => {
     if (layer.kind !== 'mapillary') return;
 
@@ -99,7 +103,7 @@ export function StreetViewPlayer({
         const imageId = await fetchNearestMapillaryImageId(mapillaryAccessToken, lat, lng);
         if (cancelled) return;
         if (!imageId) {
-          setLayer({ kind: 'iframe' });
+          setLayer({ kind: 'map-hint' });
           onLoadFailedRef.current?.();
           return;
         }
@@ -116,7 +120,7 @@ export function StreetViewPlayer({
         window.setTimeout(fireReady, 4000);
       } catch {
         if (!cancelled) {
-          setLayer({ kind: 'iframe' });
+          setLayer({ kind: 'map-hint' });
           onLoadFailedRef.current?.();
         }
       }
@@ -130,10 +134,10 @@ export function StreetViewPlayer({
     };
   }, [layer.kind, lat, lng, locationKey, mapillaryAccessToken]);
 
-  const failKartaView = () => {
+  const failPhoto = () => {
     if (mapillaryAccessToken) setLayer({ kind: 'mapillary' });
     else {
-      setLayer({ kind: 'iframe' });
+      setLayer({ kind: 'map-hint' });
       onLoadFailed?.();
     }
   };
@@ -142,30 +146,26 @@ export function StreetViewPlayer({
     return (
       <div
         className="street-view-loading-shell"
-        style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#000' }}
+        style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#1a1a1a' }}
         aria-hidden
       />
     );
   }
 
-  if (layer.kind === 'kartaview') {
+  if (layer.kind === 'photo') {
+    const attrib = ATTRIB[layer.source];
     return (
-      <div className="kartaview-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#000' }}>
+      <div className="street-photo-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#111' }}>
         <img
           src={layer.url}
           alt=""
           decoding="async"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           onLoad={() => onReady()}
-          onError={failKartaView}
+          onError={failPhoto}
         />
-        <a
-          className="kartaview-attrib"
-          href="https://kartaview.org"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          KartaView
+        <a className="street-photo-attrib" href={attrib.href} target="_blank" rel="noreferrer noopener">
+          {attrib.label}
         </a>
       </div>
     );
@@ -181,17 +181,5 @@ export function StreetViewPlayer({
     );
   }
 
-  return (
-    <iframe
-      key={locationKey}
-      title="Street View"
-      width="100%"
-      height="100%"
-      style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-      src={`https://maps.google.com/maps?layer=c&cbll=${lat},${lng}&output=svembed&hl=tr`}
-      allowFullScreen
-      onLoad={onReady}
-      onError={() => onLoadFailed?.()}
-    />
-  );
+  return <MapHintView key={locationKey} lat={lat} lng={lng} onReady={onReady} />;
 }
