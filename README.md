@@ -1,8 +1,14 @@
 # Türkiye Kâşifi (HERRY)
 
-Sokak görüntüsünden konumu tahmin et; skor mesafeye göre hesaplanır.
+GeoGuessr benzeri Türkiye konum tahmin oyunu — Mapillary sokak panoramaları + Leaflet harita.
 
 **Canlı oyun:** [herry-dl.github.io/herry-turkiye](https://herry-dl.github.io/herry-turkiye/)
+
+## Nasıl oynanır
+
+1. Sokak panoramasında etrafa bak (sürükle, ok tuşlarıyla ilerle)
+2. **Haritayı aç** → Türkiye haritasında pin koy
+3. **Tahmin et** → mesafe ve skor
 
 ## Yerel çalıştırma
 
@@ -11,14 +17,21 @@ npm ci
 npm run dev
 ```
 
-Sokak görüntüsü: **Panoramax** ve **KartaView** (ücretsiz, anahtarsız). İkisi de yoksa OSM harita ipucu gösterilir. İsteğe bağlı: `.env` içinde `VITE_MAPILLARY_ACCESS_TOKEN` ([Mapillary Developers](https://www.mapillary.com/dashboard/developers)).
+Sokak görüntüsü: **Mapillary JS** (360° viewer). Token `.env` içinde `VITE_MAPILLARY_ACCESS_TOKEN` ile override edilebilir; yoksa projede gömülü client token kullanılır.
+
+## Mimari
+
+| Katman | Dosya | Görev |
+|--------|-------|--------|
+| Oyun akışı | `App.tsx` | Tur, skor, timer, harita modal |
+| Sokak | `MapillaryViewer.tsx` | Resmi Mapillary JS viewer (`cover: false`) |
+| Konum API | `mapillary.ts` | Graph API — image ID arama |
+| Tahmin haritası | `GameMap.tsx` | Leaflet + OSM |
 
 ## Yayın (GitHub Pages)
 
-`main` dalına push sonrası [Deploy to GitHub Pages](.github/workflows/deploy-pages.yml) çalışır; site `gh-pages` dalına yazılır. Repo ayarında **Pages → Deploy from branch → gh-pages / (root)** olmalıdır.
-
-İstersen aynı workflow’u Actions sekmesinden **Run workflow** ile elle de tetikleyebilirsin.
+`main` dalına push → [Deploy to GitHub Pages](.github/workflows/deploy-pages.yml). Repo ayarında **Pages → gh-pages / (root)**.
 
 ## Yığın
 
-React, Vite, [Leaflet](https://leafletjs.com/) + OpenStreetMap (tahmin haritası ve ana sahne), KartaView / Panoramax fotoğrafları, isteğe bağlı MapillaryJS.
+React, Vite, Mapillary JS, Leaflet, OpenStreetMap

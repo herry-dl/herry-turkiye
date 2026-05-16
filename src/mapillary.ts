@@ -121,6 +121,30 @@ export async function mapillaryHasCoverage(lat: number, lng: number): Promise<bo
   return false;
 }
 
+/** Konuma en yakın Mapillary image ID'sini döndürür (viewer için). */
+export async function findNearestImageId(lat: number, lng: number): Promise<string | null> {
+  const radii = [120, 300, 700, 1500];
+
+  for (const radius of radii) {
+    const items = await searchBbox(lat, lng, radius, 15);
+    if (!items.length) continue;
+
+    const mapped = items
+      .map((it) => toMapillaryImage(it, lat, lng))
+      .filter((x): x is MapillaryImage => !!x);
+
+    if (mapped.length === 0) continue;
+
+    mapped.sort(
+      (a, b) => haversineM(lat, lng, a.lat, a.lng) - haversineM(lat, lng, b.lat, b.lng)
+    );
+
+    return mapped[0].id;
+  }
+
+  return null;
+}
+
 /**
  * Konum için sokakta dolaşılabilir fotoğraf dizisi getir.
  * En yakın fotoğrafı bulur, aynı sequence'tan komşularını da ekler.

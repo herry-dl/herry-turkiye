@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { PhotoStreetView } from './PhotoStreetView';
-import { fetchStreetScene, type StreetScene } from '../streetImagery';
+import { MapillaryViewer } from './MapillaryViewer';
+import { fetchStreetScene } from '../streetImagery';
 
 interface StreetViewPlayerProps {
   lat: number;
@@ -12,7 +12,7 @@ interface StreetViewPlayerProps {
 
 type Status =
   | { kind: 'loading' }
-  | { kind: 'ready'; scene: StreetScene }
+  | { kind: 'ready'; imageId: string }
   | { kind: 'empty' }
   | { kind: 'error'; message: string };
 
@@ -36,17 +36,17 @@ export function StreetViewPlayer({
 
     (async () => {
       try {
-        console.log(`[StreetView] fetching scene lat=${lat} lng=${lng}`);
+        console.log(`[StreetView] finding panorama lat=${lat} lng=${lng}`);
         const result = await fetchStreetScene(lat, lng);
         if (cancelled) return;
 
-        if (result && result.images.length > 0) {
-          console.log(`[StreetView] scene ready: ${result.images.length} images from ${result.source}`);
-          setStatus({ kind: 'ready', scene: result });
+        if (result?.imageId) {
+          console.log(`[StreetView] imageId=${result.imageId}`);
+          setStatus({ kind: 'ready', imageId: result.imageId });
           return;
         }
 
-        console.warn(`[StreetView] no images for lat=${lat} lng=${lng}`);
+        console.warn(`[StreetView] no panorama for lat=${lat} lng=${lng}`);
         setStatus({ kind: 'empty' });
         onLoadFailedRef.current?.();
         onReadyRef.current();
@@ -68,11 +68,12 @@ export function StreetViewPlayer({
 
   if (status.kind === 'ready') {
     return (
-      <PhotoStreetView
-        key={locationKey}
-        images={status.scene.images}
-        source={status.scene.source}
+      <MapillaryViewer
+        key={`${locationKey}-${status.imageId}`}
+        imageId={status.imageId}
+        locationKey={locationKey}
         onReady={onReady}
+        onFailed={onLoadFailed}
       />
     );
   }

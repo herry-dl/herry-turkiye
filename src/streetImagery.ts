@@ -1,24 +1,20 @@
-import { fetchMapillaryScene, mapillaryHasCoverage } from './mapillary';
-
-export type StreetImageSource = 'mapillary' | 'kartaview' | 'panoramax';
+import { findNearestImageId, mapillaryHasCoverage } from './mapillary';
 
 export type StreetScene = {
-  images: string[];
-  source: StreetImageSource;
+  imageId: string;
+  source: 'mapillary';
 };
 
-/**
- * Sokak fotoğrafları — Mapillary öncelikli (Türkiye'de en geniş kapsama).
- */
+/** En yakın Mapillary panoramasını bul (Mapillary JS viewer için image ID). */
 export async function fetchStreetScene(lat: number, lng: number): Promise<StreetScene | null> {
-  const mly = await fetchMapillaryScene(lat, lng);
-  if (mly.length > 0) {
-    return { images: mly.map((m) => m.thumbUrl), source: 'mapillary' };
+  const imageId = await findNearestImageId(lat, lng);
+  if (imageId) {
+    return { imageId, source: 'mapillary' };
   }
   return null;
 }
 
-/** Hızlı var/yok kontrolü — validation için. */
+/** Hızlı var/yok kontrolü — oyun başlamadan konum doğrulama. */
 export async function hasStreetCoverage(lat: number, lng: number): Promise<boolean> {
   return mapillaryHasCoverage(lat, lng);
 }
