@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ensureLeafletIcons, OSM_ATTRIBUTION, OSM_TILE_URL } from '../leaflet-config';
@@ -8,15 +8,23 @@ interface LeafletSceneProps {
   lng: number;
   locationKey: string;
   zoom?: number;
-  /** Oyuncu haritayı hafifçe kaydırabilsin */
   interactive?: boolean;
   onReady: () => void;
   className?: string;
 }
 
+function fitMapToParent(map: L.Map, el: HTMLElement) {
+  const parent = el.parentElement;
+  if (!parent) return;
+  const h = parent.clientHeight;
+  const w = parent.clientWidth;
+  if (h > 0) el.style.height = `${h}px`;
+  if (w > 0) el.style.width = `${w}px`;
+  map.invalidateSize(true);
+}
+
 /**
- * Imperatif Leaflet — react-leaflet ile ikinci MapContainer çakışmasını önler.
- * Flex layout’ta siyah/gri karo sorununu invalidateSize ile giderir.
+ * Imperatif Leaflet — tam ekran sahne; flex içinde şerit/siyah ekran olmaz.
  */
 export function LeafletScene({
   lat,
@@ -31,7 +39,7 @@ export function LeafletScene({
   const onReadyRef = useRef(onReady);
   onReadyRef.current = onReady;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     ensureLeafletIcons();
     const el = containerRef.current;
     if (!el) return;
@@ -55,19 +63,30 @@ export function LeafletScene({
     const fireReady = () => {
       if (ready) return;
       ready = true;
-      map.invalidateSize();
+      fitMapToParent(map, el);
       onReadyRef.current();
     };
 
-    map.whenReady(fireReady);
-    const t = window.setTimeout(fireReady, 600);
+    const resize = () => fitMapToParent(map, el);
 
-    const ro = new ResizeObserver(() => map.invalidateSize());
+    map.whenReady(() => {
+      resize();
+      fireReady();
+    });
+
+    const t1 = window.setTimeout(resize, 50);
+    const t2 = window.setTimeout(resize, 300);
+    const t3 = window.setTimeout(fireReady, 800);
+
+    const ro = new ResizeObserver(resize);
     ro.observe(el);
+    if (el.parentElement) ro.observe(el.parentElement);
 
     return () => {
       ready = true;
-      clearTimeout(t);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
       ro.disconnect();
       map.remove();
     };

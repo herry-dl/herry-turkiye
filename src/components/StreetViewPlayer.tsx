@@ -40,6 +40,7 @@ export function StreetViewPlayer({
 
   const [mapReady, setMapReady] = useState(false);
   const [photo, setPhoto] = useState<PhotoOverlay | null>(null);
+  const [photoVisible, setPhotoVisible] = useState(false);
   const [mapillaryActive, setMapillaryActive] = useState(false);
 
   const handleMapReady = () => {
@@ -51,6 +52,7 @@ export function StreetViewPlayer({
   useEffect(() => {
     let cancelled = false;
     setPhoto(null);
+    setPhotoVisible(false);
 
     (async () => {
       const free = await fetchFreeStreetImage(lat, lng);
@@ -125,11 +127,12 @@ export function StreetViewPlayer({
 
   const failPhoto = () => {
     setPhoto(null);
+    setPhotoVisible(false);
     onLoadFailedRef.current?.();
   };
 
   return (
-    <div className="street-scene-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+    <div className="street-scene-wrap">
       {!mapillaryActive && (
         <LeafletScene
           lat={lat}
@@ -139,9 +142,19 @@ export function StreetViewPlayer({
         />
       )}
 
-      {photo && !mapillaryActive && (
+      {photo && !mapillaryActive && !photoVisible && (
+        <img
+          className="street-photo-preload"
+          src={photo.url}
+          alt=""
+          onLoad={() => setPhotoVisible(true)}
+          onError={failPhoto}
+        />
+      )}
+
+      {photo && photoVisible && !mapillaryActive && (
         <div className="street-photo-overlay">
-          <img src={photo.url} alt="" decoding="async" onError={failPhoto} />
+          <img src={photo.url} alt="" decoding="async" />
           <a
             className="street-photo-attrib"
             href={ATTRIB[photo.source].href}
