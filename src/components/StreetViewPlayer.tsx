@@ -1,13 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapHintView } from './MapHintView';
+import { LeafletScene } from './LeafletScene';
 import { fetchFreeStreetImage, type StreetImageSource } from '../streetImagery';
 import { fetchNearestMapillaryImageId } from '../mapillary';
 
-type Layer =
-  | { kind: 'loading' }
-  | { kind: 'photo'; url: string; source: StreetImageSource }
-  | { kind: 'mapillary' }
-  | { kind: 'map-hint' };
+type PhotoOverlay = { url: string; source: StreetImageSource };
 
 interface StreetViewPlayerProps {
   lat: number;
@@ -24,9 +20,8 @@ const ATTRIB: Record<StreetImageSource, { href: string; label: string }> = {
 };
 
 /**
- * 1) Panoramax + KartaView (paralel, ücretsiz)
- * 2) İsteğe bağlı Mapillary (token)
- * 3) OSM harita ipucu (siyah ekran yok)
+ * Ana görünüm: Leaflet (https://leafletjs.com/) — anında yüklenir, siyah ekran yok.
+ * Üstüne isteğe bağlı topluluk sokak fotoğrafı veya Mapillary panoraması bindirilir.
  */
 export function StreetViewPlayer({
   lat,
@@ -43,88 +38,60 @@ export function StreetViewPlayer({
   onReadyRef.current = onReady;
   onLoadFailedRef.current = onLoadFailed;
 
-  const [layer, setLayer] = useState<Layer>({ kind: 'loading' });
+  const [mapReady, setMapReady] = useState(false);
+  const [photo, setPhoto] = useState<PhotoOverlay | null>(null);
+  const [mapillaryActive, setMapillaryActive] = useState(false);
 
-  // 8 sn sonra hâlâ yükleniyorsa harita ipucuna geç (siyah ekran kalmasın)
-  useEffect(() => {
-    if (layer.kind !== 'loading') return;
-    const t = window.setTimeout(() => {
-      setLayer({ kind: 'map-hint' });
-      onLoadFailedRef.current?.();
-    }, 8_000);
-    return () => clearTimeout(t);
-  }, [layer.kind, lat, lng, locationKey]);
+  const handleMapReady = () => {
+    setMapReady(true);
+    onReadyRef.current();
+  };
 
-  useEffect(() => {
-    if (layer.kind === 'map-hint' || layer.kind === 'photo') {
-      onReadyRef.current();
-    }
-  }, [layer]);
-
+  // Ücretsiz sokak fotoğrafını arka planda dene (Leaflet’i bloklamaz)
   useEffect(() => {
     let cancelled = false;
-    setLayer({ kind: 'loading' });
+    setPhoto(null);
 
     (async () => {
-      try {
-        const free = await fetchFreeStreetImage(lat, lng);
-        if (cancelled) return;
-        if (free) {
-          setLayer({ kind: 'photo', url: free.url, source: free.source });
-          return;
-        }
-        if (mapillaryAccessToken) {
-          setLayer({ kind: 'mapillary' });
-          return;
-        }
-        setLayer({ kind: 'map-hint' });
-        onLoadFailedRef.current?.();
-      } catch {
-        if (!cancelled) {
-          if (mapillaryAccessToken) setLayer({ kind: 'mapillary' });
-          else {
-            setLayer({ kind: 'map-hint' });
-            onLoadFailedRef.current?.();
-          }
-        }
-      }
+      const free = await fetchFreeStreetImage(lat, lng);
+      if (cancelled || !free) return;
+      setPhoto(free);
     })();
 
     return () => {
       cancelled = true;
     };
-  }, [lat, lng, locationKey, mapillaryAccessToken]);
+  }, [lat, lng, locationKey]);
 
+  // Mapillary (token varsa ve fotoğraf yoksa)
   useEffect(() => {
-    if (layer.kind !== 'mapillary') return;
-
-    const el = containerRef.current;
-    if (!el || !mapillaryAccessToken) return;
+    if (!mapillaryAccessToken || photo) {
+      setMapillaryActive(false);
+      return;
+    }
 
     let cancelled = false;
     let readyFired = false;
-    el.innerHTML = '';
 
-    const fireReady = () => {
-      if (cancelled || readyFired) return;
-      readyFired = true;
-      onReadyRef.current();
-    };
+    const tryMapillary = async () => {
+      await new Promise((r) => setTimeout(r, 2500));
+      if (cancelled || photo) return;
 
-    (async () => {
+      const el = containerRef.current;
+      if (!el) return;
+
       try {
+        const imageId = await fetchNearestMapillaryImageId(mapillaryAccessToken, lat, lng);
+        if (cancelled || photo || !imageId) return;
+
         const { Viewer, CameraControls } = await import('mapillary-js');
         await import('mapillary-js/dist/mapillary.css');
 
-        const imageId = await fetchNearestMapillaryImageId(mapillaryAccessToken, lat, lng);
-        if (cancelled) return;
-        if (!imageId) {
-          setLayer({ kind: 'map-hint' });
-          onLoadFailedRef.current?.();
-          return;
-        }
+        if (cancelled || photo) return;
 
         el.innerHTML = '';
+        setMapillaryActive(true);
+
         const viewer = new Viewer({
           accessToken: mapillaryAccessToken,
           container: el,
@@ -132,70 +99,71 @@ export function StreetViewPlayer({
           cameraControls: CameraControls.Street,
         });
         viewerRef.current = viewer;
+
+        const fireReady = () => {
+          if (cancelled || readyFired) return;
+          readyFired = true;
+          onReadyRef.current();
+        };
         viewer.on('load', fireReady);
         window.setTimeout(fireReady, 4000);
       } catch {
-        if (!cancelled) {
-          setLayer({ kind: 'map-hint' });
-          onLoadFailedRef.current?.();
-        }
+        if (!cancelled) onLoadFailedRef.current?.();
       }
-    })();
+    };
+
+    tryMapillary();
 
     return () => {
       cancelled = true;
+      setMapillaryActive(false);
       viewerRef.current?.remove();
       viewerRef.current = null;
-      el.innerHTML = '';
+      if (containerRef.current) containerRef.current.innerHTML = '';
     };
-  }, [layer.kind, lat, lng, locationKey, mapillaryAccessToken]);
+  }, [lat, lng, locationKey, mapillaryAccessToken, photo]);
 
   const failPhoto = () => {
-    if (mapillaryAccessToken) setLayer({ kind: 'mapillary' });
-    else {
-      setLayer({ kind: 'map-hint' });
-      onLoadFailed?.();
-    }
+    setPhoto(null);
+    onLoadFailedRef.current?.();
   };
 
-  if (layer.kind === 'loading') {
-    return (
-      <div
-        className="street-view-loading-shell"
-        style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#1a1a1a' }}
-        aria-hidden
-      />
-    );
-  }
-
-  if (layer.kind === 'photo') {
-    const attrib = ATTRIB[layer.source];
-    return (
-      <div className="street-photo-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1, background: '#111' }}>
-        <img
-          src={layer.url}
-          alt=""
-          decoding="async"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          onLoad={() => onReady()}
-          onError={failPhoto}
+  return (
+    <div className="street-scene-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+      {!mapillaryActive && (
+        <LeafletScene
+          lat={lat}
+          lng={lng}
+          locationKey={locationKey}
+          onReady={handleMapReady}
         />
-        <a className="street-photo-attrib" href={attrib.href} target="_blank" rel="noreferrer noopener">
-          {attrib.label}
-        </a>
-      </div>
-    );
-  }
+      )}
 
-  if (layer.kind === 'mapillary') {
-    return (
-      <div
-        ref={containerRef}
-        className="street-view-panorama-root"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1 }}
-      />
-    );
-  }
+      {photo && !mapillaryActive && (
+        <div className="street-photo-overlay">
+          <img src={photo.url} alt="" decoding="async" onError={failPhoto} />
+          <a
+            className="street-photo-attrib"
+            href={ATTRIB[photo.source].href}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {ATTRIB[photo.source].label}
+          </a>
+        </div>
+      )}
 
-  return <MapHintView key={locationKey} lat={lat} lng={lng} onReady={onReady} />;
+      {mapillaryActive && (
+        <div
+          ref={containerRef}
+          className="street-view-panorama-root"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        />
+      )}
+
+      {mapReady && !photo && !mapillaryActive && (
+        <div className="map-hint-banner">Harita modu — etrafa kaydırarak bak</div>
+      )}
+    </div>
+  );
 }
