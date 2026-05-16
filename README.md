@@ -21,4 +21,4 @@ Sokak görüntüsü: **Panoramax** ve **KartaView** (ücretsiz, anahtarsız). İ
 
 ## Yığın
 
-React, Vite, [Leaflet](https://leafletjs.com/) + OpenStreetMap (tahmin haritası ve ana sahne), KartaView / Panoramax fotoğrafları, isteğe bağlı MapillaryJS, PWA.
+React, Vite, [Leaflet](https://leafletjs.com/) + OpenStreetMap (tahmin haritası ve ana sahne), KartaView / Panoramax fotoğrafları, isteğe bağlı MapillaryJS.

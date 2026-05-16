@@ -3,6 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
 
+// Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((r) => r.unregister())
+  })
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
