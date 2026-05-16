@@ -1,32 +1,24 @@
-import { fetchKartaViewSequence } from './kartaview';
-import { fetchNearestPanoramaxImageUrl } from './panoramax';
+import { fetchMapillaryScene, mapillaryHasCoverage } from './mapillary';
 
-export type StreetImageSource = 'panoramax' | 'kartaview';
+export type StreetImageSource = 'mapillary' | 'kartaview' | 'panoramax';
 
 export type StreetScene = {
   images: string[];
   source: StreetImageSource;
 };
 
-const TOTAL_TIMEOUT_MS = 9_000;
-
 /**
- * Sokak sahnesi: KartaView dizisi (dolaşılabilir) veya tek Panoramax fotoğrafı.
+ * Sokak fotoğrafları — Mapillary öncelikli (Türkiye'de en geniş kapsama).
  */
 export async function fetchStreetScene(lat: number, lng: number): Promise<StreetScene | null> {
-  const timeout = new Promise<null>((resolve) => {
-    window.setTimeout(() => resolve(null), TOTAL_TIMEOUT_MS);
-  });
+  const mly = await fetchMapillaryScene(lat, lng);
+  if (mly.length > 0) {
+    return { images: mly.map((m) => m.thumbUrl), source: 'mapillary' };
+  }
+  return null;
+}
 
-  const work = async (): Promise<StreetScene | null> => {
-    const kv = await fetchKartaViewSequence(lat, lng);
-    if (kv.length) return { images: kv, source: 'kartaview' };
-
-    const px = await fetchNearestPanoramaxImageUrl(lat, lng);
-    if (px) return { images: [px], source: 'panoramax' };
-
-    return null;
-  };
-
-  return Promise.race([work(), timeout]);
+/** Hızlı var/yok kontrolü — validation için. */
+export async function hasStreetCoverage(lat: number, lng: number): Promise<boolean> {
+  return mapillaryHasCoverage(lat, lng);
 }

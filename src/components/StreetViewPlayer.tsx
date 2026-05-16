@@ -1,24 +1,57 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PhotoStreetView } from './PhotoStreetView';
-import type { StreetImageSource } from '../streetImagery';
+import { fetchStreetScene, type StreetScene } from '../streetImagery';
 
 interface StreetViewPlayerProps {
-  images: string[];
-  source: StreetImageSource;
+  lat: number;
+  lng: number;
   locationKey: string;
   onReady: () => void;
+  onLoadFailed?: () => void;
 }
 
 /**
- * Sokak görünümü: önceden doğrulanmış fotoğraflarda gezinme.
- * Hiç fetch yapmaz — App seviyesinde pre-validation ile gelen URL'leri kullanır.
+ * Sokak görünümü: round başında Mapillary'den taze fotoğraf URL'leri çeker.
+ * URL'ler kısa ömürlü olduğu için cache'lenmez — her seferinde fetch.
  */
-export function StreetViewPlayer({ images, source, locationKey, onReady }: StreetViewPlayerProps) {
-  useEffect(() => {
-    if (images.length === 0) onReady();
-  }, [images, onReady]);
+export function StreetViewPlayer({
+  lat,
+  lng,
+  locationKey,
+  onReady,
+  onLoadFailed,
+}: StreetViewPlayerProps) {
+  const onReadyRef = useRef(onReady);
+  const onLoadFailedRef = useRef(onLoadFailed);
+  onReadyRef.current = onReady;
+  onLoadFailedRef.current = onLoadFailed;
 
-  if (images.length === 0) {
+  const [scene, setScene] = useState<StreetScene | null>(null);
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setScene(null);
+    setFailed(false);
+
+    (async () => {
+      const result = await fetchStreetScene(lat, lng);
+      if (cancelled) return;
+      if (result && result.images.length > 0) {
+        setScene(result);
+        return;
+      }
+      setFailed(true);
+      onLoadFailedRef.current?.();
+      onReadyRef.current();
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [lat, lng, locationKey]);
+
+  if (failed) {
     return (
       <div className="street-empty">
         <p>Bu konumda sokak fotoğrafı bulunamadı.</p>
@@ -27,12 +60,20 @@ export function StreetViewPlayer({ images, source, locationKey, onReady }: Stree
     );
   }
 
+  if (scene) {
+    return (
+      <PhotoStreetView
+        key={locationKey}
+        images={scene.images}
+        source={scene.source}
+        onReady={onReady}
+      />
+    );
+  }
+
   return (
-    <PhotoStreetView
-      key={locationKey}
-      images={images}
-      source={source}
-      onReady={onReady}
-    />
+    <div className="street-loading">
+      <div className="loader-spinner" />
+    </div>
   );
 }

@@ -10,6 +10,12 @@ if ('serviceWorker' in navigator) {
   })
 }
 
+try {
+  ['herry-validated-v1', 'herry-validated-v2'].forEach((k) => localStorage.removeItem(k))
+} catch {
+  /* ignore */
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

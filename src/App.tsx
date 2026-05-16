@@ -4,7 +4,7 @@ import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
 import { verifiedByDifficulty, verifiedLocations } from './verifiedLocations';
-import { pickValidatedLocations, validateLocation, type ValidatedLocation } from './locationValidator';
+import { pickValidatedLocations, validateLocation } from './locationValidator';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
@@ -20,7 +20,7 @@ function fallbackPool(level: 1 | 2 | 3): Location[] {
 }
 
 function App() {
-  const [gameLocations, setGameLocations] = useState<ValidatedLocation[]>([]);
+  const [gameLocations, setGameLocations] = useState<Location[]>([]);
   const [currentRound, setCurrentRound] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [guess, setGuess] = useState<{ lat: number; lng: number } | null>(null);
@@ -45,7 +45,7 @@ function App() {
 
   const guessRef = useRef(guess);
   const roundOverRef = useRef(roundOver);
-  const gameLocationsRef = useRef<ValidatedLocation[]>(gameLocations);
+  const gameLocationsRef = useRef<Location[]>(gameLocations);
   const currentRoundRef = useRef(currentRound);
   const timeLeftRef = useRef(timeLeft);
 
@@ -220,11 +220,11 @@ function App() {
     const shuffled = (candidates.length ? candidates : pool).sort(() => Math.random() - 0.5);
 
     for (const loc of shuffled) {
-      const validated = await validateLocation(loc);
-      if (validated) {
+      const ok = await validateLocation(loc);
+      if (ok) {
         setGameLocations((prev) => {
           const updated = [...prev];
-          updated[currentRound] = validated;
+          updated[currentRound] = loc;
           return updated;
         });
         resetRound();
@@ -385,10 +385,11 @@ function App() {
                       {currentTarget ? (
                         <StreetViewPlayer
                           key={currentTarget.id}
-                          images={currentTarget.images}
-                          source={currentTarget.source}
+                          lat={currentTarget.lat}
+                          lng={currentTarget.lng}
                           locationKey={currentTarget.id}
                           onReady={handlePanoramaReady}
+                          onLoadFailed={handlePanoramaFailed}
                         />
                       ) : (
                         <div className="street-loading">

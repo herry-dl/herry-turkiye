@@ -1,22 +1,11 @@
 import type { Location } from './locations';
-import { fetchStreetScene, type StreetImageSource } from './streetImagery';
+import { hasStreetCoverage } from './streetImagery';
 
-const CACHE_KEY = 'herry-validated-v2';
-const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+const CACHE_KEY = 'herry-validated-v3';
+const CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
-type CacheEntry = {
-  ts: number;
-  ok: boolean;
-  images?: string[];
-  source?: StreetImageSource;
-};
-
+type CacheEntry = { ok: boolean; ts: number };
 type Cache = Record<string, CacheEntry>;
-
-export type ValidatedLocation = Location & {
-  images: string[];
-  source: StreetImageSource;
-};
 
 function loadCache(): Cache {
   try {
@@ -36,50 +25,38 @@ function saveCache(c: Cache): void {
   }
 }
 
-function getCached(cache: Cache, id: string): CacheEntry | null {
+function isCached(cache: Cache, id: string): boolean | null {
   const entry = cache[id];
   if (!entry) return null;
   if (Date.now() - entry.ts > CACHE_TTL_MS) return null;
-  return entry;
+  return entry.ok;
 }
 
-async function validateOne(loc: Location, cache: Cache): Promise<ValidatedLocation | null> {
-  const cached = getCached(cache, loc.id);
-  if (cached) {
-    if (!cached.ok || !cached.images || cached.images.length === 0) return null;
-    return { ...loc, images: cached.images, source: cached.source ?? 'kartaview' };
-  }
+async function validateOne(loc: Location, cache: Cache): Promise<boolean> {
+  const cached = isCached(cache, loc.id);
+  if (cached !== null) return cached;
 
-  const scene = await fetchStreetScene(loc.lat, loc.lng);
-  if (!scene || scene.images.length === 0) {
-    cache[loc.id] = { ts: Date.now(), ok: false };
-    return null;
-  }
-
-  cache[loc.id] = {
-    ts: Date.now(),
-    ok: true,
-    images: scene.images,
-    source: scene.source,
-  };
-  return { ...loc, images: scene.images, source: scene.source };
+  const ok = await hasStreetCoverage(loc.lat, loc.lng);
+  cache[loc.id] = { ok, ts: Date.now() };
+  return ok;
 }
 
 /**
- * Doğrulanmış konum + fotoğraf URL'leri.
- * Sonuçları localStorage'da önbellekler — sonraki oyunlar anında başlar.
+ * Havuzdan, sokak fotoğrafı kapsamasında olan en fazla `count` konum döndürür.
+ * Sadece var/yok bilgisini cache'ler — fotoğraf URL'leri round başında alınır
+ * (Mapillary URL'leri kısa ömürlüdür).
  */
 export async function pickValidatedLocations(
   pool: Location[],
   count: number,
   fallbackPool: Location[],
   onProgress?: (ready: number, total: number) => void
-): Promise<ValidatedLocation[]> {
+): Promise<Location[]> {
   const cache = loadCache();
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
 
-  const validated: ValidatedLocation[] = [];
-  const concurrency = 6;
+  const validated: Location[] = [];
+  const concurrency = 5;
   let index = 0;
 
   onProgress?.(0, count);
@@ -87,9 +64,9 @@ export async function pickValidatedLocations(
   async function worker() {
     while (validated.length < count && index < shuffled.length) {
       const loc = shuffled[index++];
-      const v = await validateOne(loc, cache);
-      if (v && validated.length < count) {
-        validated.push(v);
+      const ok = await validateOne(loc, cache);
+      if (ok && validated.length < count) {
+        validated.push(loc);
         onProgress?.(Math.min(validated.length, count), count);
       }
     }
@@ -98,13 +75,13 @@ export async function pickValidatedLocations(
   await Promise.all(Array.from({ length: concurrency }, worker));
 
   if (validated.length < count) {
-    const fallbackShuffled = [...fallbackPool].sort(() => Math.random() - 0.5);
-    for (const loc of fallbackShuffled) {
+    const fbShuffled = [...fallbackPool].sort(() => Math.random() - 0.5);
+    for (const loc of fbShuffled) {
       if (validated.length >= count) break;
       if (validated.some((v) => v.id === loc.id)) continue;
-      const v = await validateOne(loc, cache);
-      if (v) {
-        validated.push(v);
+      const ok = await validateOne(loc, cache);
+      if (ok) {
+        validated.push(loc);
         onProgress?.(Math.min(validated.length, count), count);
       }
     }
@@ -114,10 +91,9 @@ export async function pickValidatedLocations(
   return validated.slice(0, count);
 }
 
-/** Tek konum doğrula — ATLA için */
-export async function validateLocation(loc: Location): Promise<ValidatedLocation | null> {
+export async function validateLocation(loc: Location): Promise<boolean> {
   const cache = loadCache();
-  const v = await validateOne(loc, cache);
+  const ok = await validateOne(loc, cache);
   saveCache(cache);
-  return v;
+  return ok;
 }

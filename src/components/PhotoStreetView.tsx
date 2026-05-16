@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { StreetImageSource } from '../streetImagery';
 
 const ATTRIB: Record<StreetImageSource, { href: string; label: string }> = {
+  mapillary: { href: 'https://www.mapillary.com', label: 'Mapillary' },
   panoramax: { href: 'https://panoramax.fr', label: 'Panoramax' },
   kartaview: { href: 'https://kartaview.org', label: 'KartaView' },
 };
