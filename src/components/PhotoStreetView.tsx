@@ -75,21 +75,23 @@ export function PhotoStreetView({ images, source, onReady }: PhotoStreetViewProp
         onPointerCancel={onPointerUp}
         style={{ touchAction: 'none' }}
       >
-        <img
-          key={url}
-          src={url}
-          alt=""
-          className={`photo-street-img ${loaded ? 'loaded' : ''}`}
-          style={{
-            transform: `translate(calc(-50% + ${pan.x}px), calc(-50% + ${pan.y}px)) scale(1.2)`,
-          }}
-          draggable={false}
-          onLoad={() => {
-            setLoaded(true);
-            fireReady();
-          }}
-          onError={fireReady}
-        />
+        <div
+          className="photo-street-img-wrap"
+          style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(1.15)` }}
+        >
+          <img
+            key={url}
+            src={url}
+            alt=""
+            className={`photo-street-img ${loaded ? 'loaded' : ''}`}
+            draggable={false}
+            onLoad={() => {
+              setLoaded(true);
+              fireReady();
+            }}
+            onError={fireReady}
+          />
+        </div>
       </div>
 
       {hasNav && (

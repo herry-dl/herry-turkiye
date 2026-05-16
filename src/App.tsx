@@ -4,17 +4,12 @@ import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
 import { verifiedByDifficulty, verifiedLocations } from './verifiedLocations';
-import { hasCoverage, pickValidatedLocations } from './locationValidator';
+import { pickValidatedLocations, validateLocation, type ValidatedLocation } from './locationValidator';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
 import backgroundMusic from './assets/background.mp3';
 import countdownMusic from './assets/countdown.mp3';
-
-const MAPILLARY_TOKEN =
-  typeof import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN === 'string'
-    ? import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN.trim() || undefined
-    : undefined;
 
 function fallbackPool(level: 1 | 2 | 3): Location[] {
   return locations.filter((l) => {
@@ -25,7 +20,7 @@ function fallbackPool(level: 1 | 2 | 3): Location[] {
 }
 
 function App() {
-  const [gameLocations, setGameLocations] = useState<Location[]>([]);
+  const [gameLocations, setGameLocations] = useState<ValidatedLocation[]>([]);
   const [currentRound, setCurrentRound] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [guess, setGuess] = useState<{ lat: number; lng: number } | null>(null);
@@ -50,7 +45,7 @@ function App() {
 
   const guessRef = useRef(guess);
   const roundOverRef = useRef(roundOver);
-  const gameLocationsRef = useRef<Location[]>(gameLocations);
+  const gameLocationsRef = useRef<ValidatedLocation[]>(gameLocations);
   const currentRoundRef = useRef(currentRound);
   const timeLeftRef = useRef(timeLeft);
 
@@ -217,29 +212,26 @@ function App() {
 
   const handleSkipLocation = async () => {
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
+    setLoadingLocation(true);
+
     const pool = locationPoolRef.current;
     const usedIds = new Set(gameLocations.map((l) => l.id));
     const candidates = pool.filter((l) => !usedIds.has(l.id));
-    const shuffled = candidates.length ? candidates : pool;
+    const shuffled = (candidates.length ? candidates : pool).sort(() => Math.random() - 0.5);
 
-    for (const loc of shuffled.sort(() => Math.random() - 0.5)) {
-      if (await hasCoverage(loc)) {
+    for (const loc of shuffled) {
+      const validated = await validateLocation(loc);
+      if (validated) {
         setGameLocations((prev) => {
           const updated = [...prev];
-          updated[currentRound] = loc;
+          updated[currentRound] = validated;
           return updated;
         });
         resetRound();
         return;
       }
     }
-    const fallback = shuffled[0] ?? pool[0];
-    setGameLocations((prev) => {
-      const updated = [...prev];
-      updated[currentRound] = fallback;
-      return updated;
-    });
-    resetRound();
+    setLoadingLocation(false);
   };
 
   const handlePanoramaReady = useCallback(() => {
@@ -390,22 +382,21 @@ function App() {
                 {!gameOver ? (
                   <>
                     <div className="image-section">
-                      {(!currentTarget || loadingLocation) && (
-                        <div className="location-loader">
-                          <div className="loader-spinner"></div>
-                          <p>{!currentTarget ? 'VERİ YÜKLENİYOR...' : 'SOKAK GÖRÜNÜMÜ YÜKLENİYOR...'}</p>
-                        </div>
-                      )}
-                      {currentTarget && (
+                      {currentTarget ? (
                         <StreetViewPlayer
                           key={currentTarget.id}
-                          lat={currentTarget.lat}
-                          lng={currentTarget.lng}
+                          images={currentTarget.images}
+                          source={currentTarget.source}
                           locationKey={currentTarget.id}
-                          mapillaryAccessToken={MAPILLARY_TOKEN}
                           onReady={handlePanoramaReady}
-                          onLoadFailed={handlePanoramaFailed}
                         />
+                      ) : (
+                        <div className="street-loading">
+                          <div className="loader-spinner" />
+                        </div>
+                      )}
+                      {loadingLocation && currentTarget && (
+                        <div className="image-loading-tag">YÜKLENİYOR...</div>
                       )}
                       <div className="blackout-mask-new"></div>
                     </div>
