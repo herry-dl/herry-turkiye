@@ -64,6 +64,9 @@ export function MapillaryViewer({
       if (cancelled || readyFired) return;
       readyFired = true;
       viewer?.resize();
+      console.log(
+        `[MapillaryViewer] ready ${el.offsetWidth}x${el.offsetHeight} imageId=${imageId}`
+      );
       onReadyRef.current();
     };
 
