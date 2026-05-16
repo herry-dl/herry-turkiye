@@ -70,11 +70,20 @@ async function searchBbox(
   const t = window.setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
   try {
     const res = await fetch(url.toString(), { signal: ctrl.signal });
-    if (!res.ok) return [];
-    const json = (await res.json()) as { data?: ApiImage[]; error?: unknown };
-    if (json.error || !json.data) return [];
+    if (!res.ok) {
+      console.warn(`[Mapillary] HTTP ${res.status} for radius=${radiusM}m`);
+      return [];
+    }
+    const json = (await res.json()) as { data?: ApiImage[]; error?: { message?: string } };
+    if (json.error) {
+      console.warn('[Mapillary] API error:', json.error);
+      return [];
+    }
+    if (!json.data) return [];
+    console.log(`[Mapillary] r=${radiusM}m → ${json.data.length} images`);
     return json.data;
-  } catch {
+  } catch (e) {
+    console.warn('[Mapillary] fetch failed', e);
     return [];
   } finally {
     clearTimeout(t);

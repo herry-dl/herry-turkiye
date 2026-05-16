@@ -4,10 +4,17 @@ import './index.css'
 import App from './App'
 
 // Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
+const BUILD_VERSION = '2026-05-17-mapillary-v4'
+console.log(`[Türkiye Kâşifi] build=${BUILD_VERSION}`)
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then((regs) => {
     regs.forEach((r) => r.unregister())
   })
+}
+
+if ('caches' in window) {
+  caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => {})
 }
 
 try {
