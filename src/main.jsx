@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 
 // Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
-const BUILD_VERSION = '2026-05-17-mapillary-v5'
+const BUILD_VERSION = '2026-05-17-mapillary-v6'
 console.log(`[Türkiye Kâşifi] build=${BUILD_VERSION}`)
 
 if ('serviceWorker' in navigator) {

@@ -381,7 +381,13 @@ function App() {
               <main className="game-area">
                 {!gameOver ? (
                   <>
-                    <div className="image-section">
+                    <div
+                      className="image-section"
+                      style={{
+                        background:
+                          'linear-gradient(135deg, #1a2634 0%, #0f1419 100%)',
+                      }}
+                    >
                       {currentTarget ? (
                         <StreetViewPlayer
                           key={currentTarget.id}
@@ -394,6 +400,7 @@ function App() {
                       ) : (
                         <div className="street-loading">
                           <div className="loader-spinner" />
+                          <p className="street-loading-text">Konum hazırlanıyor…</p>
                         </div>
                       )}
                       {loadingLocation && currentTarget && (

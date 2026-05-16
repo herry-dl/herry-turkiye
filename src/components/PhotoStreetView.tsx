@@ -86,11 +86,17 @@ export function PhotoStreetView({ images, source, onReady }: PhotoStreetViewProp
             alt=""
             className={`photo-street-img ${loaded ? 'loaded' : ''}`}
             draggable={false}
+            referrerPolicy="no-referrer"
+            crossOrigin="anonymous"
             onLoad={() => {
+              console.log('[PhotoStreetView] image loaded');
               setLoaded(true);
               fireReady();
             }}
-            onError={fireReady}
+            onError={(e) => {
+              console.error('[PhotoStreetView] image error', e);
+              fireReady();
+            }}
           />
         </div>
       </div>
