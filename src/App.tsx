@@ -3,6 +3,8 @@ import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
+import { verifiedByDifficulty, verifiedLocations } from './verifiedLocations';
+import { hasCoverage, pickValidatedLocations } from './locationValidator';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
@@ -14,7 +16,7 @@ const MAPILLARY_TOKEN =
     ? import.meta.env.VITE_MAPILLARY_ACCESS_TOKEN.trim() || undefined
     : undefined;
 
-function filterLocationsByMenuDifficulty(level: 1 | 2 | 3): Location[] {
+function fallbackPool(level: 1 | 2 | 3): Location[] {
   return locations.filter((l) => {
     if (level === 1) return l.difficulty === 1;
     if (level === 2) return l.difficulty <= 2;
@@ -38,6 +40,8 @@ function App() {
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [loadingLocation, setLoadingLocation] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
+  const [preparingGame, setPreparingGame] = useState(false);
+  const [preparingProgress, setPreparingProgress] = useState({ ready: 0, total: 0 });
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -168,24 +172,37 @@ function App() {
     skipTimerRef.current = setTimeout(() => setShowSkipBtn(true), 4000);
   };
 
-  const startNewGame = () => {
-    const pool = filterLocationsByMenuDifficulty(selectedDifficulty);
-    const usable = pool.length > 0 ? pool : locations;
-    locationPoolRef.current = usable;
-
-    const shuffled = [...usable].sort(() => Math.random() - 0.5);
-    setGameLocations(shuffled);
-    setTotalScore(0);
-    setCurrentRound(0);
-    setGameOver(false);
-    setGameStarted(true);
+  const startNewGame = async () => {
+    const verifiedPool = verifiedByDifficulty(selectedDifficulty);
+    const fbPool = fallbackPool(selectedDifficulty);
+    locationPoolRef.current = verifiedPool.length > 0 ? verifiedPool : fbPool;
 
     if (introAudioRef.current) {
       introAudioRef.current.pause();
       introAudioRef.current.currentTime = 0;
     }
 
-    resetRound();
+    setPreparingGame(true);
+    setPreparingProgress({ ready: 0, total: TOTAL_ROUNDS });
+
+    try {
+      const validated = await pickValidatedLocations(
+        verifiedPool.length > 0 ? verifiedPool : verifiedLocations,
+        TOTAL_ROUNDS,
+        fbPool,
+        (ready, total) => setPreparingProgress({ ready, total })
+      );
+
+      const finalList = validated.length > 0 ? validated : verifiedLocations.slice(0, TOTAL_ROUNDS);
+      setGameLocations(finalList);
+      setTotalScore(0);
+      setCurrentRound(0);
+      setGameOver(false);
+      setGameStarted(true);
+      resetRound();
+    } finally {
+      setPreparingGame(false);
+    }
   };
 
   const handleNextRound = () => {
@@ -198,13 +215,28 @@ function App() {
     }
   };
 
-  const handleSkipLocation = () => {
+  const handleSkipLocation = async () => {
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
     const pool = locationPoolRef.current;
-    const newLoc = pool[Math.floor(Math.random() * pool.length)];
+    const usedIds = new Set(gameLocations.map((l) => l.id));
+    const candidates = pool.filter((l) => !usedIds.has(l.id));
+    const shuffled = candidates.length ? candidates : pool;
+
+    for (const loc of shuffled.sort(() => Math.random() - 0.5)) {
+      if (await hasCoverage(loc)) {
+        setGameLocations((prev) => {
+          const updated = [...prev];
+          updated[currentRound] = loc;
+          return updated;
+        });
+        resetRound();
+        return;
+      }
+    }
+    const fallback = shuffled[0] ?? pool[0];
     setGameLocations((prev) => {
       const updated = [...prev];
-      updated[currentRound] = newLoc;
+      updated[currentRound] = fallback;
       return updated;
     });
     resetRound();
@@ -257,11 +289,20 @@ function App() {
             </div>
 
             <div className="landing-buttons-new">
-              <button className="btn-play-new" onClick={startNewGame}>
-                <Flag size={24} />
-                MACERAYA BAŞLA
+              <button className="btn-play-new" onClick={startNewGame} disabled={preparingGame}>
+                {preparingGame ? (
+                  <>
+                    <div className="prep-spinner" />
+                    KONUMLAR HAZIRLANIYOR {preparingProgress.ready}/{preparingProgress.total}
+                  </>
+                ) : (
+                  <>
+                    <Flag size={24} />
+                    MACERAYA BAŞLA
+                  </>
+                )}
               </button>
-              <button className="btn-how-new" onClick={() => setShowHowToPlay(true)}>
+              <button className="btn-how-new" onClick={() => setShowHowToPlay(true)} disabled={preparingGame}>
                 NASIL OYNANIR?
               </button>
             </div>
