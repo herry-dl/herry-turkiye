@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Viewer, isSupported, isFallbackSupported } from 'mapillary-js';
+import { Viewer, RenderMode, isSupported, isFallbackSupported } from 'mapillary-js';
 import 'mapillary-js/dist/mapillary.css';
 import { MAPILLARY_TOKEN } from '../mapillary';
 
@@ -85,11 +85,14 @@ export function MapillaryViewer({
           accessToken: MAPILLARY_TOKEN,
           container: el,
           imageId,
+          imageTiling: true,
+          renderMode: RenderMode.Fill,
           component: {
             cover: false,
             attribution: true,
             bearing: false,
-            zoom: false,
+            zoom: true,
+            cache: true,
             sequence: true,
             direction: true,
             keyboard: true,
@@ -129,7 +132,7 @@ export function MapillaryViewer({
   return (
     <div className="mapillary-street-view">
       <div ref={containerRef} className="mapillary-viewer-root" />
-      <p className="street-hint">Sürükleyerek etrafa bak · Ok tuşlarıyla ilerle</p>
+      <p className="street-hint">Sürükle · Ok tuşları · Yakınlaştır (+/−)</p>
       <a
         className="street-photo-attrib"
         href="https://www.mapillary.com"

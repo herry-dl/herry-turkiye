@@ -23,6 +23,8 @@ export type MapillaryImage = {
   lat: number;
   lng: number;
   sequenceId?: string;
+  qualityScore: number;
+  distanceM: number;
 };
 
 type ApiImage = {
@@ -32,7 +34,22 @@ type ApiImage = {
   computed_geometry?: { coordinates?: [number, number] };
   geometry?: { coordinates?: [number, number] };
   sequence?: string;
+  quality_score?: number;
+  is_pano?: boolean;
 };
+
+const IMAGE_FIELDS =
+  'id,thumb_2048_url,thumb_1024_url,computed_geometry,geometry,sequence,quality_score,is_pano';
+
+/** Mesafe + bulanıklık skoru: düşük = daha iyi. */
+function pickScore(distanceM: number, qualityScore: number): number {
+  const q = Number.isFinite(qualityScore) ? qualityScore : 0.45;
+  return distanceM - q * 120;
+}
+
+function pickBestImage(mapped: MapillaryImage[]): MapillaryImage {
+  return [...mapped].sort((a, b) => pickScore(a.distanceM, a.qualityScore) - pickScore(b.distanceM, b.qualityScore))[0];
+}
 
 function metersToDeg(m: number, atLat: number): { dLat: number; dLng: number } {
   const dLat = m / 111_320;
@@ -63,7 +80,7 @@ async function searchBbox(
   const url = new URL(GRAPH_URL);
   url.searchParams.set('bbox', bbox);
   url.searchParams.set('limit', String(limit));
-  url.searchParams.set('fields', 'id,thumb_2048_url,thumb_1024_url,computed_geometry,geometry,sequence');
+  url.searchParams.set('fields', IMAGE_FIELDS);
   url.searchParams.set('access_token', MAPILLARY_TOKEN);
 
   const ctrl = new AbortController();
@@ -102,12 +119,15 @@ function toMapillaryImage(img: ApiImage, refLat: number, refLng: number): Mapill
   const [lng, lat] = coords;
   const thumbUrl = img.thumb_2048_url ?? img.thumb_1024_url;
   if (!thumbUrl) return null;
+  const distanceM = haversineM(refLat, refLng, lat, lng);
   return {
     id: img.id,
     thumbUrl,
     lat,
     lng,
     sequenceId: img.sequence,
+    qualityScore: img.quality_score ?? 0.45,
+    distanceM,
   };
 }
 
@@ -135,11 +155,11 @@ export async function findNearestImageId(lat: number, lng: number): Promise<stri
 
     if (mapped.length === 0) continue;
 
-    mapped.sort(
-      (a, b) => haversineM(lat, lng, a.lat, a.lng) - haversineM(lat, lng, b.lat, b.lng)
+    const best = pickBestImage(mapped);
+    console.log(
+      `[Mapillary] picked id=${best.id} dist=${Math.round(best.distanceM)}m quality=${best.qualityScore.toFixed(2)}`
     );
-
-    return mapped[0].id;
+    return best.id;
   }
 
   return null;
@@ -162,11 +182,7 @@ export async function fetchMapillaryScene(lat: number, lng: number): Promise<Map
 
     if (mapped.length === 0) continue;
 
-    mapped.sort(
-      (a, b) => haversineM(lat, lng, a.lat, a.lng) - haversineM(lat, lng, b.lat, b.lng)
-    );
-
-    const nearest = mapped[0];
+    const nearest = pickBestImage(mapped);
     const sequence = nearest.sequenceId;
 
     const fromSeq = sequence ? mapped.filter((m) => m.sequenceId === sequence) : [];
