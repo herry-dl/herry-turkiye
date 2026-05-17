@@ -2,7 +2,14 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
+import { AvatarPicker } from './components/AvatarPicker';
 import { locations, Location } from './locations';
+import {
+  getAvatar,
+  loadStoredAvatarId,
+  storeAvatarId,
+  type AvatarId,
+} from './avatars';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
@@ -35,6 +42,7 @@ function App() {
   const [showSkipBtn, setShowSkipBtn] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<1 | 2 | 3>(1);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [selectedAvatar, setSelectedAvatar] = useState<AvatarId | null>(() => loadStoredAvatarId());
   const [loadingLocation, setLoadingLocation] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -230,7 +238,16 @@ function App() {
               <img src={logo} alt="HERRY TÜRKİYE" className="landing-logo-img" />
             </div>
             <h1 className="landing-title-main">TÜRKİYE KÂŞİFİ</h1>
-            <p className="by-dagli-new">BY Dagli</p>
+            <p className="by-dagli-new">by dagli</p>
+
+            <AvatarPicker
+              selected={selectedAvatar}
+              onSelect={(id) => {
+                setSelectedAvatar(id);
+                storeAvatarId(id);
+              }}
+            />
+
             <div className="difficulty-selector">
               <span className="diff-label">ZORLUK SEÇ:</span>
               <div className="diff-buttons">
@@ -259,7 +276,12 @@ function App() {
             </div>
 
             <div className="landing-buttons-new">
-              <button className="btn-play-new" onClick={startNewGame}>
+              <button
+                className="btn-play-new"
+                onClick={startNewGame}
+                disabled={!selectedAvatar}
+                title={!selectedAvatar ? 'Önce bir kaşif seç' : undefined}
+              >
                 <Flag size={24} />
                 MACERAYA BAŞLA
               </button>
@@ -318,15 +340,30 @@ function App() {
           return (
             <>
               <div className="game-top-bar animate-top">
-                <div
-                  className="back-btn-wrap"
-                  onClick={() => {
-                    if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
-                    setGameStarted(false);
-                  }}
-                >
-                  <Flag size={20} color="var(--neon-yellow)" />
-                  <span>MENÜ</span>
+                <div className="top-bar-left">
+                  <div
+                    className="back-btn-wrap"
+                    onClick={() => {
+                      if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
+                      setGameStarted(false);
+                    }}
+                  >
+                    <Flag size={20} color="var(--neon-yellow)" />
+                    <span>MENÜ</span>
+                  </div>
+                  {selectedAvatar && (
+                    <div className="game-player-chip">
+                      <span
+                        className="game-player-avatar"
+                        style={{
+                          background: `linear-gradient(145deg, ${getAvatar(selectedAvatar).color}, ${getAvatar(selectedAvatar).ring})`,
+                        }}
+                      >
+                        {getAvatar(selectedAvatar).initial}
+                      </span>
+                      <span className="game-player-name">{getAvatar(selectedAvatar).name}</span>
+                    </div>
+                  )}
                 </div>
 
                 {showSkipBtn && !roundOver && !isMapOpen && (
