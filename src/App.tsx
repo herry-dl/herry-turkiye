@@ -3,7 +3,6 @@ import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
-import { verifiedByDifficulty } from './verifiedLocations';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
@@ -11,8 +10,6 @@ import backgroundMusic from './assets/background.mp3';
 import countdownMusic from './assets/countdown.mp3';
 
 function poolForDifficulty(level: 1 | 2 | 3): Location[] {
-  const verified = verifiedByDifficulty(level);
-  if (verified.length > 0) return verified;
   return locations.filter((l) => {
     if (level === 1) return l.difficulty === 1;
     if (level === 2) return l.difficulty <= 2;
@@ -257,7 +254,7 @@ function App() {
                 </button>
               </div>
               <p className="diff-hint">
-                Kolay: bilinen merkezler · Orta: + il içi yollar · Zor: tüm Türkiye havuzu
+                Kolay: büyük şehir merkezleri · Orta: ilçeler ve çevre · Zor: tüm 1000+ konum havuzu
               </p>
             </div>
 

@@ -3,7 +3,7 @@ import './index.css'
 import App from './App'
 
 // Eski PWA service worker varsa kaldır (önbellek sorunlarını önler)
-const BUILD_VERSION = '2026-05-17-google-iframe-v11'
+const BUILD_VERSION = '2026-05-17-locations-1000-v12'
 console.log(`[Türkiye Kâşifi] build=${BUILD_VERSION}`)
 
 if ('serviceWorker' in navigator) {
