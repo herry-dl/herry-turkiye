@@ -3,20 +3,25 @@ import { MapPin, Trophy, Flag } from 'lucide-react';
 import { GameMap } from './components/GameMap';
 import { StreetViewPlayer } from './components/StreetViewPlayer';
 import { locations, Location } from './locations';
-import { verifiedByDifficulty, verifiedLocations } from './verifiedLocations';
-import { pickValidatedLocations, validateLocation } from './locationValidator';
+import { verifiedByDifficulty } from './verifiedLocations';
 import { calculateDistance, calculateScore } from './utils';
 import logo from './assets/logo.png';
 import introMusic from './assets/giris-muzigi.mp3';
 import backgroundMusic from './assets/background.mp3';
 import countdownMusic from './assets/countdown.mp3';
 
-function fallbackPool(level: 1 | 2 | 3): Location[] {
+function poolForDifficulty(level: 1 | 2 | 3): Location[] {
+  const verified = verifiedByDifficulty(level);
+  if (verified.length > 0) return verified;
   return locations.filter((l) => {
     if (level === 1) return l.difficulty === 1;
     if (level === 2) return l.difficulty <= 2;
     return true;
   });
+}
+
+function pickRandomLocations(pool: Location[], count: number): Location[] {
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, count);
 }
 
 function App() {
@@ -35,8 +40,6 @@ function App() {
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [loadingLocation, setLoadingLocation] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
-  const [preparingGame, setPreparingGame] = useState(false);
-  const [preparingProgress, setPreparingProgress] = useState({ ready: 0, total: 0 });
   const introAudioRef = React.useRef<HTMLAudioElement>(null);
   const bgAudioRef = React.useRef<HTMLAudioElement>(null);
   const countdownAudioRef = React.useRef<HTMLAudioElement>(null);
@@ -167,37 +170,21 @@ function App() {
     skipTimerRef.current = setTimeout(() => setShowSkipBtn(true), 4000);
   };
 
-  const startNewGame = async () => {
-    const verifiedPool = verifiedByDifficulty(selectedDifficulty);
-    const fbPool = fallbackPool(selectedDifficulty);
-    locationPoolRef.current = verifiedPool.length > 0 ? verifiedPool : fbPool;
+  const startNewGame = () => {
+    const pool = poolForDifficulty(selectedDifficulty);
+    locationPoolRef.current = pool;
 
     if (introAudioRef.current) {
       introAudioRef.current.pause();
       introAudioRef.current.currentTime = 0;
     }
 
-    setPreparingGame(true);
-    setPreparingProgress({ ready: 0, total: TOTAL_ROUNDS });
-
-    try {
-      const validated = await pickValidatedLocations(
-        verifiedPool.length > 0 ? verifiedPool : verifiedLocations,
-        TOTAL_ROUNDS,
-        fbPool,
-        (ready, total) => setPreparingProgress({ ready, total })
-      );
-
-      const finalList = validated.length > 0 ? validated : verifiedLocations.slice(0, TOTAL_ROUNDS);
-      setGameLocations(finalList);
-      setTotalScore(0);
-      setCurrentRound(0);
-      setGameOver(false);
-      setGameStarted(true);
-      resetRound();
-    } finally {
-      setPreparingGame(false);
-    }
+    setGameLocations(pickRandomLocations(pool, TOTAL_ROUNDS));
+    setTotalScore(0);
+    setCurrentRound(0);
+    setGameOver(false);
+    setGameStarted(true);
+    resetRound();
   };
 
   const handleNextRound = () => {
@@ -210,28 +197,22 @@ function App() {
     }
   };
 
-  const handleSkipLocation = async () => {
+  const handleSkipLocation = () => {
     if (skipTimerRef.current) clearTimeout(skipTimerRef.current);
-    setLoadingLocation(true);
 
     const pool = locationPoolRef.current;
     const usedIds = new Set(gameLocations.map((l) => l.id));
     const candidates = pool.filter((l) => !usedIds.has(l.id));
     const shuffled = (candidates.length ? candidates : pool).sort(() => Math.random() - 0.5);
+    const loc = shuffled[0];
+    if (!loc) return;
 
-    for (const loc of shuffled) {
-      const ok = await validateLocation(loc);
-      if (ok) {
-        setGameLocations((prev) => {
-          const updated = [...prev];
-          updated[currentRound] = loc;
-          return updated;
-        });
-        resetRound();
-        return;
-      }
-    }
-    setLoadingLocation(false);
+    setGameLocations((prev) => {
+      const updated = [...prev];
+      updated[currentRound] = loc;
+      return updated;
+    });
+    resetRound();
   };
 
   const handlePanoramaReady = useCallback(() => {
@@ -281,20 +262,11 @@ function App() {
             </div>
 
             <div className="landing-buttons-new">
-              <button className="btn-play-new" onClick={startNewGame} disabled={preparingGame}>
-                {preparingGame ? (
-                  <>
-                    <div className="prep-spinner" />
-                    KONUMLAR HAZIRLANIYOR {preparingProgress.ready}/{preparingProgress.total}
-                  </>
-                ) : (
-                  <>
-                    <Flag size={24} />
-                    MACERAYA BAŞLA
-                  </>
-                )}
+              <button className="btn-play-new" onClick={startNewGame}>
+                <Flag size={24} />
+                MACERAYA BAŞLA
               </button>
-              <button className="btn-how-new" onClick={() => setShowHowToPlay(true)} disabled={preparingGame}>
+              <button className="btn-how-new" onClick={() => setShowHowToPlay(true)}>
                 NASIL OYNANIR?
               </button>
             </div>
