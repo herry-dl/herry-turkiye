@@ -237,7 +237,7 @@ function App() {
             <div className="landing-logo-container">
               <img src={logo} alt="HERRY TÜRKİYE" className="landing-logo-img" />
             </div>
-            <h1 className="landing-title-main">TÜRKİYE KÂŞİFİ</h1>
+            <h1 className="landing-title-main">AVRUPA & TÜRKİYE KÂŞİFİ</h1>
             <p className="by-dagli-new">by dagli</p>
 
             <AvatarPicker
@@ -271,7 +271,7 @@ function App() {
                 </button>
               </div>
               <p className="diff-hint">
-                Kolay: büyük şehir merkezleri · Orta: ilçeler ve çevre · Zor: tüm 1000+ konum havuzu
+                Kolay: büyük şehir merkezleri · Orta: ilçeler ve çevre · Zor: tüm 5000+ konum havuzu
               </p>
             </div>
 
@@ -298,7 +298,7 @@ function App() {
                 <div className="modal-body">
                   <div className="how-step">
                     <span className="step-num">1</span>
-                    <p>Etrafına bakarak Türkiye'nin neresinde olduğunu tahmin etmeye çalış.</p>
+                    <p>Etrafına bakarak Avrupa ve Türkiye'nin neresinde olduğunu tahmin etmeye çalış.</p>
                   </div>
                   <div className="how-step">
                     <span className="step-num">2</span>
@@ -307,7 +307,7 @@ function App() {
                   <div className="how-step">
                     <span className="step-num">3</span>
                     <p>
-                      Hızlı ol! 200 km içinde puan alırsın; ilk 60 saniyede tahmin yaparsan{' '}
+                      Hızlı ol! 2000 km içinde puan alırsın; ilk 60 saniyede tahmin yaparsan{' '}
                       <strong>2X puan</strong> kazanırsın.
                     </p>
                   </div>
@@ -511,7 +511,7 @@ function App() {
                               <span>{lastScore} PUAN</span>
                             </div>
                             {lastScore === 0 && (
-                              <div className="score-note">200 km'den uzaktığın veya tahmin yapmadığın için puan yok.</div>
+                              <div className="score-note">2000 km'den uzak olduğun veya tahmin yapmadığın için puan yok.</div>
                             )}
                           </div>
 

@@ -61,9 +61,9 @@ interface GameMapProps {
 export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocation, roundOver }) => {
   const mapRef = useRef<L.Map>(null);
 
-  const turkeyBounds: L.LatLngBoundsExpression = [
-    [35.8, 25.5],
-    [42.2, 44.8],
+  const europeBounds: L.LatLngBoundsExpression = [
+    [34.0, -25.0], // Southwest: Atlantic, Portugal, southern Spain
+    [71.5, 45.5],  // Northeast: Northern Norway, Finland, Eastern Turkey
   ];
 
   useEffect(() => {
@@ -78,14 +78,14 @@ export const GameMap: React.FC<GameMapProps> = ({ guess, setGuess, targetLocatio
 
   return (
     <MapContainer
-      center={[39.0, 35.0]}
-      zoom={5.5}
+      center={[48.0, 20.0]}
+      zoom={3.8}
       scrollWheelZoom={true}
       ref={mapRef}
       style={{ height: '100%', width: '100%' }}
-      maxBounds={turkeyBounds}
+      maxBounds={europeBounds}
       maxBoundsViscosity={1.0}
-      minZoom={5}
+      minZoom={3}
     >
       <TileLayer attribution={OSM_ATTRIBUTION} url={OSM_TILE_URL} />
       <MapResizeFix />

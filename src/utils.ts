@@ -16,13 +16,14 @@ function deg2rad(deg: number): number {
   return deg * (Math.PI / 180);
 }
 
-// Mesafe kademeleri: tur başına taban en fazla 100 puan; ilk 60 sn içinde tahmin 2x (en fazla 200).
+// Mesafe kademeleri (Avrupa Ölçeği): tur başına taban en fazla 100 puan; ilk 60 sn içinde tahmin 2x (en fazla 200).
 export function calculateScore(distanceKm: number): number {
-  if (distanceKm <= 1) return 100;
-  if (distanceKm <= 10) return 80;
-  if (distanceKm <= 20) return 60; 
-  if (distanceKm <= 50) return 50;
-  if (distanceKm <= 100) return 30;
-  if (distanceKm <= 200) return 10;
+  if (distanceKm <= 5) return 100;
+  if (distanceKm <= 25) return 90;
+  if (distanceKm <= 100) return 75; 
+  if (distanceKm <= 250) return 55;
+  if (distanceKm <= 500) return 40;
+  if (distanceKm <= 1000) return 25;
+  if (distanceKm <= 2000) return 10;
   return 0;
 }
